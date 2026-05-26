@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>日本 12 日自由行</title>
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="日本12日">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#fff0f5">
+    <meta name="description" content="日本12日自由行行程規劃，涵蓋東京、大阪、京都等城市的每日行程、訂單資訊、景點攻略、購物清單與注意事項。">
+
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/197/197604.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            background: linear-gradient(135deg, #fff0f5 0%, #ffffff 40%, #ffffff 60%, #f0f4ff 100%);
+            font-family: 'Inter', 'Helvetica Neue', Arial, 'Microsoft JhengHei', sans-serif;
+            min-height: 100vh;
+            overscroll-behavior-y: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .font-serif-tc { font-family: 'Noto Serif TC', serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .fade-transition { transition: opacity 0.3s ease, transform 0.3s ease; }
+        .soft-shadow { box-shadow: 0 10px 30px -10px rgba(0,0,0,0.08), 0 0 15px rgba(255,255,255,0.6); }
+
+        .badge { display: inline-flex; align-items: center; gap: 3px; padding: 3px 8px; border-radius: 6px; font-size: 0.7rem; font-weight: 600; white-space: nowrap; letter-spacing: 0.02em; }
+        @media (min-width: 768px) { .badge { padding: 4px 10px; border-radius: 8px; font-size: 0.75rem; } }
+
+        .badge-food   { background-color: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+        .badge-buy    { background-color: #fdf2f8; color: #db2777; border: 1px solid #fbcfe8; }
+        .badge-booking{ background-color: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+        .badge-story  { background-color: #f8fafc; color: #475569; border: 1px solid #e2e8f0; }
+        .badge-sight  { background-color: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
+        .badge-tip    { background-color: #fefce8; color: #ca8a04; border: 1px solid #fef08a; }
+
+        .tip-content ul { padding-left: 1.25rem; margin-top: 0.25rem; margin-bottom: 0.25rem; list-style-type: disc; }
+        .tip-content li { margin-bottom: 0.35rem; color: #4b5563; line-height: 1.5; }
+        .tip-content strong { color: #1f2937; }
+
+        /* Sakura petal animation */
+        @keyframes fall {
+            0%   { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+        .petal {
+            position: fixed;
+            top: -20px;
+            font-size: 1.2rem;
+            animation: fall linear infinite;
+            pointer-events: none;
+            z-index: 0;
+            user-select: none;
+        }
+
+        /* Tab active state */
+        .tab-btn.active {
+            background-color: #111827;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+        }
+
+        /* Card hover */
+        .day-event-card {
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .day-event-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px -6px rgba(0,0,0,0.12);
+        }
+
+        /* Date pill active */
+        .date-pill.active {
+            background: #111827;
+            color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+        }
+        .date-pill {
+            transition: all 0.2s ease;
+        }
+
+        /* Cherry blossom pink accent */
+        :root {
+            --sakura: #f43f5e;
+            --sakura-light: #fce7f3;
+        }
+    </style>
+</head>
+<body class="text-gray-800 pb-16 relative">
+
+    <!-- Decorative sakura petals -->
+    <span class="petal" style="left:5%;animation-duration:8s;animation-delay:0s;">🌸</span>
+    <span class="petal" style="left:15%;animation-duration:11s;animation-delay:2s;">🌸</span>
+    <span class="petal" style="left:30%;animation-duration:9s;animation-delay:5s;">🌸</span>
+    <span class="petal" style="left:55%;animation-duration:13s;animation-delay:1s;">🌸</span>
+    <span class="petal" style="left:70%;animation-duration:10s;animation-delay:3s;">🌸</span>
+    <span class="petal" style="left:85%;animation-duration:7s;animation-delay:4s;">🌸</span>
+    <span class="petal" style="left:92%;animation-duration:12s;animation-delay:6s;">🌸</span>
+
+    <!-- ===== HEADER ===== -->
+    <header class="pt-6 md:pt-10 pb-3 text-center px-3 relative z-10">
+        <p class="text-xs tracking-[0.25em] text-rose-400 font-semibold uppercase mb-1">✈️ 旅遊行程規劃</p>
+        <h1 class="text-[1.45rem] md:text-[2.2rem] font-serif-tc font-bold tracking-[0.1em] text-[#1a1a1a] mb-1">
+            日本 12 日自由行
+        </h1>
+        <p class="text-sm text-gray-400 mb-5">🗾 東京 · 日光 · 大阪 · 京都 · 奈良</p>
+        
+        <!-- Navigation Tabs -->
+        <div class="max-w-5xl mx-auto overflow-x-auto no-scrollbar pb-3 px-1 text-center">
+            <div class="inline-flex bg-white/60 backdrop-blur-md p-1 rounded-full shadow-sm border border-gray-200">
+                <button onclick="switchTab('itinerary')" id="tab-itinerary" class="tab-btn active px-3 md:px-5 py-1.5 md:py-2 rounded-full text-[13px] md:text-sm font-bold transition-all duration-300 whitespace-nowrap">
+                    <i class="fas fa-calendar-alt mr-1"></i>行程
+                </button>
+                <button onclick="switchTab('spots')" id="tab-spots" class="tab-btn px-3 md:px-5 py-1.5 md:py-2 rounded-full text-[13px] md:text-sm font-bold transition-all duration-300 text-gray-500 hover:text-gray-800 bg-transparent whitespace-nowrap">
+                    <i class="fas fa-torii-gate mr-1"></i>景點攻略
+                </button>
+                <button onclick="switchTab('tools')" id="tab-tools" class="tab-btn px-3 md:px-5 py-1.5 md:py-2 rounded-full text-[13px] md:text-sm font-bold transition-all duration-300 text-gray-500 hover:text-gray-800 bg-transparent whitespace-nowrap">
+                    <i class="fas fa-file-invoice mr-1"></i>訂單資訊
+                </button>
+                <button onclick="switchTab('transport')" id="tab-transport" class="tab-btn px-3 md:px-5 py-1.5 md:py-2 rounded-full text-[13px] md:text-sm font-bold transition-all duration-300 text-gray-500 hover:text-gray-800 bg-transparent whitespace-nowrap">
+                    <i class="fas fa-train mr-1"></i>交通
+                </button>
+                <button onclick="switchTab('shopping')" id="tab-shopping" class="tab-btn px-3 md:px-5 py-1.5 md:py-2 rounded-full text-[13px] md:text-sm font-bold transition-all duration-300 text-gray-500 hover:text-gray-800 bg-transparent whitespace-nowrap">
+                    <i class="fas fa-shopping-bag mr-1"></i>購物
+                </button>
+                <button onclick="switchTab('luggage')" id="tab-luggage" class="tab-btn px-3 md:px-5 py-1.5 md:py-2 rounded-full text-[13px] md:text-sm font-bold transition-all duration-300 text-gray-500 hover:text-gray-800 bg-transparent whitespace-nowrap">
+                    <i class="fas fa-suitcase mr-1"></i>行李
+                </button>
+                <button onclick="switchTab('notes')" id="tab-notes" class="tab-btn px-3 md:px-5 py-1.5 md:py-2 rounded-full text-[13px] md:text-sm font-bold transition-all duration-300 text-gray-500 hover:text-gray-800 bg-transparent whitespace-nowrap">
+                    <i class="fas fa-bullhorn mr-1"></i>注意事項
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== VIEW 1: ITINERARY ========== -->
+    <div id="view-itinerary" class="block relative z-10">
+        <!-- Date Navigation -->
+        <div class="max-w-4xl mx-auto px-3 md:px-4 mb-5 md:mb-8 text-center">
+            <div class="inline-flex bg-white/80 backdrop-blur-xl rounded-[2rem] shadow-sm border border-white p-1.5 flex items-center justify-between w-full md:w-auto">
+                <button onclick="scrollNav('left')" class="shrink-0 z-20 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full hover:bg-gray-100 text-gray-400 hover:text-gray-700 transition-colors">
+                    <i class="fas fa-chevron-left text-sm"></i>
+                </button>
+                <div id="date-nav" class="flex-1 flex overflow-x-auto justify-start items-center space-x-1 no-scrollbar scroll-smooth px-1 md:max-w-[600px]"></div>
+                <button onclick="scrollNav('right')" class="shrink-0 z-20 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full hover:bg-gray-100 text-gray-400 hover:text-gray-700 transition-colors">
+                    <i class="fas fa-chevron-right text-sm"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Day Card -->
+        <div class="px-3 md:px-4">
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] md:rounded-[2rem] soft-shadow max-w-3xl mx-auto p-4 sm:p-6 md:p-10 border border-white relative overflow-hidden" id="main-card-content">
+                <div class="flex flex-row items-center gap-3 md:gap-5 mb-5 md:mb-8">
+                    <div class="shrink-0 flex flex-col items-center justify-center w-16 h-16 md:w-[5.5rem] md:h-[5.5rem] border border-rose-100 rounded-[1rem] md:rounded-2xl bg-rose-50 shadow-sm">
+                        <span class="text-2xl md:text-[1.8rem] font-black leading-none text-gray-800" id="card-date">--</span>
+                        <span class="text-[10px] md:text-[12px] font-black tracking-[0.1em] text-rose-500 mt-1 uppercase" id="card-day-week">---</span>
+                        <span class="text-[9px] md:text-[10px] font-semibold tracking-[0.05em] text-gray-400 mt-0.5 uppercase" id="card-month">---</span>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex flex-wrap items-center gap-2 mb-1 md:mb-2">
+                            <span class="inline-block bg-[#2d3748] text-white text-[10px] md:text-[11px] px-2.5 py-0.5 rounded-full tracking-wider font-medium" id="card-tag">城市</span>
+                            <div class="inline-flex items-center gap-1.5 bg-rose-50 text-rose-600 text-[10px] md:text-[11px] px-2.5 py-0.5 rounded-full border border-rose-100 font-medium whitespace-nowrap" id="card-weather"></div>
+                        </div>
+                        <h2 class="text-[1.15rem] md:text-[1.75rem] font-serif-tc font-bold text-gray-800 leading-snug tracking-wide truncate md:whitespace-normal" id="card-title">載入中...</h2>
+                    </div>
+                </div>
+
+                <div class="space-y-3 md:space-y-4" id="card-events">
+                    <!-- Dynamically generated -->
+                </div>
+
+                <div class="flex justify-between items-center mt-8 md:mt-12 pt-6 border-t border-gray-100">
+                    <button id="btn-prev" onclick="changeDay(currentIndex - 1)" class="px-4 md:px-5 py-2 md:py-2.5 border border-gray-300 rounded-full text-[12px] md:text-sm font-medium text-gray-600 hover:border-gray-800 hover:bg-gray-50 transition-colors flex items-center gap-2">
+                        <i class="fas fa-arrow-left text-[10px]"></i> 上一天
+                    </button>
+                    <button id="btn-next" onclick="changeDay(currentIndex + 1)" class="px-4 md:px-5 py-2 md:py-2.5 border border-gray-300 rounded-full text-[12px] md:text-sm font-medium text-gray-600 hover:border-gray-800 hover:bg-gray-50 transition-colors flex items-center gap-2">
+                        下一天 <i class="fas fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== VIEW 2: SPOTS 景點攻略 ========== -->
+    <div id="view-spots" class="hidden px-3 md:px-4 relative z-10">
+        <div class="max-w-3xl mx-auto space-y-5 md:space-y-6">
+
+            <!-- 東京迪士尼攻略 -->
+            <div class="bg-yellow-50 p-4 md:p-5 rounded-xl border border-yellow-200 soft-shadow">
+                <h4 class="font-bold text-yellow-800 text-[14.5px] md:text-base mb-3 flex items-center gap-2">
+                    <i class="fas fa-star"></i> 🎠 東京迪士尼樂園必玩攻略
+                </h4>
+                <ul class="text-[13px] md:text-[13.5px] text-gray-700 space-y-2.5 list-disc pl-4">
+                    <li><strong>開園即衝：</strong>第一優先前往「美女與野獸城堡奇緣」，這是全球唯一、排隊時間最長的設施（平均 2-3 小時）。</li>
+                    <li><strong>Disney Premier Access (DPA)：</strong>建議購買「魔法之旅」+ 「巨雷山」2 個 DPA，可跳過長龍節省大量時間。</li>
+                    <li><strong>下載 Tokyo Disney Resort App：</strong>可即時查看等待時間、購買 DPA、預約餐廳，是當天必備工具。</li>
+                    <li><strong>遊行最佳位置：</strong>「夢之光幻想曲」夜間遊行建議在「灰姑娘城堡」正對面佔位，提前 30-45 分鐘抵達。</li>
+                </ul>
+            </div>
+
+            <!-- 京都嵐山黃金路線 -->
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-route text-rose-500"></i> 京都嵐山一日遊推薦動線
+                </h3>
+                <p class="text-[12.5px] text-gray-500 mb-4">建議搭乘阪急嵐山線前往，避開人潮最多的 10:00-14:00，早上 8:00 就出發！</p>
+                <div class="space-y-5 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-rose-400 before:to-purple-400">
+                    <!-- Step 1 -->
+                    <div class="relative flex items-center justify-between group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-rose-500 text-white font-bold shadow shrink-0 z-10">1</div>
+                        <div class="w-[calc(100%-4rem)] p-4 rounded-xl border border-rose-100 bg-rose-50/50 shadow-sm">
+                            <h4 class="font-bold text-rose-700 text-[14.5px]">08:00 | 竹林小徑</h4>
+                            <ul class="text-[13px] text-gray-700 list-disc pl-4 mt-2 space-y-1">
+                                <li>早晨人少，光線最美，是拍照黃金時段。</li>
+                                <li>全長約 400 公尺，步行約 10-15 分鐘。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="relative flex items-center justify-between group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-orange-500 text-white font-bold shadow shrink-0 z-10">2</div>
+                        <div class="w-[calc(100%-4rem)] p-4 rounded-xl border border-orange-100 bg-orange-50/50 shadow-sm">
+                            <h4 class="font-bold text-orange-700 text-[14.5px]">09:00 | 天龍寺</h4>
+                            <ul class="text-[13px] text-gray-700 list-disc pl-4 mt-2 space-y-1">
+                                <li>世界遺產，以「曹源池庭園」聞名，借景嵐山的回遊式庭園。</li>
+                                <li>入場費 ¥500，加購「諸堂」拜觀需 ¥300。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="relative flex items-center justify-between group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-green-500 text-white font-bold shadow shrink-0 z-10">3</div>
+                        <div class="w-[calc(100%-4rem)] p-4 rounded-xl border border-green-100 bg-green-50/50 shadow-sm">
+                            <h4 class="font-bold text-green-700 text-[14.5px]">10:30 | 渡月橋 & 午餐</h4>
+                            <ul class="text-[13px] text-gray-700 list-disc pl-4 mt-2 space-y-1">
+                                <li>在渡月橋拍攝嵐山全景後，前往周邊街道覓食。</li>
+                                <li>推薦「よしむら」的嵐山名物蕎麥麵，或嵯峨野「抹茶パフェ」。</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="relative flex items-center justify-between group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-purple-500 text-white font-bold shadow shrink-0 z-10">4</div>
+                        <div class="w-[calc(100%-4rem)] p-4 rounded-xl border border-purple-100 bg-purple-50/50 shadow-sm">
+                            <h4 class="font-bold text-purple-700 text-[14.5px]">13:00 | 伏見稲荷大社（傍晚前返回）</h4>
+                            <ul class="text-[13px] text-gray-700 list-disc pl-4 mt-2 space-y-1">
+                                <li>千本鳥居！免費參拜，建議走到「四ツ辻」展望台（約 40-60 分鐘）即可。</li>
+                                <li><span class="text-red-500 font-bold">⚠️ 傍晚後光線漸暗，建議 17:00 前離開。</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2025-2026 日本限定亮點 -->
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-star text-yellow-500"></i> 2025-2026 熱門景點與必吃美食
+                </h3>
+                <div class="overflow-x-auto rounded-xl border border-gray-200">
+                    <table class="w-full text-[13px] md:text-sm text-left border-collapse bg-white">
+                        <thead>
+                            <tr class="bg-gray-50 text-gray-700 border-b border-gray-200">
+                                <th class="p-3 font-bold w-[25%]">分類</th>
+                                <th class="p-3 font-bold w-1/3">名稱</th>
+                                <th class="p-3 font-bold">必試理由</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100 text-gray-700">
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3"><span class="badge bg-red-100 text-red-800 border-red-200">東京必去</span></td>
+                                <td class="p-3 font-semibold text-gray-900">teamLab Borderless</td>
+                                <td class="p-3 leading-relaxed">搬至麻布台Hills重生！沉浸式數位藝術，每個展間都是奇幻世界。建議提前2個月購票。</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3"><span class="badge bg-purple-100 text-purple-800 border-purple-200">新幹線體驗</span></td>
+                                <td class="p-3 font-semibold text-gray-900">東京⇆京都 新幹線</td>
+                                <td class="p-3 leading-relaxed">2小時15分直達！建議購買JR Pass 7日券（約¥50,000），可無限搭乘指定路線。</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3"><span class="badge bg-orange-100 text-orange-800 border-orange-200">大阪必吃</span></td>
+                                <td class="p-3 font-semibold text-gray-900">道頓堀 蟹道樂</td>
+                                <td class="p-3 leading-relaxed">超巨大螃蟹招牌打卡點！推薦點松葉蟹全餐，另有壽司、天婦羅一條街。</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3"><span class="badge bg-yellow-100 text-yellow-800 border-yellow-200">京都限定</span></td>
+                                <td class="p-3 font-semibold text-gray-900">茶源鄉 宇治 中村藤吉</td>
+                                <td class="p-3 leading-relaxed">百年老店本店限定「生茶ゼリィ」！宇治抹茶味最濃郁，假日需排隊 1 小時。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ========== VIEW 3: TOOLS 訂單資訊 ========== -->
+    <div id="view-tools" class="hidden px-3 md:px-4 relative z-10">
+        <div class="max-w-3xl mx-auto space-y-4 md:space-y-6">
+
+            <!-- 航班資訊 -->
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-3 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-plane text-blue-500"></i> 航班資訊
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- 去程 -->
+                    <div class="bg-blue-50/50 p-3.5 md:p-4 rounded-xl border border-blue-100 shadow-sm">
+                        <div class="flex justify-between items-start mb-2.5 border-b border-blue-100/50 pb-2">
+                            <div>
+                                <span class="font-bold text-blue-900 text-[13.5px] md:text-[14.5px] block">蘇先生 & 全體成員</span>
+                                <span class="text-[10px] text-blue-600 bg-blue-100 px-1.5 py-0.5 rounded font-mono mt-0.5 inline-block">訂單 XXXXXX</span>
+                            </div>
+                            <a href="#" target="_blank" class="shrink-0 text-[10px] bg-white border border-blue-200 text-blue-600 hover:bg-blue-100 px-2 py-1 rounded shadow-sm transition-colors flex items-center gap-1">
+                                <i class="fas fa-file-pdf"></i> 機票PDF
+                            </a>
+                        </div>
+                        <div class="space-y-2 text-[12.5px] text-gray-700">
+                            <div>
+                                <p class="text-blue-500 font-bold text-[11.5px] mb-0.5"><i class="fas fa-plane-departure w-4 text-center"></i> 去程 BR XXX</p>
+                                <p class="ml-5">X/X (X) 08:00 TPE ➔ 12:30 NRT</p>
+                            </div>
+                            <div>
+                                <p class="text-green-500 font-bold text-[11.5px] mb-0.5"><i class="fas fa-plane-arrival w-4 text-center"></i> 回程 BR XXX</p>
+                                <p class="ml-5">X/X (X) 16:00 KIX ➔ 18:30 TPE</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 回程備用 -->
+                    <div class="bg-blue-50/50 p-3.5 md:p-4 rounded-xl border border-blue-100 shadow-sm flex flex-col justify-center items-center text-center gap-2">
+                        <i class="fas fa-plus-circle text-blue-200 text-3xl"></i>
+                        <p class="text-[13px] text-blue-300 font-medium">新增其他成員機票</p>
+                        <p class="text-[11px] text-gray-400">將機票PDF上傳後填入連結</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 住宿資訊 -->
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-3 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-hotel text-purple-500"></i> 住宿資訊
+                </h3>
+                <ul class="space-y-3" id="accommodation-list">
+                    <li class="flex items-start gap-3 p-3 rounded-xl bg-purple-50/50 border border-purple-100">
+                        <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center text-purple-500 shadow-sm shrink-0"><i class="fas fa-bed"></i></div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-bold text-[13.5px] text-gray-800">東京 - Shinjuku Granbell Hotel</p>
+                            <p class="text-[12px] text-gray-500">X/X ~ X/X（3晚）新宿站步行 5 分鐘</p>
+                        </div>
+                        <a href="#" target="_blank" class="text-[10px] bg-white border border-purple-200 text-purple-600 hover:bg-purple-50 px-2 py-1 rounded shadow-sm whitespace-nowrap flex items-center gap-1 shrink-0">
+                            <i class="fas fa-map-marker-alt"></i> 導航
+                        </a>
+                    </li>
+                    <li class="flex items-start gap-3 p-3 rounded-xl bg-rose-50/50 border border-rose-100">
+                        <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center text-rose-500 shadow-sm shrink-0"><i class="fas fa-bed"></i></div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-bold text-[13.5px] text-gray-800">大阪 - Cross Hotel Osaka</p>
+                            <p class="text-[12px] text-gray-500">X/X ~ X/X（3晚）心齋橋步行 10 分鐘</p>
+                        </div>
+                        <a href="#" target="_blank" class="text-[10px] bg-white border border-rose-200 text-rose-600 hover:bg-rose-50 px-2 py-1 rounded shadow-sm whitespace-nowrap flex items-center gap-1 shrink-0">
+                            <i class="fas fa-map-marker-alt"></i> 導航
+                        </a>
+                    </li>
+                    <li class="flex items-start gap-3 p-3 rounded-xl bg-orange-50/50 border border-orange-100">
+                        <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center text-orange-500 shadow-sm shrink-0"><i class="fas fa-bed"></i></div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-bold text-[13.5px] text-gray-800">京都 - 京都新阪急酒店</p>
+                            <p class="text-[12px] text-gray-500">X/X ~ X/X（3晚）京都站直結</p>
+                        </div>
+                        <a href="#" target="_blank" class="text-[10px] bg-white border border-orange-200 text-orange-600 hover:bg-orange-50 px-2 py-1 rounded shadow-sm whitespace-nowrap flex items-center gap-1 shrink-0">
+                            <i class="fas fa-map-marker-alt"></i> 導航
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 訂單憑證 -->
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-3 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-file-invoice text-indigo-500"></i> 訂單與電子憑證
+                </h3>
+                <p class="text-[12px] md:text-[13px] text-gray-500 mb-4">點擊下方按鈕即可直接開啟您的電子憑證檔案。</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+                    <!-- JR Pass -->
+                    <div class="bg-indigo-50/50 border border-indigo-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <div class="p-3 md:p-4 border-b border-indigo-100 flex justify-between items-start bg-white/50">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-indigo-600 shadow-sm shrink-0"><i class="fas fa-train text-lg"></i></div>
+                                <div>
+                                    <p class="text-[13.5px] md:text-[14.5px] font-bold text-gray-800 leading-tight">JR Pass 7日券</p>
+                                    <p class="text-[11.5px] text-gray-500 mt-0.5">KKday / JR Central</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1 items-end">
+                                <span class="block bg-indigo-100 text-indigo-700 text-[10px] px-2 py-0.5 rounded font-bold">訂單 XXXXXX</span>
+                                <a href="#" target="_blank" class="inline-flex items-center gap-1 bg-white border border-indigo-200 text-indigo-600 hover:bg-indigo-50 text-[10px] px-2 py-0.5 rounded shadow-sm transition-colors">
+                                    <i class="fas fa-external-link-alt"></i> 開啟憑證
+                                </a>
+                            </div>
+                        </div>
+                        <div class="p-3 md:p-4 text-[12.5px] text-gray-700 space-y-2">
+                            <div class="flex items-center gap-2"><i class="fas fa-calendar-alt text-blue-400 w-4 text-center"></i><p>使用期間：X/X ~ X/X（7日）</p></div>
+                            <div class="flex items-center gap-2"><i class="fas fa-users text-green-400 w-4 text-center"></i><p>數量：X 張（成人）</p></div>
+                            <div class="flex items-center gap-2"><i class="fas fa-credit-card text-orange-400 w-4 text-center"></i><p>金額：¥50,000 / 人</p></div>
+                        </div>
+                    </div>
+
+                    <!-- 東京迪士尼 -->
+                    <div class="bg-amber-50/50 border border-amber-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <div class="p-3 md:p-4 border-b border-amber-100 flex justify-between items-start bg-white/50">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-amber-600 shadow-sm shrink-0"><i class="fas fa-magic text-lg"></i></div>
+                                <div>
+                                    <p class="text-[13.5px] md:text-[14.5px] font-bold text-gray-800 leading-tight">東京迪士尼樂園</p>
+                                    <p class="text-[11.5px] text-gray-500 mt-0.5">Tokyo Disney Resort官網</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1 items-end">
+                                <span class="block bg-amber-100 text-amber-700 text-[10px] px-2 py-0.5 rounded font-bold">訂單 XXXXXX</span>
+                                <a href="#" target="_blank" class="inline-flex items-center gap-1 bg-white border border-amber-200 text-amber-600 hover:bg-amber-50 text-[10px] px-2 py-0.5 rounded shadow-sm transition-colors">
+                                    <i class="fas fa-external-link-alt"></i> 開啟憑證
+                                </a>
+                            </div>
+                        </div>
+                        <div class="p-3 md:p-4 text-[12.5px] text-gray-700 space-y-2">
+                            <div class="flex items-center gap-2"><i class="fas fa-calendar-alt text-blue-400 w-4 text-center"></i><p>日期：X/X（X）</p></div>
+                            <div class="flex items-center gap-2"><i class="fas fa-users text-green-400 w-4 text-center"></i><p>數量：成人 X 張</p></div>
+                            <div class="flex items-center gap-2"><i class="fas fa-credit-card text-orange-400 w-4 text-center"></i><p>費用：¥7,900 / 人</p></div>
+                        </div>
+                    </div>
+
+                    <!-- teamLab -->
+                    <div class="bg-purple-50/50 border border-purple-100 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                        <div class="p-3 md:p-4 border-b border-purple-100 flex justify-between items-start bg-white/50">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-purple-600 shadow-sm shrink-0"><i class="fas fa-paint-brush text-lg"></i></div>
+                                <div>
+                                    <p class="text-[13.5px] md:text-[14.5px] font-bold text-gray-800 leading-tight">teamLab Borderless</p>
+                                    <p class="text-[11.5px] text-gray-500 mt-0.5">麻布台 Hills</p>
+                                </div>
+                            </div>
+                            <div class="flex flex-col gap-1 items-end">
+                                <span class="block bg-purple-100 text-purple-700 text-[10px] px-2 py-0.5 rounded font-bold">訂單 XXXXXX</span>
+                                <a href="#" target="_blank" class="inline-flex items-center gap-1 bg-white border border-purple-200 text-purple-600 hover:bg-purple-50 text-[10px] px-2 py-0.5 rounded shadow-sm transition-colors">
+                                    <i class="fas fa-external-link-alt"></i> 開啟憑證
+                                </a>
+                            </div>
+                        </div>
+                        <div class="p-3 md:p-4 text-[12.5px] text-gray-700 space-y-2">
+                            <div class="flex items-center gap-2"><i class="fas fa-calendar-alt text-blue-400 w-4 text-center"></i><p>日期：X/X（X）</p></div>
+                            <div class="flex items-center gap-2"><i class="fas fa-clock text-green-400 w-4 text-center"></i><p>時段：14:00 - 16:00</p></div>
+                            <div class="flex items-center gap-2"><i class="fas fa-credit-card text-orange-400 w-4 text-center"></i><p>費用：¥3,200 / 人</p></div>
+                        </div>
+                    </div>
+
+                    <!-- 預留 -->
+                    <a href="#" target="_blank" class="flex items-center justify-between p-4 bg-gray-50 border border-dashed border-gray-300 rounded-xl hover:bg-rose-50 hover:border-rose-300 transition-colors cursor-pointer group">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-gray-400 group-hover:text-rose-500 shadow-sm transition-colors"><i class="fas fa-plus"></i></div>
+                            <div>
+                                <p class="text-[13.5px] font-bold text-gray-400 group-hover:text-rose-600 transition-colors">新增其他憑證</p>
+                                <p class="text-[11px] text-gray-400">例如：環球影城、歌舞伎等</p>
+                            </div>
+                        </div>
+                        <i class="fas fa-external-link-alt text-gray-300 group-hover:text-rose-400 transition-colors"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ========== VIEW 4: TRANSPORT 交通 ========== -->
+    <div id="view-transport" class="hidden px-3 md:px-4 relative z-10">
+        <div class="max-w-3xl mx-auto space-y-4 md:space-y-6">
+
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-train text-blue-500"></i> JR Pass 使用範圍
+                </h3>
+                <div class="space-y-3">
+                    <div class="flex items-start gap-3 p-3 bg-blue-50 rounded-xl border border-blue-100">
+                        <i class="fas fa-check-circle text-blue-500 mt-0.5 shrink-0"></i>
+                        <div>
+                            <p class="font-bold text-[13.5px] text-blue-800">東京 ⇆ 京都 / 大阪</p>
+                            <p class="text-[12px] text-gray-600">東海道新幹線（のぞみ以外）均可搭乘，約2小時15分</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 bg-blue-50 rounded-xl border border-blue-100">
+                        <i class="fas fa-check-circle text-blue-500 mt-0.5 shrink-0"></i>
+                        <div>
+                            <p class="font-bold text-[13.5px] text-blue-800">成田機場 ⇆ 東京</p>
+                            <p class="text-[12px] text-gray-600">成田特快 N'EX（JR Pass持有人免費）</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 bg-red-50 rounded-xl border border-red-100">
+                        <i class="fas fa-times-circle text-red-400 mt-0.5 shrink-0"></i>
+                        <div>
+                            <p class="font-bold text-[13.5px] text-red-700">東京地鐵（東京Metro/都営）</p>
+                            <p class="text-[12px] text-gray-600">JR Pass不含，需另購 IC卡（Suica/Pasmo）</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-credit-card text-green-500"></i> IC 卡（Suica / ICOCA）
+                </h3>
+                <ul class="space-y-2 text-[13px] text-gray-700 list-disc pl-5">
+                    <li><strong>Suica（西瓜卡）：</strong>東日本主要用途，在便利商店、自動販賣機、地鐵均可使用。</li>
+                    <li><strong>ICOCA：</strong>關西地區主要用途，大阪/京都/神戶均適用。</li>
+                    <li>兩張卡<strong>在全日本主要地區均可互通</strong>，購買其中一張即可。</li>
+                    <li><strong>加值方式：</strong>各站自動售票機，便利商店（部分）。</li>
+                    <li>台灣出發前可在機場購買「Welcome Suica」，省去現場排隊時間。</li>
+                </ul>
+            </div>
+
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-taxi text-yellow-500"></i> 計程車 & 其他
+                </h3>
+                <ul class="space-y-2 text-[13px] text-gray-700 list-disc pl-5">
+                    <li><strong>Go計程車App：</strong>日本最大打車App，可叫車並支援信用卡付款。</li>
+                    <li><strong>起跳價：</strong>東京約 ¥500（1.052 公里），深夜加成 20%。</li>
+                    <li><strong>嵐山竹馬（人力車）：</strong>俥夫（えびす屋）約 ¥4,000/30分，建議預約。</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ========== VIEW 5: SHOPPING 購物 ========== -->
+    <div id="view-shopping" class="hidden px-3 md:px-4 relative z-10">
+        <div class="max-w-3xl mx-auto space-y-4 md:space-y-6">
+
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-shopping-bag text-pink-500"></i> 購物清單
+                </h3>
+                <div class="space-y-4" id="shopping-list">
+                    <!-- Dynamically rendered -->
+                </div>
+            </div>
+
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-3 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-store text-purple-500"></i> 必逛商圈
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="p-3 rounded-xl bg-pink-50 border border-pink-100">
+                        <p class="font-bold text-[13.5px] text-pink-800">🗼 東京 原宿・表參道</p>
+                        <p class="text-[12px] text-gray-600 mt-1">Zara・H&M・Supreme・藥妝店，竹下通最多年輕人</p>
+                    </div>
+                    <div class="p-3 rounded-xl bg-blue-50 border border-blue-100">
+                        <p class="font-bold text-[13.5px] text-blue-800">🗼 東京 秋葉原</p>
+                        <p class="text-[12px] text-gray-600 mt-1">電器・動漫周邊・電玩，Yodobashi Camera必逛</p>
+                    </div>
+                    <div class="p-3 rounded-xl bg-amber-50 border border-amber-100">
+                        <p class="font-bold text-[13.5px] text-amber-800">🏯 大阪 心齋橋・道頓堀</p>
+                        <p class="text-[12px] text-gray-600 mt-1">藥妝集中地，BIC Camera・松本清都在這</p>
+                    </div>
+                    <div class="p-3 rounded-xl bg-green-50 border border-green-100">
+                        <p class="font-bold text-[13.5px] text-green-800">⛩️ 京都 錦市場</p>
+                        <p class="text-[12px] text-gray-600 mt-1">「京都的廚房」，醃漬物・出汁・抹茶伴手禮最齊全</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ========== VIEW 6: LUGGAGE 行李 ========== -->
+    <div id="view-luggage" class="hidden px-3 md:px-4 relative z-10">
+        <div class="max-w-3xl mx-auto space-y-4 md:space-y-6">
+
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-suitcase text-rose-500"></i> 行李打包清單
+                </h3>
+                <div class="space-y-4" id="luggage-list">
+                    <!-- Dynamically rendered -->
+                </div>
+            </div>
+
+            <!-- 日本氣候 -->
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-3 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-cloud-sun text-yellow-500"></i> 旅行季節氣候參考
+                </h3>
+                <div class="overflow-x-auto rounded-xl border border-gray-200">
+                    <table class="w-full text-[13px] text-left bg-white">
+                        <thead class="bg-gray-50 text-gray-700 border-b">
+                            <tr>
+                                <th class="p-3 font-bold">月份</th>
+                                <th class="p-3 font-bold">東京</th>
+                                <th class="p-3 font-bold">大阪/京都</th>
+                                <th class="p-3 font-bold">建議穿著</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y text-gray-700">
+                            <tr class="hover:bg-gray-50"><td class="p-3 font-semibold">3-4月</td><td class="p-3">12-18°C 🌸</td><td class="p-3">13-19°C 🌸</td><td class="p-3">薄外套+內搭，賞櫻必備</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="p-3 font-semibold">5月</td><td class="p-3">18-25°C ☀️</td><td class="p-3">19-26°C ☀️</td><td class="p-3">短袖+薄外套</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="p-3 font-semibold">9-10月</td><td class="p-3">20-28°C 🍂</td><td class="p-3">21-29°C 🍂</td><td class="p-3">短袖+薄外套，注意台風</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="p-3 font-semibold">11-12月</td><td class="p-3">8-16°C 🍁</td><td class="p-3">8-17°C 🍁</td><td class="p-3">厚外套+毛衣，賞楓必備</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ========== VIEW 7: NOTES 注意事項 ========== -->
+    <div id="view-notes" class="hidden px-3 md:px-4 relative z-10">
+        <div class="max-w-3xl mx-auto space-y-4 md:space-y-5">
+
+            <div class="bg-red-50 p-4 md:p-5 rounded-xl border border-red-200 soft-shadow">
+                <h4 class="font-bold text-red-800 text-[14.5px] mb-3 flex items-center gap-2">
+                    <i class="fas fa-exclamation-triangle"></i> 🚨 重要！出發前必看
+                </h4>
+                <ul class="text-[13px] text-gray-700 space-y-2.5 list-disc pl-4">
+                    <li><strong>Visit Japan Web：</strong>出發前請至官網完成入境、免稅、海關申告登錄，可加速通關。</li>
+                    <li><strong>網路：</strong>建議租借日本 WiFi 分享器（WifiHog/大和WiFi），或購買天數型SIM卡。</li>
+                    <li><strong>信用卡：</strong>部分老街店家<span class="text-red-600 font-bold">只收現金</span>！建議攜帶 JPY 10,000~20,000 備用。</li>
+                    <li><strong>藥品：</strong>部分台灣常用藥（含麻黃素的感冒藥）在日本是管制品，請查明後再攜帶。</li>
+                </ul>
+            </div>
+
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-info-circle text-blue-500"></i> 日本旅遊禮儀與小知識
+                </h3>
+                <div class="space-y-3 text-[13px] text-gray-700">
+                    <div class="flex items-start gap-3 p-3 bg-blue-50 rounded-xl">
+                        <i class="fas fa-subway text-blue-400 mt-0.5 shrink-0 w-5 text-center"></i>
+                        <div><strong>電車禮儀：</strong>車廂內請靜音、不講電話，博愛座空著也不要坐，行李放置架盡量不要擋到他人。</div>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 bg-green-50 rounded-xl">
+                        <i class="fas fa-utensils text-green-400 mt-0.5 shrink-0 w-5 text-center"></i>
+                        <div><strong>餐廳文化：</strong>進入日式餐廳要等候帶位，不可自行入座。用餐時不要傳食（筷子傳筷子有忌諱）。</div>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 bg-yellow-50 rounded-xl">
+                        <i class="fas fa-shoe-prints text-yellow-500 mt-0.5 shrink-0 w-5 text-center"></i>
+                        <div><strong>脫鞋禮儀：</strong>進入傳統旅館（旅館/民宿）、榻榻米區域、部分神社需脫鞋，注意鞋的方向朝外。</div>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 bg-rose-50 rounded-xl">
+                        <i class="fas fa-ban text-rose-400 mt-0.5 shrink-0 w-5 text-center"></i>
+                        <div><strong>走路飲食：</strong>日本部分地區（如奈良、鎌倉）禁止邊走邊吃，請找定點享用食物。</div>
+                    </div>
+                    <div class="flex items-start gap-3 p-3 bg-purple-50 rounded-xl">
+                        <i class="fas fa-camera text-purple-400 mt-0.5 shrink-0 w-5 text-center"></i>
+                        <div><strong>拍照禮儀：</strong>寺廟、神社內的神像通常禁止拍照，以及不要未經同意拍攝他人（尤其是藝妓）。</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-phone text-green-500"></i> 緊急聯絡資訊
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[13px]">
+                    <div class="p-3 bg-red-50 rounded-xl border border-red-100">
+                        <p class="font-bold text-red-700">🆘 日本緊急電話</p>
+                        <p class="mt-1 text-gray-700">警察：<strong>110</strong></p>
+                        <p class="text-gray-700">救護/消防：<strong>119</strong></p>
+                    </div>
+                    <div class="p-3 bg-blue-50 rounded-xl border border-blue-100">
+                        <p class="font-bold text-blue-700">🏥 台灣外交部旅外急難救助</p>
+                        <p class="mt-1 text-gray-700">24小時專線：<strong>+886-800-085-095</strong></p>
+                    </div>
+                    <div class="p-3 bg-green-50 rounded-xl border border-green-100">
+                        <p class="font-bold text-green-700">🏦 信用卡掛失</p>
+                        <p class="mt-1 text-gray-700">VISA：<strong>+1-800-847-2911</strong></p>
+                        <p class="text-gray-700">Master：<strong>+1-636-722-7111</strong></p>
+                    </div>
+                    <div class="p-3 bg-purple-50 rounded-xl border border-purple-100">
+                        <p class="font-bold text-purple-700">🏨 台灣駐日辦事處</p>
+                        <p class="mt-1 text-gray-700">東京：<strong>+81-3-3280-7811</strong></p>
+                        <p class="text-gray-700">大阪：<strong>+81-6-6443-8481</strong></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- ========== JAVASCRIPT ========== -->
+    <script>
+    // ==========================================
+    // ===       行程資料（可自行修改）         ===
+    // ==========================================
+    const itineraryData = [
+        {
+            date: "2025-10-01",
+            title: "出發！台北 ✈ 東京",
+            tag: "東京",
+            weather: "☁️ 22°C",
+            events: [
+                { time: "08:00", type: "booking", icon: "fas fa-plane-departure", title: "桃園機場 T2 出發", desc: "建議提前 3 小時抵達辦理登機，確認行李重量不超過 23kg。" },
+                { time: "12:30", type: "sight", icon: "fas fa-plane-arrival", title: "抵達成田機場 NRT", desc: "搭乘 N'EX 直達東京站（約 60 分鐘），JR Pass 持有者免費搭乘。" },
+                { time: "14:30", type: "booking", icon: "fas fa-hotel", title: "Check-in 飯店", desc: "Shinjuku Granbell Hotel｜新宿站東口步行 5 分鐘。早到可寄存行李先去逛街。" },
+                { time: "16:00", type: "sight", icon: "fas fa-city", title: "新宿散策", desc: "歌舞伎町、新宿御苑、伊勢丹百貨隨意逛，感受東京熱鬧氛圍。" },
+                { time: "19:00", type: "food", icon: "fas fa-utensils", title: "晚餐：新宿思い出横丁", desc: "昭和風格居酒屋橫丁，推薦「やきとり」燒鳥串與生啤酒。" }
+            ]
+        },
+        {
+            date: "2025-10-02",
+            title: "東京迪士尼樂園",
+            tag: "東京",
+            weather: "☀️ 24°C",
+            events: [
+                { time: "07:30", type: "booking", icon: "fas fa-train", title: "搭車前往迪士尼", desc: "JR 京葉線 舞濱站，全程約 30 分鐘，記得確認 DPA 購買狀況。" },
+                { time: "08:30", type: "sight", icon: "fas fa-magic", title: "開園！直衝美女與野獸", desc: "一開園立即前往「美女與野獸城堡奇緣」，這是等待時間最長的設施（平均 120-180 分鐘）。" },
+                { time: "12:00", type: "food", icon: "fas fa-utensils", title: "午餐：Plaza Pavilion 餐廳", desc: "園區內景觀最好的餐廳之一，可以看到城堡全景，建議提前在 App 訂位。" },
+                { time: "13:30", type: "sight", icon: "fas fa-roller-coaster", title: "下午：解鎖各園區設施", desc: "巨雷山 / 太空山 / 鬼屋（幽靈公館）/ 飛天翱翔，使用 DPA 節省排隊時間。" },
+                { time: "20:00", type: "sight", icon: "fas fa-star", title: "夢之光幻想曲夜間遊行", desc: "提前 30 分鐘在城堡正對面佔位，場面壯觀！結束後搭車返回。" }
+            ]
+        },
+        {
+            date: "2025-10-03",
+            title: "東京 → 日光 一日遊",
+            tag: "日光",
+            weather: "🌤️ 18°C",
+            events: [
+                { time: "08:00", type: "booking", icon: "fas fa-train", title: "搭東武日光線出發", desc: "從淺草站搭乘「特急スペーシア」，約2小時抵達東武日光站。" },
+                { time: "10:30", type: "sight", icon: "fas fa-torii-gate", title: "日光東照宮", desc: "德川家康長眠之地，必看「眠り猫」「三猿」「鳴き龍」等著名雕刻，入場費 ¥1,300。" },
+                { time: "13:00", type: "food", icon: "fas fa-utensils", title: "午餐：湯波（湯波揚げ）", desc: "日光名物「湯葉（豆腐皮）料理」，推薦「湯葉揚げ定食」¥1,800。" },
+                { time: "14:30", type: "sight", icon: "fas fa-water", title: "華嚴瀑布", desc: "高度 97 公尺，日本三大名瀑之一！搭電梯下到觀瀑台 ¥570。秋天楓葉季最美。" },
+                { time: "17:00", type: "booking", icon: "fas fa-train", title: "返回東京", desc: "搭乘特急返回淺草，建議 17:00 前出發，晚間回到東京還能逛夜市。" }
+            ]
+        },
+        {
+            date: "2025-10-04",
+            title: "東京 → 大阪（新幹線）",
+            tag: "大阪",
+            weather: "☀️ 25°C",
+            events: [
+                { time: "08:30", type: "booking", icon: "fas fa-train", title: "東京站搭乘新幹線", desc: "搭乘「ひかり」號（JR Pass可搭），約2小時40分抵達新大阪站，記得事先劃位！" },
+                { time: "11:30", type: "booking", icon: "fas fa-hotel", title: "Check-in 大阪飯店", desc: "Cross Hotel Osaka｜心斎橋附近，地鐵方便，建議寄存行李後立即出發。" },
+                { time: "13:00", type: "sight", icon: "fas fa-castle", title: "大阪城公園", desc: "免費入公園，天守閣門票 ¥600。金色外牆在藍天下超美，登頂可俯瞰大阪全景。" },
+                { time: "16:00", type: "buy", icon: "fas fa-shopping-bag", title: "心齋橋・道頓堀購物", desc: "松本清藥妝・Don Quijote・H&M・Zara，晚上必拍格力高跑者廣告牌！" },
+                { time: "19:00", type: "food", icon: "fas fa-utensils", title: "晚餐：道頓堀美食街", desc: "必吃：蟹道樂（海鮮）/ 金龍拉麵（24小時）/ 一蘭拉麵 / 章魚燒（會津屋）。" }
+            ]
+        },
+        {
+            date: "2025-10-05",
+            title: "大阪 → 京都 古都漫遊",
+            tag: "京都",
+            weather: "🌤️ 22°C",
+            events: [
+                { time: "08:00", type: "booking", icon: "fas fa-train", title: "搭 JR 前往京都", desc: "大阪 ➔ 京都 約 15 分鐘（¥580），或搭阪急電車更省錢（¥410）。" },
+                { time: "09:00", type: "sight", icon: "fas fa-torii-gate", title: "伏見稲荷大社・千本鳥居", desc: "免費！建議走到「四ツ辻」展望台（40-60分鐘），景色絕佳。越早越少人！" },
+                { time: "11:30", type: "sight", icon: "fas fa-leaf", title: "清水寺・三年坂", desc: "世界遺產清水舞台，門票 ¥400。順遊三年坂、二年坂購買抹茶甜點與伴手禮。" },
+                { time: "14:00", type: "sight", icon: "fas fa-tree", title: "嵐山竹林・渡月橋", desc: "搭嵐電（京福電鐵）前往嵐山（¥220）。竹林拍照建議下午光線充足前完成。" },
+                { time: "17:30", type: "food", icon: "fas fa-utensils", title: "晚餐：錦市場周邊", desc: "錦天滿宮前的錦市場（16:00後攤販較多），推薦「たこ棒」「玉子焼き」「湯豆腐」。" }
+            ]
+        },
+        {
+            date: "2025-10-06",
+            title: "京都深度文化巡禮",
+            tag: "京都",
+            weather: "☁️ 20°C",
+            events: [
+                { time: "08:30", type: "sight", icon: "fas fa-building", title: "金閣寺（鹿苑寺）", desc: "鍍金寺廟倒映水面超夢幻！門票 ¥500，建議 9:00 前抵達避開人潮。" },
+                { time: "10:30", type: "sight", icon: "fas fa-spa", title: "嵯峨野觀光小火車（需預約）", desc: "龜岡 ➔ 嵯峨 全程約25分鐘，秋天楓葉超美。票價 ¥880，提前至少1週購票。" },
+                { time: "13:00", type: "food", icon: "fas fa-utensils", title: "午餐：宇治 中村藤吉", desc: "百年老店抹茶甜點，「生茶ゼリィ」¥1,350，假日排隊約60分鐘，記得先抽號碼牌！" },
+                { time: "15:00", type: "sight", icon: "fas fa-archway", title: "東福寺・通天橋", desc: "楓葉季最美秘境！通天橋俯瞰滿山紅葉超壯觀，門票 ¥1,000（紅葉期）。" },
+                { time: "18:30", type: "food", icon: "fas fa-utensils", title: "晚餐：祇園・花見小路", desc: "在祇園區享用正宗懷石料理或京都家庭料理「おばんざい」，偶爾可見藝妓出行。" }
+            ]
+        },
+        {
+            date: "2025-10-07",
+            title: "奈良 ＋ 返回大阪",
+            tag: "奈良",
+            weather: "☀️ 23°C",
+            events: [
+                { time: "09:00", type: "booking", icon: "fas fa-train", title: "搭車前往奈良", desc: "從京都搭近鐵特急（¥910/50分）或 JR（¥720/44分），皆可抵達奈良站。" },
+                { time: "10:00", type: "sight", icon: "fas fa-paw", title: "奈良公園・餵小鹿", desc: "奈良小鹿是天然紀念物！可購買「鹿仙貝」餵食，注意小鹿會搶食，看好包包！" },
+                { time: "11:30", type: "sight", icon: "fas fa-monument", title: "東大寺・大佛殿", desc: "全球最大木造建築！奈良大佛高達 15 公尺，門票 ¥600。記得鑽大佛鼻孔柱！" },
+                { time: "13:00", type: "food", icon: "fas fa-utensils", title: "午餐：奈良町散策", desc: "奈良町老街享用「柿の葉すし」（柿葉壽司）或「三輪そうめん」，價格親民。" },
+                { time: "15:30", type: "booking", icon: "fas fa-train", title: "返回大阪，晚間自由活動", desc: "近鐵返回大阪難波站。傍晚可前往梅田 Grand Front 或 HEP Five 摩天輪。" }
+            ]
+        },
+        {
+            date: "2025-10-08",
+            title: "大阪環球影城 USJ",
+            tag: "大阪",
+            weather: "☀️ 26°C",
+            events: [
+                { time: "07:30", type: "booking", icon: "fas fa-train", title: "搭JR夢咲線前往USJ", desc: "從大阪站搭 JR 環狀線 + 夢咲線，約30分鐘，JR Pass可搭至USJ站。" },
+                { time: "09:00", type: "sight", icon: "fas fa-gamepad", title: "超級任天堂世界！", desc: "一入園直衝！戴上能量手環（¥3,500）體驗AR互動打金幣，玩瑪利歐卡丁車賽車。" },
+                { time: "11:00", type: "sight", icon: "fas fa-hat-wizard", title: "哈利波特魔法世界", desc: "搭乘「哈利波特禁忌之旅」！飛天掃帚3D體驗，再喝一杯奶油啤酒（熱/冷 ¥800）。" },
+                { time: "13:00", type: "food", icon: "fas fa-utensils", title: "午餐：三根掃帚", desc: "園區內哈利波特區餐廳，英式炸魚薯條 ¥1,600，建議11:30前或14:00後用餐避高峰。" },
+                { time: "14:30", type: "sight", icon: "fas fa-star", title: "侏羅紀世界・其他設施", desc: "侏羅紀世界水上冒險、小小兵、好萊塢夢飛車，請善用Express Pass跳過排隊！" }
+            ]
+        },
+        {
+            date: "2025-10-09",
+            title: "大阪購物 & 自由日",
+            tag: "大阪",
+            weather: "🌤️ 24°C",
+            events: [
+                { time: "10:00", type: "buy", icon: "fas fa-store", title: "心齋橋 BIGA&PLAZA 商圈", desc: "Bic Camera 電器、藥妝比拼（松本清 vs. Tsuruha Drug），記得索取免稅！" },
+                { time: "12:00", type: "food", icon: "fas fa-utensils", title: "午餐：自由選擇", desc: "推薦：北極星蛋包飯（心斎橋本店）/ 難波大阪燒「千房」/ 立食壽司（大起水産）。" },
+                { time: "14:00", type: "buy", icon: "fas fa-shopping-bag", title: "難波 Don Quijote", desc: "24小時巨型雜貨店，美妝/零食/電器均有。夜間更便宜！推薦買眼藥水、護膚品。" },
+                { time: "17:00", type: "sight", icon: "fas fa-eye", title: "自由活動選擇", desc: "可選：梅田空中庭園展望台（¥1,500）/ 大阪天守閣夜景 / 心斎橋逛街到打烊。" },
+                { time: "20:00", type: "food", icon: "fas fa-utensils", title: "告別晚餐：難波串揚げ", desc: "道頓堀串炸名店「だるま」，現炸現吃超過癮，記得遵守一串只沾一次醬的規定！" }
+            ]
+        },
+        {
+            date: "2025-10-10",
+            title: "大阪 ✈ 台北，平安返家",
+            tag: "大阪",
+            weather: "☀️ 25°C",
+            events: [
+                { time: "08:00", type: "booking", icon: "fas fa-train", title: "搭 JR 前往關西機場 KIX", desc: "大阪站搭 Haruka 特急（JR Pass可搭），約80分鐘到 KIX。建議提前3小時出發。" },
+                { time: "10:30", type: "booking", icon: "fas fa-plane", title: "關西機場候機", desc: "辦理退稅（免稅品不要提前使用）、完成電子申報（Visit Japan Web）。" },
+                { time: "13:00", type: "booking", icon: "fas fa-plane-departure", title: "搭機返台 BR XXXX", desc: "KIX ➔ TPE，飛行時間約 2.5 小時，準時歸國！" },
+                { time: "16:00", type: "booking", icon: "fas fa-home", title: "抵達桃園機場 T2", desc: "歡迎回家！記得清點行李，日本限制帶回：香菸 200 支、酒 1 公升、新台幣 10 萬以內。" }
+            ]
+        }
+    ];
+
+    // ==========================================
+    // ===         購物清單資料               ===
+    // ==========================================
+    const shoppingList = [
+        {
+            category: "💊 藥妝",
+            color: "pink",
+            items: [
+                { name: "眼藥水（參天、Rohto）", qty: "各 2 瓶" },
+                { name: "口服美白（資生堂Transino）", qty: "依需求" },
+                { name: "痠痛貼布（撒隆巴斯）", qty: "5 盒" },
+                { name: "整腸錠（太田胃散）", qty: "1-2 盒" },
+                { name: "防曬乳（Anessa 安耐曬）", qty: "1 瓶" }
+            ]
+        },
+        {
+            category: "🍫 零食伴手禮",
+            color: "amber",
+            items: [
+                { name: "白色戀人（北海道）", qty: "3-5 盒" },
+                { name: "東京芭那那", qty: "2 盒" },
+                { name: "京都八橋（生八橋）", qty: "2 盒" },
+                { name: "大阪章魚燒餅乾", qty: "2 盒" },
+                { name: "抹茶 KitKat / Pocky", qty: "依需求" }
+            ]
+        },
+        {
+            category: "👗 服飾配件",
+            color: "purple",
+            items: [
+                { name: "優衣庫（UNIQLO）UT 限定款", qty: "依喜好" },
+                { name: "GU 褲款（日本限定）", qty: "依喜好" },
+                { name: "雨傘（日本折疊傘質量佳）", qty: "1-2 把" }
+            ]
+        },
+        {
+            category: "🔌 電器 3C",
+            color: "blue",
+            items: [
+                { name: "任天堂 Switch 遊戲卡帶（日版）", qty: "依喜好" },
+                { name: "Panasonic / Hitachi 小型家電", qty: "注意電壓" },
+                { name: "充電線 / 行動電源（飛行限制）", qty: "視需要" }
+            ]
+        }
+    ];
+
+    // ==========================================
+    // ===         行李清單資料               ===
+    // ==========================================
+    const luggageList = [
+        {
+            category: "📄 證件文件",
+            color: "blue",
+            items: ["護照（有效期6個月以上）", "機票確認單（印出或截圖）", "JR Pass 兌換券", "飯店確認單（各間）", "旅遊保險單", "緊急聯絡卡（日語/英語）"]
+        },
+        {
+            category: "💳 金錢財務",
+            color: "green",
+            items: ["日幣現金（建議帶 JPY 30,000 起跳）", "VISA/Master 信用卡（海外刷卡）", "Suica / ICOCA IC卡", "備用信用卡（放不同地方）"]
+        },
+        {
+            category: "👕 衣物",
+            color: "orange",
+            items: ["天數+2 套內衣褲", "外套（依季節，洋蔥式穿法）", "舒適球鞋（走路多！）", "拖鞋（入住旅館用）", "泳衣（若有溫泉/游泳行程）", "正式服裝（若有高級餐廳）"]
+        },
+        {
+            category: "💊 藥品健康",
+            color: "red",
+            items: ["腸胃藥（旅行者腹瀉常見）", "退燒止痛藥", "暈車藥（新幹線/巴士用）", "Band-Aid 創口貼（新鞋磨腳）", "防蚊液（夏季用）", "個人必備藥（處方藥備足）"]
+        },
+        {
+            category: "🔌 3C 電器",
+            color: "purple",
+            items: ["手機充電線", "行動電源（100Wh以下）", "萬用插頭轉換器（日本110V/Type-A）", "相機 + 記憶卡 + 備用電池", "耳機 / 頸枕（長途飛機用）"]
+        },
+        {
+            category: "🛁 盥洗備品",
+            color: "cyan",
+            items: ["牙刷牙膏（飯店通常有提供）", "護膚保濕品（日本乾燥）", "防曬乳 SPF50+", "香皂（溫泉區有規定）", "個人衛生用品"]
+        }
+    ];
+
+    // ==========================================
+    // ===         全域狀態                    ===
+    // ==========================================
+    let currentIndex = 0;
+    const dayNames = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+    const monthNames = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+
+    // ==========================================
+    // ===         Tab 切換                    ===
+    // ==========================================
+    function switchTab(tabId) {
+        const views = ['itinerary','spots','tools','transport','shopping','luggage','notes'];
+        views.forEach(v => {
+            const el = document.getElementById('view-' + v);
+            el.classList.add('hidden');
+            el.classList.remove('block');
+            const btn = document.getElementById('tab-' + v);
+            if (btn) {
+                btn.classList.remove('active');
+                btn.classList.add('text-gray-500');
+            }
+        });
+        const target = document.getElementById('view-' + tabId);
+        target.classList.remove('hidden');
+        target.classList.add('block');
+        const activeBtn = document.getElementById('tab-' + tabId);
+        if (activeBtn) {
+            activeBtn.classList.add('active');
+            activeBtn.classList.remove('text-gray-500');
+        }
+
+        if (tabId === 'shopping') renderShoppingList();
+        if (tabId === 'luggage') renderLuggageList();
+    }
+
+    // ==========================================
+    // ===         日期導航                    ===
+    // ==========================================
+    function buildDateNav() {
+        const nav = document.getElementById('date-nav');
+        nav.innerHTML = '';
+        itineraryData.forEach((day, idx) => {
+            const d = new Date(day.date + 'T12:00:00');
+            const pill = document.createElement('button');
+            pill.className = 'date-pill flex flex-col items-center px-3 py-1.5 rounded-full cursor-pointer shrink-0 ' + (idx === 0 ? 'active text-white' : 'text-gray-500 hover:text-gray-800 hover:bg-gray-100');
+            pill.innerHTML = `<span class="text-[10px] font-bold">${dayNames[d.getDay()]}</span><span class="text-[15px] font-black leading-tight">${d.getDate()}</span>`;
+            pill.onclick = () => changeDay(idx);
+            nav.appendChild(pill);
+        });
+    }
+
+    function scrollNav(dir) {
+        const nav = document.getElementById('date-nav');
+        nav.scrollBy({ left: dir === 'left' ? -120 : 120, behavior: 'smooth' });
+    }
+
+    // ==========================================
+    // ===         渲染日行程                  ===
+    // ==========================================
+    function changeDay(idx) {
+        if (idx < 0 || idx >= itineraryData.length) return;
+        currentIndex = idx;
+        const day = itineraryData[idx];
+        const d = new Date(day.date + 'T12:00:00');
+
+        document.getElementById('card-date').textContent = d.getDate();
+        document.getElementById('card-day-week').textContent = dayNames[d.getDay()];
+        document.getElementById('card-month').textContent = monthNames[d.getMonth()] + ' ' + d.getFullYear();
+        document.getElementById('card-tag').textContent = day.tag;
+        document.getElementById('card-weather').innerHTML = day.weather;
+        document.getElementById('card-title').textContent = day.title;
+
+        // Events
+        const eventsEl = document.getElementById('card-events');
+        eventsEl.innerHTML = '';
+        day.events.forEach(ev => {
+            const colors = {
+                food: { bg:'bg-red-50', border:'border-red-200', icon:'text-red-500', time:'text-red-400' },
+                sight: { bg:'bg-blue-50', border:'border-blue-200', icon:'text-blue-500', time:'text-blue-400' },
+                buy: { bg:'bg-pink-50', border:'border-pink-200', icon:'text-pink-500', time:'text-pink-400' },
+                booking: { bg:'bg-green-50', border:'border-green-200', icon:'text-green-500', time:'text-green-400' },
+                story: { bg:'bg-gray-50', border:'border-gray-200', icon:'text-gray-400', time:'text-gray-400' },
+            };
+            const c = colors[ev.type] || colors['story'];
+            const typeLabels = { food:'餐飲', sight:'景點', buy:'購物', booking:'預訂', story:'故事' };
+            const card = document.createElement('div');
+            card.className = `day-event-card ${c.bg} ${c.border} border rounded-xl p-3 md:p-4 flex gap-3`;
+            card.innerHTML = `
+                <div class="shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-full bg-white flex items-center justify-center ${c.icon} shadow-sm border ${c.border}">
+                    <i class="${ev.icon} text-sm"></i>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex flex-wrap items-center gap-2 mb-1">
+                        <span class="text-[11px] font-bold ${c.time} font-mono">${ev.time}</span>
+                        <span class="badge badge-${ev.type}">${typeLabels[ev.type] || ''}</span>
+                    </div>
+                    <p class="font-bold text-[13.5px] md:text-[14.5px] text-gray-800 leading-snug">${ev.title}</p>
+                    <p class="text-[12px] md:text-[13px] text-gray-500 mt-1 leading-relaxed">${ev.desc}</p>
+                </div>`;
+            eventsEl.appendChild(card);
+        });
+
+        // Update date pills
+        document.querySelectorAll('.date-pill').forEach((pill, i) => {
+            if (i === idx) {
+                pill.classList.add('active', 'text-white');
+                pill.classList.remove('text-gray-500', 'hover:text-gray-800', 'hover:bg-gray-100');
+            } else {
+                pill.classList.remove('active', 'text-white');
+                pill.classList.add('text-gray-500', 'hover:text-gray-800', 'hover:bg-gray-100');
+            }
+        });
+
+        // Update prev/next buttons
+        document.getElementById('btn-prev').style.visibility = idx > 0 ? 'visible' : 'hidden';
+        document.getElementById('btn-next').style.visibility = idx < itineraryData.length - 1 ? 'visible' : 'hidden';
+
+        // Scroll pill into view
+        const pills = document.querySelectorAll('.date-pill');
+        if (pills[idx]) pills[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+        // Fade animation
+        const card = document.getElementById('main-card-content');
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(8px)';
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            });
+        });
+    }
+
+    // ==========================================
+    // ===         渲染購物清單               ===
+    // ==========================================
+    function renderShoppingList() {
+        const el = document.getElementById('shopping-list');
+        if (el.children.length > 0) return;
+        const colorMap = {
+            pink: { bg:'bg-pink-50', border:'border-pink-100', title:'text-pink-800', dot:'bg-pink-400' },
+            amber: { bg:'bg-amber-50', border:'border-amber-100', title:'text-amber-800', dot:'bg-amber-400' },
+            purple: { bg:'bg-purple-50', border:'border-purple-100', title:'text-purple-800', dot:'bg-purple-400' },
+            blue: { bg:'bg-blue-50', border:'border-blue-100', title:'text-blue-800', dot:'bg-blue-400' },
+        };
+        shoppingList.forEach(group => {
+            const c = colorMap[group.color] || colorMap.blue;
+            const div = document.createElement('div');
+            div.className = `${c.bg} ${c.border} border rounded-xl p-4`;
+            div.innerHTML = `<h4 class="font-bold text-[14px] ${c.title} mb-3">${group.category}</h4>
+                <ul class="space-y-2">${group.items.map(item => `
+                <li class="flex items-center gap-2 text-[13px] text-gray-700">
+                    <input type="checkbox" class="w-4 h-4 rounded accent-rose-500">
+                    <span class="flex-1">${typeof item === 'string' ? item : item.name}</span>
+                    ${item.qty ? `<span class="text-[11px] text-gray-400 shrink-0">${item.qty}</span>` : ''}
+                </li>`).join('')}</ul>`;
+            el.appendChild(div);
+        });
+    }
+
+    // ==========================================
+    // ===         渲染行李清單               ===
+    // ==========================================
+    function renderLuggageList() {
+        const el = document.getElementById('luggage-list');
+        if (el.children.length > 0) return;
+        const colorMap = {
+            blue: 'bg-blue-50 border-blue-100 text-blue-800',
+            green: 'bg-green-50 border-green-100 text-green-800',
+            orange: 'bg-orange-50 border-orange-100 text-orange-800',
+            red: 'bg-red-50 border-red-100 text-red-800',
+            purple: 'bg-purple-50 border-purple-100 text-purple-800',
+            cyan: 'bg-cyan-50 border-cyan-100 text-cyan-800',
+        };
+        luggageList.forEach(group => {
+            const c = colorMap[group.color] || 'bg-gray-50 border-gray-100 text-gray-800';
+            const [bg, border, title] = c.split(' ');
+            const div = document.createElement('div');
+            div.className = `${bg} ${border} border rounded-xl p-4`;
+            div.innerHTML = `<h4 class="font-bold text-[14px] ${title} mb-3">${group.category}</h4>
+                <ul class="space-y-2">${group.items.map(item => `
+                <li class="flex items-center gap-2 text-[13px] text-gray-700">
+                    <input type="checkbox" class="w-4 h-4 rounded accent-rose-500">
+                    <span>${item}</span>
+                </li>`).join('')}</ul>`;
+            el.appendChild(div);
+        });
+    }
+
+    // ==========================================
+    // ===            初始化                   ===
+    // ==========================================
+    document.addEventListener('DOMContentLoaded', () => {
+        buildDateNav();
+        changeDay(0);
+
+        // Auto select today's date if it matches
+        const today = new Date().toISOString().split('T')[0];
+        const todayIdx = itineraryData.findIndex(d => d.date === today);
+        if (todayIdx !== -1) changeDay(todayIdx);
+    });
+    </script>
+</body>
+</html>
