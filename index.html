@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
@@ -701,20 +701,22 @@
                     title: "抵達機場（成田/羽田）",
                     desc: "預計耗時 1.5 小時，過海關提領行李，預抓 1 小時。",
                     badges: [{cls:"booking", icon:"fa-plane", text:"入境辦理"}],
-                    notice: { icon: "fa-clock", text: "預計耗時 1.5 小時", warning: "過海關＋提領行李，預抓充裕時間，不要緊張！" }
+                    tip: { title: "入境流程導覽", content: "1. 機上先填好Visit Japan Web的入境審查QR Code，走快速通道省時。<br>2. 提領行李後，確認行李箱未損毀再離開。<br>3. 成田→上野搭 Skyliner 約41分；羽田→上野搭 JR 京濱東北線約40分。" },
+                    notice: { icon: "fa-clock", text: "時間推算提醒", warning: "14:00落地→出關約1小時→抵上野16:00→租車16:30。班機若延誤，務必提前聯絡車行更改取車時間！" }
                 },
                 {
                     time: "16:00", type: "booking", icon: "fas fa-key",
                     title: "【租車組】上野租車取車",
                     desc: "請出示日文駕照譯本與台灣護照，確認 ETC 卡與保險範圍。",
                     badges: [{cls:"booking", icon:"fa-key", text:"取車"}],
-                    tip: { title: "取車現場注意事項", content: "1. 出示<b>日文駕照譯本</b>（必須，沒有無法取車）<br>2. 確認車內 ETC 卡已設定<br>3. 確認保險涵蓋範圍，建議選自負額 ¥0 方案<br>4. 在停車場先熟悉一下車內設備（雨刷位置等）" }
+                    tip: { title: "導遊取車秘訣 🚙", content: "1. <b>日文駕照譯本</b>絕對不能忘，沒有則100%無法取車。<br>2. 保險建議直上最高級（自負額¥0 + NOC免責補償）。<br>3. 確認 ETC 卡已啟用，確認車內備有駕車手冊與安全三角架。<br>4. <b>日本靠左行駛！</b>上車後先在停車場練習幾次左轉，再上路。" }
                 },
                 {
                     time: "17:30", type: "transport", icon: "fas fa-car",
                     title: "自駕前往下田飯店",
                     desc: "走東名高速 → 伊豆縱貫道，車程約 3.5 小時。",
-                    notice: { icon: "fa-car", text: "車程約 3.5 小時", warning: "長途駕駛極度疲勞，務必換手輪流開！建議在足柄 SA 休息 15 分鐘。" }
+                    tip: { title: "路線與休息點建議", content: "建議路線：東名高速（東京IC）→ 沼津IC → 伊豆縱貫道 → 下田。<br>必停：<b>海老名SA</b>（東名最大休息站），有豐富美食、商店可採購補給，也是長途夜車前養精蓄銳的好地方。" },
+                    notice: { icon: "fa-car", text: "長途夜車警告", warning: "週末傍晚出東京容易塞車（東名高速大和~厚木段）。抵達下田多數餐廳20:00打烊，建議在途中SA解決晚餐！" }
                 }
             ]
         },
@@ -729,35 +731,35 @@
                     title: "第一站：龍宮窟",
                     desc: "神祕的愛心形海蝕洞與天然天窗，享受早晨平靜的海風。",
                     badges: [{cls:"sight", icon:"fa-heart", text:"天窗洞"}],
-                    tip: { title: "拍照看點", content: "從洞頂往下看可以拍到完美的愛心形開口，建議站在天窗下方往上拍，光線從上方灑下效果最夢幻。" }
+                    tip: { title: "導遊私房拍攝點 📸", content: "停車場在入口旁，收費約¥500。建議先爬上坡往天窗俯拍愛心形開口，再下到沙灘仰拍天窗光束。<b>退潮時可走到洞底</b>，效果更夢幻！出發前可查詢當日下田潮汐時間。" }
                 },
                 {
                     time: "11:45", type: "food", icon: "fas fa-utensils",
                     title: "午餐：下田港美食二選一",
                     desc: "選項 A：金目亭（招牌金目鯛海鮮丼）/ 選項 B：Ra-maru（黑船漢堡）",
                     badges: [{cls:"food", icon:"fa-fish", text:"招牌金目鯛"}],
-                    notice: { icon: "fa-map-marker-alt", text: "下田港休息站（大停車場好停）", warning: "選項 A 金目亭 (海鮮丼) / 選項 B Ra-maru (黑船漢堡)" }
+                    notice: { icon: "fa-clock", text: "導遊注意事項", warning: "「金目亭」只營業到15:00，且食材賣完提早打烊！強烈建議11:45趕到，先入座吃飯。金目鯛燉煮定食（金目煮付け定食）是本店極品，一定要點！" }
                 },
                 {
                     time: "13:30", type: "sight", icon: "fas fa-camera",
                     title: "第二站：白濱海灘 & 白浜神社",
-                    desc: "參拜古老神社，走到沙灘拍矗立在海中礁石上的「紅色海上鳥居」。",
+                    desc: "參拜古老神社，沙灘拍礁石上的「紅色海上鳥居」，海水是夢幻Tiffany藍。",
                     badges: [{cls:"sight", icon:"fa-camera", text:"Tiffany藍海水"}],
-                    tip: { title: "必拍建議", content: "海水是美麗的 Tiffany 藍！鳥居在礁石上，退潮時可走近拍特寫。最好帶防水拖鞋以防礁石打濕。" }
+                    tip: { title: "神社與海灘小提醒", content: "白浜神社是伊豆最古老的神社（約2400年歷史），境內有數棵千年古木，入內參拜結緣。沙灘靠近鳥居礁石的區域浪花會打濕鞋，建議穿防水涼鞋或自備塑膠袋套腳。" }
                 },
                 {
                     time: "16:00", type: "sight", icon: "fas fa-walking",
                     title: "傍晚：看體力二選一",
                     desc: "想走走 → 培里之路咖啡廳；想躺平 → 搭下田纜車登頂看全景。",
                     badges: [{cls:"story", icon:"fa-leaf", text:"慢活行程"}],
-                    notice: { icon: "fa-leaf", text: "培里之路 vs 下田纜車", warning: "培里之路：沿柳川漫步，石板路旁有咖啡廳和小店。下田纜車：登頂俯瞰下田港全景，可以眺望伊豆七島。" }
+                    notice: { icon: "fa-route", text: "行程選擇建議", warning: "若天氣晴朗推薦下田纜車（寝姿山ロープウェイ，來回約¥1,250），傍晚光線最美，從山頂可遠眺整個下田港與伊豆七島！若體力較差，就選培里之路石板街咖啡廳悠閒坐坐。" }
                 },
                 {
                     time: "19:00", type: "food", icon: "fas fa-utensils",
-                    title: "晚餐：在地小吃 or 飯店開趴",
-                    desc: "上の山亭有神級金目鯛炒飯；7-11 買炸雞泡麵回飯店洗澡開趴！",
+                    title: "晚餐：在地小吃 or 飯店放鬆",
+                    desc: "上の山亭有神級金目鯛炒飯；或便利商店買炸雞泡麵回飯店洗澡開趴！",
                     badges: [{cls:"tip", icon:"fa-star", text:"極致放鬆"}],
-                    tip: { title: "上の山亭 推薦點法", content: "金目鯛拉麵 ¥1,200、金目鯛炒飯 ¥1,000、煎餃。<br>車程 5 分鐘，門口好停車，不用訂位，早點去。" }
+                    tip: { title: "導遊在地美食推薦", content: "「上の山亭」是當地人也愛去的中華料理，無需訂位，車程5分鐘。必點：<b>金目鯛炒飯</b>、<b>金目鯛拉麵</b>，份量大CP值高。若太累就去便利商店買食物，第一天先好好休息，明天才有體力！" }
                 }
             ]
         },
@@ -770,50 +772,50 @@
                 {
                     time: "10:00", type: "transport", icon: "fas fa-car",
                     title: "下田飯店出發 → 城崎海岸",
-                    desc: "沿國道 135 號北上，車程約 40 分鐘。",
-                    notice: { icon: "fa-map-marked-alt", text: "沿國道 135 號北上", warning: "沿海岸線開，海景超美！建議慢慢開欣賞風景。" }
+                    desc: "沿國道 135 號北上，車程約 40 分鐘，沿途海景絕美。",
+                    notice: { icon: "fa-car", text: "沿海單線道注意", warning: "國道135號部分路段只有單線道，遇到假日或慢速車輛須耐心等待超車時機。行車時間請多抓15分鐘彈性。" }
                 },
                 {
                     time: "10:40", type: "sight", icon: "fas fa-mountain",
                     title: "第一站：城崎海岸 & 門脇吊橋",
                     desc: "黑色熔岩斷崖奇景，吊橋下是洶湧的波浪，氣勢磅礴。",
                     badges: [{cls:"sight", icon:"fa-water", text:"熔岩斷崖"}],
-                    tip: { title: "參觀建議", content: "這時候體力最好，適合走走吊橋（搖晃感很強，心臟弱請小心）。大約停留 45 分鐘，再繼續前往大室山。" }
+                    tip: { title: "步道與拍攝導覽 🥾", content: "停車場約¥500，沿步道走到吊橋約10分鐘。<b>門脇燈塔可免費登高</b>，從上方俯瞰吊橋與熔岩海岸是最好的拍攝角度！風大時吊橋晃動明顯，高空恐懼症患者請評估。" }
                 },
                 {
                     time: "11:40", type: "food", icon: "fas fa-utensils",
-                    title: "午餐：Ohmuro Luncheonette（大室軽食堂）",
-                    desc: "位於大室山纜車站旁，非常熱門，建議提早 11:40 抵達避開人潮。",
+                    title: "午餐：大室山附近（Ohmuro Luncheonette）",
+                    desc: "位於大室山纜車站旁，非常熱門，建議11:40提早抵達。",
                     badges: [{cls:"food", icon:"fa-utensils", text:"大室軽食堂"}],
-                    notice: { icon: "fa-clock", text: "提早 11:40 抵達避人潮", warning: "位於大室山纜車站旁，停車場就在旁邊。這家非常熱門，建議開門就進去排。" },
-                    tip: { title: "用餐提示", content: "推薦使用伊豆石盛裝的精緻定食，份量剛好，吃完體力充沛繼續上山。" }
+                    tip: { title: "吃完直衝纜車", content: "餐廳就在大室山纜車旁，動線最順！吃飽直接買纜車票上山，不用移車。午餐時間若人滿，旁邊有其他小販與自動販賣機可解決口腹之慾。" }
                 },
                 {
                     time: "13:00", type: "sight", icon: "fas fa-mountain",
                     title: "第二站：大室山 ⛰️（搭纜車登頂）",
-                    desc: "搭纜車上山，環繞火山口散步一圈，是陽光最足、海景最亮的時候。",
+                    desc: "搭纜車上山環繞火山口散步一圈，360度海景＆富士山展望。",
                     badges: [{cls:"sight", icon:"fa-mountain", text:"抹茶布丁山"}],
-                    tip: { title: "登頂必做三件事", content: "1. 環繞火山口走一圈（約 20 分鐘）<br>2. 找角度拍大室山的「抹茶布丁」造型<br>3. 360度遠眺：天氣好可以看到富士山！" }
+                    tip: { title: "登頂必做三件事", content: "纜車來回約¥1,000。<b>注意：山頂完全無遮蔽！</b>帽子要夾好，防曬做足。<br>1. 環繞火山口步道走一圈（約20分鐘）。<br>2. 找角度拍「抹茶布丁造型」全景。<br>3. 火山口底部有射箭場（約¥1,000），體驗武士修行感，強烈推薦！" },
+                    notice: { icon: "fa-wind", text: "天氣條件", warning: "若當天強風或大雨，纜車可能停駛！出發前可致電確認（電話查Google地圖）。" }
                 },
                 {
                     time: "14:15", type: "sight", icon: "fas fa-paw",
                     title: "第三站：伊豆仙人掌公園 🦫",
-                    desc: "就在大室山對面，走路就到。重點看水豚泡湯與半開放小動物。",
+                    desc: "就在大室山對面，步行可達。水豚、袋鼠、狐獴近距離接觸！",
                     badges: [{cls:"sight", icon:"fa-paw", text:"療癒水豚"}],
-                    tip: { title: "水豚泡湯時間", content: "水豚露天溫泉（カピバラの湯）是冬季才有，6月是夏季活動，但依然可以近距離接觸水豚、狐獴等小動物，超療癒！" }
+                    tip: { title: "動物接觸指南", content: "門票約¥2,700，可在Klook或KKday上購買電子票折價。6月是夏季，沒有冬季限定的溫泉水豚（那是11月~2月），但可以購買動物飼料親自餵食水豚與袋鼠。狐獴站在你肩膀上的體驗超好玩！" }
                 },
                 {
                     time: "16:15", type: "transport", icon: "fas fa-car",
                     title: "一路向北，直奔熱海",
-                    desc: "從大室山沿國道 135 號北上，車程約 45 分鐘。",
-                    notice: { icon: "fa-car", text: "車程約 45 分鐘", warning: "預計 17:00 抵達熱海飯店 Check-in，行李放好可以先泡澡休息。" }
+                    desc: "國道 135 號北上，車程約 45 分鐘。",
+                    notice: { icon: "fa-car", text: "黃昏塞車警報", warning: "傍晚進熱海市區容易塞車，且熱海飯店停車場通常在山坡上，需小心上坡窄路。建議17:00前抵達飯店。" }
                 },
                 {
                     time: "18:30", type: "food", icon: "fas fa-fire",
                     title: "晚餐：健康燒肉 Honori 熱海店",
-                    desc: "在飯店放完行李稍作休息後，出門享用美味的燒肉大餐，慰勞一天的疲勞！",
+                    desc: "放好行李稍事休息後，出門大口吃黑毛和牛燒肉！",
                     badges: [{cls:"food", icon:"fa-fire", text:"健康焼肉ほのり"}],
-                    tip: { title: "用餐提示", content: "這家採用健康黑毛和牛，油脂分布均勻但不膩口。強烈建議點<b>牛舌</b>和<b>特上霜降</b>，搭配他們自製的醬料，是當天最舒壓的一餐。" }
+                    tip: { title: "訂位建議", content: "座位不多，請務必請飯店櫃台幫忙打電話訂位（日語訂位更有禮貌）。必點：<b>厚切牛舌</b>、<b>特上霜降和牛</b>。搭配他們自製的特調醬料，是熱海最頂的一餐。" }
                 }
             ]
         },
@@ -826,31 +828,31 @@
                 {
                     time: "09:30", type: "sight", icon: "fas fa-tree",
                     title: "第一站：來宮神社（2100年神木）",
-                    desc: "趁早吸收神木芬多精，在附設的茶寮喝拿鐵、吃點心，拍美美的照片。",
+                    desc: "吸收神木芬多精，附設茶寮喝拿鐵、拍美照。",
                     badges: [{cls:"sight", icon:"fa-tree", text:"2100年神木"}],
-                    tip: { title: "神木參拜方式", content: "據說繞行大楠一圈，壽命延長一年！邊走邊感受千年巨木的能量。附設的「茶寮 縁（えにし）」咖啡廳超美，桌子就在樹根旁，建議進去坐坐。" }
+                    tip: { title: "神社導覽重點", content: "傳說繞大楠一圈延壽一年，人多時請有序排隊緩步前行。境內的<b>茶寮 縁（えにし）</b>咖啡廳有「焦がし饅頭（焦糖麻糬）」是必吃名產！" },
+                    notice: { icon: "fa-parking", text: "停車場注意", warning: "來宮神社附設停車場位子極少且免費，平日9點後就容易客滿！建議停旁邊的收費停車場（約¥500/小時），步行約3分鐘。" }
                 },
                 {
                     time: "11:00", type: "sight", icon: "fas fa-palette",
                     title: "第二站：MOA 美術館（看展＋午餐）",
-                    desc: "開車攻頂，停進大停車場，館內有無敵海景與三星甜點主廚監修的咖啡廳。",
+                    desc: "開車攻頂，館內有無敵海景與三星甜點主廚監修的咖啡廳。",
                     badges: [{cls:"sight", icon:"fa-palette", text:"國寶藝術"}, {cls:"tip", icon:"fa-star", text:"三星甜點"}],
-                    notice: { icon: "fa-parking", text: "開車攻頂！", warning: "停進大停車場，館內有無敵海景與名廚餐廳。" },
-                    tip: { title: "必訪 鎧塚俊彥 La Pâtisserie", content: "由三星甜點主廚監修！強推 MOA 限定甜點：<br>• <b>cassis（カシス）</b>：無花果、焦糖與黑醋栗慕斯蛋糕。<br>• <b>熱海烤布蕾</b>：濃郁香草佐大美伊豆牧場焦糖冰淇淋。" }
+                    tip: { title: "導遊看點解說", content: "門票約¥1,700（官網購買略有折扣）。入館必體驗：<b>萬花筒光廊（手扶梯）</b>，幾何光影非常壯觀。<br>館內鎮館之寶：尾形光琳的『紅白梅圖屏風』（日本國寶）。<br>午餐在館內的<b>Toshi Yoroizuka Atami</b>吃限定甜點，俯瞰相模灣，是本日最奢華體驗。" },
+                    notice: { icon: "fa-car", text: "停車資訊", warning: "美術館大型停車場免費，車子直接開上去。但美術館閉館時間是16:00（最後入場15:30），請注意時間！" }
                 },
                 {
                     time: "14:00", type: "hotel", icon: "fas fa-car",
                     title: "開車前往樂天 STAY 熱海",
-                    desc: "車程 15 分鐘，把車子穩穩停在專屬車位，開啟無壓力逛街模式！",
-                    notice: { icon: "fa-car", text: "車程 15 分鐘", warning: "把車停好！接下來逛商店街可以輕鬆不帶車，明天再用車。" }
+                    desc: "車停飯店，開啟無壓力逛街模式！",
+                    notice: { icon: "fa-car", text: "停車策略", warning: "熱海車站周邊停車費貴且易滿！最佳做法：把車停在飯店，改搭計程車或市區公車（約¥200起）往返商店街，完全不用擔心停車問題。" }
                 },
                 {
                     time: "14:30", type: "buy", icon: "fas fa-shopping-bag",
                     title: "第三站：熱海站前商店街爆買！",
-                    desc: "搭計程車或公車不到 5 分鐘，雙手空空盡情買，不用搶停車位！",
+                    desc: "計程車約5分鐘抵達，雙手空空盡情購物！",
                     badges: [{cls:"food", icon:"fa-store", text:"吃貨模式"}, {cls:"buy", icon:"fa-shopping-bag", text:"買伴手禮"}],
-                    notice: { icon: "fa-taxi", text: "交通：計程車或市區公車", warning: "不用去車站前搶昂貴車位，搭車不到 5 分鐘。" },
-                    tip: { title: "商店街必吃攻略 🎯", content: "雙手空空盡情買！必吃清單：<br>1. <b>熱海プリン Café 2nd</b>（熱海布丁，滑嫩鹹蛋黃口味最特別）<br>2. <b>磯揚げ まる天</b>（現炸海鮮黑輪，芝士竹輪超好吃）<br>3. <b>又一庵謹製 熱海ばたーあん</b>（紅豆奶油吐司，必買！）<br>4. 剛出爐的<b>溫泉饅頭</b>（各家口味不同，買幾顆比較）" }
+                    tip: { title: "導遊必吃名單 🎯", content: "商店街約17:00陸續關門，請把握時間！<br>1. <b>熱海布丁（熱海プリン）</b>：招牌焦糖口味＋鹹蛋黃口味，復古牛奶瓶裝超萌。<br>2. <b>磯揚げ まる天</b>：現炸海鮮黑輪，起司竹輪是極品，站著吃最對味。<br>3. <b>又一庵 熱海ばたーあん</b>：紅豆奶油麵包非常搶手。<br>4. 各家溫泉饅頭（買幾顆比較口味！）。" }
                 }
             ]
         },
@@ -864,62 +866,61 @@
                     time: "09:00", type: "transport", icon: "fas fa-car",
                     title: "熱海退房 → 驅車直奔沼津港",
                     desc: "沿國道 135 號北上後接東名，車程約 45 分鐘。",
-                    notice: { icon: "fa-car", text: "車程約 45 分鐘", warning: "9:45 抵達沼津港，這時候停車位非常好找！不要太晚到。" }
+                    tip: { title: "路線選擇", content: "可選沿海的國道135號欣賞風景，或走東名高速快速通過。建議走東名沼津IC下，直接導航到「沼津港 大型展望水門 View-O 停車場」，停一次車搞定全部行程！" }
                 },
                 {
                     time: "09:45", type: "buy", icon: "fas fa-shopping-bag",
                     title: "市場搶先逛（伴手禮速掃）🛍️",
-                    desc: "水族館開門前先把最想要的「真空包裝一夜干」與田丸屋「山葵鹽/美乃滋」買齊，放回車上的冷氣房。",
+                    desc: "水族館開門前先把「真空包裝一夜干」與田丸屋「山葵美乃滋」買齊，放回車上的冷氣房。",
                     badges: [{cls:"buy", icon:"fa-shopping-bag", text:"無負擔逛街"}],
-                    tip: { title: "內行買法", content: "先買好再去玩，不用整個上午提著大包小包！特別推薦：<br>• 田丸屋 山葵美乃滋（超好配飯，只有靜岡才有）<br>• 一夜干（金目鯛、金槍魚）真空包裝可帶回台灣" }
+                    tip: { title: "在地私房伴手禮", content: "<b>田丸屋 山葵美乃滋</b>是靜岡限定，一般超市很難找到，沼津港市場特產店必買！真空包裝的金目鯛一夜干可帶回台灣，記得放在托運行李中。" }
                 },
                 {
                     time: "10:00", type: "sight", icon: "fas fa-fish",
                     title: "🐠 沼津深海水族館",
                     desc: "準時開門第一波進場！看各種奇特的駿河灣深海生物。",
                     badges: [{cls:"sight", icon:"fa-fish", text:"腔棘魚標本"}],
-                    tip: { title: "最佳觀賞品質", content: "開門即進，館內最安靜最舒適！必看：<br>• <b>世界唯一腔棘魚冷凍標本</b>（3億年前的活化石）<br>• 深海發光魚類展示<br>• 駿河灣深海生物全系列" }
+                    tip: { title: "導遊看點解說", content: "門票約¥1,800。這是日本唯一深海主題水族館！<b>千萬不能錯過的是二樓的「腔棘魚冷凍標本」</b>，這是世界上唯一的標本，這種魚在恐龍時代就存在，非常震撼。規模不大，約1.5小時看完剛好。" }
                 },
                 {
                     time: "11:30", type: "food", icon: "fas fa-utensils",
-                    title: "🍱 午餐黃金時間（翻牌三選一）",
+                    title: "🍱 午餐黃金時間（沼津港三選一）",
                     desc: "壽司之助（滿溢壽司）/ 五鐵（海鮮三吃）/ かねはち（定食）",
                     badges: [{cls:"food", icon:"fa-utensils", text:"免排隊入座"}],
-                    notice: { icon: "fa-store", text: "餐廳剛開門，第一批入座", warning: "壽司之助（滿溢壽司）/ 五鐵（海鮮三吃）/ かねはち（定食）" },
-                    tip: { title: "完美時間差", content: "水族館出來剛好各大餐廳開門，完全不用在大太陽下排隊！趁現在人少，從容選好位子慢慢吃。" }
+                    notice: { icon: "fa-store", text: "完美時間差！", warning: "11:30是各大餐廳剛開門時間，不需曬太陽排隊就能直接入座！導遊首推<b>五鐵</b>的「深海魚三吃套餐」，最後用鮮魚高湯泡飯收尾，是沼津最在地的吃法。" }
                 },
                 {
                     time: "13:00", type: "sight", icon: "fas fa-water",
-                    title: "港邊消遣：巨型水門「View-O」散步 🌊",
-                    desc: "搭電梯到 30 公尺高的空中展望迴廊，吹著海風眺望駿河灣與富士山（門票 ¥100！）",
+                    title: "港邊：巨型水門「View-O」展望台 🌊",
+                    desc: "30公尺高的空中展望迴廊，票價只要 ¥100！",
                     badges: [{cls:"sight", icon:"fa-water", text:"富士山眺望"}],
-                    tip: { title: "CP值爆表體驗", content: "只要 ¥100 就能上去的展望台！如果天氣好，富士山清晰可見，配著廣闊的駿河灣，是沼津最美的角度之一。" }
+                    tip: { title: "全日本最大水門", content: "只要一枚¥100硬幣就能搭電梯到30公尺高空！晴天時駿河灣與富士山一覽無遺，是拍富士山絕景的隱藏景點，遊客很少，性價比爆表。" }
                 },
                 {
                     time: "14:30", type: "transport", icon: "fas fa-car",
                     title: "開車前往三島大吊橋",
-                    desc: "結束沼津港全攻略，吹著冷氣往山線移動，車程約 30 分鐘。",
-                    notice: { icon: "fa-car", text: "車程約 30 分鐘", warning: "沿著山路開，有機會遠眺富士山，停車場很大。" }
+                    desc: "車程約 30 分鐘，沿途爬山路。",
+                    notice: { icon: "fa-car", text: "山路駕駛注意", warning: "往三島大吊橋的路段會開始爬坡，重機與跑車很多，請注意後視鏡再換道。停車場很大且免費。" }
                 },
                 {
                     time: "15:00", type: "sight", icon: "fas fa-mountain",
                     title: "👑 三島大吊橋（Mishima Skywalk）",
-                    desc: "日本最長吊橋！下午 3 點整抵達，夕陽光影灑在山谷上最美，也是拍富士山最立體的時段。",
+                    desc: "日本最長吊橋（全長400m）！下午光線最佳，富士山清晰可見。",
                     badges: [{cls:"sight", icon:"fa-mountain", text:"日本最長吊橋"}],
-                    tip: { title: "最佳光影時刻", content: "下午 3 點，太陽在吊橋稍後方，光線最好拍照。吊橋全長 400 公尺，走到對面可以看到富士山最完整的身影。入場費 ¥1,100。" }
+                    tip: { title: "導遊拍攝秘訣＆加購建議", content: "門票¥1,100。<b>下午3點太陽在橋側後方，拍富士山最順光清晰！</b><br>走到對面後有小型景點區可以歇腳。若想體驗極限，現場加購<b>Zipline（約¥2,000）</b>，飛越山谷的感覺是此行最難忘的體驗之一！" }
                 },
                 {
                     time: "16:30", type: "transport", icon: "fas fa-car",
                     title: "順流直上，直奔箱根溫泉飯店",
-                    desc: "從三島大吊橋走箱根新道，輕鬆翻過山頭，正式進入箱根，車程約 30 分鐘。",
-                    notice: { icon: "fa-car", text: "車程約 30 分鐘", warning: "箱根新道是無料高速，爬坡後很快進入箱根市區，CHECK-IN 後記得先泡溫泉再吃飯！" }
+                    desc: "走箱根新道翻越山頭，車程約 30 分鐘進入箱根。",
+                    notice: { icon: "fa-car", text: "天黑前抵達！", warning: "箱根山路無路燈且常起霧！請務必在17:00天黑前抵達飯店。若遇大霧請開霧燈（前霧燈），放慢車速，切勿超車。" }
                 },
                 {
                     time: "17:00", type: "hotel", icon: "fas fa-hot-tub",
                     title: "抵達箱根 Check-in ♨️",
-                    desc: "時間非常優雅。放好行李喝杯熱茶，享用澎湃精緻的溫泉會席料理，再去泡個暖呼呼的箱根溫泉！",
+                    desc: "放好行李，換上浴衣，享用精緻溫泉會席料理，再泡暖呼呼的箱根溫泉！",
                     badges: [{cls:"booking", icon:"fa-hot-tub", text:"溫泉會席"}],
-                    tip: { title: "極致放鬆行程", content: "今晚是整趟旅程最頂的一晚！溫泉會席通常是多道精緻料理，慢慢享用不要急。吃完再去泡大浴場，把這幾天的疲勞全部泡掉。" }
+                    tip: { title: "溫泉旅館禮儀完整版", content: "1. Check-in後換上浴衣（Yukata），旅館內全程浴衣行走是文化。<br>2. 大浴場使用前必須在洗身區完整清洗全身。<br>3. <b>毛巾不可入浴池！</b>放在頭上或置於旁邊即可。<br>4. <b>有刺青者</b>請提前告知或預約個人包廂湯屋（貸切風呂），以免造成困擾。" }
                 }
             ]
         },
@@ -932,53 +933,53 @@
                 {
                     time: "06:30", type: "transport", icon: "fas fa-car",
                     title: "退房出發 🚗",
-                    desc: "清晨的山路完全沒車，開起來非常舒服。",
-                    notice: { icon: "fa-car", text: "行李直接上車", warning: "清晨出發！山區清晨涼爽，正是走路和拍照的最佳時機。" }
+                    desc: "清晨的山路完全沒車，開起來非常舒服，氣溫涼爽。",
+                    tip: { title: "清晨出發準備", content: "箱根清晨約15度，外套必備！很多旅館有提供早出行李寄存服務，可把不用的行李先寄放，輕裝出發。清晨山路偶爾有野生動物（鹿、猴子）出沒，保持警覺。" }
                 },
                 {
                     time: "07:00", type: "sight", icon: "fas fa-camera",
-                    title: "第一站：箱根神社・平和鳥居（完美包場）",
-                    desc: "07:00 準時卡位，光線最柔和，拍出天地間只有你們的鳥居神級大片。",
+                    title: "第一站：箱根神社・平和鳥居（黃金包場）",
+                    desc: "07:00 抵達，幾乎沒有遊客，拍出神級鳥居大片。",
                     badges: [{cls:"sight", icon:"fa-camera", text:"黃金包場"}],
-                    tip: { title: "拍攝建議", content: "這個時間幾乎沒有遊客！用 Insta360 拍平和鳥居完全沒人入鏡。拍完順著古木參天的參道走上本殿參拜，整段步行約 30 分鐘，神清氣爽。" }
+                    tip: { title: "導遊排隊預測 📸", content: "9:00以後來平和鳥居要排隊1-2小時！7:00抵達是神之操作。<b>停車直接進箱根神社免費停車場</b>，走下去只要3分鐘。拍完鳥居走上參道往本殿，古木參天、無人靜謐，整段體驗約30-40分鐘。" }
                 },
                 {
                     time: "09:00", type: "food", icon: "fas fa-coffee",
-                    title: "第二站：Bakery & Table 箱根（足湯頭等艙）",
-                    desc: "09:00 準時進店，搶下一樓戶外「溫泉足湯座位區」，邊泡足湯邊吃熱麵包看湖景。",
+                    title: "第二站：Bakery & Table（足湯頭等艙早餐）",
+                    desc: "09:00 準時到場，搶一樓戶外足湯座位，邊泡腳邊吃麵包看蘆之湖。",
                     badges: [{cls:"booking", icon:"fa-coffee", text:"足湯頭等艙"}],
-                    notice: { icon: "fa-clock", text: "09:00 準時進店", warning: "搶下最有名的一樓戶外「溫泉足湯座位區」，09:30 以後就難搶了！" },
-                    tip: { title: "慢活享受", content: "一邊泡著暖呼呼的足湯，一邊吃剛出爐、熱氣騰騰的麵包看蘆之湖，早起的疲勞瞬間全消！推薦點：可頌＋卡布奇諾。" }
+                    notice: { icon: "fa-clock", text: "黃金座位爭奪戰", warning: "一樓戶外足湯座位只有幾個！09:00開店前5分鐘到門口排候。自備小毛巾擦腳，或現場購買¥100一次性毛巾。" },
+                    tip: { title: "必點麵包推薦", content: "招牌「米粉咖哩麵包（中有半熟蛋）」與「箱根山羊奶吐司」。一邊泡著暖呼呼的溫泉足湯，一邊看蘆之湖上的海賊船緩緩前行，是箱根最奢華的早晨。" }
                 },
                 {
-                    time: "10:05", type: "sight", icon: "fas fa-running",
-                    title: "第三站：箱根驛傳博物館 & 元箱根港",
-                    desc: "順向開車 5 分鐘到箱根町港，看日本最熱血的大學接力賽歷史，在港口拍巨大的海賊船進港。",
+                    time: "10:00", type: "sight", icon: "fas fa-running",
+                    title: "第三站：元箱根港（海賊船拍攝＋箱根驛傳博物館）",
+                    desc: "看日本最熱血的大學接力賽歷史，在港口拍海賊船進港。",
                     badges: [{cls:"sight", icon:"fa-running", text:"熱血歷史"}],
-                    tip: { title: "看點", content: "箱根驛傳是每年 1 月元旦的傳統接力賽，博物館展示歷史照片與選手故事，非常感人。港口有固定時刻的觀光船「箱根海賊船」可以拍到很帥氣的角度。" }
+                    tip: { title: "海賊船最佳拍攝點", content: "在元箱根港或箱根町港岸邊等待，以蘆之湖與富士山為背景，拍即將靠岸的大海賊船最壯觀！箱根驛傳博物館免費參觀，展示每年元旦最熱血的大學接力賽歷史照片與故事。" }
                 },
                 {
                     time: "11:30", type: "food", icon: "fas fa-utensils",
-                    title: "第四站：箱根湯本商店街（蕎麥麵午餐＋買伴手禮）",
-                    desc: "開車走「箱根新道」一路下坡，抵達時剛好各大老字號餐廳剛開門，免排隊！",
+                    title: "第四站：箱根湯本（蕎麥麵午餐＋伴手禮）",
+                    desc: "開車走箱根新道下坡，各大老字號餐廳剛開門，第一批入座！",
                     badges: [{cls:"food", icon:"fa-utensils", text:"蕎麥麵午餐"}, {cls:"buy", icon:"fa-shopping-bag", text:"買伴手禮"}],
-                    notice: { icon: "fa-route", text: "開車走「箱根新道」一路下坡", warning: "抵達時剛好各大老字號餐廳剛開門，第一批入座！" },
-                    tip: { title: "完美動線", content: "吃蕎麥麵（推薦：初花、はつ花）→ 逛溫泉街 → 買伴手禮直接丟回車上，下午繼續輕裝出發。" }
+                    notice: { icon: "fa-parking", text: "湯本停車建議", warning: "箱根湯本車站附近停車很難找！導遊建議停在「市営第3駐車場」（約¥200/30分），走路3分鐘到商店街，逛完把戰利品丟回車上再輕裝出發。" },
+                    tip: { title: "蕎麥麵名店選擇", content: "午餐首推「はつ花 (Hatsuhana)」的自然薯蕎麥麵，口感獨特滑順。伴手禮必買「湯もっち（溫泉麻糬）」與現烤仙貝。11:30抵達是第一批入座的黃金時間！" }
                 },
                 {
-                    time: "14:00", type: "sight", icon: "fas fa-palette",
+                    time: "13:30", type: "sight", icon: "fas fa-palette",
                     title: "第五站：雕刻之森美術館",
-                    desc: "在森林與藝術品之間漫步 2 小時，必拍彩繪玻璃塔，節奏非常悠閒。",
+                    desc: "在森林與藝術品之間漫步，必拍彩繪玻璃塔。",
                     badges: [{cls:"sight", icon:"fa-palette", text:"午後藝術散步"}],
-                    tip: { title: "必拍打卡", content: "1. <b>彩繪玻璃塔</b>（The Hall of Happiness）：陽光照射玻璃的光影變化超夢幻。<br>2. 戶外大型雕塑群：畢卡索、摩爾的作品在山間展示。<br>3. 入場費 ¥1,600，下午人較少，好拍照。" }
+                    tip: { title: "網美打卡攻略", content: "門票約¥1,600。<b>彩繪玻璃塔（The Hall of Happiness）</b>：爬到塔頂，陽光照射玻璃的光影變化超夢幻，是打卡神點。園區內設有免費足湯，記得帶小毛巾。最後入場時間16:30，17:00閉館。" }
                 },
                 {
-                    time: "16:20", type: "sight", icon: "fas fa-mountain",
-                    title: "第六站：大湧谷 🌋（完美收工）",
-                    desc: "傍晚抵達！中午的可怕塞車車潮早就散了，輕鬆停進大停車場，吃延壽黑雞蛋、看火山煙。",
-                    badges: [{cls:"food", icon:"fa-egg", text:"黑雞蛋"}, {cls:"sight", icon:"fa-mountain", text:"夕陽富士山"}],
-                    notice: { icon: "fa-parking", text: "輕鬆停進大停車場", warning: "傍晚人潮散去，停車超輕鬆！如果運氣好，夕陽下的富士山是最壯觀的。" },
-                    tip: { title: "完美收工", content: "黑雞蛋：「吃一顆延壽7年」！每袋 5 顆 ¥600，每人建議最多吃 2 顆（硫磺味是特色，正常的）。火山口區域有封閉期，請確認當天是否開放。" }
+                    time: "15:30", type: "sight", icon: "fas fa-mountain",
+                    title: "第六站：大湧谷 🌋（趕在關門前！）",
+                    desc: "從雕刻之森開車約20分鐘，吃延壽黑雞蛋、看火山白煙。",
+                    badges: [{cls:"food", icon:"fa-egg", text:"黑雞蛋"}, {cls:"sight", icon:"fa-mountain", text:"火山奇景"}],
+                    notice: { icon: "fa-exclamation-triangle", text: "【重要！導遊強烈警告】", warning: "大湧谷停車場與商店約16:00-16:30關閉！從雕刻之森出發後，務必15:30前抵達，否則買不到黑雞蛋！同時出發前確認當日火山噴發警戒等級（Level 1=開放，Level 2+=部分管制）。" },
+                    tip: { title: "黑雞蛋傳說與享用方式", content: "「吃一顆大湧谷黑雞蛋延壽7年」！5顆一袋約¥500，每人建議吃1-2顆。硫磺味是正常的，黑色外殼是硫磺礦物質沉積，蛋白質正常。如運氣好，傍晚夕陽下的富士山是最壯觀的背景。" }
                 }
             ]
         },
@@ -989,27 +990,38 @@
             weather: "🌤️ 17°C",
             events: [
                 {
-                    time: "10:00", type: "buy", icon: "fas fa-shopping-bag",
-                    title: "御殿場 Premium Outlets 採買",
-                    desc: "腹地廣大，建議先在官網看好必逛品牌地圖。到達後第一件事：先去抽想吃餐廳的整理券！",
-                    badges: [{cls:"buy", icon:"fa-shopping-bag", text:"富士山絕景"}, {cls:"sight", icon:"fa-mountain", text:"富士山背景"}],
-                    tip: { title: "逛街攻略", content: "1. 抵達先抽餐廳號碼牌（さわやか 或 田むら銀かつ亭）<br>2. 按地圖規劃路線，分東西兩館依序逛<br>3. 退稅：購買後到退稅服務台，護照出示即可辦理<br>4. 天氣好時背景就是富士山，記得拍照！" }
+                    time: "09:30", type: "buy", icon: "fas fa-shopping-bag",
+                    title: "抵達 御殿場 Premium Outlets",
+                    desc: "全日本最大Outlet，富士山絕景背後！先在官網下載品牌地圖。",
+                    badges: [{cls:"buy", icon:"fa-shopping-bag", text:"血拼主場"}, {cls:"sight", icon:"fa-mountain", text:"富士山背景"}],
+                    tip: { title: "導遊攻略（精華版）🗺️", content: "園區分為West/East/Hill三館，建議路線：West（COACH、Kate Spade等精品）→ East（UNIQLO、GAP、運動品牌）→ Hill（日系品牌）。<br><b>到達後第一件事：直奔Sawayaka抽整理券！</b>拿到券後再去血拼等叫號。<br>退稅：購物後帶護照至退稅服務台辦理，當日消費滿¥5,000可退稅。" }
                 },
                 {
-                    time: "12:30", type: "food", icon: "fas fa-utensils",
-                    title: "排隊名店二選一（午餐 or 晚餐）",
-                    desc: "Sawayaka（さわやか）vs 田むら銀かつ亭，兩家都超熱門，務必提早抽號碼牌！",
-                    badges: [{cls:"food", icon:"fa-utensils", text:"神級漢堡排"}, {cls:"food", icon:"fa-leaf", text:"豆腐豬排"}],
-                    notice: { icon: "fa-store", text: "Sawayaka vs 田むら銀かつ亭", warning: "兩家都超級熱門，務必提早抽號碼牌！等待時間可以繼續逛街。" },
-                    tip: { title: "美食選擇", content: "<b>Sawayaka（さわやか）</b>：靜岡限定！鐵板現壓的爆汁半熟牛肉漢堡排，切開時粉嫩的中心最美味。<br><b>田むら銀かつ亭</b>：箱根名店！招牌「豆腐豬排煮」在鐵板上滋滋作響，溫和又超下飯。" }
+                    time: "09:45", type: "food", icon: "fas fa-ticket-alt",
+                    title: "【極密任務】搶抽 Sawayaka 整理券",
+                    desc: "10:00抽券，通常要等到13:00-14:00，抽完繼續逛街等叫號！",
+                    badges: [{cls:"tip", icon:"fa-running", text:"抽券衝刺"}],
+                    notice: { icon: "fa-exclamation-circle", text: "導遊血淚警告", warning: "Sawayaka（さわやか）漢堡排是靜岡縣限定名店！御殿場店等待時間常破2-3小時，10:00不抽券可能下午都吃不到！抽完可用手機號碼登記或App追蹤叫號進度，放心繼續逛街。" }
                 },
                 {
-                    time: "17:00", type: "hotel", icon: "fas fa-hotel",
-                    title: "自駕返回東京上野 & 飯店 Check-in 🏨",
-                    desc: "行李與戰利品直接上房間，避開週末傍晚回城塞車潮。",
+                    time: "13:00", type: "food", icon: "fas fa-utensils",
+                    title: "午餐：神級 Sawayaka 漢堡排",
+                    desc: "整理券叫號後入座，點招牌拳頭漢堡排！",
+                    badges: [{cls:"food", icon:"fa-utensils", text:"靜岡縣限定名店"}],
+                    tip: { title: "點餐完整指南", content: "必點：<b>拳頭漢堡排（げんこつハンバーグ）</b>，店員會在桌邊用鐵板壓切，五分熟的粉嫩牛肉最美味。沾日式醬汁或直接撒鹽吃都很讚。<br>若整理券時間太晚或排隊失敗，備案是「田むら銀かつ亭」的豆腐豬排煮定食。" }
+                },
+                {
+                    time: "15:30", type: "transport", icon: "fas fa-car",
+                    title: "逛到捨不得走，提早撤退回東京",
+                    desc: "避開週末傍晚東名塞車，預計車程 1.5 - 2 小時。",
+                    notice: { icon: "fa-car", text: "東名塞車時刻表", warning: "週五/六傍晚東名高速(御殿場→東京方向)極易大塞車！強烈建議16:00前離開Outlet，否則車程可能變3小時以上。" }
+                },
+                {
+                    time: "18:30", type: "hotel", icon: "fas fa-hotel",
+                    title: "上野飯店 Check-in 🏨",
+                    desc: "大包小包直接放上樓，輕鬆吃個晚餐！",
                     badges: [{cls:"booking", icon:"fa-hotel", text:"上野首晚"}],
-                    notice: { icon: "fa-car", text: "行李與戰利品直接上房間", warning: "避開週末傍晚回城塞車潮。抵達上野飯店先辦理 Check-in，把滿滿的收穫放回房間，輕鬆吃晚餐休息！" },
-                    tip: { title: "停車與休整", content: "先在飯店下行李並確認配合的停車場。今晚好好休息，為明天的池袋大冒險之行儲備精力！" }
+                    tip: { title: "入住上野的好處", content: "今天好好休息！確認明天早上還車的車行位置，以及附近最近的加油站。可以去阿美橫町吃個居酒屋，慶祝順利帶著大包小包戰利品回到東京。" }
                 }
             ]
         },
@@ -1022,46 +1034,45 @@
                 {
                     time: "09:30", type: "booking", icon: "fas fa-key",
                     title: "上野市區還車 🔑",
-                    desc: "還車前記得把油加滿，還完車後開啟「雙手空空無痛狂逛」模式！",
+                    desc: "還車前把油加滿，換回輕裝自由模式！",
                     badges: [{cls:"booking", icon:"fa-key", text:"自駕大功告成"}],
-                    notice: { icon: "fa-gas-pump", text: "還車前記得把油加滿", warning: "車行附近尋找加油站加滿無鉛汽油（レギュラー），還完車後一身輕！" },
-                    tip: { title: "還車後一身輕", content: "昨天就已辦妥入住手續，今天早上把背包等行李直接留在房間，還完車後，空手且完全沒有停車與塞車的負擔，超愜意！" }
+                    notice: { icon: "fa-gas-pump", text: "滿油還車規定", warning: "日本租車契約規定：<b>滿油還車</b>！導航找最近加油站，加「レギュラー（Regular，紅色油槍）」。保留加油收據，還車時車行會查驗！未滿油會按最高油價補收，非常不划算。" },
+                    tip: { title: "還車後一身輕", content: "昨晚已辦理飯店入住，行李安全在房間。還完車後，從此完全沒有停車與塞車的壓力！搭電車進出東京，輕鬆又快速。" }
                 },
                 {
                     time: "10:15", type: "transport", icon: "fas fa-subway",
-                    title: "搭電車前往池袋（JR 山手線）🚃",
-                    desc: "直達僅需 16 分鐘，週末的池袋人車極多，搭電車免塞車！",
-                    notice: { icon: "fa-subway", text: "直達僅需 16 分鐘", warning: "週末的池袋人車極多，搭電車到池袋是最明智的選擇，完全不用擔心停車問題。" }
+                    title: "搭 JR 山手線前往池袋",
+                    desc: "上野→池袋直達 16 分鐘，班次頻繁不用看時刻表。",
+                    tip: { title: "電車乘坐小教學", content: "搭乘「JR山手線（內回）」從上野出發，方向是「大崎・品川方向」，中途不需換車，約16分鐘直達池袋。刷 Suica/ICOCA 卡感應進出閘口即可。" }
                 },
                 {
                     time: "10:45", type: "buy", icon: "fas fa-gamepad",
-                    title: "第一站：太陽城 Sunshine City（扭蛋＋一番賞）",
-                    desc: "世界紀錄 3000 台扭蛋機的天堂、一番賞官方旗艦店，動漫迷的地獄（荷包的）！",
+                    title: "第一站：太陽城（扭蛋3000台＋一番賞）",
+                    desc: "吉尼斯世界紀錄3000台扭蛋！動漫迷的天堂，荷包的煉獄。",
                     badges: [{cls:"buy", icon:"fa-gamepad", text:"3000台扭蛋"}, {cls:"booking", icon:"fa-trophy", text:"一番賞官方店"}],
-                    tip: { title: "太陽城狂熱二重奏 🎯", content: "1. <b>扭蛋百貨總本店（ガシャポンのデパート）</b>：曾獲吉尼斯世界紀錄！3000台扭蛋機，最新款、超奇特、限定版應有盡有，轉到手抽筋！<br>2. <b>一番賞官方旗艦店（一番くじ公式ショップ）</b>：官方直營正版保證，現場體驗撕開抽獎券的極致快感！" }
+                    tip: { title: "扭蛋百貨攻略 🎯", content: "「ガシャポンのデパート」在太陽城 World Import Mart 3F。<br>備好大量¥100硬幣（現場有換幣機）。<br>一番賞官方旗艦店是現場體驗撕開賞券的最純粹快感，比台灣便宜且款式更新更多！" }
                 },
                 {
                     time: "13:15", type: "food", icon: "fas fa-utensils",
                     title: "午餐：麵創房 無敵家 🍜",
-                    desc: "池袋傳說豚骨拉麵！注意：僅收現金，去前記得準備好日幣現鈔！",
+                    desc: "池袋傳說豚骨拉麵，注意：現金支付！",
                     badges: [{cls:"food", icon:"fa-utensils", text:"豚骨拉麵傳奇"}],
-                    notice: { icon: "fa-money-bill-wave", text: "注意：僅收現金", warning: "排隊前記得確認身上有足夠日幣現鈔！旁邊有便利商店可以領錢。" },
-                    tip: { title: "無敵家必點吃法", content: "點招牌厚切極致叉燒，濃郁厚實的豚骨湯頭，擠一顆桌上的免費<b>現磨大蒜</b>進去，湯頭香氣直接昇華到另一個境界！" }
+                    notice: { icon: "fa-money-bill-wave", text: "重要注意事項", warning: "無敵家【只收現金！】去前請確認身上有足夠日幣（一碗約¥950-1,200）。另外不論何時都有排隊，預留40-60分鐘是基本，旁邊有便利商店可以領錢。" },
+                    tip: { title: "必點內行吃法", content: "點招牌「本丸麵」或「特製叉燒麵」。桌上有免費的<b>現磨大蒜</b>與激辛高菜，吃到一半擠大蒜進去，豚骨湯頭的香氣直接昇華！不敢吃蒜的可以跳過。" }
                 },
                 {
-                    time: "14:30", type: "buy", icon: "fas fa-store",
-                    title: "下午：池袋東口動漫老街（Animate & 二手店撿便宜）",
-                    desc: "Animate 旗艦店＋駿河屋/らしんばん 二手店，高手先逛二手店再決定要不要抽。",
-                    badges: [{cls:"buy", icon:"fa-store", text:"Animate旗艦店"}, {cls:"buy", icon:"fa-exchange-alt", text:"二手店撿便宜"}],
-                    tip: { title: "內行省錢秘辛 💡", content: "1. <b>Animate 池袋本店</b>：世界最大動漫旗艦店，9層樓高，最新扭蛋與一番賞情報最即時。<br>2. <b>らしんばん / K-BOOKS / 駿河屋</b>：重點！如果某一番賞沒抽到，先來二手店，別人抽到的 A 賞 B 賞都會在這裡以固定價格販售，有時比一直抽還划算！" }
+                    time: "14:45", type: "buy", icon: "fas fa-store",
+                    title: "下午：Animate旗艦店＋二手店省錢撿寶",
+                    desc: "世界最大動漫旗艦店 + 駿河屋/らしんばん 找平價戰利品。",
+                    badges: [{cls:"buy", icon:"fa-store", text:"Animate旗艦店"}, {cls:"buy", icon:"fa-exchange-alt", text:"二手店"}],
+                    tip: { title: "內行省錢秘辛 💡", content: "Animate池袋本店（9層樓）是全球最大，最新情報最齊全。<br><b>重點：</b>逛Animate前，<b>先去二手店</b>（駿河屋、Lashinbang、K-Books）！別人已抽到的A賞B賞會以固定標價賣出，有時比你一直抽更划算，而且還能確保拿到想要的那個賞！" }
                 },
                 {
                     time: "18:00", type: "food", icon: "fas fa-fire",
-                    title: "晚餐：敘敘苑 太陽城 60 店 🥩",
-                    desc: "在 Sunshine 60 大樓的 59 樓高空，吃頂級和牛燒肉，看璀璨的東京萬家燈火！",
+                    title: "晚餐：敘敘苑 太陽城60店（59樓夜景燒肉）",
+                    desc: "Sunshine 60大樓59樓，頂級和牛燒肉配東京萬家燈火！",
                     badges: [{cls:"sight", icon:"fa-star", text:"59F 高空夜景"}, {cls:"food", icon:"fa-fire", text:"頂級黑毛和牛"}],
-                    notice: { icon: "fa-envelope-open-text", text: "必看預約提示", warning: "強烈建議提早一個月於官網預約窗邊的對坐席！" },
-                    tip: { title: "高空燒肉盛宴", content: "在 Sunshine 60 大樓 59 樓，一邊吃著入口即化的頂級燒肉，一邊看著窗外璀璨明亮的東京萬家燈火，完美結束滿載而歸的池袋狂熱之夜！" }
+                    notice: { icon: "fa-envelope-open-text", text: "訂位＆服裝提醒", warning: "強烈建議出發前一個月在官網或電話預訂<b>窗邊景觀位</b>！餐廳氣氛較正式，建議穿著Smart Casual，勿穿拖鞋、短褲或無袖。" }
                 }
             ]
         },
@@ -1073,38 +1084,39 @@
             events: [
                 {
                     time: "10:00", type: "sight", icon: "fas fa-tree",
-                    title: "上午：上野恩賜公園散步",
-                    desc: "飯店就在附近，睡飽再出發。可以去上野動物園看熊貓，或在星巴克喝杯咖啡。",
+                    title: "上午：上野公園散步 & 悠閒早餐",
+                    desc: "飯店就在附近，睡飽再出發，享受自在的東京早晨。",
                     badges: [{cls:"sight", icon:"fa-tree", text:"休閒芬多精"}],
-                    tip: { title: "悠閒早晨", content: "上野動物園是大貓熊的家，如果有帶小孩非常推薦！也可以在上野公園的露天咖啡廳慢慢吃早餐，感受東京人的悠閒假日。" }
+                    tip: { title: "上野公園小指南", content: "公園非常大，主要景點：上野動物園（大貓熊！）、國立西洋美術館（柯比意建築/UNESCO世遺）、東京都美術館。公園內的星巴克位置絕美，適合悠閒吃早餐。不必硬排，今天是自由度最高的一天。" }
                 },
                 {
                     time: "12:00", type: "food", icon: "fas fa-utensils",
                     title: "午餐：阿美橫町平民美食",
-                    desc: "邊走邊吃，體驗最接地氣的東京市場文化！",
-                    badges: [{cls:"food", icon:"fa-utensils", text:"鐵火丼/肉餅"}],
-                    notice: { icon: "fa-store", text: "邊走邊吃", warning: "阿美橫町各攤販都是平民價！推薦：大統領（燒烤）、海鮮丼現做攤位，很多都是站著吃。" }
+                    desc: "體驗最接地氣的東京市場文化！邊走邊吃。",
+                    badges: [{cls:"food", icon:"fa-utensils", text:"平民美食"}],
+                    tip: { title: "必吃街頭小吃推薦", content: "1. <b>肉の大山</b>：現炸「メンチカツ（炸肉餅）」超多汁！配啤酒站著吃是最道地的下町文化。<br>2. <b>みなとや</b>：平價海鮮丼，¥500-800就有大份量。<br>3. <b>大統領</b>：路邊串燒居酒屋，午後就很熱鬧，非常接地氣。" }
                 },
                 {
-                    time: "14:00", type: "buy", icon: "fas fa-shopping-bag",
+                    time: "13:30", type: "buy", icon: "fas fa-shopping-bag",
                     title: "下午：阿美橫町 & 多慶屋狂掃",
-                    desc: "買到雙手提不動，可以隨時走回飯店放戰利品，這就是住上野最大的特權！",
-                    badges: [{cls:"buy", icon:"fa-shopping-bag", text:"藥妝零食"}],
-                    tip: { title: "上野住宿優勢", content: "多慶屋：超大型雜貨百貨，從藥妝到食材到電器都有，而且比其他地方便宜 5-10%！買到手軟了就回飯店放，休息一下再繼續。這種彈性只有住上野才有！" }
+                    desc: "住上野最大特權：買到提不動就跑回飯店放，再繼續買！",
+                    badges: [{cls:"buy", icon:"fa-shopping-bag", text:"藥妝零食狂掃"}],
+                    notice: { icon: "fa-bullhorn", text: "藥妝店選擇攻略", warning: "阿美橫町的「OS Drug」通常價格最低，但<b>只收現金且無退稅服務</b>！<br>若要刷卡＋退稅，請去：<b>多慶屋（紫色大樓，7層樓）</b>或<b>松本清、大國藥妝</b>，貨品更齊全且有完整退稅服務。" },
+                    tip: { title: "多慶屋必逛樓層", content: "多慶屋是上野最大綜合購物中心！各樓層分類：B1食品、1F化妝品、2F藥妝、3-4F雜貨家電、5F服裝。買到手軟就回飯店放，住上野就是可以這樣爽快反覆！" }
                 },
                 {
                     time: "17:00", type: "sight", icon: "fas fa-gamepad",
-                    title: "傍晚：秋葉原動漫聖地",
-                    desc: "從上野搭 JR 僅需 3 分鐘，體驗日本最濃厚的 ACG 文化！",
-                    badges: [{cls:"sight", icon:"fa-gamepad", text:"電器與扭蛋"}],
-                    tip: { title: "宅文化體驗", content: "電器：Yodobashi Camera（最大、可退稅）。動漫：Sofmap、Lashinbang（二手中古）。還有女僕咖啡廳，從上野搭 JR 只要 3 分鐘，超方便！" }
+                    title: "傍晚：秋葉原補貨（JR 3分鐘直達）",
+                    desc: "上野→秋葉原僅3分鐘，電器＆扭蛋補齊遺珠！",
+                    badges: [{cls:"sight", icon:"fa-gamepad", text:"電器扭蛋天堂"}],
+                    tip: { title: "秋葉原採買重點", content: "電器首選：<b>Yodobashi Camera Multimedia Akiba</b>（最大，退稅+刷卡+積點全有）。<br>動漫扭蛋：Radio會館、中央通各棟大樓都有。<br>二手收藏：Sofmap、Lashinbang秋葉原店，超多二手周邊。" }
                 },
                 {
                     time: "19:30", type: "food", icon: "fas fa-beer",
-                    title: "晚餐：上野居酒屋街",
-                    desc: "在高架橋下的日式居酒屋（如大統領）喝杯生啤酒，為完美的旅程乾杯！",
-                    badges: [{cls:"food", icon:"fa-beer", text:"串燒啤酒"}],
-                    tip: { title: "完美收尾", content: "上野阿美橫町的大統領是最具代表性的大眾居酒屋，露天座位在橋下，氣氛絕佳！串燒搭生啤酒，是最道地的東京居酒屋體驗。" }
+                    title: "晚餐：上野居酒屋街，為旅程乾杯！",
+                    desc: "高架橋下的下町居酒屋，串燒＋生啤，完美收尾。",
+                    badges: [{cls:"food", icon:"fa-beer", text:"下町居酒屋"}],
+                    tip: { title: "在地居酒屋體驗", content: "「大統領」或「肉の大山」傍晚氣氛超棒！坐在高架橋下的露天攤位，點幾串もつ焼き（內臟串燒）和一杯生ビール（生啤酒），體驗最真實的東京下町夜晚。這是旅行最後能量儲備，明天認真打包！" }
                 }
             ]
         },
@@ -1116,37 +1128,36 @@
             events: [
                 {
                     time: "09:30", type: "hotel", icon: "fas fa-suitcase",
-                    title: "飯店退房與行李寄放",
-                    desc: "將行李先寄放在櫃台，準備最後的補齊作戰！",
+                    title: "飯店退房與行李整理",
+                    desc: "把行李先寄放在櫃台，輕裝進行最後採買！",
                     badges: [{cls:"booking", icon:"fa-suitcase", text:"打包戰利品"}],
-                    notice: { icon: "fa-info-circle", text: "退房手續", warning: "把沉甸甸的行李先寄放在飯店，準備最後一輪採買！" }
+                    notice: { icon: "fa-balance-scale", text: "行李超重提醒", warning: "請向飯店借用行李秤（Luggage Scale）確認重量！超重罰金一般每公斤¥3,000-¥5,000，非常貴。退稅的食品類商品必須放在<b>托運行李</b>中，不可在出境前拆封。" }
                 },
                 {
                     time: "10:00", type: "buy", icon: "fas fa-gift",
-                    title: "二木の菓子（伴手禮最終補貨）",
-                    desc: "各種日本零食、伴手禮這邊最齊全，把握最後機會裝滿行李箱！",
-                    badges: [{cls:"buy", icon:"fa-gift", text:"買免稅"}],
-                    tip: { title: "終極採買", content: "二木の菓子就在上野阿美橫町旁，是伴手禮界的天堂！各種餅乾、糖果、日本限定零食一應俱全，而且可以退稅。最後機會，好好把握！" }
+                    title: "二木の菓子（伴手禮終極補貨）",
+                    desc: "各種零食伴手禮最齊全，最後機會！",
+                    badges: [{cls:"buy", icon:"fa-gift", text:"大採購"}],
+                    notice: { icon: "fa-clock", text: "時間控制", warning: "二木の菓子免稅退稅排隊可能需要20-30分鐘！請在11:00前完成採購結帳，保留充裕時間前往京成上野站搭Skyliner。" },
+                    tip: { title: "最後採購攻略", content: "各口味KitKat、Pocky、帆船巧克力、梅片等，這裡通常比機場免稅店便宜15-20%！建議先在機場免稅店確認哪些東西比較貴，再回頭在這裡大量採購。" }
                 },
                 {
                     time: "12:30", type: "transport", icon: "fas fa-train",
-                    title: "搭乘 Skyliner 前往成田機場",
-                    desc: "從京成上野直達成田機場約 41 分鐘，全車對號座超舒適！",
-                    badges: [{cls:"booking", icon:"fa-train", text:"京成電鐵"}],
-                    notice: { icon: "fa-bolt", text: "最速交通", warning: "從京成上野直達機場約 41 分鐘，全車對號座超舒適！不用在複雜的東京車站迷路轉車，拖著行李直接從上野上車就是爽！" },
-                    tip: { title: "上野的最大優勢", content: "整趟旅程住上野的最大優勢在這裡！不用在複雜的東京車站迷路轉車，拖著行李直接從京成上野站上 Skyliner，輕鬆直達成田。" }
+                    title: "搭 Skyliner 前往成田機場",
+                    desc: "京成上野 → 成田，全車對號座，41分鐘直達！",
+                    badges: [{cls:"booking", icon:"fa-train", text:"快速抵達機場"}],
+                    tip: { title: "乘車流程", content: "京成上野站在地下室，注意不是JR上野站！<br>1. 至京成上野站售票機購票（或事先在Klook/KKday買好電子票）。<br>2. 選擇座位後拿實體車票感應進閘口。<br>3. 月台在地下2樓，按指標走即可。Skyliner是全程對號座，非常舒適！" }
                 },
                 {
                     time: "14:00", type: "flight", icon: "fas fa-plane-departure",
-                    title: "抵達成田機場辦理登機",
-                    desc: "入關後還可以買 Tokyo Banana、白色戀人等機場限定伴手禮！",
+                    title: "成田機場辦理登機手續",
+                    desc: "3小時前抵達機場，辦完手續後逛免稅店買最後伴手禮！",
                     badges: [{cls:"booking", icon:"fa-plane-departure", text:"準備起飛"}],
-                    tip: { title: "機場免稅店巡禮", content: "成田機場免稅店必買：<br>• Tokyo Banana（多種口味）<br>• 白色戀人（北海道限定口味）<br>• 羽田機場限定款（看時間是否去羽田）<br>別忘了在出發前到廁所把購買的食品類商品吃掉或整理好，不要放在免稅品袋裡混入。" }
+                    tip: { title: "機場流程與最後採購", content: "1. 確認搭的是哪個Terminal（T1、T2或T3），Skyliner停T2，其他Terminal有接駁電車。<br>2. 辦完Check-in後去辦理退稅（把退稅商品準備好，工作人員會查驗）。<br>3. 過安檢後逛免稅店必買：<b>Tokyo Banana、Royce生巧克力（要冷藏！）、白色戀人</b>。<br>4. 回程飛機上填好台灣的入境申報單（有無攜帶肉類相關食品等）。" }
                 }
             ]
         }
     ];
-
     // ==========================================
     // ===         購物清單資料               ===
     // ==========================================
