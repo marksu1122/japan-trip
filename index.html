@@ -326,6 +326,17 @@
                 </div>
             </div>
 
+            <!-- 🍽️ 餐廳必點美食 & 預訂攻略 -->
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-2 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-utensils text-rose-500"></i> 🍽️ 餐廳必點美食 & 預訂攻略
+                </h3>
+                <p class="text-[12.5px] text-gray-500 mb-4">整理此行 10 天內所有列出的餐廳，包含推薦菜色、估計預算以及在地導遊的排隊或訂位攻略。</p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="restaurant-rec-list">
+                    <!-- Dynamically rendered restaurant cards -->
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -623,19 +634,102 @@
     <div id="view-notes" class="hidden px-3 md:px-4 relative z-10">
         <div class="max-w-3xl mx-auto space-y-4 md:space-y-6">
 
-            <div class="bg-red-50 p-4 md:p-5 rounded-xl border border-red-200 soft-shadow">
-                <h4 class="font-bold text-red-800 text-[14.5px] md:text-base mb-3 flex items-center gap-2">
-                    <i class="fas fa-exclamation-circle"></i> 🚨 出發前必辦事項（Deadline 前完成）
-                </h4>
-                <ul class="text-[13px] md:text-[13.5px] text-gray-700 space-y-2 list-disc pl-4">
-                    <li><strong>日文駕照譯本：</strong>至監理所辦理，費用約 NT$100，當天即可取件。<span class="text-red-600 font-bold">沒有就無法取車！</span></li>
-                    <li><strong>Visit Japan Web 電子申報：</strong>入境日本前需完成線上申報，建議在飛機上填好，到了就可以直接走快速通道。</li>
-                    <li><strong>Skyliner 回程車票：</strong>建議提前購買京成 Skyliner 回程票（京成上野 → 成田），省去現場排隊。</li>
-                    <li><strong>Welcome Suica / ICOCA：</strong>可在台灣機場或網路預購，抵日後免排隊直接使用。</li>
-                    <li><strong>御殿場 Premium Outlets 品牌確認：</strong>出發前在官網確認想去的品牌是否有貨，腹地很大建議規劃路線。</li>
-                </ul>
+            <!-- 📋 行前準備代辦清單 -->
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-tasks text-rose-500"></i> 📋 行前準備代辦清單
+                </h3>
+                <p class="text-[12.5px] text-gray-500 mb-4">距離出發時間有限，請依照時間段完成以下事項。勾選後系統會自動保存您的進度！</p>
+                <div class="space-y-4" id="notes-checklist">
+                    <!-- Dynamically rendered checklists -->
+                </div>
             </div>
 
+            <!-- 💰 省錢達人終極攻略 -->
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-piggy-bank text-amber-500"></i> 💰 省錢達人終極攻略
+                </h3>
+                <div class="space-y-4 text-[13px] text-gray-700 leading-relaxed">
+                    <div class="p-3.5 rounded-xl bg-amber-50/50 border border-amber-100">
+                        <h4 class="font-bold text-amber-800 text-[14px] mb-2">🛍️ 御殿場 Outlets 外國遊客限定優惠</h4>
+                        <ol class="list-decimal pl-4 space-y-1.5">
+                            <li>前往 <a href="https://www.premiumoutlets.co.jp/vc/gotemba/" target="_blank" class="text-rose-500 underline font-bold">御殿場官網</a> 下載「訪日外國人限定優待券」電子版。</li>
+                            <li>搭配 <b>JCB 信用卡</b> 在指定品牌店鋪消費可享額外退稅或折扣。</li>
+                            <li><b>退稅手續：</b>同店當日消費滿 ¥5,000 以上，帶護照至各品牌結帳或退稅櫃台辦理（10% 退稅）。</li>
+                        </ol>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-pink-50/50 border border-pink-100">
+                        <h4 class="font-bold text-rose-800 text-[14px] mb-2">💊 藥妝最省採買策略</h4>
+                        <ul class="list-disc pl-4 space-y-1.5">
+                            <li><b>OS Drug（阿美橫町）：</b>價格通常是全東京最便宜，但<span class="text-rose-600 font-bold">只收現金、沒有退稅</span>。適合買少量非大量囤貨的藥品。</li>
+                            <li><b>多慶屋（上野）：</b>7 層樓超齊全，支援免稅且可刷卡。刷指定信用卡有額外優惠，適合大量採買以達到退稅門檻（¥5,000）。</li>
+                            <li><b>松本清/大國藥妝：</b>可刷卡及退稅，部分品項有額外折扣券，建議與 OS Drug 比價後購買。</li>
+                            <li>💡 <b>推薦策略：</b>少量且急用的在 OS Drug 現金購買；大宗藥妝在多慶屋一次刷卡退稅！</li>
+                        </ul>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-purple-50/50 border border-purple-100">
+                        <h4 class="font-bold text-purple-800 text-[14px] mb-2">🎯 一番賞與動漫商品省錢策略</h4>
+                        <ul class="list-disc pl-4 space-y-1.5">
+                            <li><b>採買順序：</b>先逛二手店（駿河屋 → Lashinbang → K-Books）→ 找不到目標賞直接買 → 最後才去官方店抽一番賞。</li>
+                            <li>💡 <b>原因：</b>日本二手市場非常發達，許多玩家抽到的 A 賞/B 賞會直接賣給二手店。二手店以固定標價販售，通常比您自己盲抽的期望值成本更低、更保險！</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 💸 預估省錢明細 -->
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-3 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-calculator text-blue-500"></i> 💸 預估總省錢金額（以 4 人同行估算）
+                </h3>
+                <div class="overflow-x-auto rounded-xl border border-gray-200">
+                    <table class="w-full text-[13px] text-left bg-white">
+                        <thead class="bg-gray-50 text-gray-700 border-b">
+                            <tr>
+                                <th class="p-3 font-bold">項目</th>
+                                <th class="p-3 font-bold">每人省下</th>
+                                <th class="p-3 font-bold">4 人共省</th>
+                                <th class="p-3 font-bold">備註</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y text-gray-700">
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 font-semibold">Klook 預購景點門票</td>
+                                <td class="p-3 text-green-600 font-medium">~¥1,250</td>
+                                <td class="p-3 text-green-600 font-bold">~¥5,000 (約 NT$1,100)</td>
+                                <td class="p-3">大室山、仙人掌公園、MOA、水族館、三島吊橋、雕刻之森</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 font-semibold">Skyliner 來回/單程預購</td>
+                                <td class="p-3 text-green-600 font-medium">¥270</td>
+                                <td class="p-3 text-green-600 font-bold">¥1,080</td>
+                                <td class="p-3">京成上野往成田，Klook 比現場購買划算</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 font-semibold">御殿場 Outlets 外國人折扣</td>
+                                <td class="p-3 text-green-600 font-medium">額外 5%-10%</td>
+                                <td class="p-3 text-green-600 font-bold">視消費額而定</td>
+                                <td class="p-3">依各品牌折扣不同，結帳出示折扣券</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 font-semibold">藥妝退稅 + 信用卡回饋</td>
+                                <td class="p-3 text-green-600 font-medium">10% + 3% 左右</td>
+                                <td class="p-3 text-green-600 font-bold">消費額的 13%</td>
+                                <td class="p-3">滿 ¥5,000 可退稅，刷海外高回饋信用卡</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="p-3 font-semibold">二手店挖寶 A/B 賞</td>
+                                <td class="p-3 text-green-600 font-medium">省 ¥500~¥3,000</td>
+                                <td class="p-3 text-green-600 font-bold">視抽運而定</td>
+                                <td class="p-3">避免在一番賞店家盲目抽盲盒的無限支出</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 日本消費與禮儀 -->
             <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
                 <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
                     <i class="fas fa-yen-sign text-green-500"></i> 日本消費與禮儀
@@ -649,6 +743,7 @@
                 </ul>
             </div>
 
+            <!-- 緊急聯絡與實用資訊 -->
             <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
                 <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
                     <i class="fas fa-phone-alt text-blue-500"></i> 緊急聯絡與實用資訊
@@ -787,7 +882,7 @@
                     title: "午餐：大室山附近（Ohmuro Luncheonette）",
                     desc: "位於大室山纜車站旁，非常熱門，建議11:40提早抵達。",
                     badges: [{cls:"food", icon:"fa-utensils", text:"大室軽食堂"}],
-                    tip: { title: "吃完直衝纜車", content: "餐廳就在大室山纜車旁，動線最順！吃飽直接買纜車票上山，不用移車。午餐時間若人滿，旁邊有其他小販與自動販賣機可解決口腹之慾。" }
+                    tip: { title: "導遊美食推薦 🍱", content: "大室輕食堂選用在地新鮮食材，並盛裝在當地陶藝家特製的手工器皿中。推薦點<b>伊豆味噌燉烏龍麵</b>或<b>在地地魚天婦羅定食</b>，餐後還附帶抹茶與精緻小點心！建議 11:40 前抵達以防客滿。" }
                 },
                 {
                     time: "13:00", type: "sight", icon: "fas fa-mountain",
@@ -815,7 +910,7 @@
                     title: "晚餐：健康燒肉 Honori 熱海店",
                     desc: "放好行李稍事休息後，出門大口吃黑毛和牛燒肉！",
                     badges: [{cls:"food", icon:"fa-fire", text:"健康焼肉ほのり"}],
-                    tip: { title: "訂位建議", content: "座位不多，請務必請飯店櫃台幫忙打電話訂位（日語訂位更有禮貌）。必點：<b>厚切牛舌</b>、<b>特上霜降和牛</b>。搭配他們自製的特調醬料，是熱海最頂的一餐。" }
+                    tip: { title: "訂位與推薦必點 🥩", content: "座位極少，請務必在抵達熱海飯店當天，立刻請櫃台人員幫忙撥電話預訂位置！必點：<b>厚切牛舌</b>、<b>極上霜降五花肉</b>，最後來一碗Q彈解膩的<b>盛岡冷麵</b>，完美！" }
                 }
             ]
         },
@@ -838,7 +933,7 @@
                     title: "第二站：MOA 美術館（看展＋午餐）",
                     desc: "開車攻頂，館內有無敵海景與三星甜點主廚監修的咖啡廳。",
                     badges: [{cls:"sight", icon:"fa-palette", text:"國寶藝術"}, {cls:"tip", icon:"fa-star", text:"三星甜點"}],
-                    tip: { title: "導遊看點解說", content: "門票約¥1,700（官網購買略有折扣）。入館必體驗：<b>萬花筒光廊（手扶梯）</b>，幾何光影非常壯觀。<br>館內鎮館之寶：尾形光琳的『紅白梅圖屏風』（日本國寶）。<br>午餐在館內的<b>Toshi Yoroizuka Atami</b>吃限定甜點，俯瞰相模灣，是本日最奢華體驗。" },
+                    tip: { title: "導遊看點與甜點推薦 🍰", content: "門票約¥1,700。入館必體驗：<b>萬花筒光廊（手扶梯）</b>，幾何光影非常壯觀。館內有日本國寶『紅白梅圖屏風』。<br>一定要去館內的 <b>Toshi Yoroizuka Atami</b> 享用米其林星級甜點大師監修的甜點！推薦<b>Cassis 慕斯蛋糕</b>和<b>熱海店限定烤布蕾</b>，坐在窗邊俯瞰相模灣海景是頂級享受。" },
                     notice: { icon: "fa-car", text: "停車資訊", warning: "美術館大型停車場免費，車子直接開上去。但美術館閉館時間是16:00（最後入場15:30），請注意時間！" }
                 },
                 {
@@ -887,7 +982,8 @@
                     title: "🍱 午餐黃金時間（沼津港三選一）",
                     desc: "壽司之助（滿溢壽司）/ 五鐵（海鮮三吃）/ かねはち（定食）",
                     badges: [{cls:"food", icon:"fa-utensils", text:"免排隊入座"}],
-                    notice: { icon: "fa-store", text: "完美時間差！", warning: "11:30是各大餐廳剛開門時間，不需曬太陽排隊就能直接入座！導遊首推<b>五鐵</b>的「深海魚三吃套餐」，最後用鮮魚高湯泡飯收尾，是沼津最在地的吃法。" }
+                    notice: { icon: "fa-store", text: "完美時間差！", warning: "11:30是各大餐廳剛開門時間，不需曬太陽排隊就能直接入座！" },
+                    tip: { title: "沼津港三強必點菜色 🍱", content: "1. <b>五鐵：</b>首推「壹の鐵」深海魚五重丼，先吃刺身，再拌特製蛋黃醬，最後淋入魚骨高湯做茶泡飯。<br>2. <b>壽司之助：</b>招牌「溢れる壽司」，鮭魚卵、海膽滿到溢出來，視覺與味覺雙重震撼。<br>3. <b>かねはち：</b>「深海極み丼」，使用當日最鮮的駿河灣深海地魚刺身。" }
                 },
                 {
                     time: "13:00", type: "sight", icon: "fas fa-water",
@@ -964,7 +1060,7 @@
                     desc: "開車走箱根新道下坡，各大老字號餐廳剛開門，第一批入座！",
                     badges: [{cls:"food", icon:"fa-utensils", text:"蕎麥麵午餐"}, {cls:"buy", icon:"fa-shopping-bag", text:"買伴手禮"}],
                     notice: { icon: "fa-parking", text: "湯本停車建議", warning: "箱根湯本車站附近停車很難找！導遊建議停在「市営第3駐車場」（約¥200/30分），走路3分鐘到商店街，逛完把戰利品丟回車上再輕裝出發。" },
-                    tip: { title: "蕎麥麵名店選擇", content: "午餐首推「はつ花 (Hatsuhana)」的自然薯蕎麥麵，口感獨特滑順。伴手禮必買「湯もっち（溫泉麻糬）」與現烤仙貝。11:30抵達是第一批入座的黃金時間！" }
+                    tip: { title: "蕎麥麵名店與必點 🍜", content: "「はつ花」是箱根百年名店，完全以山藥泥和雞蛋代替水來揉製麵條！<br>• <b>冷麵黨必點：</b>「せいろそば」（冷蕎麥麵附山藥泥與生蛋黃，口感極 Q 彈）。<br>• <b>熱麵黨必點：</b>「貞女そば」（熱山藥泥蕎麥麵，湯頭溫潤美味）。<br>11:30 開門第一批進去，通常現場排隊約 15-30 分鐘。伴手禮必買「湯もっち（溫泉麻糬）」。" }
                 },
                 {
                     time: "13:30", type: "sight", icon: "fas fa-palette",
@@ -1008,7 +1104,7 @@
                     title: "午餐：神級 Sawayaka 漢堡排",
                     desc: "整理券叫號後入座，點招牌拳頭漢堡排！",
                     badges: [{cls:"food", icon:"fa-utensils", text:"靜岡縣限定名店"}],
-                    tip: { title: "點餐完整指南", content: "必點：<b>拳頭漢堡排（げんこつハンバーグ）</b>，店員會在桌邊用鐵板壓切，五分熟的粉嫩牛肉最美味。沾日式醬汁或直接撒鹽吃都很讚。<br>若整理券時間太晚或排隊失敗，備案是「田むら銀かつ亭」的豆腐豬排煮定食。" }
+                    tip: { title: "漢堡排點餐與備案指南 🥩", content: "1. <b>さわやか：</b>必點 250g 的「拳頭漢堡排 (げんこつハンバーグ)」，店員會在桌邊將漢堡排切開並在鐵板上按壓。推薦<b>五分熟 (Medium-rare)</b>，口感爆汁美味，搭配洋蔥醬 (Onion sauce) 最對味！<br>2. <b>田むら銀かつ亭 (備案)：</b>如果さわやか排隊太誇張，可改吃這家的「豆腐豬排煮定食」(豆腐かつ煮)，豆腐夾豬肉餡，吸飽高湯與蛋液，滑嫩清爽。" }
                 },
                 {
                     time: "15:30", type: "transport", icon: "fas fa-car",
@@ -1072,7 +1168,8 @@
                     title: "晚餐：敘敘苑 太陽城60店（59樓夜景燒肉）",
                     desc: "Sunshine 60大樓59樓，頂級和牛燒肉配東京萬家燈火！",
                     badges: [{cls:"sight", icon:"fa-star", text:"59F 高空夜景"}, {cls:"food", icon:"fa-fire", text:"頂級黑毛和牛"}],
-                    notice: { icon: "fa-envelope-open-text", text: "訂位＆服裝提醒", warning: "強烈建議出發前一個月在官網或電話預訂<b>窗邊景觀位</b>！餐廳氣氛較正式，建議穿著Smart Casual，勿穿拖鞋、短褲或無袖。" }
+                    notice: { icon: "fa-envelope-open-text", text: "訂位＆服裝提醒", warning: "強烈建議出發前一個月在官網或電話預訂<b>窗邊景觀位</b>！餐廳氣氛較正式，建議穿著Smart Casual，勿穿拖鞋、短庫或無袖。" },
+                    tip: { title: "敘敘苑必點與省錢攻略 🥓", content: "1. <b>必點品項：</b>上等五花肉 (上カルビ)、鹽味牛舌 (牛タン塩焼)，肉質極度軟嫩，配上甜美燒肉醬，極度美味！<br>2. <b>省錢攻略：</b>若想體驗高品質燒肉但預算有限，推薦改在中午吃<b>燒肉午間套餐</b>，CP 值極高（約 ¥3,500 - ¥6,000 起）。" }
                 }
             ]
         },
@@ -1094,7 +1191,7 @@
                     title: "午餐：阿美橫町平民美食",
                     desc: "體驗最接地氣的東京市場文化！邊走邊吃。",
                     badges: [{cls:"food", icon:"fa-utensils", text:"平民美食"}],
-                    tip: { title: "必吃街頭小吃推薦", content: "1. <b>肉の大山</b>：現炸「メンチカツ（炸肉餅）」超多汁！配啤酒站著吃是最道地的下町文化。<br>2. <b>みなとや</b>：平價海鮮丼，¥500-800就有大份量。<br>3. <b>大統領</b>：路邊串燒居酒屋，午後就很熱鬧，非常接地氣。" }
+                    tip: { title: "必吃街頭小吃推薦 🍺", content: "1. <b>肉の大山：</b>招牌是現炸的「特製炸肉餅 (特製メンチカツ)」與「可樂餅」，外酥內嫩、一口爆汁。在店外「立吞區」（站立吃）買炸肉餅搭配生啤，CP值爆表！<br>2. <b>大統領：</b>路邊串燒老店，必點「烤內臟串 (もつ焼き)」 and 「馬肉燉煮 (煮込み)」，午後便人聲鼎沸，極具日本下町庶民風情。" }
                 },
                 {
                     time: "13:30", type: "buy", icon: "fas fa-shopping-bag",
@@ -1139,7 +1236,7 @@
                     desc: "各種零食伴手禮最齊全，最後機會！",
                     badges: [{cls:"buy", icon:"fa-gift", text:"大採購"}],
                     notice: { icon: "fa-clock", text: "時間控制", warning: "二木の菓子免稅退稅排隊可能需要20-30分鐘！請在11:00前完成採購結帳，保留充裕時間前往京成上野站搭Skyliner。" },
-                    tip: { title: "最後採購攻略", content: "各口味KitKat、Pocky、帆船巧克力、梅片等，這裡通常比機場免稅店便宜15-20%！建議先在機場免稅店確認哪些東西比較貴，再回頭在這裡大量採購。" }
+                    tip: { title: "伴手禮採購指南 🎁", content: "這裡是阿美橫町最強零食批發店！<br>• <b>必買推薦：</b>各類限定口味 KitKat 巧克力、大包裝帆船巧克力、蒟蒻果凍，還有靜岡限定的<b>田丸屋山葵美乃滋</b>！<br>• <b>溫馨提醒：</b>店內走道較擠，建議列好清單一次掃貨。店內有免稅櫃台，請準備好護照辦理退稅，退稅排隊可能需要 20-30 分鐘。" }
                 },
                 {
                     time: "12:30", type: "transport", icon: "fas fa-train",
@@ -1284,6 +1381,237 @@
     ];
 
     // ==========================================
+    // ===         注意事項代辦清單資料         ===
+    // ==========================================
+    const notesChecklistData = [
+        {
+            category: "🔴 超緊急（今天就辦！）",
+            color: "red",
+            items: [
+                { id: "lic-trans", text: "辦理日文駕照譯本（監理所，帶駕照正本）", urgent: true },
+                { id: "vjw-acc", text: "建立 Visit Japan Web 帳號並填寫資料（全員各自）", urgent: true },
+                { id: "passport-val", text: "確認護照有效期（需至 2026/12/13 以後）", urgent: true },
+                { id: "jojoen-book", text: "預訂敘敘苑 太陽城60店窗邊景觀席（極搶手）", urgent: true }
+            ]
+        },
+        {
+            category: "🟠 本週內完成（6/1~6/7）",
+            color: "orange",
+            items: [
+                { id: "klook-sky", text: "Klook 購買京成 Skyliner 回程票（上野→成田）" },
+                { id: "klook-suica", text: "Klook 預購 Welcome Suica 實體卡" },
+                { id: "klook-cactus", text: "Klook 預購伊豆仙人掌動物公園門票" },
+                { id: "klook-moa", text: "Klook 預購 MOA 美術館門票" },
+                { id: "klook-aquarium", text: "Klook 預購沼津深海水族館門票" },
+                { id: "klook-skywalk", text: "Klook 預購三島大吊橋門票" },
+                { id: "klook-sculpture", text: "Klook 預購箱根雕刻之森美術館門票" },
+                { id: "outlet-coupon", text: "官網下載並列印御殿場 Outlets 外國遊客折扣券" }
+            ]
+        },
+        {
+            category: "🟡 出發前 3 天完成（6/10~6/12）",
+            color: "amber",
+            items: [
+                { id: "yen-cash", text: "換妥日幣現金（建議每人 JPY 50,000~80,000）" },
+                { id: "gmaps-offline", text: "下載 Google Maps 靜岡縣離線地圖（山區自駕防斷網）" },
+                { id: "app-transit", text: "下載 Yahoo! 乗換案内 App（電車查路線最準）" },
+                { id: "app-go", text: "下載 GO 計程車 App" },
+                { id: "car-insurance", text: "聯絡車行確認租車保險內容（含 NOC 與自負額）" },
+                { id: "luggage-weight", text: "確認託運行李重量，借行李秤備用" },
+                { id: "klook-check", text: "確認所有 Klook 電子票券已下載至手機" }
+            ]
+        },
+        {
+            category: "✈️ 旅途中/機上",
+            color: "blue",
+            items: [
+                { id: "vjw-final", text: "完成 Visit Japan Web 入境與海關申報（生成 QR Code）" },
+                { id: "arrival-card", text: "飛機上填妥日本申報單與台灣入境卡備用" }
+            ]
+        }
+    ];
+
+    // ==========================================
+    // ===         餐廳必點推薦與攻略資料       ===
+    // ==========================================
+    const restaurantRecommendationsData = [
+        {
+            name: "金目亭",
+            area: "伊豆・下田港",
+            day: "Day 2 午餐首選",
+            budget: "¥1,500 - ¥3,000",
+            dishes: [
+                { name: "金目鯛煮付け定食 (金目鯛燉煮定食)", desc: "招牌必點！以秘製鹹甜醬汁慢火燉煮整條新鮮金目鯛，魚肉細緻，醬汁下飯。" },
+                { name: "金目鯛極み丼 (金目鯛生魚片丼)", desc: "能一次品嚐到炙燒、醃漬與新鮮刺身三種不同風味的金目鯛生魚片。" }
+            ],
+            tip: "營業至 15:00，但食材賣完就會提早打烊！強烈建議 11:45 左右提早抵達以確保能順利入座並點到燉煮定食。"
+        },
+        {
+            name: "Ra-maru (黑船漢堡)",
+            area: "伊豆・下田港",
+            day: "Day 2 午餐備選",
+            budget: "¥1,000 - ¥1,800",
+            dishes: [
+                { name: "下田バーガー (下田金目鯛漢堡)", desc: "下田限定名物！酥炸金目鯛魚排搭配濃郁切達起司、卡士達塔塔醬，夾入特製黑船麵包中。" }
+            ],
+            tip: "位於「開國下田港」休息站內，如果金目亭排隊太長，這家是極佳且獨特的備選！"
+        },
+        {
+            name: "上の山亭",
+            area: "伊豆・下田",
+            day: "Day 2 晚餐推薦",
+            budget: "¥1,000 - ¥2,000",
+            dishes: [
+                { name: "金目鯛チャーハン (金目鯛炒飯)", desc: "炒得粒粒分明、鑊氣十足，每一口都吃得到金目鯛魚肉碎，香氣四溢。" },
+                { name: "金目鯛ラーメン (金目鯛拉麵)", desc: "以金目鯛骨慢火熬煮出來的清爽魚介湯頭，鮮甜不膩。" }
+            ],
+            tip: "當地人非常喜愛的中華料理老店，無須訂位，份量大、CP值極高，適合第一天自駕完好好補充體力。"
+        },
+        {
+            name: "健康燒肉 Honori (ほのり)",
+            area: "熱海",
+            day: "Day 3 晚餐推薦",
+            budget: "¥4,000 - ¥8,000",
+            dishes: [
+                { name: "厚切り牛タン (厚切牛舌)", desc: "店家招牌，厚度極具誠意，烤至外脆內嫩，多汁彈牙。" },
+                { name: "極上霜降りカルビ (特上霜降五花肉)", desc: "嚴選黑毛和牛，油花分佈完美，入口即化。" }
+            ],
+            tip: "<b>⚠️ 極度熱門，一定要訂位！</b>抵達熱海飯店時，請櫃台服務人員立刻代撥電話預訂位置。"
+        },
+        {
+            name: "Ohmuro Luncheonette (大室輕食堂)",
+            area: "大室山",
+            day: "Day 3 午餐推薦",
+            budget: "¥1,200 - ¥2,000",
+            dishes: [
+                { name: "伊豆みそ煮込みうどん (伊豆味噌燉烏龍麵)", desc: "濃郁的伊豆在地味噌湯底，搭配燉煮入味的 Q 彈烏龍麵與滿滿野菜。" },
+                { name: "地魚天ぷら定食 (在地地魚天婦羅定食)", desc: "嚴選當日伊豆近海新鮮漁獲炸製，外皮薄脆酥香。" }
+            ],
+            tip: "位於大室山纜車入口旁，餐廳採用當地陶藝家手工製作的精美器皿，用餐附贈抹茶與精緻茶點。建議 11:40 前提早卡位。"
+        },
+        {
+            name: "Toshi Yoroizuka Atami",
+            area: "熱海・MOA 美術館",
+            day: "Day 4 午間甜點",
+            budget: "¥1,500 - ¥2,500",
+            dishes: [
+                { name: "Cassis 慕斯蛋糕", desc: "酸甜黑醋栗與巧克力交織，層次豐富細緻。" },
+                { name: "熱海限定烤布蕾 (Crème Brûlée)", desc: "MOA美術館店限定，表面焦糖香脆，布丁體滑順香濃。" }
+            ],
+            tip: "由米其林星級甜點大師鎧塚俊彥監修的甜點沙龍。可以一邊俯瞰相模灣海景一邊享用精緻甜點，下午人多，看展前建議先去確認排隊情況。"
+        },
+        {
+            name: "熱海プリン Café 2nd",
+            area: "熱海商店街",
+            day: "Day 4 點心推薦",
+            budget: "¥400 - ¥800",
+            dishes: [
+                { name: "特製カラメルプリン (特製焦糖布丁)", desc: "最經典的綿密口感，附上河馬造型的微苦焦糖醬，甜而不膩。" },
+                { name: "溫泉玉子プリン (溫泉蛋布丁)", desc: "搭配一顆半熟溫泉蛋的獨特布丁，鹹甜濃郁交織。" }
+            ],
+            tip: "復古澡堂風的主題店，拍照非常出片。排隊人潮多，但流動速度快，吃完後牛奶瓶容器可以帶回家作紀念！"
+        },
+        {
+            name: "まる天 (磯揚げ まる天)",
+            area: "熱海商店街",
+            day: "Day 4 街頭小吃",
+            budget: "¥300 - ¥600",
+            dishes: [
+                { name: "チーズ棒 (起司棒)", desc: "熱騰騰的炸魚漿內夾著滿滿濃郁起司，一口咬下會爆漿。" },
+                { name: "たこ棒 (章魚棒)", desc: "魚漿內藏有大顆彈牙的章魚丁，外皮炸得微焦酥脆。" }
+            ],
+            tip: "位於熱海老街，非常適合買一串邊走邊吃，熱騰騰現炸的風味最好。"
+        },
+        {
+            name: "五鐵 / 壽司之助 / かねはち",
+            area: "沼津港",
+            day: "Day 5 午餐三選一",
+            budget: "¥1,800 - ¥3,500",
+            dishes: [
+                { name: "五鐵：壹の鐵 (深海魚五重茶泡飯)", desc: "招牌海鮮丼三吃！先吃刺身原味，再拌特製蛋黃醬汁，最後沖入濃移魚骨高湯做成茶泡飯。" },
+                { name: "壽司之助：溢れる壽司 (滿溢壽司)", desc: "元祖滿溢壽司，鮭魚卵、海膽像小山一樣滿到盤子上，CP值極高。" },
+                { name: "かねはち：深海極み丼", desc: "以當日捕撈的駿河灣特有深海魚製成的極致生魚片丼飯。" }
+            ],
+            tip: "11:30 是各大餐廳剛開門的黃金時間，水族館逛完後立刻前往，不需排隊即可入座。"
+        },
+        {
+            name: "は初花 (はつ花)",
+            area: "箱根湯本",
+            day: "Day 6 午餐推薦",
+            budget: "¥1,000 - ¥2,000",
+            dishes: [
+                { name: "せいろそば (山藥泥冷蕎麥麵)", desc: "冷蕎麥麵沾著野生山藥泥與生蛋黃，口感極度滑順有彈性。" },
+                { name: "貞女そば (熱山藥蕎麥麵)", desc: "鋪上滿滿滑嫩山藥泥的熱蕎麥麵，湯頭溫潤鮮美。" }
+            ],
+            tip: "<b>百年蕎麥麵老字號。</b>不使用水，完全以「山藥泥」和雞蛋揉製麵條。平日現場排隊約需 15-30 分鐘，翻桌率快。"
+        },
+        {
+            name: "さわやか (爽快漢堡排)",
+            area: "御殿場 Outlets",
+            day: "Day 7 午餐首選",
+            budget: "¥1,200 - ¥2,500",
+            dishes: [
+                { name: "げんこつハンバーグ (拳頭漢堡排 250g)", desc: "靜岡縣限定的絕對霸主！100% 牛肉，桌邊炙燒壓切。外焦香、內裡呈粉嫩五分熟（Medium-rare）最推薦，搭配洋蔥醬汁。" }
+            ],
+            tip: "<b>🔥 終極排隊名店！</b> 早上 10:00 一到請務必立刻直奔店門口抽取整理券（通常需等 2-3 小時以上），抽完後安心逛 Outlets，透過手機查看叫號進度。"
+        },
+        {
+            name: "田むら銀かつ亭 (銀豆腐豬排)",
+            area: "箱根/御殿場",
+            day: "Day 7 午餐備選",
+            budget: "¥1,500 - ¥2,500",
+            dishes: [
+                { name: "豆腐かつ煮定食 (豆腐豬排煮定食)", desc: "箱根特產豆腐夾著香嫩豬肉餡，裹粉酥炸後放在砂鍋中，以高湯與蛋液燉煮，清甜滑嫩而不油膩。" }
+            ],
+            tip: "若さわやか漢堡排排隊時間太過誇張，這家是箱根最出名的名物料理備選（御殿場店免去強羅排隊）。"
+        },
+        {
+            name: "麵創房 無敵家",
+            area: "池袋",
+            day: "Day 8 午餐推薦",
+            budget: "¥1,000 - ¥1,500",
+            dishes: [
+                { name: "無敵家らーめん 本丸 (本丸拉麵)", desc: "最經典招牌。豚骨湯頭極度濃郁香黏，搭配厚切肥嫩炙燒叉燒與半熟滷蛋。" }
+            ],
+            tip: "<b>⚠️ 注意：僅收現金，不可刷卡！</b> 桌上備有青森縣產現磨大蒜，吃到一半請一定要擠一顆下去，湯頭風味直接昇華！平均排隊時間約 30-50 分鐘。"
+        },
+        {
+            name: "敘敘苑 太陽城60店",
+            area: "池袋",
+            day: "Day 8 晚餐推薦",
+            budget: "¥3,500 - ¥10,000",
+            dishes: [
+                { name: "上カルビ (上等牛五花)", desc: "油花分布均勻，肉質極度軟嫩，入口後油脂甜美。" },
+                { name: "牛タン塩焼 (鹽味牛舌)", desc: "薄切牛舌搭配特製鹽醬，口感爽脆多汁。" },
+                { name: "燒肉午間套餐 (Lunch Menu)", desc: "若想省錢，可考慮中午來享用午間套餐，只需 ¥3,500 起就能體驗高品質燒肉！" }
+            ],
+            tip: "位於 59 樓，視野無敵。<b>強烈建議一個月前在官網訂位</b>，並指名「窗邊席 (窓側席)」以俯瞰東京夜景。晚餐有服裝限制，請勿穿著背心、拖鞋或短褲。"
+        },
+        {
+            name: "大統領 / 肉の大山",
+            area: "上野",
+            day: "Day 9 午餐/下午茶",
+            budget: "¥500 - ¥2,000",
+            dishes: [
+                { name: "大統領：もつ焼き (炭火烤內臟串)", desc: "招牌馬肉燉煮與各式烤內臟串，搭配生啤酒，下町居酒屋靈魂。" },
+                { name: "肉の大山：特製メンチカツ (特製炸肉餅)", desc: "肉鋪直營！現炸肉餅外皮金黃酥脆，一口咬下肉汁四溢，只要兩三百日圓，CP值爆表。" }
+            ],
+            tip: "兩家店皆位於上野高架橋下，極富庶民風情。肉の大山設有立吞區（站著吃），價格比入座便宜，推薦點個炸肉餅配杯飲料，直接在店門口享用！"
+        },
+        {
+            name: "二木の菓子",
+            area: "上野阿美橫町",
+            day: "Day 10 伴手禮採購",
+            budget: "¥2,000 - ¥10,000",
+            dishes: [
+                { name: "各口味 KitKat 巧克力", desc: "包含日本各地限定口味（如宇治抹茶、溫泉饅頭味），價格非常實惠。" },
+                { name: "田丸屋 山葵美乃滋", desc: "靜岡限定的調味神醬，拌沙拉或沾炸物皆是一絕！" }
+            ],
+            tip: "上野最強伴手禮/零食批發免稅店。店內走道較擠，建議列好清單一次掃貨。免稅結帳櫃台排隊人多，請預留 20-30 分鐘。"
+        }
+    ];
+
+    // ==========================================
     // ===         全域狀態                    ===
     // ==========================================
     let currentIndex = 0;
@@ -1315,6 +1643,8 @@
         }
         if (tabId === 'shopping') renderShoppingList();
         if (tabId === 'luggage') renderLuggageList();
+        if (tabId === 'notes') renderNotesChecklist();
+        if (tabId === 'spots') renderRestaurantRecommendations();
     }
 
     // ==========================================
@@ -1540,6 +1870,111 @@
     }
 
     // ==========================================
+    // ===         渲染注意事項代辦清單         ===
+    // ==========================================
+    function renderNotesChecklist() {
+        const el = document.getElementById('notes-checklist');
+        if (!el) return;
+        el.innerHTML = '';
+        
+        const colorMap = {
+            red:    'bg-red-50 border-red-100 text-red-800',
+            orange: 'bg-orange-50 border-orange-100 text-orange-800',
+            amber:  'bg-amber-50 border-amber-100 text-amber-800',
+            blue:   'bg-blue-50 border-blue-100 text-blue-800',
+        };
+
+        notesChecklistData.forEach(group => {
+            const c = colorMap[group.color] || 'bg-gray-50 border-gray-100 text-gray-800';
+            const [bg, border, title] = c.split(' ');
+            const div = document.createElement('div');
+            div.className = `${bg} ${border} border rounded-xl p-4`;
+            
+            let listHtml = `<h4 class="font-bold text-[14px] ${title} mb-3 flex items-center gap-1.5">${group.category}</h4>`;
+            listHtml += `<ul class="space-y-2.5">`;
+            
+            group.items.forEach(item => {
+                const checked = localStorage.getItem('notes_chk_' + item.id) === 'true' ? 'checked' : '';
+                const lineThrough = checked ? 'line-through text-gray-400 font-normal' : 'font-semibold';
+                listHtml += `
+                <li class="flex items-start gap-2.5 text-[13px] text-gray-700">
+                    <input type="checkbox" id="notes_chk_${item.id}" ${checked} onchange="toggleNotesCheck('${item.id}')" class="w-4 h-4 rounded accent-rose-500 mt-0.5 shrink-0 cursor-pointer">
+                    <label for="notes_chk_${item.id}" id="notes_lbl_${item.id}" class="cursor-pointer select-none flex-1 leading-snug ${lineThrough}">
+                        ${item.urgent ? `<span class="bg-red-500 text-white font-bold px-1.5 py-0.5 rounded text-[10px] mr-1">緊急</span>` : ''}
+                        ${item.text}
+                    </label>
+                </li>`;
+            });
+            
+            listHtml += `</ul>`;
+            div.innerHTML = listHtml;
+            el.appendChild(div);
+        });
+    }
+
+    function toggleNotesCheck(id) {
+        const chk = document.getElementById('notes_chk_' + id);
+        const lbl = document.getElementById('notes_lbl_' + id);
+        if (chk && lbl) {
+            localStorage.setItem('notes_chk_' + id, chk.checked);
+            if (chk.checked) {
+                lbl.classList.add('line-through', 'text-gray-400', 'font-normal');
+                lbl.classList.remove('font-semibold');
+            } else {
+                lbl.classList.remove('line-through', 'text-gray-400', 'font-normal');
+                lbl.classList.add('font-semibold');
+            }
+        }
+    }
+
+    // ==========================================
+    // ===         渲染餐廳推薦與美食指南       ===
+    // ==========================================
+    function renderRestaurantRecommendations() {
+        const el = document.getElementById('restaurant-rec-list');
+        if (!el) return;
+        if (el.children.length > 0) return; // avoid duplicate renders
+
+        restaurantRecommendationsData.forEach(r => {
+            const card = document.createElement('div');
+            card.className = 'bg-white rounded-2xl border border-gray-100 p-4 md:p-5 soft-shadow hover:shadow-md transition-shadow flex flex-col justify-between';
+            
+            let dishesHtml = r.dishes.map(d => `
+                <div class="mb-2 bg-gray-50/50 rounded-lg p-2.5 border border-gray-100/50">
+                    <p class="font-bold text-[12.5px] text-gray-800 flex items-center gap-1.5">
+                        <i class="fas fa-check-circle text-rose-400 text-xs"></i> ${d.name}
+                    </p>
+                    <p class="text-[11.5px] text-gray-500 mt-0.5 pl-4 leading-relaxed">${d.desc}</p>
+                </div>
+            `).join('');
+
+            card.innerHTML = `
+                <div>
+                    <div class="flex items-start justify-between mb-2">
+                        <div>
+                            <span class="text-[10px] font-bold text-rose-500 bg-rose-50 px-2 py-0.5 rounded-full mr-1">${r.area}</span>
+                            <span class="text-[10px] font-bold text-blue-500 bg-blue-50 px-2 py-0.5 rounded-full">${r.day}</span>
+                            <h4 class="font-bold text-[15px] text-gray-800 mt-1.5">${r.name}</h4>
+                        </div>
+                        <span class="text-[11px] font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded">${r.budget}</span>
+                    </div>
+                    
+                    <div class="mt-3.5 space-y-2">
+                        <p class="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1.5"><i class="fas fa-utensils mr-1"></i> 推薦必點餐點</p>
+                        ${dishesHtml}
+                    </div>
+                </div>
+                
+                <div class="mt-4 pt-3 border-t border-gray-100 bg-rose-50/30 rounded-xl p-3 text-[11.5px] text-gray-600 leading-relaxed">
+                    <p class="font-bold text-rose-700 mb-1 flex items-center gap-1"><i class="fas fa-lightbulb text-rose-500"></i> 導遊攻略小撇步</p>
+                    ${r.tip}
+                </div>
+            `;
+            el.appendChild(card);
+        });
+    }
+
+    // ==========================================
     // ===            初始化                   ===
     // ==========================================
     document.addEventListener('DOMContentLoaded', () => {
@@ -1550,6 +1985,10 @@
         const today = new Date().toISOString().split('T')[0];
         const todayIdx = itineraryData.findIndex(d => d.date === today);
         if (todayIdx !== -1) changeDay(todayIdx);
+
+        // Pre-render list functions
+        renderNotesChecklist();
+        renderRestaurantRecommendations();
     });
     </script>
 </body>
