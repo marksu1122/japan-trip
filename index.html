@@ -218,32 +218,47 @@
                 </h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <!-- 去程 -->
-                    <div class="bg-blue-50/50 p-3.5 md:p-4 rounded-xl border border-blue-100 shadow-sm">
-                        <div class="flex justify-between items-start mb-2.5 border-b border-blue-100/50 pb-2">
-                            <div>
-                                <span class="font-bold text-blue-900 text-[13.5px] md:text-[14.5px] block">全體成員</span>
-                                <span class="text-[10px] text-blue-600 bg-blue-100 px-1.5 py-0.5 rounded font-mono mt-0.5 inline-block">訂單 XXXXXX</span>
+                    <div class="bg-blue-50/50 p-3.5 md:p-4 rounded-xl border border-blue-100 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2 pb-2 border-b border-blue-100/50">
+                                <div>
+                                    <span class="font-bold text-blue-900 text-[13.5px] md:text-[14.5px] block">去程 ➔ 東京成田 (NRT)</span>
+                                    <span class="text-[10px] text-blue-600 bg-blue-100 px-1.5 py-0.5 rounded font-mono mt-0.5 inline-block">BR198 (商務艙 Class I)</span>
+                                </div>
+                                <span class="bg-blue-600 text-white text-[10px] px-1.5 py-0.5 rounded font-bold">訂單 OK</span>
                             </div>
-                            <a href="#" target="_blank" class="shrink-0 text-[10px] bg-white border border-blue-200 text-blue-600 hover:bg-blue-100 px-2 py-1 rounded shadow-sm transition-colors flex items-center gap-1">
-                                <i class="fas fa-file-pdf"></i> 機票PDF
-                            </a>
+                            <div class="space-y-2 text-[12.5px] text-gray-700">
+                                <div class="flex items-start gap-2"><i class="fas fa-calendar-day text-blue-500 w-4 text-center mt-0.5"></i><p><strong>日期：</strong>2026/06/13 (六)</p></div>
+                                <div class="flex items-start gap-2"><i class="fas fa-clock text-blue-500 w-4 text-center mt-0.5"></i><p><strong>時間：</strong>09:00 ➔ 13:25 (飛行 3h 25m)</p></div>
+                                <div class="flex items-start gap-2"><i class="fas fa-map-marker-alt text-blue-500 w-4 text-center mt-0.5"></i><p><strong>航廈：</strong>桃園 T2 ➔ 成田 T1</p></div>
+                                <div class="flex items-start gap-2"><i class="fas fa-suitcase text-blue-500 w-4 text-center mt-0.5"></i><p><strong>行李：</strong>托運 2PC / 每人</p></div>
+                            </div>
                         </div>
-                        <div class="space-y-2 text-[12.5px] text-gray-700">
-                            <div>
-                                <p class="text-blue-500 font-bold text-[11.5px] mb-0.5"><i class="fas fa-plane-departure w-4 text-center"></i> 去程</p>
-                                <p class="ml-5">6/13 (六) TPE ➔ NRT（成田）</p>
-                            </div>
-                            <div>
-                                <p class="text-green-500 font-bold text-[11.5px] mb-0.5"><i class="fas fa-plane-arrival w-4 text-center"></i> 回程</p>
-                                <p class="ml-5">6/22 (一) NRT ➔ TPE</p>
-                            </div>
+                        <div class="mt-4 pt-2 border-t border-blue-100/50 flex gap-2">
+                            <a href="https://drive.google.com/drive/u/0/folders/173uz4mGDScSfsQk2p0t90HEnqKbw5tF6" target="_blank" class="flex-1 text-center text-[11px] bg-white border border-blue-200 text-blue-600 hover:bg-blue-50 py-1 rounded shadow-sm transition-colors font-bold"><i class="fas fa-file-pdf mr-1"></i> 機票憑證</a>
                         </div>
                     </div>
-                    <!-- 備用欄 -->
-                    <div class="bg-blue-50/50 p-3.5 md:p-4 rounded-xl border border-blue-100 shadow-sm flex flex-col justify-center items-center text-center gap-2">
-                        <i class="fas fa-plus-circle text-blue-200 text-3xl"></i>
-                        <p class="text-[13px] text-blue-300 font-medium">新增其他成員機票</p>
-                        <p class="text-[11px] text-gray-400">將機票PDF上傳後填入連結</p>
+
+                    <!-- 回程 -->
+                    <div class="bg-emerald-50/50 p-3.5 md:p-4 rounded-xl border border-emerald-100 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-2 pb-2 border-b border-emerald-100/50">
+                                <div>
+                                    <span class="font-bold text-emerald-900 text-[13.5px] md:text-[14.5px] block">回程 ➔ 台北桃園 (TPE)</span>
+                                    <span class="text-[10px] text-emerald-600 bg-emerald-100 px-1.5 py-0.5 rounded font-mono mt-0.5 inline-block">BR183 (商務艙 Class I)</span>
+                                </div>
+                                <span class="bg-emerald-600 text-white text-[10px] px-1.5 py-0.5 rounded font-bold">訂單 OK</span>
+                            </div>
+                            <div class="space-y-2 text-[12.5px] text-gray-700">
+                                <div class="flex items-start gap-2"><i class="fas fa-calendar-day text-emerald-500 w-4 text-center mt-0.5"></i><p><strong>日期：</strong>2026/06/22 (一)</p></div>
+                                <div class="flex items-start gap-2"><i class="fas fa-clock text-emerald-500 w-4 text-center mt-0.5"></i><p><strong>時間：</strong>13:25 ➔ 16:05 (飛行 3h 40m)</p></div>
+                                <div class="flex items-start gap-2"><i class="fas fa-map-marker-alt text-emerald-500 w-4 text-center mt-0.5"></i><p><strong>航廈：</strong>成田 T1 ➔ 桃園 T2</p></div>
+                                <div class="flex items-start gap-2"><i class="fas fa-suitcase text-emerald-500 w-4 text-center mt-0.5"></i><p><strong>行李：</strong>托運 2PC / 每人</p></div>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-2 border-t border-emerald-100/50 flex gap-2">
+                            <a href="https://drive.google.com/drive/u/0/folders/173uz4mGDScSfsQk2p0t90HEnqKbw5tF6" target="_blank" class="flex-1 text-center text-[11px] bg-white border border-emerald-200 text-emerald-600 hover:bg-emerald-50 py-1 rounded shadow-sm transition-colors font-bold"><i class="fas fa-file-pdf mr-1"></i> 機票憑證</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -681,12 +696,12 @@
             weather: "🌙 16°C",
             events: [
                 {
-                    time: "14:00", type: "flight", icon: "fas fa-plane",
-                    title: "抵達機場（成田/羽田）",
-                    desc: "預計耗時 1.5 小時，過海關提領行李，預抓 1 小時。",
-                    badges: [{cls:"booking", icon:"fa-plane", text:"入境辦理"}],
-                    tip: { title: "入境流程導覽", content: "1. 機上先填好Visit Japan Web的入境審查QR Code，走快速通道省時。<br>2. 提領行李後，確認行李箱未損毀再離開。<br>3. 成田→上野搭 Skyliner 約41分；羽田→上野搭 JR 京濱東北線約40分。" },
-                    notice: { icon: "fa-clock", text: "時間推算提醒", warning: "14:00落地→出關約1小時→抵上野16:00→租車16:30。班機若延誤，務必提前聯絡車行更改取車時間！" }
+                    time: "13:25", type: "flight", icon: "fas fa-plane",
+                    title: "抵達東京成田機場 (NRT) ✈️",
+                    desc: "搭乘長榮航空 BR198 (商務艙)。預計 13:25 降落於成田機場第一航廈。",
+                    badges: [{cls:"booking", icon:"fa-plane", text:"BR198 商務艙"}, {cls:"sight", icon:"fa-check", text:"成田 T1 入境"}],
+                    tip: { title: "入境與接駁說明", content: "1. 下機後跟隨指標前往入境審查，出示 Visit Japan Web 入境 QR Code。<br>2. 提領行李（商務艙行李享有優先提領優先權！會非常快出件）。<br>3. 搭乘 京成電鐵 Skyliner 前往上野（約 41 分鐘），前往日產租車上野站前店取車（預約 16:00）。" },
+                    notice: { icon: "fa-clock", text: "時間排程", warning: "13:25 落地 ➔ 預計 14:15 前完成出關與行李提領 ➔ 搭乘 14:30 左右的 Skyliner ➔ 15:15 抵達上野 ➔ 16:00 前往車行取車時間非常充裕！" }
                 },
                 {
                     time: "16:00", type: "booking", icon: "fas fa-key",
@@ -1115,33 +1130,39 @@
             weather: "🌤️ 22°C",
             events: [
                 {
-                    time: "09:30", type: "hotel", icon: "fas fa-suitcase",
-                    title: "飯店退房與行李整理",
-                    desc: "把行李先寄放在櫃台，輕裝進行最後採買！",
+                    time: "08:30", type: "hotel", icon: "fas fa-suitcase",
+                    title: "飯店退房與行李整理打包 🏨",
+                    desc: "完成退房手續，帶上所有戰利品，準備前往京成上野站！",
                     badges: [{cls:"booking", icon:"fa-suitcase", text:"打包戰利品"}],
-                    notice: { icon: "fa-balance-scale", text: "行李超重提醒", warning: "請向飯店借用行李秤（Luggage Scale）確認重量！超重罰金一般每公斤¥3,000-¥5,000，非常貴。退稅的食品類商品必須放在<b>托運行李</b>中，不可在出境前拆封。" }
+                    tip: { title: "行李打包與秤重 ⚖️", content: "1. 請向飯店櫃台借用行李秤（Luggage Scale）確認重量！商務艙每人享有 2 件各 32kg 的超大額度，通常非常夠用。<br>2. <b>免稅密封袋：</b>在日本購買的免稅商品（特別是藥妝、消耗品）請<b>務必放入托運行李</b>（因含有液體、噴霧等無法帶上飛機的物品），出境時日本海關只會掃描護照，一般不會拆箱檢查。" }
                 },
                 {
-                    time: "10:00", type: "buy", icon: "fas fa-gift",
-                    title: "二木の菓子（伴手禮終極補貨）",
-                    desc: "各種零食伴手禮最齊全，最後機會！",
-                    badges: [{cls:"buy", icon:"fa-gift", text:"大採購"}],
-                    notice: { icon: "fa-clock", text: "時間控制", warning: "二木の菓子免稅退稅排隊可能需要20-30分鐘！請在11:00前完成採購結帳，保留充裕時間前往京成上野站搭Skyliner。" },
-                    tip: { title: "伴手禮採購指南 🎁", content: "這裡是阿美橫町最強零食批發店！<br>• <b>必買推薦：</b>各類限定口味 KitKat 巧克力、大包裝帆船巧克力、蒟蒻果凍，還有靜岡限定的<b>田丸屋山葵美乃滋</b>！<br>• <b>溫馨提醒：</b>店內走道較擠，建議列好清單一次掃貨。店內有免稅櫃台，請準備好護照辦理退稅，退稅排隊可能需要 20-30 分鐘。" }
-                },
-                {
-                    time: "12:30", type: "transport", icon: "fas fa-train",
-                    title: "搭 Skyliner 前往成田機場",
-                    desc: "京成上野 → 成田，全車對號座，41分鐘直達！",
+                    time: "09:40", type: "transport", icon: "fas fa-train",
+                    title: "搭乘 京成電鐵 Skyliner 前往成田機場 🚆",
+                    desc: "京成上野站 ➔ 成田機場第一航廈 (NRT T1)。車程約 41 分鐘，全車對號座。",
                     badges: [{cls:"booking", icon:"fa-train", text:"快速抵達機場"}],
-                    tip: { title: "乘車流程", content: "京成上野站在地下室，注意不是JR上野站！<br>1. 至京成上野站售票機購票（或事先在Klook/KKday買好電子票）。<br>2. 選擇座位後拿實體車票感應進閘口。<br>3. 月台在地下2樓，按指標走即可。Skyliner是全程對號座，非常舒適！" }
+                    tip: { title: "乘車提醒 🚆", content: "請搭乘約 09:40 或 10:00 左右發車的 Skyliner。京成上野站位於地下室（與 JR 上野站不同，需步行約 3-5 分鐘）。進站時直接刷 Skyliner 票券，直達成田機場第一航廈（終點站）。" }
                 },
                 {
-                    time: "14:00", type: "flight", icon: "fas fa-plane-departure",
-                    title: "成田機場辦理登機手續",
-                    desc: "3小時前抵達機場，辦完手續後逛免稅店買最後伴手禮！",
+                    time: "10:45", type: "flight", icon: "fas fa-plane-departure",
+                    title: "成田機場第一航廈 (T1) 辦理登機 ✈️",
+                    desc: "長榮航空 BR183 (商務艙)。辦理 Check-in、托運行李並通關。",
                     badges: [{cls:"booking", icon:"fa-plane-departure", text:"準備起飛"}],
-                    tip: { title: "機場流程與最後採購", content: "1. 確認搭的是哪個Terminal（T1、T2或T3），Skyliner停T2，其他Terminal有接駁電車。<br>2. 辦完Check-in後去辦理退稅（把退稅商品準備好，工作人員會查驗）。<br>3. 過安檢後逛免稅店必買：<b>Tokyo Banana、Royce生巧克力（要冷藏！）、白色戀人</b>。<br>4. 回程飛機上填好台灣的入境申報單（有無攜帶肉類相關食品等）。" }
+                    tip: { title: "商務艙優先禮遇 🌟", content: "1. <b>優先櫃台：</b>前往長榮航空商務艙專屬櫃台辦理登機，不需跟經濟艙一起排長隊。<br>2. <b>行李優先：</b>托運行李會貼上 Priority 標籤，抵達桃園後會第一時間出件。<br>3. <b>貴賓室：</b>商務艙旅客可免費使用成田機場的<b>全日空 ANA Lounge 貴賓室</b>，登機前可在此放鬆、享用咖哩飯與飲品。" }
+                },
+                {
+                    time: "12:00", type: "buy", icon: "fas fa-gift",
+                    title: "機場免稅店最後補貨 🛍️",
+                    desc: "過關後在免稅店採購伴手禮，如 Tokyo Banana、白色戀人、薯條三兄弟等。",
+                    badges: [{cls:"buy", icon:"fa-gift", text:"大採購"}],
+                    tip: { title: "免稅店購物提醒 🛍️", content: "Royce 生巧克力需要購買保冷袋（約 ¥100）。免稅店購買的液體類伴手禮（如清酒、美妝品）過安檢後即可攜帶登機，不需托運。" }
+                },
+                {
+                    time: "13:25", type: "flight", icon: "fas fa-plane",
+                    title: "搭乘長榮航空 BR183 返台 ✈️",
+                    desc: "13:25 起飛 ➔ 16:05 抵達台灣桃園國際機場第二航廈 (TPE T2)。",
+                    badges: [{cls:"booking", icon:"fa-plane", text:"安全返航"}],
+                    tip: { title: "返台準備", content: "飛機上請向空姐索取「台灣申報單」（若有需要申報的物品）。降落後請確認手機已切換回台灣電信網路。" }
                 }
             ]
         }
