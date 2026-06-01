@@ -137,9 +137,6 @@
                 <button onclick="switchTab('itinerary')" id="tab-itinerary" class="tab-btn active px-3 md:px-5 py-1.5 md:py-2 rounded-full text-[13px] md:text-sm font-bold transition-all duration-300 whitespace-nowrap">
                     <i class="fas fa-calendar-alt mr-1"></i>行程
                 </button>
-                <button onclick="switchTab('spots')" id="tab-spots" class="tab-btn px-3 md:px-5 py-1.5 md:py-2 rounded-full text-[13px] md:text-sm font-bold transition-all duration-300 text-gray-500 hover:text-gray-800 bg-transparent whitespace-nowrap">
-                    <i class="fas fa-torii-gate mr-1"></i>景點攻略
-                </button>
                 <button onclick="switchTab('tools')" id="tab-tools" class="tab-btn px-3 md:px-5 py-1.5 md:py-2 rounded-full text-[13px] md:text-sm font-bold transition-all duration-300 text-gray-500 hover:text-gray-800 bg-transparent whitespace-nowrap">
                     <i class="fas fa-file-invoice mr-1"></i>訂單資訊
                 </button>
@@ -208,137 +205,7 @@
         </div>
     </div>
 
-    <!-- ========== VIEW 2: SPOTS 景點攻略 ========== -->
-    <div id="view-spots" class="hidden px-3 md:px-4 relative z-10">
-        <div class="max-w-3xl mx-auto space-y-5 md:space-y-6">
 
-            <!-- 伊豆・下田重點提醒 -->
-            <div class="bg-rose-50 p-4 md:p-5 rounded-xl border border-rose-200 soft-shadow">
-                <h4 class="font-bold text-rose-800 text-[14.5px] md:text-base mb-3 flex items-center gap-2">
-                    <i class="fas fa-exclamation-triangle"></i> 🚗 伊豆自駕行前關鍵提醒
-                </h4>
-                <ul class="text-[13px] md:text-[13.5px] text-gray-700 space-y-2.5 list-disc pl-4">
-                    <li><strong>日文駕照譯本：</strong>務必在台灣出發前至監理所辦妥！日本租車公司一定會要求出示「日文駕照譯本」，沒有就無法取車。</li>
-                    <li><strong>ETC 卡必備：</strong>取車時確認 ETC 卡是否已設定，伊豆一帶高速公路使用頻繁，建議加購 ETC 方案省去停車繳費麻煩。</li>
-                    <li><strong>Google Maps 下載離線地圖：</strong>山區可能訊號不穩，建議出發前下載「靜岡縣」離線地圖備用。</li>
-                    <li><strong>停車場文化：</strong>熱門景點（龍宮窟、大室山）均有免費大型停車場，平日人少，停車非常方便！</li>
-                </ul>
-            </div>
-
-            <!-- 箱根特攻路線 -->
-            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
-                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
-                    <i class="fas fa-route text-rose-500"></i> 箱根特攻大迴圈 (Day 6)
-                </h3>
-                <p class="text-[12.5px] text-gray-500 mb-4">清晨出發，人流最少的時段搶先包場，完美避開中午大量車潮與遊客。</p>
-                <div class="space-y-5 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-rose-400 before:to-purple-400">
-                    <div class="relative flex items-center justify-between group">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-rose-500 text-white font-bold shadow shrink-0 z-10">1</div>
-                        <div class="w-[calc(100%-4rem)] p-4 rounded-xl border border-rose-100 bg-rose-50/50 shadow-sm">
-                            <h4 class="font-bold text-rose-700 text-[14.5px]">07:00 | 箱根神社・平和鳥居（包場黃金時段）</h4>
-                            <ul class="text-[13px] text-gray-700 list-disc pl-4 mt-2 space-y-1">
-                                <li>早晨光線最柔和，幾乎沒有遊客，是拍出「天地只有你們」神級大片的唯一時機。</li>
-                                <li>拿出 Insta360 拍完鳥居後，沿古木參天的參道走上本殿參拜，整段步行約 30 分鐘。</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="relative flex items-center justify-between group">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-orange-500 text-white font-bold shadow shrink-0 z-10">2</div>
-                        <div class="w-[calc(100%-4rem)] p-4 rounded-xl border border-orange-100 bg-orange-50/50 shadow-sm">
-                            <h4 class="font-bold text-orange-700 text-[14.5px]">09:00 | Bakery & Table 足湯早餐</h4>
-                            <ul class="text-[13px] text-gray-700 list-disc pl-4 mt-2 space-y-1">
-                                <li>09:00 準時卡位，搶下一樓戶外「溫泉足湯座位區」。</li>
-                                <li>一邊泡著暖呼呼的足湯，一邊吃剛出爐的麵包看蘆之湖湖景，早起的疲勞瞬間全消。</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="relative flex items-center justify-between group">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-green-500 text-white font-bold shadow shrink-0 z-10">3</div>
-                        <div class="w-[calc(100%-4rem)] p-4 rounded-xl border border-green-100 bg-green-50/50 shadow-sm">
-                            <h4 class="font-bold text-green-700 text-[14.5px]">14:00 | 雕刻之森美術館</h4>
-                            <ul class="text-[13px] text-gray-700 list-disc pl-4 mt-2 space-y-1">
-                                <li>在森林與藝術品之間漫步 2 小時，<strong>一定要去彩繪玻璃塔</strong>拍網美照。</li>
-                                <li>節奏非常悠閒，適合人多的時候穿插其中、錯開人潮。</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="relative flex items-center justify-between group">
-                        <div class="flex items-center justify-center w-10 h-10 rounded-full border-4 border-white bg-purple-500 text-white font-bold shadow shrink-0 z-10">4</div>
-                        <div class="w-[calc(100%-4rem)] p-4 rounded-xl border border-purple-100 bg-purple-50/50 shadow-sm">
-                            <h4 class="font-bold text-purple-700 text-[14.5px]">16:20 | 大湧谷（傍晚完美收工）</h4>
-                            <ul class="text-[13px] text-gray-700 list-disc pl-4 mt-2 space-y-1">
-                                <li>這時候中午可怕的排隊車潮與團客早就散了，輕鬆停進大停車場！</li>
-                                <li>傍晚微涼的空氣中看火山白煙、吃熱騰騰的延壽黑雞蛋，若運氣好，夕陽下的富士山是最壯觀的。</li>
-                                <li><span class="text-red-500 font-bold">⚠️ 黑雞蛋：「吃一顆延壽7年！」每人建議最多吃 2 顆。</span></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 2026 熱門景點與必吃美食 -->
-            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
-                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
-                    <i class="fas fa-star text-yellow-500"></i> 此行熱門景點與必吃美食
-                </h3>
-                <div class="overflow-x-auto rounded-xl border border-gray-200">
-                    <table class="w-full text-[13px] md:text-sm text-left border-collapse bg-white">
-                        <thead>
-                            <tr class="bg-gray-50 text-gray-700 border-b border-gray-200">
-                                <th class="p-3 font-bold w-[25%]">分類</th>
-                                <th class="p-3 font-bold w-1/3">名稱</th>
-                                <th class="p-3 font-bold">必試理由</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-gray-100 text-gray-700">
-                            <tr class="hover:bg-gray-50">
-                                <td class="p-3"><span class="badge-pill badge-sight">伊豆必去</span></td>
-                                <td class="p-3 font-semibold text-gray-900">龍宮窟</td>
-                                <td class="p-3 leading-relaxed">神祕的愛心形海蝕洞，天窗透下自然光，早晨人少光線最美。</td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="p-3"><span class="badge-pill badge-sight">大室山</span></td>
-                                <td class="p-3 font-semibold text-gray-900">大室山纜車 ⛰️</td>
-                                <td class="p-3 leading-relaxed">搭纜車登上抹茶布丁造型的火山口，環繞一圈360度看海景與富士山，門票 ¥ 800。</td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="p-3"><span class="badge-pill badge-food">必吃靜岡</span></td>
-                                <td class="p-3 font-semibold text-gray-900">さわやか 漢堡排</td>
-                                <td class="p-3 leading-relaxed">靜岡限定！鐵板現壓的爆汁半熟牛肉漢堡排，是靜岡人的驕傲，務必提早抽號碼牌！</td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="p-3"><span class="badge-pill badge-booking">箱根限定</span></td>
-                                <td class="p-3 font-semibold text-gray-900">Bakery & Table 足湯座位</td>
-                                <td class="p-3 leading-relaxed">蘆之湖畔邊泡足湯邊吃麵包，是箱根最有名的慢活早餐，09:00 準時到場搶戶外席。</td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="p-3"><span class="badge-pill badge-food">池袋必吃</span></td>
-                                <td class="p-3 font-semibold text-gray-900">麵創房 無敵家</td>
-                                <td class="p-3 leading-relaxed">池袋傳說豚骨拉麵！注意：<strong class="text-red-600">僅收現金</strong>，去前記得準備日幣現鈔，擠一顆現磨大蒜香氣直接昇華。</td>
-                            </tr>
-                            <tr class="hover:bg-gray-50">
-                                <td class="p-3"><span class="badge-pill badge-buy">上野採買</span></td>
-                                <td class="p-3 font-semibold text-gray-900">阿美橫町 & 多慶屋</td>
-                                <td class="p-3 leading-relaxed">上野住宿最大優勢！雙手提不動時可隨時回飯店放東西，再繼續出來買。</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- 🍽️ 餐廳必點美食 & 預訂攻略 -->
-            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
-                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-2 border-b pb-2 flex items-center gap-2">
-                    <i class="fas fa-utensils text-rose-500"></i> 🍽️ 餐廳必點美食 & 預訂攻略
-                </h3>
-                <p class="text-[12.5px] text-gray-500 mb-4">整理此行 10 天內所有列出的餐廳，包含推薦菜色、估計預算以及在地導遊的排隊或訂位攻略。</p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4" id="restaurant-rec-list">
-                    <!-- Dynamically rendered restaurant cards -->
-                </div>
-            </div>
-
-        </div>
-    </div>
 
     <!-- ========== VIEW 3: TOOLS 訂單資訊 ========== -->
     <div id="view-tools" class="hidden px-3 md:px-4 relative z-10">
@@ -1452,185 +1319,7 @@
         }
     ];
 
-    // ==========================================
-    // ===         餐廳必點推薦與攻略資料       ===
-    // ==========================================
-    const restaurantRecommendationsData = [
-        {
-            name: "金目亭",
-            area: "伊豆・下田港",
-            day: "Day 2 午餐首選",
-            budget: "¥1,500 - ¥3,000",
-            dishes: [
-                { name: "金目鯛煮付け定食 (金目鯛燉煮定食)", desc: "招牌必點！以秘製鹹甜醬汁慢火燉煮整條新鮮金目鯛，魚肉細緻，醬汁下飯。" },
-                { name: "金目鯛極み丼 (金目鯛生魚片丼)", desc: "能一次品嚐到炙燒、醃漬與新鮮刺身三種不同風味的金目鯛生魚片。" }
-            ],
-            tip: "營業至 15:00，但食材賣完就會提早打烊！強烈建議 11:45 左右提早抵達以確保能順利入座並點到燉煮定食。"
-        },
-        {
-            name: "Ra-maru (黑船漢堡)",
-            area: "伊豆・下田港",
-            day: "Day 2 午餐備選",
-            budget: "¥1,000 - ¥1,800",
-            dishes: [
-                { name: "下田バーガー (下田金目鯛漢堡)", desc: "下田限定名物！酥炸金目鯛魚排搭配濃郁切達起司、卡士達塔塔醬，夾入特製黑船麵包中。" }
-            ],
-            tip: "位於「開國下田港」休息站內，如果金目亭排隊太長，這家是極佳且獨特的備選！"
-        },
-        {
-            name: "上の山亭",
-            area: "伊豆・下田",
-            day: "Day 2 晚餐推薦",
-            budget: "¥1,000 - ¥2,000",
-            dishes: [
-                { name: "金目鯛チャーハン (金目鯛炒飯)", desc: "炒得粒粒分明、鑊氣十足，每一口都吃得到金目鯛魚肉碎，香氣四溢。" },
-                { name: "金目鯛ラーメン (金目鯛拉麵)", desc: "以金目鯛骨慢火熬煮出來的清爽魚介湯頭，鮮甜不膩。" }
-            ],
-            tip: "當地人非常喜愛的中華料理老店，無須訂位，份量大、CP值極高，適合第一天自駕完好好補充體力。"
-        },
-        {
-            name: "健康燒肉 Honori (ほのり)",
-            area: "熱海",
-            day: "Day 3 晚餐推薦",
-            budget: "¥4,000 - ¥8,000",
-            dishes: [
-                { name: "厚切り牛タン (厚切牛舌)", desc: "店家招牌，厚度極具誠意，烤至外脆內嫩，多汁彈牙。" },
-                { name: "極上霜降りカルビ (特上霜降五花肉)", desc: "嚴選黑毛和牛，油花分佈完美，入口即化。" }
-            ],
-            tip: "<b>⚠️ 極度熱門，一定要訂位！</b>抵達熱海飯店時，請櫃台服務人員立刻代撥電話預訂位置。"
-        },
-        {
-            name: "Ohmuro Luncheonette (大室輕食堂)",
-            area: "大室山",
-            day: "Day 3 午餐推薦",
-            budget: "¥1,200 - ¥2,000",
-            dishes: [
-                { name: "伊豆みそ煮込みうどん (伊豆味噌燉烏龍麵)", desc: "濃郁的伊豆在地味噌湯底，搭配燉煮入味的 Q 彈烏龍麵與滿滿野菜。" },
-                { name: "地魚天ぷら定食 (在地地魚天婦羅定食)", desc: "嚴選當日伊豆近海新鮮漁獲炸製，外皮薄脆酥香。" }
-            ],
-            tip: "位於大室山纜車入口旁，餐廳採用當地陶藝家手工製作的精美器皿，用餐附贈抹茶與精緻茶點。建議 11:40 前提早卡位。"
-        },
-        {
-            name: "Toshi Yoroizuka Atami",
-            area: "熱海・MOA 美術館",
-            day: "Day 4 午間甜點",
-            budget: "¥1,500 - ¥2,500",
-            dishes: [
-                { name: "Cassis 慕斯蛋糕", desc: "酸甜黑醋栗與巧克力交織，層次豐富細緻。" },
-                { name: "熱海限定烤布蕾 (Crème Brûlée)", desc: "MOA美術館店限定，表面焦糖香脆，布丁體滑順香濃。" }
-            ],
-            tip: "由米其林星級甜點大師鎧塚俊彥監修的甜點沙龍。可以一邊俯瞰相模灣海景一邊享用精緻甜點，下午人多，看展前建議先去確認排隊情況。"
-        },
-        {
-            name: "熱海プリン Café 2nd",
-            area: "熱海商店街",
-            day: "Day 4 點心推薦",
-            budget: "¥400 - ¥800",
-            dishes: [
-                { name: "特製カラメルプリン (特製焦糖布丁)", desc: "最經典的綿密口感，附上河馬造型的微苦焦糖醬，甜而不膩。" },
-                { name: "溫泉玉子プリン (溫泉蛋布丁)", desc: "搭配一顆半熟溫泉蛋的獨特布丁，鹹甜濃郁交織。" }
-            ],
-            tip: "復古澡堂風的主題店，拍照非常出片。排隊人潮多，但流動速度快，吃完後牛奶瓶容器可以帶回家作紀念！"
-        },
-        {
-            name: "まる天 (磯揚げ まる天)",
-            area: "熱海商店街",
-            day: "Day 4 街頭小吃",
-            budget: "¥300 - ¥600",
-            dishes: [
-                { name: "チーズ棒 (起司棒)", desc: "熱騰騰的炸魚漿內夾著滿滿濃郁起司，一口咬下會爆漿。" },
-                { name: "たこ棒 (章魚棒)", desc: "魚漿內藏有大顆彈牙的章魚丁，外皮炸得微焦酥脆。" }
-            ],
-            tip: "位於熱海老街，非常適合買一串邊走邊吃，熱騰騰現炸的風味最好。"
-        },
-        {
-            name: "五鐵 / 壽司之助 / かねはち",
-            area: "沼津港",
-            day: "Day 5 午餐三選一",
-            budget: "¥1,800 - ¥3,500",
-            dishes: [
-                { name: "五鐵：壹の鐵 (深海魚五重茶泡飯)", desc: "招牌海鮮丼三吃！先吃刺身原味，再拌特製蛋黃醬汁，最後沖入濃移魚骨高湯做成茶泡飯。" },
-                { name: "壽司之助：溢れる壽司 (滿溢壽司)", desc: "元祖滿溢壽司，鮭魚卵、海膽像小山一樣滿到盤子上，CP值極高。" },
-                { name: "かねはち：深海極み丼", desc: "以當日捕撈的駿河灣特有深海魚製成的極致生魚片丼飯。" }
-            ],
-            tip: "11:30 是各大餐廳剛開門的黃金時間，水族館逛完後立刻前往，不需排隊即可入座。"
-        },
-        {
-            name: "は初花 (はつ花)",
-            area: "箱根湯本",
-            day: "Day 6 午餐推薦",
-            budget: "¥1,000 - ¥2,000",
-            dishes: [
-                { name: "せいろそば (山藥泥冷蕎麥麵)", desc: "冷蕎麥麵沾著野生山藥泥與生蛋黃，口感極度滑順有彈性。" },
-                { name: "貞女そば (熱山藥蕎麥麵)", desc: "鋪上滿滿滑嫩山藥泥的熱蕎麥麵，湯頭溫潤鮮美。" }
-            ],
-            tip: "<b>百年蕎麥麵老字號。</b>不使用水，完全以「山藥泥」和雞蛋揉製麵條。平日現場排隊約需 15-30 分鐘，翻桌率快。"
-        },
-        {
-            name: "さわやか (爽快漢堡排)",
-            area: "御殿場 Outlets",
-            day: "Day 7 午餐首選",
-            budget: "¥1,200 - ¥2,500",
-            dishes: [
-                { name: "げんこつハンバーグ (拳頭漢堡排 250g)", desc: "靜岡縣限定的絕對霸主！100% 牛肉，桌邊炙燒壓切。外焦香、內裡呈粉嫩五分熟（Medium-rare）最推薦，搭配洋蔥醬汁。" }
-            ],
-            tip: "<b>🔥 終極排隊名店！</b> 早上 10:00 一到請務必立刻直奔店門口抽取整理券（通常需等 2-3 小時以上），抽完後安心逛 Outlets，透過手機查看叫號進度。"
-        },
-        {
-            name: "田むら銀かつ亭 (銀豆腐豬排)",
-            area: "箱根/御殿場",
-            day: "Day 7 午餐備選",
-            budget: "¥1,500 - ¥2,500",
-            dishes: [
-                { name: "豆腐かつ煮定食 (豆腐豬排煮定食)", desc: "箱根特產豆腐夾著香嫩豬肉餡，裹粉酥炸後放在砂鍋中，以高湯與蛋液燉煮，清甜滑嫩而不油膩。" }
-            ],
-            tip: "若さわやか漢堡排排隊時間太過誇張，這家是箱根最出名的名物料理備選（御殿場店免去強羅排隊）。"
-        },
-        {
-            name: "麵創房 無敵家",
-            area: "池袋",
-            day: "Day 8 午餐推薦",
-            budget: "¥1,000 - ¥1,500",
-            dishes: [
-                { name: "無敵家らーめん 本丸 (本丸拉麵)", desc: "最經典招牌。豚骨湯頭極度濃郁香黏，搭配厚切肥嫩炙燒叉燒與半熟滷蛋。" }
-            ],
-            tip: "<b>⚠️ 注意：僅收現金，不可刷卡！</b> 桌上備有青森縣產現磨大蒜，吃到一半請一定要擠一顆下去，湯頭風味直接昇華！平均排隊時間約 30-50 分鐘。"
-        },
-        {
-            name: "敘敘苑 太陽城60店",
-            area: "池袋",
-            day: "Day 8 晚餐推薦",
-            budget: "¥3,500 - ¥10,000",
-            dishes: [
-                { name: "上カルビ (上等牛五花)", desc: "油花分布均勻，肉質極度軟嫩，入口後油脂甜美。" },
-                { name: "牛タン塩焼 (鹽味牛舌)", desc: "薄切牛舌搭配特製鹽醬，口感爽脆多汁。" },
-                { name: "燒肉午間套餐 (Lunch Menu)", desc: "若想省錢，可考慮中午來享用午間套餐，只需 ¥3,500 起就能體驗高品質燒肉！" }
-            ],
-            tip: "位於 59 樓，視野無敵。<b>強烈建議一個月前在官網訂位</b>，並指名「窗邊席 (窓側席)」以俯瞰東京夜景。晚餐有服裝限制，請勿穿著背心、拖鞋或短褲。"
-        },
-        {
-            name: "大統領 / 肉の大山",
-            area: "上野",
-            day: "Day 9 午餐/下午茶",
-            budget: "¥500 - ¥2,000",
-            dishes: [
-                { name: "大統領：もつ焼き (炭火烤內臟串)", desc: "招牌馬肉燉煮與各式烤內臟串，搭配生啤酒，下町居酒屋靈魂。" },
-                { name: "肉の大山：特製メンチカツ (特製炸肉餅)", desc: "肉鋪直營！現炸肉餅外皮金黃酥脆，一口咬下肉汁四溢，只要兩三百日圓，CP值爆表。" }
-            ],
-            tip: "兩家店皆位於上野高架橋下，極富庶民風情。肉の大山設有立吞區（站著吃），價格比入座便宜，推薦點個炸肉餅配杯飲料，直接在店門口享用！"
-        },
-        {
-            name: "二木の菓子",
-            area: "上野阿美橫町",
-            day: "Day 10 伴手禮採購",
-            budget: "¥2,000 - ¥10,000",
-            dishes: [
-                { name: "各口味 KitKat 巧克力", desc: "包含日本各地限定口味（如宇治抹茶、溫泉饅頭味），價格非常實惠。" },
-                { name: "田丸屋 山葵美乃滋", desc: "靜岡限定的調味神醬，拌沙拉或沾炸物皆是一絕！" }
-            ],
-            tip: "上野最強伴手禮/零食批發免稅店。店內走道較擠，建議列好清單一次掃貨。免稅結帳櫃台排隊人多，請預留 20-30 分鐘。"
-        }
-    ];
+
 
     // ==========================================
     // ===         全域狀態                    ===
@@ -1643,7 +1332,7 @@
     // ===         Tab 切換                    ===
     // ==========================================
     function switchTab(tabId) {
-        const views = ['itinerary','spots','tools','transport','shopping','luggage','notes'];
+        const views = ['itinerary','tools','transport','shopping','luggage','notes'];
         views.forEach(v => {
             const el = document.getElementById('view-' + v);
             el.classList.add('hidden');
@@ -1665,7 +1354,6 @@
         if (tabId === 'shopping') renderShoppingList();
         if (tabId === 'luggage') renderLuggageList();
         if (tabId === 'notes') renderNotesChecklist();
-        if (tabId === 'spots') renderRestaurantRecommendations();
     }
 
     // ==========================================
@@ -1948,52 +1636,7 @@
         }
     }
 
-    // ==========================================
-    // ===         渲染餐廳推薦與美食指南       ===
-    // ==========================================
-    function renderRestaurantRecommendations() {
-        const el = document.getElementById('restaurant-rec-list');
-        if (!el) return;
-        if (el.children.length > 0) return; // avoid duplicate renders
 
-        restaurantRecommendationsData.forEach(r => {
-            const card = document.createElement('div');
-            card.className = 'bg-white rounded-2xl border border-gray-100 p-4 md:p-5 soft-shadow hover:shadow-md transition-shadow flex flex-col justify-between';
-            
-            let dishesHtml = r.dishes.map(d => `
-                <div class="mb-2 bg-gray-50/50 rounded-lg p-2.5 border border-gray-100/50">
-                    <p class="font-bold text-[12.5px] text-gray-800 flex items-center gap-1.5">
-                        <i class="fas fa-check-circle text-rose-400 text-xs"></i> ${d.name}
-                    </p>
-                    <p class="text-[11.5px] text-gray-500 mt-0.5 pl-4 leading-relaxed">${d.desc}</p>
-                </div>
-            `).join('');
-
-            card.innerHTML = `
-                <div>
-                    <div class="flex items-start justify-between mb-2">
-                        <div>
-                            <span class="text-[10px] font-bold text-rose-500 bg-rose-50 px-2 py-0.5 rounded-full mr-1">${r.area}</span>
-                            <span class="text-[10px] font-bold text-blue-500 bg-blue-50 px-2 py-0.5 rounded-full">${r.day}</span>
-                            <h4 class="font-bold text-[15px] text-gray-800 mt-1.5">${r.name}</h4>
-                        </div>
-                        <span class="text-[11px] font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded">${r.budget}</span>
-                    </div>
-                    
-                    <div class="mt-3.5 space-y-2">
-                        <p class="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-1.5"><i class="fas fa-utensils mr-1"></i> 推薦必點餐點</p>
-                        ${dishesHtml}
-                    </div>
-                </div>
-                
-                <div class="mt-4 pt-3 border-t border-gray-100 bg-rose-50/30 rounded-xl p-3 text-[11.5px] text-gray-600 leading-relaxed">
-                    <p class="font-bold text-rose-700 mb-1 flex items-center gap-1"><i class="fas fa-lightbulb text-rose-500"></i> 導遊攻略小撇步</p>
-                    ${r.tip}
-                </div>
-            `;
-            el.appendChild(card);
-        });
-    }
 
     // ==========================================
     // ===            初始化                   ===
@@ -2009,7 +1652,6 @@
 
         // Pre-render list functions
         renderNotesChecklist();
-        renderRestaurantRecommendations();
     });
     </script>
 </body>
