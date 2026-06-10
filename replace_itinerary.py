@@ -345,40 +345,58 @@ new_data = r"""    const itineraryData = [
                     badges: [{cls:"booking", icon:"fa-key", text:"自駕大功告成"}],
                     notice: { icon: "fa-gas-pump", text: "滿油還車規定", warning: "日本租車必須滿油還車。請用導航尋找最近的加油站，加『レギュラー (Regular 紅色油槍)』，並記得保留加油收據，車行會檢查！" }
                 },
-                {
-                    time: "10:15", type: "transport", icon: "fas fa-subway",
-                    title: "搭電車前往池袋（JR 山手線）🚃",
-                    desc: "直達僅需 16 分鐘，週末的池袋人車極多，搭電車免塞車！",
-                    tip: { title: "導遊乘車提示", content: "今天開始使用 Suica / ICOCA 等交通卡。上野到池袋搭乘『JR山手線(內回)』最快，班次極多不用看時刻表。" }
+                                {
+                    time: "10:00", type: "buy", icon: "fas fa-shopping-bag",
+                    title: "抵達池袋站 & 東武百貨購物 🛍️",
+                    desc: "抵達池袋！西口直通東武百貨，5F 為 Mont-bell 戶外專區（為市區少數可辦理退稅專櫃），開門第一波前去選購裝備！",
+                    badges: [{cls:"buy", icon:"fa-shopping-bag", text:"Mont-bell選購"}, {cls:"sight", icon:"fa-check", text:"西口直通"}],
+                    tip: { title: "置物小貼士 💡", content: "建議購買完 Mont-bell 後，先將大件戰利品寄放在池袋車站的投幣置物櫃 (Lockers)，這樣後續就可以輕裝逛街，不會提得太累。" }
                 },
                 {
-                    time: "10:45", type: "buy", icon: "fas fa-gamepad",
-                    title: "第一站：太陽城 Sunshine City（扭蛋＋一番賞）",
-                    desc: "世界紀錄 3000 台扭蛋機的天堂、一番賞官方旗艦店，動漫迷的地獄（荷包的）！",
-                    badges: [{cls:"buy", icon:"fa-gamepad", text:"3000台扭蛋"}, {cls:"booking", icon:"fa-trophy", text:"一番賞官方店"}],
-                    tip: { title: "扭蛋百貨總本店攻略 🎯", content: "準備好大量的100日圓硬幣！(現場也有換幣機)。這裡有高達3000台扭蛋機，看到喜歡的直接轉，因為園區太大，錯過你可能就找不到原本那台了！" }
+                    time: "10:05", type: "sight", icon: "fas fa-map-marked-alt",
+                    title: "🗺️ 池袋行程地圖導覽 🗺️",
+                    desc: "為您特別標記的池袋東口逛街路線地圖，可點擊放大查看。<br><br><a href='./ikebukuro_map.png' target='_blank'><img src='./ikebukuro_map.png' alt='池袋逛街地圖' class='mt-2 rounded-xl border border-pink-100 max-w-full h-auto shadow-md hover:scale-[1.01] transition-transform' /></a>",
+                    badges: [{cls:"sight", icon:"fa-map", text:"路線地圖"}, {cls:"tip", icon:"fa-search-plus", text:"點擊放大"}]
                 },
                 {
-                    time: "13:15", type: "food", icon: "fas fa-utensils",
-                    title: "午餐：麵創房 無敵家 🍜",
-                    desc: "池袋傳說豚骨拉麵！注意：僅收現金，排隊是常態！",
-                    badges: [{cls:"food", icon:"fa-utensils", text:"豚骨拉麵傳奇"}],
-                    notice: { icon: "fa-money-bill-wave", text: "導遊排隊預警", warning: "無敵家不論何時都有排隊人潮，預留40-60分鐘排隊時間是基本。且再次提醒：【只收現金】！請備妥日幣。" },
-                    tip: { title: "內行吃法", content: "點招牌『本丸麵』或厚切叉燒麵。桌上有免費的現磨大蒜和激辛高菜，吃到一半加進去，湯頭層次瞬間改變，非常過癮。" }
+                    time: "11:30", type: "transport", icon: "fas fa-walking",
+                    title: "穿越站區前往池袋東口 🚶",
+                    desc: "穿越車站中央通路，往熱鬧的東口（陽光 60 通）前進。",
+                    tip: { title: "散步備註 🚶", content: "如果還有多餘體力，東口一出來就是 Bic Camera 與唐吉訶德，也可以先在此做第一波採點。" }
                 },
                 {
-                    time: "14:45", type: "buy", icon: "fas fa-store",
-                    title: "下午：池袋東口動漫老街（Animate & 二手店）",
-                    desc: "Animate 旗艦店＋駿河屋/らしんばん 二手店，高手先逛二手店再決定要不要抽。",
-                    badges: [{cls:"buy", icon:"fa-store", text:"Animate旗艦店"}, {cls:"buy", icon:"fa-exchange-alt", text:"二手店撿便宜"}],
-                    tip: { title: "阿宅省錢秘辛 💡", content: "1. <b>Animate 池袋本店</b>：世界最大，共9層樓，新品最齊全。<br>2. <b>駿河屋 / Lashinbang</b>：重點！如果一番賞沒抽到，先來二手店找，別人抽到的 A/B 賞都會在這裡明碼標價販售，有時比你一直抽還划算！" }
+                    time: "12:00", type: "food", icon: "fas fa-utensils",
+                    title: "午餐：麵處 花田 或 太陽城美食 🍜",
+                    desc: "午餐首推陽光 60 通巷內的「麵處 花田」（主打極度濃郁的味噌拉麵）。",
+                    badges: [{cls:"food", icon:"fa-utensils", text:"濃郁味噌拉麵"}],
+                    notice: { icon: "fa-store", text: "用餐策略", warning: "花田拉麵為池袋超人氣味噌拉麵，排隊人數多。若不想排隊，也可以直接在太陽城內隨意挑選餐廳用餐，自由度更高。" }
                 },
                 {
-                    time: "18:00", type: "food", icon: "fas fa-fire",
-                    title: "晚餐：敘敘苑 太陽城 60 店 🥩",
-                    desc: "在 Sunshine 60 大樓的 59 樓高空，吃頂級和牛燒肉，看東京萬家燈火！",
-                    badges: [{cls:"sight", icon:"fa-star", text:"59F 高空夜景"}, {cls:"food", icon:"fa-fire", text:"頂級黑毛和牛"}],
-                    notice: { icon: "fa-envelope-open-text", text: "訂位與服裝規範", warning: "強烈建議出發前一個月在台灣先上官網預訂『窗邊景觀位』！餐廳氣氛高級，建議穿著Smart Casual，不要穿拖鞋短褲。" }
+                    time: "13:00", type: "buy", icon: "fas fa-gamepad",
+                    title: "第一站：太陽城 Sunshine City（扭蛋總本店 & 遊戲中心） 🎮",
+                    desc: "集結吉尼斯世界紀錄 3000 台扭蛋的「扭蛋百貨總本店」與萬代南夢宮遊戲中心都在太陽城 World Import Mart 3F，是同一個地方！下午在冷氣房裡悠閒狂歡。",
+                    badges: [{cls:"buy", icon:"fa-gamepad", text:"3000台扭蛋"}, {cls:"booking", icon:"fa-trophy", text:"南夢宮遊戲"}],
+                    tip: { title: "太陽城其他看點 🏢", content: "太陽城內還有陽光水族館、寶可夢中心 (Pokémon Center Mega Tokyo), 卡普空商店 (Capcom Store) 及陽光 60 展望台。想逛哪裡就逛哪裡，時間非常充裕且自由！" }
+                },
+                {
+                    time: "16:30", type: "buy", icon: "fas fa-shopping-bag",
+                    title: "第二站：UNIQLO 採購 & 西友超市掃貨 👕",
+                    desc: "逛陽光 60 通的大型 UNIQLO 旗艦店，採買日本限定款服飾，隨後至隔壁 24H 西友超市掃貨零食與伴手禮。",
+                    badges: [{cls:"buy", icon:"fa-shopping-bag", text:"UNIQLO"}, {cls:"buy", icon:"fa-store", text:"24H西友超市"}]
+                },
+                {
+                    time: "18:00", type: "sight", icon: "fas fa-walking",
+                    title: "傍晚：自由探索與備案時間 ☕",
+                    desc: "完全不設限的遊玩與探索時光！可以隨心找間特色咖啡廳歇腳、喝杯飲料。有多餘時間可自行探索，或前往備案點（Animate 本店、Bic Camera、唐吉訶德）。",
+                    badges: [{cls:"story", icon:"fa-leaf", text:"無壓力逛街"}, {cls:"buy", icon:"fa-store", text:"動漫/電器備案"}],
+                    tip: { title: "自由探索說明 💡", content: "池袋東口街區繁華，您也可以隨便找家藥妝店比價、或者到站前的商場逛逛，輕鬆無負擔。" }
+                },
+                {
+                    time: "21:30", type: "food", icon: "fas fa-utensils",
+                    title: "宵夜：麵創房 無敵家 🍜",
+                    desc: "深夜前去無敵家吃招牌熱騰騰豚骨拉麵，避開晚餐時間的恐怖排隊人潮。",
+                    badges: [{cls:"food", icon:"fa-star", text:"宵夜首選"}, {cls:"booking", icon:"fa-money-bill-wave", text:"僅收現金"}],
+                    tip: { title: "用餐提示", content: "無敵家排隊時店員會先給菜單並點餐。無敵家【只收現金】，請在排隊前備足日幣現鈔喔！" }
                 }
             ]
         },
