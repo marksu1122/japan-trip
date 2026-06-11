@@ -1483,16 +1483,16 @@
     // ==========================================
     const weatherCache = {};
     const dayCoordinates = {
-        0: { name: "伊豆下田", lat: 34.6796, lon: 138.9442 },
-        1: { name: "伊豆下田", lat: 34.6796, lon: 138.9442 },
-        2: { name: "熱海", lat: 35.0962, lon: 139.0717 },
-        3: { name: "箱根", lat: 35.2324, lon: 139.1039 },
-        4: { name: "箱根", lat: 35.2324, lon: 139.1039 },
-        5: { name: "東京", lat: 35.6762, lon: 139.6503 },
-        6: { name: "東京", lat: 35.6762, lon: 139.6503 },
-        7: { name: "東京", lat: 35.6762, lon: 139.6503 },
-        8: { name: "東京", lat: 35.6762, lon: 139.6503 },
-        9: { name: "東京", lat: 35.6762, lon: 139.6503 }
+        0: { name: "伊豆下田", lat: 34.6796, lon: 138.9442, tenkiUrl: "https://tenki.jp/forecast/5/26/5030/22205/" },
+        1: { name: "伊豆下田", lat: 34.6796, lon: 138.9442, tenkiUrl: "https://tenki.jp/forecast/5/26/5030/22205/" },
+        2: { name: "熱海", lat: 35.0962, lon: 139.0717, tenkiUrl: "https://tenki.jp/forecast/5/26/5030/22206/" },
+        3: { name: "箱根", lat: 35.2324, lon: 139.1039, tenkiUrl: "https://tenki.jp/forecast/3/17/4620/14382/" },
+        4: { name: "箱根", lat: 35.2324, lon: 139.1039, tenkiUrl: "https://tenki.jp/forecast/3/17/4620/14382/" },
+        5: { name: "東京", lat: 35.6762, lon: 139.6503, tenkiUrl: "https://tenki.jp/forecast/3/16/4410/13106/" },
+        6: { name: "東京", lat: 35.6762, lon: 139.6503, tenkiUrl: "https://tenki.jp/forecast/3/16/4410/13106/" },
+        7: { name: "東京", lat: 35.6762, lon: 139.6503, tenkiUrl: "https://tenki.jp/forecast/3/16/4410/13106/" },
+        8: { name: "東京", lat: 35.6762, lon: 139.6503, tenkiUrl: "https://tenki.jp/forecast/3/16/4410/13106/" },
+        9: { name: "東京", lat: 35.6762, lon: 139.6503, tenkiUrl: "https://tenki.jp/forecast/3/16/4410/13106/" }
     };
 
     function getWmoWeatherInfo(code) {
@@ -1529,11 +1529,11 @@
         const weatherEl = document.getElementById('card-weather');
         
         function setWeatherUI(emoji, min, max, desc, isRealtime) {
-            const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(coords.name + ' 天氣')}`;
+            const tenkiUrl = coords.tenkiUrl || 'https://tenki.jp/';
             if (isRealtime) {
-                weatherEl.innerHTML = `<a href="${searchUrl}" target="_blank" class="hover:underline flex items-center gap-1">${emoji} ${min}°C~${max}°C (${desc} 預報) <i class="fas fa-external-link-alt text-[9px] opacity-70"></i></a>`;
+                weatherEl.innerHTML = `<a href="${tenkiUrl}" target="_blank" class="hover:underline flex items-center gap-1">${emoji} ${min}°C~${max}°C (${desc} 預報) <i class="fas fa-external-link-alt text-[9px] opacity-70"></i></a>`;
             } else {
-                weatherEl.innerHTML = `<a href="${searchUrl}" target="_blank" class="hover:underline flex items-center gap-1">${emoji} (歷史均溫) <i class="fas fa-external-link-alt text-[9px] opacity-70"></i></a>`;
+                weatherEl.innerHTML = `<a href="${tenkiUrl}" target="_blank" class="hover:underline flex items-center gap-1">${emoji} (歷史均溫) <i class="fas fa-external-link-alt text-[9px] opacity-70"></i></a>`;
             }
         }
 
@@ -1585,8 +1585,8 @@
         document.getElementById('card-tag').textContent = day.tag;
 
         const coords = dayCoordinates[idx];
-        const searchUrl = coords ? `https://www.google.com/search?q=${encodeURIComponent(coords.name + ' 天氣')}` : '#';
-        document.getElementById('card-weather').innerHTML = `<a href="${searchUrl}" target="_blank" class="hover:underline flex items-center gap-1">${day.weather} (歷史均溫) <i class="fas fa-external-link-alt text-[9px] opacity-70"></i></a>`;
+        const tenkiUrl = coords ? coords.tenkiUrl : 'https://tenki.jp/';
+        document.getElementById('card-weather').innerHTML = `<a href="${tenkiUrl}" target="_blank" class="hover:underline flex items-center gap-1">${day.weather} (歷史均溫) <i class="fas fa-external-link-alt text-[9px] opacity-70"></i></a>`;
 
         document.getElementById('card-title').textContent = day.title;
 
