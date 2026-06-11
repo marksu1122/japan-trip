@@ -428,18 +428,25 @@ new_data = r"""    const itineraryData = [
                     notice: { icon: "fa-bullhorn", text: "藥妝店避坑指南", warning: "阿美橫町的『OS Drug』藥妝通常最便宜，但【只收現金且無退稅】。如果要大量購買並刷卡退稅，建議去松本清、大國藥妝或『多慶屋(紫色的建築)』！" }
                 },
                 {
-                    time: "17:00", type: "sight", icon: "fas fa-gamepad",
-                    title: "傍晚：秋葉原動漫聖地",
-                    desc: "從上野搭 JR 僅需 3 分鐘，補齊昨天的遺珠之憾！",
-                    badges: [{cls:"sight", icon:"fa-gamepad", text:"電器與扭蛋"}],
-                    tip: { title: "秋葉原採買重點", content: "如果想買電器，直接去車站旁的 Yodobashi Camera (秋葉原最大，退稅＋信用卡優惠最齊全)。如果想找遊戲公仔，Radio會館和各大二手店可以逛到腿軟。" }
+                    time: "15:30", type: "sight", icon: "fas fa-coffee",
+                    title: "下午茶與歷史街區：日本橋（搭銀座線直達 8 分鐘） ☕",
+                    desc: "搭乘地鐵直達日本橋，探訪東京商業起點與百年老街！可造訪日本首家百貨「日本橋三越」、復古奢華的「日本橋高島屋」或現代商場「COREDO 室町」。",
+                    badges: [{cls:"sight", icon:"fa-history", text:"百年歷史街區"}, {cls:"buy", icon:"fa-store", text:"老字號百貨"}],
+                    tip: { title: "日本橋必逛與必吃 🍡", content: "1. <b>福德神社：</b>隱身在 COREDO 室町大樓之間的綠意神社，以祈求中籤（一番賞、演唱會門票）與旅途平安聞名，一定要去參拜！<br>2. <b>傳統和菓子：</b>可以去「日本橋 榮太樓」或「木屋」等百年老店品嚐日式甜點，歇腳喝杯抹茶。<br>3. <b>交通：</b>上野站搭乘「東京地鐵銀座線」直達日本橋站僅需 8 分鐘，刷交通卡進出即可。" }
+                },
+                {
+                    time: "18:00", type: "sight", icon: "fas fa-gamepad",
+                    title: "傍晚：秋葉原最終補貨（搭日比谷線 4 分鐘） 🎮",
+                    desc: "從日本橋地區搭乘日比谷線直達秋葉原，補齊動漫周邊、電器或扭蛋遺珠！",
+                    badges: [{cls:"sight", icon:"fa-gamepad", text:"電器扭蛋天堂"}],
+                    tip: { title: "秋葉原採買重點", content: "電器首選：<b>Yodobashi Camera Multimedia Akiba</b>（最大，退稅+刷卡+積點全有）。<br>動漫扭蛋：Radio會館、中央通各棟大樓都有。<br>二手收藏：Sofmap、Lashinbang秋葉原店，超多二手周邊。<br><b>交通：</b>從人形町站或三越前站搭乘日比谷線/銀座線，約 3-5 分鐘即達秋葉原。" }
                 },
                 {
                     time: "19:30", type: "food", icon: "fas fa-beer",
-                    title: "晚餐：上野居酒屋街",
-                    desc: "在高架橋下的日式居酒屋（如大統領）喝杯生啤酒，為旅程乾杯！",
-                    badges: [{cls:"food", icon:"fa-beer", text:"串燒啤酒"}],
-                    tip: { title: "體驗高架橋下文化", content: "『大統領』或『肉の大山』傍晚後氣氛極佳！坐在塑膠箱當椅子的路邊攤，點幾串燒烤(もつ焼き)和一杯生啤(Nama Beer)，完美融入東京下町的夜晚。" }
+                    title: "晚餐：上野居酒屋街，為旅程乾杯！",
+                    desc: "高架橋下的下町居酒屋，串燒＋生啤，完美收尾。",
+                    badges: [{cls:"food", icon:"fa-beer", text:"下町居酒屋"}],
+                    tip: { title: "在地居酒屋體驗", content: "「大統領」或「肉の大山」傍晚氣氛超棒！坐在高架橋下的露天攤位，點幾串もつ焼き（內臟串燒）和一杯生ビール（生啤酒），體驗最真實的東京下町夜晚。這是旅行最後能量儲備，明天認真打包！" }
                 }
             ]
         },
