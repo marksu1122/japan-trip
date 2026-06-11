@@ -1479,6 +1479,97 @@
     }
 
     // ==========================================
+    // ===         即時天氣預報                 ===
+    // ==========================================
+    const weatherCache = {};
+    const dayCoordinates = {
+        0: { name: "伊豆下田", lat: 34.6796, lon: 138.9442 },
+        1: { name: "伊豆下田", lat: 34.6796, lon: 138.9442 },
+        2: { name: "熱海", lat: 35.0962, lon: 139.0717 },
+        3: { name: "箱根", lat: 35.2324, lon: 139.1039 },
+        4: { name: "箱根", lat: 35.2324, lon: 139.1039 },
+        5: { name: "東京", lat: 35.6762, lon: 139.6503 },
+        6: { name: "東京", lat: 35.6762, lon: 139.6503 },
+        7: { name: "東京", lat: 35.6762, lon: 139.6503 },
+        8: { name: "東京", lat: 35.6762, lon: 139.6503 },
+        9: { name: "東京", lat: 35.6762, lon: 139.6503 }
+    };
+
+    function getWmoWeatherInfo(code) {
+        const mapping = {
+            0: { emoji: "☀️", desc: "晴朗" },
+            1: { emoji: "🌤️", desc: "晴時多雲" },
+            2: { emoji: "⛅", desc: "多雲時晴" },
+            3: { emoji: "☁️", desc: "陰天" },
+            45: { emoji: "🌫️", desc: "霧" },
+            48: { emoji: "🌫️", desc: "霧" },
+            51: { emoji: "🌧️", desc: "毛毛雨" },
+            53: { emoji: "🌧️", desc: "毛毛雨" },
+            55: { emoji: "🌧️", desc: "毛毛雨" },
+            61: { emoji: "🌧️", desc: "小雨" },
+            63: { emoji: "🌧️", desc: "中雨" },
+            65: { emoji: "🌧️", desc: "大雨" },
+            71: { emoji: "🌨️", desc: "小雪" },
+            73: { emoji: "🌨️", desc: "中雪" },
+            75: { emoji: "🌨️", desc: "大雪" },
+            80: { emoji: "🌧️", desc: "陣雨" },
+            81: { emoji: "🌧️", desc: "陣雨" },
+            82: { emoji: "🌧️", desc: "暴雨" },
+            95: { emoji: "⛈️", desc: "雷雨" },
+            96: { emoji: "⛈️", desc: "雷雨" },
+            99: { emoji: "⛈️", desc: "雷雨" }
+        };
+        return mapping[code] || { emoji: "☀️", desc: "晴朗" };
+    }
+
+    function updateWeatherRealtime(dayDate, idx) {
+        const coords = dayCoordinates[idx];
+        if (!coords) return;
+
+        const weatherEl = document.getElementById('card-weather');
+        
+        function setWeatherUI(emoji, min, max, desc, isRealtime) {
+            if (isRealtime) {
+                weatherEl.innerHTML = `${emoji} ${min}°C~${max}°C (${desc} 預報)`;
+            } else {
+                weatherEl.innerHTML = `${emoji} (歷史均溫)`;
+            }
+        }
+
+        if (weatherCache[idx]) {
+            const data = weatherCache[idx];
+            setWeatherUI(data.emoji, data.min, data.max, data.desc, true);
+            return;
+        }
+
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${coords.lat}&longitude=${coords.lon}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=Asia%2FTokyo&forecast_days=16`;
+        
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                if (data && data.daily && data.daily.time) {
+                    const times = data.daily.time;
+                    const dIdx = times.indexOf(dayDate);
+                    if (dIdx !== -1) {
+                        const code = data.daily.weathercode[dIdx];
+                        const max = Math.round(data.daily.temperature_2m_max[dIdx]);
+                        const min = Math.round(data.daily.temperature_2m_min[dIdx]);
+                        const wInfo = getWmoWeatherInfo(code);
+                        
+                        weatherCache[idx] = { emoji: wInfo.emoji, min: min, max: max, desc: wInfo.desc };
+                        
+                        if (currentIndex === idx) {
+                            setWeatherUI(wInfo.emoji, min, max, wInfo.desc, true);
+                        }
+                    }
+                }
+            })
+            .catch(err => {
+                console.error("Failed to fetch weather forecast:", err);
+            });
+    }
+
+    // ==========================================
     // ===         渲染日行程                  ===
     // ==========================================
     function changeDay(idx) {
@@ -1491,8 +1582,11 @@
         document.getElementById('card-day-week').textContent = dayNames[d.getDay()];
         document.getElementById('card-month').textContent = monthNames[d.getMonth()] + ' ' + d.getFullYear();
         document.getElementById('card-tag').textContent = day.tag;
-        document.getElementById('card-weather').innerHTML = day.weather;
+        document.getElementById('card-weather').innerHTML = day.weather + ' (歷史均溫)';
         document.getElementById('card-title').textContent = day.title;
+
+        // Fetch and display real-time forecast
+        updateWeatherRealtime(day.date, idx);
 
         // Events
         const eventsEl = document.getElementById('card-events');
