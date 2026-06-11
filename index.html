@@ -1529,10 +1529,11 @@
         const weatherEl = document.getElementById('card-weather');
         
         function setWeatherUI(emoji, min, max, desc, isRealtime) {
+            const searchUrl = `https://www.google.com/search?q=${encodeURIComponent(coords.name + ' 天氣')}`;
             if (isRealtime) {
-                weatherEl.innerHTML = `${emoji} ${min}°C~${max}°C (${desc} 預報)`;
+                weatherEl.innerHTML = `<a href="${searchUrl}" target="_blank" class="hover:underline flex items-center gap-1">${emoji} ${min}°C~${max}°C (${desc} 預報) <i class="fas fa-external-link-alt text-[9px] opacity-70"></i></a>`;
             } else {
-                weatherEl.innerHTML = `${emoji} (歷史均溫)`;
+                weatherEl.innerHTML = `<a href="${searchUrl}" target="_blank" class="hover:underline flex items-center gap-1">${emoji} (歷史均溫) <i class="fas fa-external-link-alt text-[9px] opacity-70"></i></a>`;
             }
         }
 
@@ -1582,7 +1583,11 @@
         document.getElementById('card-day-week').textContent = dayNames[d.getDay()];
         document.getElementById('card-month').textContent = monthNames[d.getMonth()] + ' ' + d.getFullYear();
         document.getElementById('card-tag').textContent = day.tag;
-        document.getElementById('card-weather').innerHTML = day.weather + ' (歷史均溫)';
+
+        const coords = dayCoordinates[idx];
+        const searchUrl = coords ? `https://www.google.com/search?q=${encodeURIComponent(coords.name + ' 天氣')}` : '#';
+        document.getElementById('card-weather').innerHTML = `<a href="${searchUrl}" target="_blank" class="hover:underline flex items-center gap-1">${day.weather} (歷史均溫) <i class="fas fa-external-link-alt text-[9px] opacity-70"></i></a>`;
+
         document.getElementById('card-title').textContent = day.title;
 
         // Fetch and display real-time forecast
