@@ -347,10 +347,10 @@ new_data = r"""    const itineraryData = [
                 },
                                 {
                     time: "10:00", type: "buy", icon: "fas fa-shopping-bag",
-                    title: "抵達池袋站 & 東武百貨購物 🛍️",
-                    desc: "抵達池袋！西口直通東武百貨，5F 為 Mont-bell 戶外專區（為市區少數可辦理退稅專櫃），開門第一波前去選購裝備！",
-                    badges: [{cls:"buy", icon:"fa-shopping-bag", text:"Mont-bell選購"}, {cls:"sight", icon:"fa-check", text:"西口直通"}],
-                    tip: { title: "置物小貼士 💡", content: "建議購買完 Mont-bell 後，先將大件戰利品寄放在池袋車站的投幣置物櫃 (Lockers)，這樣後續就可以輕裝逛街，不會提得太累。" }
+                    title: "抵達池袋站 & 百貨購物 🛍️",
+                    desc: "抵達池袋！西口直通東武百貨 (Tobu) 與 LUMINE 百貨。東武 5F 除了 Mont-bell 戶外專區（為市區少數可辦理退稅專櫃），還有鬼塚虎 (Onitsuka Tiger) 及 United Arrows 專櫃，開門第一波前去選購裝備與潮流服飾！",
+                    badges: [{cls:"buy", icon:"fa-shopping-bag", text:"Mont-bell選購"}, {cls:"buy", icon:"fa-tags", text:"鬼塚虎/UA"}, {cls:"sight", icon:"fa-check", text:"西口直通"}],
+                    tip: { title: "百貨購物與置物攻略 💡", content: "1. <b>東武百貨 (Tobu)：</b>5F 設有 Mont-bell 與 <b>Onitsuka Tiger (鬼塚虎)</b> 專櫃，且可辦理退稅。<br>2. <b>LUMINE 池袋：</b>與西口直通，內部有 <b>United Arrows</b> 專櫃，推薦順路去逛！<br>3. <b>置物小貼士：</b>建議購買完後，先將大件戰利品寄放在池袋車站的投幣置物櫃 (Lockers)，這樣後續就可以輕裝逛街，不會提得太累。" }
                 },
                 {
                     time: "10:05", type: "sight", icon: "fas fa-map-marked-alt",
@@ -361,8 +361,9 @@ new_data = r"""    const itineraryData = [
                 {
                     time: "11:30", type: "transport", icon: "fas fa-walking",
                     title: "穿越站區前往池袋東口 🚶",
-                    desc: "穿越車站中央通路，往熱鬧的東口（陽光 60 通）前進。",
-                    tip: { title: "散步備註 🚶", content: "如果還有多餘體力，東口一出來就是 Bic Camera 與唐吉訶德，也可以先在此做第一波採點。" }
+                    desc: "穿越車站中央通路，往熱鬧的東口（陽光 60 通）前進。出站即是 PARCO 本館，內有 <b>Onitsuka Tiger (鬼塚虎)</b> 與 <b>Beauty & Youth (United Arrows)</b> 專櫃，推薦在此進行第一波採購！",
+                    badges: [{cls:"buy", icon:"fa-tags", text:"PARCO本館潮流"}],
+                    tip: { title: "散步與東口採購備註 🚶", content: "如果還有多餘體力，東口一出來就是 PARCO 本館（鬼塚虎、UA/BY 都在此），旁邊還有 Bic Camera 與唐吉訶德，也可以先在此做第一波採點。" }
                 },
                 {
                     time: "12:00", type: "food", icon: "fas fa-utensils",
