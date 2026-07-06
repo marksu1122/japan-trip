@@ -41,13 +41,60 @@
         .badge-pill { display: inline-flex; align-items: center; gap: 3px; padding: 3px 8px; border-radius: 6px; font-size: 0.7rem; font-weight: 600; white-space: nowrap; letter-spacing: 0.02em; }
         @media (min-width: 768px) { .badge-pill { padding: 4px 10px; font-size: 0.75rem; } }
 
-        .badge-food   { background-color: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
-        .badge-buy    { background-color: #fdf2f8; color: #db2777; border: 1px solid #fbcfe8; }
-        .badge-booking{ background-color: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
-        .badge-story  { background-color: #f8fafc; color: #475569; border: 1px solid #e2e8f0; }
-        .badge-sight  { background-color: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; }
+        /* Morandi Tint Palette for Cards */
+        .card-sight     { background-color: #F2F6F3; border-color: #E2ECE5; }
+        .card-transport { background-color: #F4F6F8; border-color: #E5EAEF; }
+        .card-food      { background-color: #FAF1F1; border-color: #F5E3E3; }
+        .card-buy       { background-color: #F5F3F9; border-color: #E7E3F0; }
+        .card-flight    { background-color: #F8F2F9; border-color: #EFE2F1; }
+        .card-hotel     { background-color: #F4F3F7; border-color: #E6E3ED; }
+        .card-booking   { background-color: #EEF5F6; border-color: #DCECEF; }
+        .card-story     { background-color: #FAFAF9; border-color: #EBEAE6; }
+
+        /* Text and Icon Colors */
+        .text-sight     { color: #3A5F43; }
+        .text-transport { color: #5A6B7C; }
+        .text-food      { color: #C38B8B; }
+        .text-buy       { color: #524675; }
+        .text-flight    { color: #A863A0; }
+        .text-hotel     { color: #726297; }
+        .text-booking   { color: #3B7A87; }
+        .text-story     { color: #57534E; }
+
+        /* Borders for Icons */
+        .border-sight     { border-color: #E2ECE5; }
+        .border-transport { border-color: #E5EAEF; }
+        .border-food      { border-color: #F5E3E3; }
+        .border-buy       { border-color: #E7E3F0; }
+        .border-flight    { border-color: #EFE2F1; }
+        .border-hotel     { border-color: #E6E3ED; }
+        .border-booking   { border-color: #DCECEF; }
+        .border-story     { border-color: #EBEAE6; }
+
+        /* Morandi Badges */
+        .badge-food   { background-color: #FAF1F1; color: #C38B8B; border: 1px solid #F5E3E3; }
+        .badge-buy    { background-color: #F5F3F9; color: #524675; border: 1px solid #E7E3F0; }
+        .badge-booking{ background-color: #EEF5F6; color: #3B7A87; border: 1px solid #DCECEF; }
+        .badge-story  { background-color: #FAFAF9; color: #57534E; border: 1px solid #EBEAE6; }
+        .badge-sight  { background-color: #F2F6F3; color: #3A5F43; border: 1px solid #E2ECE5; }
+        .badge-transport { background-color: #F4F6F8; color: #5A6B7C; border: 1px solid #E5EAEF; }
+        .badge-flight { background-color: #F8F2F9; color: #A863A0; border: 1px solid #EFE2F1; }
+        .badge-hotel  { background-color: #F4F3F7; color: #726297; border: 1px solid #E6E3ED; }
         .badge-tip    { background-color: #fefce8; color: #ca8a04; border: 1px solid #fef08a; }
         .badge-green  { background-color: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+
+        /* Clean Notice UI */
+        .notice-box {
+            background-color: #FCF8F2 !important;
+            border: 1px solid #F1E4D0 !important;
+        }
+        .notice-danger {
+            color: #9B2C2C !important;
+        }
+        .notice-warning {
+            color: #6B512C !important;
+        }
+
 
         /* Sakura petal animation */
         @keyframes fall {
@@ -1606,14 +1653,14 @@
         eventsEl.innerHTML = '';
         day.events.forEach(ev => {
             const colors = {
-                food:      { bg:'bg-red-50',    border:'border-red-200',    icon:'text-red-500',    time:'text-red-400'    },
-                sight:     { bg:'bg-blue-50',   border:'border-blue-200',   icon:'text-blue-500',   time:'text-blue-400'   },
-                buy:       { bg:'bg-pink-50',   border:'border-pink-200',   icon:'text-pink-500',   time:'text-pink-400'   },
-                booking:   { bg:'bg-green-50',  border:'border-green-200',  icon:'text-green-500',  time:'text-green-400'  },
-                transport: { bg:'bg-slate-50',  border:'border-slate-200',  icon:'text-slate-500',  time:'text-slate-400'  },
-                flight:    { bg:'bg-blue-50',   border:'border-blue-200',   icon:'text-blue-600',   time:'text-blue-500'   },
-                hotel:     { bg:'bg-purple-50', border:'border-purple-200', icon:'text-purple-500', time:'text-purple-400' },
-                story:     { bg:'bg-gray-50',   border:'border-gray-200',   icon:'text-gray-400',   time:'text-gray-400'   },
+                food:      { card: 'card-food',      text: 'text-food',      border: 'border-food',      time: 'text-food' },
+                sight:     { card: 'card-sight',     text: 'text-sight',     border: 'border-sight',     time: 'text-sight' },
+                buy:       { card: 'card-buy',       text: 'text-buy',       border: 'border-buy',       time: 'text-buy' },
+                booking:   { card: 'card-booking',   text: 'text-booking',   border: 'border-booking',   time: 'text-booking' },
+                transport: { card: 'card-transport', text: 'text-transport', border: 'border-transport', time: 'text-transport' },
+                flight:    { card: 'card-flight',    text: 'text-flight',    border: 'border-flight',    time: 'text-flight' },
+                hotel:     { card: 'card-hotel',     text: 'text-hotel',     border: 'border-hotel',     time: 'text-hotel' },
+                story:     { card: 'card-story',     text: 'text-story',     border: 'border-story',     time: 'text-story' },
             };
             const c = colors[ev.type] || colors['story'];
             const typeLabels = {
@@ -1621,12 +1668,13 @@
                 transport:'交通', flight:'航班', hotel:'住宿', story:'故事'
             };
             const badgeClsMap = {
-                food: 'badge-food', buy: 'badge-buy', booking: 'badge-green',
-                sight: 'badge-sight', tip: 'badge-tip', story: 'badge-story', green: 'badge-green'
+                food: 'badge-food', buy: 'badge-buy', booking: 'badge-booking',
+                sight: 'badge-sight', transport: 'badge-transport', flight: 'badge-flight',
+                hotel: 'badge-hotel', story: 'badge-story', tip: 'badge-tip'
             };
 
             const card = document.createElement('div');
-            card.className = `day-event-card ${c.bg} ${c.border} border rounded-xl p-3 md:p-4`;
+            card.className = `day-event-card ${c.card} border rounded-xl p-3 md:p-4`;
 
             // Badges HTML
             let badgesHtml = '';
@@ -1640,14 +1688,18 @@
             // Notice HTML
             let noticeHtml = '';
             if (ev.notice) {
+                const level = ev.notice.level || 'danger';
+                const textClass = level === 'danger' ? 'notice-danger' : 'notice-warning';
+                const icon = ev.notice.icon || (level === 'danger' ? 'fa-exclamation-triangle' : 'fa-exclamation-circle');
+
                 noticeHtml = `<div class="mt-2.5 bg-white/70 rounded-xl border border-gray-100 p-3 text-[12px] text-gray-700">
                     <div class="flex items-center gap-2 mb-1.5">
-                        <i class="fas ${ev.notice.icon} text-gray-400 text-sm"></i>
+                        <i class="fas ${icon} text-gray-400 text-sm"></i>
                         <span class="font-bold text-gray-600">${ev.notice.text}</span>
                     </div>
-                    <div class="flex items-start gap-2 bg-red-50 rounded-lg border border-red-100 p-2">
-                        <i class="fas fa-exclamation-triangle text-red-400 text-xs mt-0.5 shrink-0"></i>
-                        <span class="text-red-700 font-medium leading-snug">${ev.notice.warning}</span>
+                    <div class="flex items-start gap-2 notice-box rounded-lg p-2 ${textClass}">
+                        <i class="fas ${icon} text-xs mt-0.5 shrink-0"></i>
+                        <span class="font-medium leading-snug">${ev.notice.warning}</span>
                     </div>
                 </div>`;
             }
@@ -1672,13 +1724,13 @@
 
             card.innerHTML = `
                 <div class="flex gap-3">
-                    <div class="shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-full bg-white flex items-center justify-center ${c.icon} shadow-sm border ${c.border}">
+                    <div class="shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-full bg-white flex items-center justify-center ${c.text} shadow-sm border ${c.border}">
                         <i class="${ev.icon} text-sm"></i>
                     </div>
                     <div class="flex-1 min-w-0">
                         <div class="flex flex-wrap items-center gap-2 mb-1">
                             <span class="text-[11px] font-bold ${c.time} font-mono">${ev.time}</span>
-                            <span class="badge-pill badge-${ev.type === 'transport' ? 'story' : ev.type === 'flight' ? 'sight' : ev.type === 'hotel' ? 'story' : ev.type}">${typeLabels[ev.type] || ''}</span>
+                            <span class="badge-pill badge-${ev.type}">${typeLabels[ev.type] || ''}</span>
                         </div>
                         <p class="font-bold text-[13.5px] md:text-[14.5px] text-gray-800 leading-snug">${ev.title}</p>
                         <p class="text-[12px] md:text-[13px] text-gray-500 mt-1 leading-relaxed">${ev.desc}</p>
