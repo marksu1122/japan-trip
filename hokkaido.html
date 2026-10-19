@@ -273,7 +273,7 @@
                             <div class="flex items-start gap-2"><i class="fas fa-calendar-day text-blue-500 w-4 text-center mt-0.5"></i><p><strong>日期：</strong>2026/10/22 (四)</p></div>
                             <div class="flex items-start gap-2"><i class="fas fa-clock text-blue-500 w-4 text-center mt-0.5"></i><p><strong>時間：</strong>13:00 ➔ 17:55 (3h55m)</p></div>
                             <div class="flex items-start gap-2"><i class="fas fa-map-marker-alt text-blue-500 w-4 text-center mt-0.5"></i><p><strong>機場：</strong>桃園 ➔ 新千歲</p></div>
-                            <div class="flex items-start gap-2"><i class="fas fa-suitcase text-blue-500 w-4 text-center mt-0.5"></i><p><strong>行李：</strong>依訂單（請確認）</p></div>
+                            <div class="flex items-start gap-2"><i class="fas fa-suitcase text-blue-500 w-4 text-center mt-0.5"></i><p><strong>行李：</strong>依酷航訂單</p></div>
                         </div>
                     </div>
                     <div class="bg-emerald-50/50 p-3.5 md:p-4 rounded-xl border border-emerald-100 shadow-sm">
@@ -325,11 +325,15 @@
             </div>
 
             <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
-                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-3 border-b pb-2 flex items-center gap-2"><i class="fas fa-car-side text-indigo-500"></i> 租車</h3>
-                <div class="text-[12.5px] text-gray-700 space-y-2">
-                    <div class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-blue-500 w-4 text-center"></i><p><strong>取車：</strong>10/24 (六) 08:30 @ 札幌（店鋪待補）</p></div>
-                    <div class="flex items-center gap-2"><i class="fas fa-flag-checkered text-green-500 w-4 text-center"></i><p><strong>還車：</strong>10/26 (一) 08:30 @ 函館（店鋪待補）</p></div>
-                    <div class="flex items-center gap-2"><i class="fas fa-snowflake text-sky-500 w-4 text-center"></i><p><strong>確認：</strong>冬季輪胎・ETC・異地還車費</p></div>
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-3 border-b pb-2 flex items-center gap-2"><i class="fas fa-car-side text-indigo-500"></i> 租車憑證（楽天トラベル × ニッポンレンタカー）</h3>
+                <div class="bg-indigo-50/50 border border-indigo-100 rounded-xl p-4 space-y-2.5 text-[12.5px] text-gray-700">
+                    <div class="flex flex-wrap justify-between items-center border-b border-indigo-100 pb-2">
+                        <span class="font-bold text-indigo-900 text-[14px]">ニッポンレンタカー（札幌駅前 ➔ 新函館北斗駅前）</span>
+                        <span class="font-mono text-[11px] bg-indigo-600 text-white px-2 py-0.5 rounded font-bold">預約番號: RC12461331534313494</span>
+                    </div>
+                    <div class="flex items-start gap-2"><i class="fas fa-user text-indigo-500 w-4 text-center mt-0.5"></i><p><strong>預約人：</strong>蘇 文弘 様（預約受付日：2026-10-18）</p></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-map-marker-alt text-blue-500 w-4 text-center mt-0.5"></i><p><strong>取車（貸出）：</strong>2026/10/24 (六) 08:30 @ <b>札幌駅前営業所</b><br>北海道札幌市東区北７条東１丁目１番１号（TEL: 050-1712-2997） <a href="https://www.google.com/maps/search/?api=1&query=ニッポンレンタカー+札幌駅前営業所" target="_blank" class="text-blue-600 underline font-bold ml-1">開啟導航</a></p></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-flag-checkered text-green-600 w-4 text-center mt-0.5"></i><p><strong>還車（返却）：</strong>2026/10/26 (一) 08:30 @ <b>新函館北斗駅前営業所</b><br>北海道北斗市市渡１－５－１（TEL: 050-1712-2994 / Mapcode: <b>86 543 069</b>） <a href="https://www.google.com/maps/search/?api=1&query=ニッポンレンタカー+新函館北斗駅前営業所" target="_blank" class="text-green-700 underline font-bold ml-1">開啟導航</a></p></div>
                 </div>
             </div>
 
@@ -340,20 +344,19 @@
     <div id="view-transport" class="hidden px-3 md:px-4 relative z-10">
         <div class="max-w-3xl mx-auto space-y-4 md:space-y-6">
             <div class="bg-amber-50 p-4 md:p-5 rounded-xl border border-amber-200 soft-shadow">
-                <h4 class="font-bold text-amber-800 text-[14.5px] md:text-base mb-3 flex items-center gap-2"><i class="fas fa-car"></i> 🚗 自駕概覽（10/24 – 10/26）</h4>
+                <h4 class="font-bold text-amber-800 text-[14.5px] md:text-base mb-3 flex items-center gap-2"><i class="fas fa-car"></i> 🚗 自駕路線概覽（10/24 08:30 – 10/26 08:30）</h4>
                 <ul class="text-[13px] md:text-[13.5px] text-gray-700 space-y-2 list-disc pl-4">
-                    <li><strong>10/24：</strong>札幌 ➔ 定山溪（1h）➔ 中山峠 ➔ 洞爺湖（1.5h）➔ 豐浦 Hotel Cocoa（25 分）</li>
-                    <li><strong>10/25：</strong>豐浦 ➔ 登別（1h10m，道央道）➔ 大沼公園 ➔ 函館（約 3h）</li>
-                    <li><strong>10/26：</strong>加油 ➔ 08:30 函館還車</li>
+                    <li><strong>Day 3 (10/24 六)：</strong>ニッポンレンタカー札幌駅前（08:30 取車 & 附近抽一番賞）➔ 定山溪溫泉（約 1h）➔ 中山峠 ➔ 洞爺湖（約 1.5h）➔ 豐浦 Hotel Cocoa（約 20m）</li>
+                    <li><strong>Day 4 (10/25 日)：</strong>豐浦 ➔ 登別地獄谷（道央道，約 1h10m）➔ 大沼國定公園 ➔ 函館環球景觀飯店（約 3h）</li>
+                    <li><strong>Day 5 (10/26 一)：</strong>07:40 函館飯店出發 ➔ ENEOS 渡島大野SS 加滿油 ➔ 08:30 新函館北斗駅前店還車 ➔ 搭 JR 函館ライナー（18 分）回函館朝市</li>
                 </ul>
             </div>
             <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
-                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-3 border-b pb-2 flex items-center gap-2"><i class="fas fa-road text-blue-500"></i> 重點路段</h3>
-                <ul class="space-y-2 text-[13px] text-gray-700 list-disc pl-5">
-                    <li><strong>國道 230 中山峠：</strong>標高 835m，晚秋可能結冰，查 <a class="text-blue-600 underline" href="https://info-road.hdb.hkd.mlit.go.jp/" target="_blank">北海道道路情報</a>。</li>
-                    <li><strong>道央自動車道：</strong>豐浦IC ➔ 登別東IC ➔ 大沼公園IC，有 ETC 較方便。</li>
-                    <li><strong>函館山：</strong>夜間有自家車管制，請搭纜車。</li>
-                    <li><strong>行車時間：</strong>以 Google Maps 為準再加 15-20% 緩衝。</li>
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-3 border-b pb-2 flex items-center gap-2"><i class="fas fa-gas-pump text-rose-500"></i> 還車加油站 & 重點路段導航</h3>
+                <ul class="space-y-2.5 text-[13px] text-gray-700 list-disc pl-5">
+                    <li><strong>還車滿油加油站（距新函館北斗站車程 2 分鐘）：</strong><b>ENEOS 渡島大野SS（北海道北斗市市渡15）</b>，請加 <b>Regular（紅色油槍）</b> 並索取收據交予店員查驗。 <a class="text-blue-600 underline font-bold" href="https://www.google.com/maps/search/?api=1&query=ENEOS+渡島大野SS+北斗市" target="_blank">Google Maps 導航</a></li>
+                    <li><strong>國道 230 中山峠：</strong>標高 835m，晚秋清晨與傍晚可能結冰，出發前可查 <a class="text-blue-600 underline" href="https://info-road.hdb.hkd.mlit.go.jp/" target="_blank">北海道道路情報</a>。</li>
+                    <li><strong>函館山夜間管制：</strong>10 月每晚 <b>16:00–21:00 禁止自駕車上山</b>，務必將車停在飯店改搭纜車。</li>
                 </ul>
             </div>
         </div>
@@ -377,21 +380,21 @@
                     <i class="fas fa-store text-purple-500"></i> 此行必逛商圈
                 </h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div class="p-3 rounded-xl bg-rose-50 border border-rose-100">
-                        <p class="font-bold text-[13.5px] text-rose-800">🍫 札幌 狸小路・站前</p>
-                        <p class="text-[12px] text-gray-600 mt-1">ROYCE、白色戀人、六花亭、LeTAO，藥妝與唐吉訶德集中</p>
-                    </div>
                     <div class="p-3 rounded-xl bg-blue-50 border border-blue-100">
-                        <p class="font-bold text-[13.5px] text-blue-800">🎯 札幌 動漫二手店</p>
-                        <p class="text-[12px] text-gray-600 mt-1">狸小路周邊駿河屋、Lashinbang，可先找想要的賞再決定抽不抽</p>
+                        <p class="font-bold text-[13.5px] text-blue-800">🎯 札幌站北口 Lawson & 東急 9F 一番賞</p>
+                        <p class="text-[12px] text-gray-600 mt-1">10/24 進撃の巨人 ～心臓を捧げよ～ 開賣！租車店旁 98m 就有 Lawson，東急百貨 9F 有官方旗艦店</p>
+                    </div>
+                    <div class="p-3 rounded-xl bg-rose-50 border border-rose-100">
+                        <p class="font-bold text-[13.5px] text-rose-800">🍫 札幌 狸小路・大丸百貨</p>
+                        <p class="text-[12px] text-gray-600 mt-1">ROYCE、白色戀人、六花亭、LeTAO、北菓樓，建議在札幌買齊伴手禮</p>
                     </div>
                     <div class="p-3 rounded-xl bg-amber-50 border border-amber-100">
-                        <p class="font-bold text-[13.5px] text-amber-800">🦀 函館朝市</p>
-                        <p class="text-[12px] text-gray-600 mt-1">干貝、昆布、烏賊乾貨（生鮮肉品不可帶回台灣）</p>
+                        <p class="font-bold text-[13.5px] text-amber-800">🦑 函館朝市・駅二市場</p>
+                        <p class="text-[12px] text-gray-600 mt-1">干貝糖、昆布、烏賊絲乾貨伴手禮（生鮮水果肉品不可帶回台灣）</p>
                     </div>
                     <div class="p-3 rounded-xl bg-green-50 border border-green-100">
-                        <p class="font-bold text-[13.5px] text-green-800">🧱 金森紅磚倉庫</p>
-                        <p class="text-[12px] text-gray-600 mt-1">函館限定雜貨、音樂盒、甜點，雨天也好逛</p>
+                        <p class="font-bold text-[13.5px] text-green-800">🧱 函館 金森紅磚倉庫</p>
+                        <p class="text-[12px] text-gray-600 mt-1">Petite Merveille 起司蛋糕、Snaffles、小丑漢堡周邊商品</p>
                     </div>
                 </div>
             </div>
@@ -455,17 +458,52 @@
                 </div>
             </div>
 
+            <!-- 🍜 四大指定美食與一番賞終極攻略 -->
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-utensils text-rose-500"></i> 🍜 四大指定美食 & 一番賞排程總整理
+                </h3>
+                <div class="space-y-3 text-[13px] text-gray-700 leading-relaxed">
+                    <div class="p-3.5 rounded-xl bg-amber-50/60 border border-amber-200">
+                        <h4 class="font-bold text-amber-900 text-[14px] mb-1.5">1️⃣ つけ麺 八芒星（雙沾醬沾麵）— ⚠️ 時間最嚴格！</h4>
+                        <p>• <b>營業限制</b>：<b>週四公休（10/22 休），且只開中午 11:00–15:00（L.O. 14:40），晚上不營業！</b><br>
+                        • <b>唯一時段</b>：已鎖定於 <b>Day 2 (10/23 五) 11:30 午餐</b>（逛完北海道大學後前往）。<br>
+                        • <b>地址</b>：札幌市中央区南6条西9-1024-44 パインスタービル 1F（市電「東本願寺前」步行 6 分）。</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-rose-50/60 border border-rose-200">
+                        <h4 class="font-bold text-rose-900 text-[14px] mb-1.5">2️⃣ ラーメン札幌 一粒庵（米其林推薦・元氣味噌拉麵）</h4>
+                        <p>• <b>位置超近</b>：就在 JR 札幌站南口 ホクレンビル B1F，<b>距離 KOKO 飯店走路僅 3 分鐘</b>！<br>
+                        • <b>營業時間</b>：11:00–15:00 / 17:00–20:00（不定休，主要休週二）。<br>
+                        • <b>排定時段</b>：<b>Day 2 (10/23 五) 17:30 晚餐</b>（17:00 開門早點去免久排，必點「元気のでるみそラーメン」）。</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-orange-50/60 border border-orange-200">
+                        <h4 class="font-bold text-orange-900 text-[14px] mb-1.5">3️⃣ Soup Curry KING（濃厚雙湯頭湯咖哩）</h4>
+                        <p>• <b>分店選擇</b>：① <b>セントラル店</b>（南2西3 B1F，近大通/狸小路，平日 11:30–15:30 / 17:30–21:30 L.O. 21:00）② <b>本店</b>（豐平區平岸3條16丁目，<b>附 13 個免費車位</b>，週六 11:30–21:30）。<br>
+                        • <b>排定時段</b>：<b>Day 1 (10/22 四) 20:20 晚餐</b> 去 Central 店；若班機延誤，可改 Day 2 下午或 Day 3 開車去平岸本店！</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-emerald-50/60 border border-emerald-200">
+                        <h4 class="font-bold text-emerald-900 text-[14px] mb-1.5">4️⃣ えびそば一幻（鮮蝦拉麵）— ❓ 到處都有嗎？</h4>
+                        <p>• <b>北海道僅有 2 間店</b>（並非到處都有！）：<br>
+                        &nbsp;&nbsp;① <b>新千歲空港店</b>（國內線 3F 拉麵道場，09:00–21:00 L.O. 20:30）➔ 可於 <b>Day 1 18:45 落地先吃</b>！<br>
+                        &nbsp;&nbsp;② <b>札幌総本店</b>（南7條西9丁目，就在八芒星隔壁街！<b>11:00–凌晨 03:00</b>）➔ 可於 <b>Day 1 或 Day 2 當宵夜</b>（21:30 後免排隊）！</p>
+                    </div>
+                    <div class="p-3.5 rounded-xl bg-purple-50/60 border border-purple-200">
+                        <h4 class="font-bold text-purple-900 text-[14px] mb-1.5">🎯 一番くじ 進撃の巨人 ～心臓を捧げよ～（10/24 週六開賣）</h4>
+                        <p>• <b>租車點旁走路 1–5 分鐘內就有 5 間 Lawson + 1 間東急百貨官方旗艦店</b>（詳見 Day 3 行程攻略表）！<br>
+                        • 08:30 在 Nippon Rent-A-Car 札幌站前店取車時，先走 1 分鐘到斜對面 <b>Lawson 札幌北6條東二丁目店 (98m)</b> 看是否已開抽；若要等 10:00 場，<b>札幌東急百貨 9F 一番賞公式店</b> 10:00 準時開門、籤桶最多！</p>
+                    </div>
+                </div>
+            </div>
+
             <!-- 北海道晚秋攻略 -->
             <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
                 <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
                     <i class="fas fa-snowflake text-sky-500"></i> 🍂 北海道晚秋自駕攻略
                 </h3>
                 <ul class="space-y-2 text-[13px] text-gray-700 list-disc pl-5">
-                    <li><strong>天氣：</strong>10 月下旬札幌/函館白天約 10–14°C、早晚 3–6°C，山區可能下初雪。</li>
-                    <li><strong>日落早：</strong>約 16:40 就天黑，自駕行程盡量在 16:30 前結束。</li>
-                    <li><strong>野生動物：</strong>山路常有蝦夷鹿衝出，黃昏尤其要減速。</li>
-                    <li><strong>加油：</strong>鄉間加油站晚上很早關門，油量剩一半就加。</li>
-                    <li><strong>甲地租乙地還：</strong>札幌取車、函館還車通常要另收異地還車費，取車時確認金額。</li>
+                    <li><strong>天氣：</strong>10 月下旬札幌/函館白天約 10–14°C、早晚 3–6°C，中山峠等山區可能下初雪。</li>
+                    <li><strong>日落早：</strong>約 16:40 就天黑，長途山路自駕盡量在 16:30 前結束。</li>
+                    <li><strong>還車點特別注意：</strong>10/26 08:30 還車點為「<b>新函館北斗駅前</b>」，從函館市區飯店過去需 30–35 分鐘車程，請於 07:40 出發！</li>
                 </ul>
             </div>
 
@@ -476,23 +514,15 @@
                 </h3>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div class="p-3 rounded-xl bg-blue-50 border border-blue-100">
-                        <p class="font-bold text-[13px] text-blue-800 mb-1">🚑 日本緊急電話</p>
+                        <p class="font-bold text-[13px] text-blue-800 mb-1">🚑 日本緊急電話 & 租車店</p>
                         <p class="text-[12px] text-gray-700">警察：<strong>110</strong>／消防救護：<strong>119</strong></p>
-                        <p class="text-[12px] text-gray-700">道路救援 JAF：<strong>#8139</strong></p>
+                        <p class="text-[12px] text-gray-700">札幌站前取車店：<strong>050-1712-2997</strong></p>
+                        <p class="text-[12px] text-gray-700">新函館北斗還車店：<strong>050-1712-2994</strong></p>
                     </div>
                     <div class="p-3 rounded-xl bg-green-50 border border-green-100">
                         <p class="font-bold text-[13px] text-green-800 mb-1">📱 必備 App</p>
                         <p class="text-[12px] text-gray-700">• Google Maps（離線地圖）• Google 翻譯</p>
-                        <p class="text-[12px] text-gray-700">• Visit Japan Web • tenki.jp 天氣</p>
-                    </div>
-                    <div class="p-3 rounded-xl bg-amber-50 border border-amber-100">
-                        <p class="font-bold text-[13px] text-amber-800 mb-1">💴 消費</p>
-                        <p class="text-[12px] text-gray-700">同店單日 ¥5,000 以上可退稅（帶護照）</p>
-                        <p class="text-[12px] text-gray-700">朝市、小店多收現金</p>
-                    </div>
-                    <div class="p-3 rounded-xl bg-rose-50 border border-rose-100">
-                        <p class="font-bold text-[13px] text-rose-800 mb-1">♨️ 溫泉禮儀</p>
-                        <p class="text-[12px] text-gray-700">入浴前先洗淨身體，毛巾不可泡進池中</p>
+                        <p class="text-[12px] text-gray-700">• Visit Japan Web • GO / Uber 叫車</p>
                     </div>
                 </div>
             </div>
@@ -506,7 +536,7 @@
     const itineraryData = [
         {
             date: "2026-10-22",
-            title: "抵達新千歲 & 札幌夜晚",
+            title: "抵達新千歲 & 札幌美食之夜",
             tag: "札幌",
             weather: "🌙 5°C~12°C",
             events: [
@@ -515,268 +545,318 @@
                     title: "酷航 TR892 桃園 ➔ 新千歲 ✈️",
                     desc: "13:00 桃園起飛，17:55 抵達新千歲機場 (CTS)，飛行約 3h55m。<br>🔑 訂位代號：<b>AF61PK</b>",
                     badges: [{cls:"booking", icon:"fa-plane", text:"TR892"}, {cls:"flight", icon:"fa-clock", text:"17:55 抵達"}],
-                    notice: { level: "warning", icon: "fa-utensils", text: "廉航無餐", warning: "酷航基本票不含餐，建議在桃園機場先吃午餐或攜帶輕食上機。入境前先填好 <b>Visit Japan Web</b> QR Code。" }
+                    notice: { level: "warning", icon: "fa-utensils", text: "廉航無餐 & 入境準備", warning: "酷航基本票不含餐，建議在桃園機場先吃午餐或帶輕食上機。出發前請填妥 <b>Visit Japan Web</b> 並截圖 QR Code。" }
+                },
+                {
+                    time: "18:45", type: "food", icon: "fas fa-bowl-food",
+                    title: "【選擇 A】えびそば一幻 新千歲空港店 🦐",
+                    desc: "全北海道只有 2 家一幻（新千歲機場店 & 札幌總本店）！若出關順利且肚子餓，可先去國內線航廈 3F「北海道拉麵道場」吃濃郁鮮蝦湯頭拉麵（營業至 21:00，L.O. 20:30）。",
+                    badges: [{cls:"food", icon:"fa-shrimp", text:"えびそば一幻"}, {cls:"sight", icon:"fa-clock", text:"09:00-21:00"}],
+                    tip: { title: "一幻拉麵點餐攻略 🦐", content: "• <b>北海道僅 2 店</b>：① 新千歲機場國內線 3F（09:00–21:00）② 札幌總本店（南7條西9丁目，11:00–翌03:00）。<br>• <b>必點組合</b>：湯頭選「<b>そのまま（原味純蝦湯）</b>」或「<b>ほどほど（加豚骨）</b>」＋ 口味選「<b>えびみそ（鮮蝦味噌）</b>」或「<b>えびしお（鮮蝦鹽味）</b>」＋ 粗麵（太麺），再加點一顆 <b>えびおにぎり（蝦味飯糰）</b> 泡進湯裡吃！<br>• 💡 若想趕去市區吃 <b>Soup Curry KING</b>（21:00 L.O.），這餐可留到今晚或明晚去札幌總本店當宵夜（開到凌晨 03:00）！" }
                 },
                 {
                     time: "19:00", type: "transport", icon: "fas fa-train",
                     title: "JR 快速 Airport ➔ 札幌站 🚆",
-                    desc: "入境＋領行李約 45-60 分鐘。機場 B1 搭 JR 快速 Airport，約 37 分鐘抵達札幌站，約 ¥1,230/人。",
-                    badges: [{cls:"transport", icon:"fa-train", text:"JR 約 37 分"}, {cls:"transport", icon:"fa-credit-card", text:"可刷 Suica/信用卡感應"}],
-                    tip: { title: "搭車小技巧 🚆", content: "• 每小時約 5-6 班，免預約自由席即可。<br>• 可在機場「北海道四季市場」先逛伴手禮，但回程不經新千歲，<b>想買的 ROYCE / 白色戀人等請在札幌買</b>。<br>• 札幌站下車走 <b>南口</b> 往 KOKO 飯店（步行約 5 分鐘）。" }
+                    desc: "從新千歲機場 B1 搭 JR 快速 Airport，約 37 分鐘直達札幌站（自由席 ¥1,230 / 指定席 u-seat ¥2,070）。",
+                    badges: [{cls:"transport", icon:"fa-train", text:"JR 約 37 分"}, {cls:"transport", icon:"fa-credit-card", text:"可刷 Suica"}],
+                    tip: { title: "搭車與伴手禮提醒 🚆", content: "• 每小時約 5–6 班車，直接刷 Suica/ICOCA 進站搭自由席即可。<br>• 回程從函館飛，不會再回新千歲機場，<b>札幌限定伴手禮請在札幌買齊</b>。<br>• 札幌站下車走 <b>南口</b> 前往 KOKO 飯店（步行約 5 分鐘）。" }
                 },
                 {
                     time: "20:00", type: "hotel", icon: "fas fa-hotel",
                     title: "KOKO 飯店 札幌站前 Check-in 🏨",
-                    desc: "好萊塢雙床房，10/22–10/24 共 2 晚。<br>🔑 訂單號：<b>1616334349510502</b>",
-                    badges: [{cls:"hotel", icon:"fa-bed", text:"2 晚"}, {cls:"booking", icon:"fa-suitcase", text:"可寄放行李"}]
+                    desc: "好萊塢雙床房，10/22–10/24 共 2 晚。位於札幌站南口與大通之間，離一粒庵步行僅 3 分鐘！<br>🔑 訂單號：<b>1616334349510502</b>",
+                    badges: [{cls:"hotel", icon:"fa-bed", text:"2 晚"}, {cls:"booking", icon:"fa-map-marker-alt", text:"札幌站南口"}]
                 },
                 {
-                    time: "20:30", type: "food", icon: "fas fa-utensils",
-                    title: "晚餐：成吉思汗烤肉 or 湯咖哩 🍖",
-                    desc: "抵達日先吃北海道招牌！成吉思汗烤羊肉（だるま／ジンギスカン専門店）或湯咖哩。",
-                    badges: [{cls:"food", icon:"fa-fire", text:"成吉思汗"}, {cls:"food", icon:"fa-pepper-hot", text:"湯咖哩"}],
-                    tip: { title: "夜晚口袋名單 🌙", content: "• <b>成吉思汗だるま</b>（薄野）：老字號，晚上常排隊，可吃完再逛。<br>• <b>湯咖哩 Suage+ / GARAKU</b>：GARAKU 末點較早，太晚可改站前 ESTA/大丸美食街。<br>• 想吃拉麵：薄野 <b>元祖拉麵橫丁</b> 營業到深夜。" }
+                    time: "20:20", type: "food", icon: "fas fa-pepper-hot",
+                    title: "晚餐：Soup Curry KING セントラル店 🍛（或 一幻總本店宵夜）",
+                    desc: "札幌超人氣 W 湯頭（雞骨白湯＋和風高湯）濃厚系湯咖哩！Central 店位於南2條西3丁目 B1F（狸小路附近），晚間營業至 21:30（<b>L.O. 21:00</b>）。",
+                    badges: [{cls:"food", icon:"fa-pepper-hot", text:"Soup Curry KING"}, {cls:"food", icon:"fa-clock", text:"L.O. 21:00"}],
+                    tip: { title: "Soup Curry KING & 宵夜攻略 🍛", content: "• <b>Soup Curry KING セントラル店</b>：北海道札幌市中央区南2条西3丁目13-4 カタオカビルB1F（從飯店搭地鐵南北線 1 站至「大通站」步行 3 分鐘，或直接走 12 分鐘）。<br>• <b>必點招牌</b>：<b>チキン野菜カリー（雞腿蔬菜湯咖哩）</b> 或 <b>ラムカリー（小羔羊湯咖哩）</b>、<b>角煮カリー（燉豚角煮）</b>，辣度推薦 2–3 番，飯量可選。<br>• 🌙 <b>宵夜 / 備案（超過 21:00）</b>：若班機延誤趕不上 21:00 點餐，直接去 <b>えびそば一幻 総本店</b>（南7條西9丁目，營業至 <b>凌晨 03:00</b>），再把 Soup Curry KING 移到明天午餐或晚餐！" }
                 }
             ]
         },
         {
             date: "2026-10-23",
-            title: "北大銀杏大道 & 札幌市區",
+            title: "北大銀杏大道 & 四大名店全制霸",
             tag: "札幌",
             weather: "⛅ 5°C~13°C",
             events: [
                 {
-                    time: "08:30", type: "food", icon: "fas fa-coffee",
-                    title: "早餐：二条市場海鮮丼 or 站前咖啡 🍣",
-                    desc: "想吃海鮮可去二条市場（地鐵大通/步行），或在飯店附近輕鬆解決，保留肚子給午餐。",
-                    badges: [{cls:"food", icon:"fa-fish", text:"海鮮丼"}]
+                    time: "09:00", type: "sight", icon: "fas fa-university",
+                    title: "北海道大學：北 13 條銀杏大道 & 白楊木林道 🍂",
+                    desc: "從飯店往北走約 12 分鐘即達北大。10 月下旬正是 <b>北 13 條銀杏大道</b> 金黃高峰期，約 70 棵銀杏排成 380 公尺金色隧道！建議停留 1.5–2 小時。",
+                    badges: [{cls:"sight", icon:"fa-leaf", text:"銀杏見頃"}, {cls:"sight", icon:"fa-ticket-alt", text:"免費開放"}],
+                    tip: { title: "北大黃金散步動線 🗺️", content: "正門 ➔ <b>克拉克博士胸像</b> ➔ 中央草坪 ➔ 綜合博物館（免費）➔ <b>白楊木林道</b> ➔ <b>北 13 條銀杏大道</b>（由北 13 條門出，直通地鐵南北線「北12條站」）。<br>📸 週五早上 09:00–10:30 順光且避開週末人潮，拍照最美。<br>🍦 校內 <b>北大マルシェ Cafe & Labo</b> 可喝北大農場鮮奶、吃霜淇淋當早點。" },
+                    notice: { level: "warning", icon: "fa-info-circle", text: "校園禮儀", warning: "北大為授課中校園，請勿進入教學研究大樓，拍照時留意雙向自行車與校車。" }
                 },
                 {
-                    time: "09:30", type: "sight", icon: "fas fa-university",
-                    title: "北海道大學：銀杏大道 & 白楊木林道 🍂",
-                    desc: "從札幌站北口步行約 10 分鐘。10 月下旬正是 <b>北 13 條銀杏大道</b> 黃葉高峰，約 70 棵銀杏排成金色隧道。建議停留 1.5-2 小時。",
-                    badges: [{cls:"sight", icon:"fa-leaf", text:"銀杏季"}, {cls:"sight", icon:"fa-ticket-alt", text:"免費"}],
-                    tip: { title: "北大散步動線 🗺️", content: "正門 ➔ <b>克拉克博士胸像</b> ➔ 中央草坪 ➔ 綜合博物館（免費，週一休）➔ <b>白楊木林道</b> ➔ <b>北 13 條銀杏大道</b>（北 13 條門）。<br>📸 銀杏大道上午順光，週末人潮多，週五早上相對好拍。<br>🍦 校內 <b>北大マルシェ</b> 可買北大限定牛奶/冰淇淋與文創。" },
-                    notice: { level: "warning", icon: "fa-info-circle", text: "校園禮儀", warning: "北大是上課中的校園，請勿進入研究大樓，拍照勿阻擋自行車道。" }
-                },
-                {
-                    time: "12:00", type: "food", icon: "fas fa-utensils",
-                    title: "午餐：湯咖哩 / 味噌拉麵 🍜",
-                    desc: "札幌兩大名物擇一，另一個留給晚上。",
-                    badges: [{cls:"food", icon:"fa-pepper-hot", text:"湯咖哩"}, {cls:"food", icon:"fa-bowl-food", text:"味噌拉麵"}]
+                    time: "11:30", type: "food", icon: "fas fa-bowl-rice",
+                    title: "午餐：つけ麺 八芒星（雙沾醬沾麵）🍜",
+                    desc: "札幌罕見的沾麵專門店（舊名：六芒星）！主打「<b>王道＋自選第 2 種</b>」雙沾醬吃法。<b>僅營業中午 11:00–15:00（L.O. 14:40）</b>，必須排在週五午餐！",
+                    badges: [{cls:"food", icon:"fa-star", text:"雙沾醬 Wつけ汁"}, {cls:"food", icon:"fa-clock", text:"僅開中午 11:00-15:00"}],
+                    tip: { title: "つけ麺 八芒星 必吃攻略 🍜", content: "• <b>地址</b>：札幌市中央区南6条西9-1024-44 パインスタービル 1F（從北大搭地鐵南北線至大通轉市電至「東本願寺前」步行 6 分鐘，或從北大直接搭計程車約 10 分鐘 ¥1,200）。<br>• <b>點餐攻略</b>：基本附 1 碗「<b>王道（魚介豚骨雞湯）</b>」沾醬，可再從 <b>海老、辛旨、濃厚、味噌、藥膳、雞鹽、背脂</b> 中任選第 2 碗沾醬（激推 <b>海老</b> 或 <b>辛旨</b>）！<br>• 🍚 <b>超人氣副餐</b>：午間套餐可加點評價極高的「<b>ミニルーロー飯（迷你滷肉飯）</b>」。出示追蹤官方 IG (`@8_bousei`) 常有送溏心蛋等特典！" },
+                    notice: { level: "danger", icon: "fa-exclamation-triangle", text: "僅中午營業・湯完即止", warning: "八芒星週四公休、且晚上不營業（僅 11:00–15:00，L.O. 14:40），週五中午是此行唯一能吃到的時段，建議 11:30–12:00 前抵達！" }
                 },
                 {
                     time: "13:30", type: "sight", icon: "fas fa-city",
-                    title: "時計台 ➔ 大通公園 ➔ 電視塔 🗼",
-                    desc: "市中心步行串連，大通公園秋季行道樹也正轉紅。電視塔展望台可俯瞰大通公園。",
+                    title: "大通公園 ➔ 札幌電視塔 ➔ 時計台 🗼",
+                    desc: "午餐後散步回大通公園、電視塔與札幌時計台，欣賞晚秋街景。",
                     badges: [{cls:"sight", icon:"fa-camera", text:"市區散步"}]
                 },
                 {
-                    time: "15:30", type: "buy", icon: "fas fa-shopping-bag",
-                    title: "狸小路 & 薄野逛街 🛍️",
-                    desc: "藥妝、唐吉訶德、二手動漫店集中。伴手禮（ROYCE、六花亭、白色戀人）建議在札幌一次買齊。",
-                    badges: [{cls:"buy", icon:"fa-store", text:"藥妝/伴手禮"}]
+                    time: "15:00", type: "buy", icon: "fas fa-shopping-bag",
+                    title: "狸小路商店街 & 動漫二手店挖寶 🛍️",
+                    desc: "藥妝、伴手禮（ROYCE、六花亭、白色戀人）與駿河屋 / Lashinbang / Animate 集中區，可先逛二手店看進擊的巨人賞品行情！",
+                    badges: [{cls:"buy", icon:"fa-store", text:"藥妝/伴手禮"}, {cls:"buy", icon:"fa-gamepad", text:"駿河屋/安利美特"}],
+                    tip: { title: "Soup Curry KING 下午茶時段備案 🍛", content: "如果昨晚 Day 1 沒吃到 <b>Soup Curry KING セントラル店</b>，它就在狸小路旁（南2條西3丁目），可在 14:30 前（午間 L.O. 15:00）或 17:30 晚餐時段補吃！" }
                 },
                 {
-                    time: "18:00", type: "sight", icon: "fas fa-mountain",
-                    title: "（選配）藻岩山夜景 🌃",
-                    desc: "日本新三大夜景之一。搭路面電車到「ロープウェイ入口」轉免費接駁，纜車＋迷你纜車來回約 ¥2,100/人。",
-                    badges: [{cls:"sight", icon:"fa-star", text:"新三大夜景"}],
-                    notice: { level: "warning", icon: "fa-temperature-low", text: "山頂很冷", warning: "10 月下旬山頂晚上約 0-5°C，請帶羽絨外套與手套。" }
+                    time: "17:30", type: "food", icon: "fas fa-utensils",
+                    title: "晚餐：ラーメン札幌 一粒庵（米其林推薦味噌拉麵）🍜",
+                    desc: "就在 KOKO 飯店旁步行 3 分鐘（ホクレンビル B1F）！使用北海道產小麥自製麵條與行者大蒜的頂級味噌拉麵。晚間營業 <b>17:00–20:00</b>。",
+                    badges: [{cls:"food", icon:"fa-award", text:"米其林推薦"}, {cls:"food", icon:"fa-clock", text:"17:00-20:00"}],
+                    tip: { title: "一粒庵 排隊與必點攻略 🍜", content: "• <b>地址</b>：札幌市中央区北4条西1丁目1 ホクレンビル B1F（JR 札幌站南口步行 2 分鐘、地下街 23 號出口直結，離 KOKO 飯店僅 200 公尺）。<br>• <b>必點招牌</b>：「<b>元気のでるみそラーメン（元氣味噌拉麵）</b>」——完全不臭的北海道行者大蒜＋濃郁味噌＋滑嫩炒蛋，香氣極迷人！<br>• ⏰ <b>避峰建議</b>：晚餐 17:00 開門，建議 <b>17:00–17:30</b> 抵達最不用久排；先把戰利品放回 KOKO 飯店再走過去超順路！" }
+                },
+                {
+                    time: "19:30", type: "sight", icon: "fas fa-mountain",
+                    title: "（選配）藻岩山夜景 & えびそば一幻 総本店宵夜 🌃",
+                    desc: "晚上可上藻岩山看日本新三大夜景，或逛札幌站大丸百貨/Stellar Place。宵夜若還想吃蝦湯拉麵，<b>えびそば一幻 総本店</b>（南7西9）開到凌晨 03:00！",
+                    badges: [{cls:"sight", icon:"fa-star", text:"新三大夜景"}, {cls:"food", icon:"fa-shrimp", text:"一幻總店至03:00"}]
                 }
             ]
         },
         {
             date: "2026-10-24",
-            title: "取車 ➔ 定山溪 ➔ 洞爺湖",
+            title: "取車 & 一番賞開抽 ➔ 定山溪 ➔ 洞爺湖",
             tag: "自駕",
             weather: "⛅ 3°C~12°C",
             events: [
                 {
                     time: "08:00", type: "hotel", icon: "fas fa-door-open",
-                    title: "KOKO 飯店 Check-out",
-                    desc: "整理好行李後退房，前往租車店。",
+                    title: "KOKO 飯店 Check-out ➔ 步行前往租車店",
+                    desc: "退房後拉行李從札幌站北口方向步行約 8–10 分鐘（約 750m）至 Nippon Rent-A-Car 札幌站前店。",
                     badges: [{cls:"hotel", icon:"fa-suitcase", text:"退房"}]
                 },
                 {
                     time: "08:30", type: "booking", icon: "fas fa-key",
-                    title: "札幌取車 🔑（待補租車公司）",
-                    desc: "10/24 08:30 取車 ➔ 10/26 08:30 函館還車（甲地租乙地還）。",
-                    badges: [{cls:"booking", icon:"fa-key", text:"取車"}, {cls:"booking", icon:"fa-route", text:"異地還車"}],
-                    notice: { level: "danger", icon: "fa-snowflake", text: "取車必確認", warning: "1. 台灣駕照正本＋<b>日文譯本</b>＋護照 2. 確認為 <b>冬季輪胎（スタッドレス）</b> 3. ETC 卡 4. 拍照/錄影車身刮痕 5. 確認異地還車費。" }
+                    title: "ニッポンレンタカー 札幌駅前店 取車 🔑",
+                    desc: "樂天租車預約號碼：<b>RC12461331534313494</b><br>📍 地址：北海道札幌市東区北７条東１丁目１番１号（電話：050-1712-2997）",
+                    badges: [{cls:"booking", icon:"fa-key", text:"08:30 取車"}, {cls:"booking", icon:"fa-snowflake", text:"確認冬胎"}],
+                    notice: { level: "danger", icon: "fa-id-card", text: "取車必備三寶 & 冬胎確認", warning: "請出示：1. <b>台灣駕照正本</b> 2. <b>日文譯本</b> 3. <b>護照</b>。取車時確認已配 <b>冬季輪胎（スタッドレス）</b> 與 ETC 卡，並繞車錄影。" }
                 },
                 {
-                    time: "09:30", type: "buy", icon: "fas fa-dice",
-                    title: "市區抽一番賞 🎯（店家待補）",
-                    desc: "預定 09:30 開抽，抽完 10:00 出發定山溪。",
-                    badges: [{cls:"buy", icon:"fa-gift", text:"一番賞"}],
-                    notice: { level: "warning", icon: "fa-parking", text: "停車與時間", warning: "取車到抽賞只有 1 小時，請先查好店家附近的計時停車場（Times / 名鐵協商）。若店家在取車點附近，也可考慮步行過去。" }
+                    time: "08:50", type: "buy", icon: "fas fa-dice",
+                    title: "一番賞「進撃の巨人 ～心臓を捧げよ～」巡場 & 10:00 開抽 🎯",
+                    desc: "2026/10/24 (六) 開賣，1 抽 ¥850！租車店斜對面 <b>走路 1 分鐘（98m）就有 Lawson</b>，且 <b>札幌東急百貨 9F 一番賞官方店</b> 10:00 準時開門！",
+                    badges: [{cls:"buy", icon:"fa-dice", text:"進撃の巨人 shingeki16"}, {cls:"buy", icon:"fa-yen-sign", text:"1抽 ¥850"}],
+                    tip: {
+                        title: "🎯 租車點周邊 6 間最近一番賞店鋪清單（依距離排序）",
+                        content: "從 <b>ニッポンレンタカー札幌駅前店（北7東1）</b> 出發最近的販售店：<br>" +
+                                 "<div class='overflow-x-auto my-2 rounded-lg border border-gray-200 bg-white'>" +
+                                 "<table style='width:100%;font-size:11.5px;border-collapse:collapse;text-align:left'>" +
+                                 "<tr style='background:#f8fafc;border-bottom:1px solid #e2e8f0'>" +
+                                 "<th style='padding:6px'>排序 / 店名</th><th style='padding:6px'>距離</th><th style='padding:6px'>地址 / 攻略備註</th><th style='padding:6px'>導航</th></tr>" +
+                                 "<tr style='border-bottom:1px solid #f1f5f9;background:#f0fdf4'>" +
+                                 "<td style='padding:6px;font-weight:bold;color:#166534'>① ローソン 札幌北６条東二丁目店</td>" +
+                                 "<td style='padding:6px;font-weight:bold;color:#166534'>98m<br>(走1分)</td>" +
+                                 "<td style='padding:6px'>東区北６条東２‐２‐１<br><span style='color:#16a34a'>⭐ 租車店斜對面！08:45 取完車立刻先去問開抽時間</span></td>" +
+                                 "<td style='padding:6px'><a href='https://www.google.com/maps/search/?api=1&query=ローソン+札幌北６条東二丁目店' target='_blank' style='color:#2563eb;text-decoration:underline'>地圖</a></td></tr>" +
+                                 "<tr style='border-bottom:1px solid #f1f5f9'>" +
+                                 "<td style='padding:6px;font-weight:bold'>② ローソン 札幌北７条西一丁目店</td>" +
+                                 "<td style='padding:6px'>213m<br>(走3分)</td>" +
+                                 "<td style='padding:6px'>北区北７条西１‐２‐６（北口大通旁，走路即達）</td>" +
+                                 "<td style='padding:6px'><a href='https://www.google.com/maps/search/?api=1&query=ローソン+札幌北７条西一丁目店' target='_blank' style='color:#2563eb;text-decoration:underline'>地圖</a></td></tr>" +
+                                 "<tr style='border-bottom:1px solid #f1f5f9'>" +
+                                 "<td style='padding:6px;font-weight:bold'>③ ローソン カレス記念病院店</td>" +
+                                 "<td style='padding:6px'>291m<br>(走4分)</td>" +
+                                 "<td style='padding:6px'>東区北６条東３‐１‐１（醫院旁新店，競爭者可能較少！）</td>" +
+                                 "<td style='padding:6px'><a href='https://www.google.com/maps/search/?api=1&query=北海道札幌市東区北６条東３‐１‐１+ローソン' target='_blank' style='color:#2563eb;text-decoration:underline'>地圖</a></td></tr>" +
+                                 "<tr style='border-bottom:1px solid #f1f5f9'>" +
+                                 "<td style='padding:6px;font-weight:bold'>④ ローソン ＴーＰＬＵＳ札幌店</td>" +
+                                 "<td style='padding:6px'>319m<br>(走4分)</td>" +
+                                 "<td style='padding:6px'>北区北８条西１‐３</td>" +
+                                 "<td style='padding:6px'><a href='https://www.google.com/maps/search/?api=1&query=ローソン+ＴーＰＬＵＳ札幌店' target='_blank' style='color:#2563eb;text-decoration:underline'>地圖</a></td></tr>" +
+                                 "<tr style='border-bottom:1px solid #f1f5f9'>" +
+                                 "<td style='padding:6px;font-weight:bold'>⑤ ローソン 札幌駅北口前店</td>" +
+                                 "<td style='padding:6px'>356m<br>(走5分)</td>" +
+                                 "<td style='padding:6px'>北区北７条西２‐８‐１</td>" +
+                                 "<td style='padding:6px'><a href='https://www.google.com/maps/search/?api=1&query=ローソン+札幌駅北口前店' target='_blank' style='color:#2563eb;text-decoration:underline'>地圖</a></td></tr>" +
+                                 "<tr style='background:#fdf2f8'>" +
+                                 "<td style='padding:6px;font-weight:bold;color:#9d174d'>⑥ 一番くじ公式ショップ<br>さっぽろ東急百貨店</td>" +
+                                 "<td style='padding:6px;font-weight:bold;color:#9d174d'>491m<br>(走6分)</td>" +
+                                 "<td style='padding:6px'>中央区北4条西2-1 <b>東急百貨店 9階</b><br><span style='color:#be185d'>🔥 10:00 百貨開門準時開賣！官方旗艦店籤桶最多最穩</span></td>" +
+                                 "<td style='padding:6px'><a href='https://www.google.com/maps/search/?api=1&query=さっぽろ東急百貨店' target='_blank' style='color:#2563eb;text-decoration:underline'>地圖</a></td></tr>" +
+                                 "</table></div>" +
+                                 "💡 <b>規劃師雙軌策略</b>：<br>" +
+                                 "1. <b>08:45 先巡 ①②③ 號 Lawson</b>：部分 Lawson 會在 00:00 或 07:00 就擺出來賣，若已開抽就能在 09:15 前抽完、提早出發定山溪！<br>" +
+                                 "2. <b>10:00 準時場</b>：若 Lawson 指定 10:00 開賣，或想抽貨量最足的 <b>⑥ 東急百貨 9F 官方店（10:00 開門）</b>，可先在附近吃早餐，10:00 開抽、10:20 出發定山溪！"
+                    }
                 },
                 {
-                    time: "10:00", type: "transport", icon: "fas fa-car",
-                    title: "自駕 ➔ 定山溪溫泉（約 1 小時）🚗",
-                    desc: "走國道 230 號往南，約 30 km。",
-                    badges: [{cls:"transport", icon:"fa-road", text:"約 1 小時"}]
+                    time: "10:20", type: "transport", icon: "fas fa-car",
+                    title: "自駕出發 ➔ 定山溪溫泉（約 50–60 分鐘）🚗",
+                    desc: "走國道 230 號（石山通）一路往南直達定山溪。若前兩天還沒吃到 <b>Soup Curry KING</b>，也可順路繞去有 13 個免費車位的「<b>Soup Curry KING 本店（平岸店）</b>」吃早午餐（11:30 開門）！",
+                    badges: [{cls:"transport", icon:"fa-road", text:"國道230號"}]
                 },
                 {
-                    time: "11:00", type: "sight", icon: "fas fa-leaf",
+                    time: "11:20", type: "sight", icon: "fas fa-leaf",
                     title: "定山溪：二見吊橋 & 河童足湯 🍁",
-                    desc: "二見公園步道走到 <b>二見吊橋</b>（紅葉尾聲仍有餘韻），溫泉街有免費足湯。停留約 1.5 小時並在此午餐。",
-                    badges: [{cls:"sight", icon:"fa-leaf", text:"紅葉尾聲"}, {cls:"sight", icon:"fa-hot-tub", text:"免費足湯"}],
-                    tip: { title: "定山溪小攻略 ♨️", content: "• 停車：<b>定山溪觀光案內所旁公共停車場</b>（免費）。<br>• 若時間充裕可加 <b>豐平峽水壩</b>（需轉乘電動巴士，季節運行至 11 月上旬，約多 1.5 小時）。<br>• 午餐可在溫泉街吃蕎麥麵或豆腐料理。" }
+                    desc: "漫步二見公園紅色的 <b>二見吊橋</b> 賞晚秋溪谷紅葉，泡溫泉街免費足湯，並在溫泉街用午餐。建議停留約 1.5–2 小時。",
+                    badges: [{cls:"sight", icon:"fa-leaf", text:"溪谷紅葉"}, {cls:"sight", icon:"fa-hot-tub", text:"免費足湯"}],
+                    tip: { title: "定山溪停車與美食 ♨️", content: "• <b>免費停車</b>：定山溪觀光案內所旁公共停車場，或二見公園附近停車位。<br>• <b>人氣點心/午餐</b>：<b>坂ノ上の最中</b>（精緻甜點）、<b>J・glacée</b>（蘋果派與霜淇淋）、溫泉街蕎麥麵。" }
                 },
                 {
-                    time: "13:00", type: "transport", icon: "fas fa-car",
-                    title: "經中山峠 ➔ 洞爺湖（約 1.5 小時）⛰️",
-                    desc: "國道 230 號越過中山峠（標高 835m），中途可在 <b>道之驛 望羊中山</b> 吃名物「炸馬鈴薯（あげいも）」。",
-                    badges: [{cls:"transport", icon:"fa-mountain", text:"山路"}, {cls:"food", icon:"fa-drumstick-bite", text:"あげいも"}],
-                    notice: { level: "danger", icon: "fa-snowflake", text: "山路結冰風險", warning: "中山峠 10 月下旬可能降雪或路面結冰。出發前查看 <b>北海道道路情報</b>，車速放慢，避免天黑後行駛。" }
+                    time: "13:15", type: "transport", icon: "fas fa-car",
+                    title: "經中山峠（望羊中山）➔ 洞爺湖（約 1.5 小時）⛰️",
+                    desc: "續行國道 230 號翻越中山峠（標高 835m），中途停靠休息站「<b>道之驛 望羊中山</b>」吃名物「炸馬鈴薯（あげいも）」並遠眺羊蹄山。",
+                    badges: [{cls:"transport", icon:"fa-mountain", text:"中山峠"}, {cls:"food", icon:"fa-drumstick-bite", text:"名物あげいも"}],
+                    notice: { level: "danger", icon: "fa-snowflake", text: "山路氣溫低・留意路況", warning: "中山峠海拔較高，10 月下旬偶有降雪或結冰，請放慢車速並在下午陽光充足時通過。" }
                 },
                 {
-                    time: "14:45", type: "sight", icon: "fas fa-water",
-                    title: "洞爺湖：Silo 展望台 & 湖畔 🏞️",
-                    desc: "Silo 展望台可俯瞰整個洞爺湖與中島。時間夠可順遊昭和新山／有珠山纜車（末班約 16:00 前後）。",
-                    badges: [{cls:"sight", icon:"fa-camera", text:"湖景"}],
-                    tip: { title: "洞爺湖長期煙火 🎆", content: "洞爺湖溫泉每年 4 月底至 10 月底，每晚約 <b>20:45 起放 20 分鐘煙火</b>（10/24 應仍在期間內，請以官網為準）。<br>如想看，可先到 Hotel Cocoa 入住，晚上再開約 25 分鐘回湖畔。" }
+                    time: "15:00", type: "sight", icon: "fas fa-water",
+                    title: "洞爺湖：Silo 展望台 & 湖畔漫步 🏞️",
+                    desc: "在 <b>Silo 展望台（サイロ展望台）</b> 拍洞爺湖、中島與羊蹄山全景，喝洞爺湖牧場鮮乳，接著到洞爺湖溫泉街湖畔散步。",
+                    badges: [{cls:"sight", icon:"fa-camera", text:"絕景展望台"}],
+                    tip: { title: "洞爺湖花火大會資訊 🎆", content: "洞爺湖長期花火大會（4/28–10/31）每晚 <b>20:45–21:05</b> 在溫泉街湖面施放！若晚上想看煙火，可在溫泉街吃完晚餐看完煙火再開 20 分鐘回豐浦 Hotel Cocoa。" }
                 },
                 {
-                    time: "16:30", type: "hotel", icon: "fas fa-hotel",
+                    time: "17:00", type: "hotel", icon: "fas fa-hotel",
                     title: "Hotel Cocoa（豐浦町）Check-in 🏨",
-                    desc: "Twin Room 1 晚，入住 15:00 起／退房 10:00。<br>🔑 訂單號：<b>1787129869</b>",
+                    desc: "Twin Room 1 晚（入住 15:00 起 / 退房 10:00），距離洞爺湖溫泉街車程約 20 分鐘。<br>🔑 訂單號：<b>1787129869</b>",
                     badges: [{cls:"hotel", icon:"fa-bed", text:"1 晚"}],
-                    notice: { level: "warning", icon: "fa-utensils", text: "晚餐先準備", warning: "豐浦町餐廳少且打烊早，建議在洞爺湖溫泉街先吃晚餐或在超市/超商買好。" }
+                    notice: { level: "warning", icon: "fa-utensils", text: "晚餐建議在洞爺湖解決", warning: "豐浦町周邊夜間餐廳較少，建議在洞爺湖溫泉街吃完晚餐，並於超商買好宵夜與隔日早餐再回飯店。" }
                 }
             ]
         },
         {
             date: "2026-10-25",
-            title: "登別地獄谷 ➔ 南下函館",
+            title: "登別地獄谷 ➔ 南下函館百萬夜景",
             tag: "自駕",
             weather: "⛅ 6°C~14°C",
             events: [
                 {
                     time: "08:30", type: "transport", icon: "fas fa-car",
-                    title: "豐浦 ➔ 登別（約 1 小時 10 分）🚗",
-                    desc: "走道央自動車道（豐浦IC ➔ 登別東IC）。",
-                    badges: [{cls:"transport", icon:"fa-road", text:"高速公路"}]
+                    title: "豐浦 ➔ 登別地獄谷（約 1 小時 10 分）🚗",
+                    desc: "退房後上道央自動車道（豐浦IC ➔ 登別東IC），直接開往登別地獄谷。",
+                    badges: [{cls:"transport", icon:"fa-road", text:"道央道"}]
                 },
                 {
                     time: "09:45", type: "sight", icon: "fas fa-smog",
-                    title: "登別地獄谷 & 大湯沼 👹",
-                    desc: "火山噴氣地形，木棧道約 15 分鐘到鐵泉池。再開車到 <b>大湯沼</b> 與 <b>大湯沼川天然足湯</b>。停留約 2 小時。",
+                    title: "登別地獄谷 & 大湯沼川天然足湯 👹",
+                    desc: "直徑 450 公尺的火山噴氣口遺跡，秋紅襯托白煙超壯觀！走木棧道至鐵泉池，再開車 3 分鐘至 <b>大湯沼</b> 與森林裡的 <b>大湯沼川天然足湯</b>。停留約 2 小時。",
                     badges: [{cls:"sight", icon:"fa-ticket-alt", text:"免費入場"}, {cls:"sight", icon:"fa-parking", text:"停車 ¥500"}],
-                    tip: { title: "登別順遊 ♨️", content: "• 地獄谷停車場可在同日停大湯沼停車場（出示收據）。<br>• 溫泉街有 <b>閻魔堂</b>（定時會變臉）。<br>• 早上人少、光線好，上午到最理想。" }
+                    tip: { title: "登別停車與順遊攻略 ♨️", content: "• <b>一張停車券停兩處</b>：地獄谷收費停車場（普通車 ¥500）的收據保留好，當天再停「大湯沼停車場」免再收費！<br>• <b>極樂通商店街</b>：可看 <b>閻魔堂</b> 變臉秀，買鬼怪限定伴手禮。" }
                 },
                 {
                     time: "12:00", type: "food", icon: "fas fa-utensils",
-                    title: "午餐：登別溫泉街 🍜",
-                    desc: "推薦地獄拉麵或溫泉街咖哩。",
+                    title: "午餐：登別溫泉街（地獄拉麵 / 閻魔炒麵）🍜",
+                    desc: "在登別極樂通商店街享用招牌辣味地獄拉麵、閻魔炒麵或海鮮丼。",
                     badges: [{cls:"food", icon:"fa-pepper-hot", text:"地獄拉麵"}]
                 },
                 {
-                    time: "13:00", type: "transport", icon: "fas fa-car",
-                    title: "登別 ➔ 函館（約 3 小時）🚗",
-                    desc: "道央道 ➔ 大沼公園IC ➔ 函館。中途可停 <b>大沼國定公園</b>（駒岳＋湖景，約 30 分鐘）。",
+                    time: "13:15", type: "transport", icon: "fas fa-car",
+                    title: "登別 ➔ 大沼國定公園 ➔ 函館（約 3 小時）🚗",
+                    desc: "沿道央自動車道往南（登別東IC ➔ 大沼公園IC 約 2.5 小時），中途可停 <b>大沼國定公園</b> 拍駒岳湖景、買沼之家糰子，再進函館市區（約 40 分鐘）。",
                     badges: [{cls:"transport", icon:"fa-road", text:"約 3 小時"}, {cls:"sight", icon:"fa-leaf", text:"大沼公園"}],
-                    notice: { level: "warning", icon: "fa-gas-pump", text: "長途駕駛", warning: "每 1.5 小時休息一次。傍晚 16:40 左右日落，盡量 17:00 前抵達函館。" }
+                    notice: { level: "warning", icon: "fa-clock", text: "把握日落時間", warning: "10 月下旬函館約 16:40 日落，建議 16:30 前抵達函館飯店 Check-in，方便銜接函館山夕陽與夜景。" }
                 },
                 {
                     time: "16:30", type: "hotel", icon: "fas fa-hotel",
-                    title: "環球景觀飯店函館 Check-in 🏨",
-                    desc: "大床房（帶淋浴），10/25–10/27 共 2 晚，有私人停車位、溫泉、三溫暖。<br>🔑 訂單號：<b>1616334349105930</b>",
-                    badges: [{cls:"hotel", icon:"fa-bed", text:"2 晚"}, {cls:"hotel", icon:"fa-hot-tub", text:"溫泉"}, {cls:"hotel", icon:"fa-parking", text:"停車位"}]
+                    title: "環球景觀飯店函館 (Hotel Global View Hakodate) Check-in 🏨",
+                    desc: "大床房（帶淋浴），10/25–10/27 共 2 晚。附設天然溫泉大浴場與三溫暖！<br>🔑 訂單號：<b>1616334349105930</b>",
+                    badges: [{cls:"hotel", icon:"fa-bed", text:"2 晚"}, {cls:"hotel", icon:"fa-hot-tub", text:"天然溫泉"}, {cls:"hotel", icon:"fa-parking", text:"飯店停車"}]
                 },
                 {
-                    time: "17:30", type: "sight", icon: "fas fa-mountain",
-                    title: "函館山夜景 🌃",
-                    desc: "世界級夜景！建議搭 <b>函館山纜車</b>（來回約 ¥1,800/人），從飯店搭計程車或市電到十字街再走到纜車站。",
-                    badges: [{cls:"sight", icon:"fa-star", text:"百萬夜景"}],
-                    notice: { level: "warning", icon: "fa-car", text: "夜間不能開車上山", warning: "函館山登山道路在夜間有自家車管制期，請把車停在飯店，改搭纜車或計程車。若當天霧大，可延到 10/26 晚上。" }
+                    time: "17:15", type: "sight", icon: "fas fa-mountain",
+                    title: "函館山百萬夜景 🌃",
+                    desc: "從飯店搭計程車或市電前往「函館山纜車山麓站」，搭纜車（來回 ¥1,800/人）登頂欣賞雙海灣夾抱的璀璨夜景！",
+                    badges: [{cls:"sight", icon:"fa-star", text:"世界三大夜景"}, {cls:"transport", icon:"fa-cable-car", text:"纜車 ¥1,800"}],
+                    notice: { level: "danger", icon: "fa-ban", text: "16:00–21:00 禁行自用車", warning: "10/1–11/上旬每晚 <b>16:00–21:00 函館山登山道禁止租賃車/自用車通行</b>！請務必把車停在飯店，搭計程車或市電＋纜車上山。" }
                 },
                 {
                     time: "19:30", type: "food", icon: "fas fa-utensils",
-                    title: "晚餐：函館鹽拉麵 / 居酒屋 🍜",
-                    desc: "推薦 <b>函館麵廚房あじさい</b> 鹽拉麵，或大門橫丁屋台村。",
-                    badges: [{cls:"food", icon:"fa-bowl-food", text:"鹽拉麵"}]
+                    title: "晚餐：幸運小丑漢堡 or 函館鹽拉麵 / 大門橫丁 🍔",
+                    desc: "下山後可吃函館名物「幸運小丑漢堡」、函館麵廚房あじさい鹽拉麵，或回飯店附近的大門橫丁屋台小酌，回飯店泡溫泉！",
+                    badges: [{cls:"food", icon:"fa-hamburger", text:"小丑漢堡"}, {cls:"food", icon:"fa-bowl-food", text:"鹽拉麵"}]
                 }
             ]
         },
         {
             date: "2026-10-26",
-            title: "函館還車 & 港町漫遊",
+            title: "新函館北斗站還車 & 函館港町漫遊",
             tag: "函館",
             weather: "⛅ 6°C~14°C",
             events: [
                 {
-                    time: "08:00", type: "transport", icon: "fas fa-gas-pump",
-                    title: "加滿油 ⛽",
-                    desc: "還車前在還車點附近加滿油（Regular 紅色油槍），收據保留給店員查驗。",
-                    badges: [{cls:"transport", icon:"fa-gas-pump", text:"滿油還車"}]
+                    time: "07:40", type: "transport", icon: "fas fa-car",
+                    title: "從函館飯店出發 ➔ 新函館北斗站加油（車程約 30 分）⛽",
+                    desc: "⚠️ 注意：您的還車店是「<b>新函館北斗駅前店</b>」（距離函館市區約 18km / 30 分鐘車程）！請於 07:40 輕裝開車出發（大件行李留飯店房間），至還車點附近的 <b>ENEOS 渡島大野SS</b> 加滿油（Regular 紅油槍）。",
+                    badges: [{cls:"transport", icon:"fa-gas-pump", text:"滿油還車"}, {cls:"transport", icon:"fa-clock", text:"車程 30 分"}],
+                    notice: { level: "danger", icon: "fa-exclamation-circle", text: "還車地點在「新函館北斗駅」！", warning: "樂天訂單返卻店鋪為「<b>新函館北斗駅前</b>（北海道北斗市市渡1-5-1）」，並非市區的 JR 函館站！早上請預留 30–35 分鐘車程＋加油時間。<br>💡 <i>若您原本是想在市區「函館駅前店」還車，建議出發前登入樂天個人頁面確認是否可改訂市區店鋪，就能省下一趟來回北斗市的時間！</i>" }
                 },
                 {
-                    time: "08:30", type: "booking", icon: "fas fa-key",
-                    title: "函館還車 🔑（地點待補）",
-                    desc: "還車後改以市電／步行遊覽函館。",
-                    badges: [{cls:"booking", icon:"fa-flag-checkered", text:"還車"}],
-                    notice: { level: "warning", icon: "fa-suitcase", text: "行李先放飯店", warning: "建議 10/25 入住時就把行李搬進房間，還車時只帶隨身包。" }
+                    time: "08:30", type: "booking", icon: "fas fa-flag-checkered",
+                    title: "ニッポンレンタカー 新函館北斗駅前店 還車 🔑",
+                    desc: "預約號碼：<b>RC12461331534313494</b><br>📍 地址：北海道北斗市市渡１－５－１（電話：050-1712-2994 / Mapcode：<b>86 543 069</b>）<br>還車後步行 1 分鐘進 JR 新函館北斗站，搭 <b>JR 函館ライナー</b> 回 JR 函館站（約 15–20 分鐘，¥440）。",
+                    badges: [{cls:"booking", icon:"fa-flag-checkered", text:"08:30 還車"}, {cls:"transport", icon:"fa-train", text:"JR 回函館站 18分"}]
                 },
                 {
-                    time: "09:15", type: "food", icon: "fas fa-fish",
-                    title: "函館朝市：海鮮丼 & 釣烏賊 🦑",
-                    desc: "鄰近函館站。<b>駅二市場</b> 可體驗釣活烏賊現切生魚片。",
-                    badges: [{cls:"food", icon:"fa-fish", text:"海鮮丼"}, {cls:"food", icon:"fa-star", text:"活烏賊"}]
+                    time: "09:30", type: "food", icon: "fas fa-fish",
+                    title: "函館朝市：現釣活烏賊 & 海鮮丼早餐 🦑",
+                    desc: "回到 JR 函館站旁就是函館朝市！去 <b>駅二市場</b> 體驗自己釣活烏賊、師傅現場做成透明烏賊生魚片，再吃海膽干貝海鮮丼（きくよ食堂 / うにむらかみ）。",
+                    badges: [{cls:"food", icon:"fa-fish", text:"活烏賊生魚片"}, {cls:"food", icon:"fa-utensils", text:"海膽海鮮丼"}]
                 },
                 {
                     time: "11:00", type: "sight", icon: "fas fa-warehouse",
-                    title: "金森紅磚倉庫 ➔ 元町八幡坂 ⛪",
-                    desc: "灣區紅磚倉庫逛街，再走上元町坡道：八幡坂、舊函館區公會堂、天主教／東正教教堂。",
-                    badges: [{cls:"sight", icon:"fa-camera", text:"港町散步"}, {cls:"buy", icon:"fa-store", text:"紅磚倉庫"}]
+                    title: "金森紅磚倉庫 & 元町八幡坂散步 ⛪",
+                    desc: "漫步港邊紅磚倉庫群（必吃 Petite Merveille 起司蛋糕、Snaffles 乳酪蛋糕），再往上走拍筆直通向大海的 <b>八幡坂</b>、舊函館區公會堂與元町教堂群。",
+                    badges: [{cls:"sight", icon:"fa-camera", text:"八幡坂海景"}, {cls:"buy", icon:"fa-store", text:"紅磚倉庫"}]
                 },
                 {
                     time: "13:00", type: "food", icon: "fas fa-hamburger",
-                    title: "午餐：幸運小丑漢堡 🍔",
-                    desc: "函館限定連鎖，招牌中華雞腿堡（チャイニーズチキンバーガー）。灣區本店就在紅磚倉庫旁。",
-                    badges: [{cls:"food", icon:"fa-hamburger", text:"函館限定"}]
+                    title: "午餐：幸運小丑漢堡 灣區本店 🍔",
+                    desc: "函館靈魂美食！必點 No.1「<b>中華雞腿堡（チャイニーズチキンバーガー）</b>」＋「<b>幸運薯條（ラキポテ，淋肉醬起司）</b>」。",
+                    badges: [{cls:"food", icon:"fa-hamburger", text:"中華雞腿堡"}]
                 },
                 {
                     time: "14:30", type: "sight", icon: "fas fa-star",
-                    title: "五稜郭公園 & 五稜郭塔 ⭐",
-                    desc: "搭市電到「五稜郭公園前」。登塔俯瞰星形城郭，秋天櫻花樹葉轉紅。附近有 <b>六花亭五稜郭店</b> 喝下午茶。",
-                    badges: [{cls:"sight", icon:"fa-ticket-alt", text:"塔 約 ¥1,000"}],
-                    tip: { title: "函館市電 🚋", content: "市電＋巴士 <b>一日券</b> 可在函館站觀光案內所購買，或用 Suica 感應。坐 2-3 趟以上就划算。" }
+                    title: "五稜郭塔 & 六花亭五稜郭店 ⭐",
+                    desc: "搭函館市電至「五稜郭公園前」，登上五稜郭塔俯瞰巨大星形要塞與晚秋紅葉。下塔後可到公園旁的 <b>六花亭 五稜郭店</b> 喝咖啡吃現烤甜點。",
+                    badges: [{cls:"sight", icon:"fa-star", text:"星形城郭"}, {cls:"food", icon:"fa-coffee", text:"六花亭午茶"}]
                 },
                 {
                     time: "18:00", type: "food", icon: "fas fa-utensils",
-                    title: "晚餐 & 自由活動 🌙",
-                    desc: "若昨晚函館山起霧，今晚補上夜景。晚餐可吃壽司或成吉思汗。飯店泡溫泉休息。",
-                    badges: [{cls:"food", icon:"fa-fish", text:"壽司"}]
+                    title: "晚餐：根室花まる迴轉壽司 / 函館成吉思汗 🍣",
+                    desc: "在函館站前 <b>Kiralis 函館 B1「根室花まる」</b> 吃高 CP 值北海道迴轉壽司（可先抽號碼牌），或吃羊羊亭成吉思汗烤肉。",
+                    badges: [{cls:"food", icon:"fa-fish", text:"根室花まる"}]
                 }
             ]
         },
         {
             date: "2026-10-27",
-            title: "函館 ➔ 桃園 賦歸",
+            title: "函館最後採買 ➔ 桃園賦歸",
             tag: "回程",
             weather: "⛅ 6°C~13°C",
             events: [
                 {
                     time: "08:00", type: "food", icon: "fas fa-coffee",
-                    title: "早餐 & 最後採買 ☕",
-                    desc: "朝市最後掃貨（乾貨、海產真空包裝，<b>生鮮不可帶回台灣</b>）。",
+                    title: "早餐 & 函館朝市最後伴手禮採買 ☕",
+                    desc: "在飯店或朝市享用早餐，採買干貝糖、昆布等乾貨伴手禮（⚠️ 新鮮水果與肉類製品不可攜帶入境台灣）。",
                     badges: [{cls:"buy", icon:"fa-shopping-basket", text:"最後採買"}]
                 },
                 {
-                    time: "09:30", type: "transport", icon: "fas fa-bus",
-                    title: "機場巴士 ➔ 函館機場（約 20 分）🚌",
-                    desc: "函館站前機場巴士或計程車（約 ¥3,000）。退房後出發。",
-                    badges: [{cls:"transport", icon:"fa-bus", text:"約 20 分"}]
+                    time: "09:40", type: "transport", icon: "fas fa-bus",
+                    title: "退房 ➔ 搭乘帝產巴士 / 計程車前往函館機場 🚌",
+                    desc: "函館市區離函館機場非常近！從 JR 函館站前 11 號乘車處搭機場接駁巴士約 <b>20 分鐘</b>（¥500/人），或從飯店直接搭計程車約 15–20 分鐘（約 ¥2,800）。",
+                    badges: [{cls:"transport", icon:"fa-bus", text:"車程僅 20 分"}]
                 },
                 {
                     time: "12:20", type: "flight", icon: "fas fa-plane",
-                    title: "台灣虎航 IT237 函館 ➔ 桃園 ✈️",
-                    desc: "12:20 起飛，16:00 抵達桃園 T1。每人托運 25 公斤。<br>🔑 訂位代號：<b>R4SE7S</b>",
-                    badges: [{cls:"booking", icon:"fa-plane", text:"IT237"}, {cls:"flight", icon:"fa-suitcase", text:"25kg/人"}],
-                    notice: { level: "danger", icon: "fa-clock", text: "報到截止", warning: "虎航櫃檯約起飛前 <b>50 分鐘</b> 關閉，請 10:20 前抵達機場。行李請在飯店先秤重。" }
+                    title: "台灣虎航 IT237 函館 (HKD) ➔ 桃園 (TPE) ✈️",
+                    desc: "12:20 函館起飛，16:00 抵達桃園國際機場第一航廈 (T1)。每人均含 <b>25 公斤托運行李</b>！<br>🔑 訂位代號：<b>R4SE7S</b>",
+                    badges: [{cls:"booking", icon:"fa-plane", text:"IT237"}, {cls:"flight", icon:"fa-suitcase", text:"托運 25kg/人"}],
+                    notice: { level: "danger", icon: "fa-clock", text: "10:15 前抵達機場報到", warning: "函館機場國際線規模較小，虎航櫃檯於起飛前 2.5 小時開櫃、<b>起飛前 45 分鐘關櫃</b>，建議 10:00–10:20 抵達機場辦理報到與免稅店採買。" }
                 }
             ]
         }
@@ -785,57 +865,55 @@
     // ===         購物清單               ===
     // ==========================================
     const shoppingList = [
-        { category: "🍫 伴手禮甜點", color: "pink", items: [] },
-        { category: "💊 藥妝", color: "purple", items: [] },
-        { category: "🎯 一番賞/動漫", color: "blue", items: [] },
-        { category: "🦀 海產乾貨", color: "amber", items: [] },
+        { category: "🎯 一番賞 & 動漫周邊", color: "blue", items: [] },
+        { category: "🍫 北海道甜點伴手禮", color: "pink", items: [] },
+        { category: "💊 藥妝保養", color: "purple", items: [] },
+        { category: "🦑 函館海產乾貨", color: "amber", items: [] },
         { category: "👕 服飾雜貨", color: "green", items: [] }
     ];
     // ==========================================
     // ===         行李清單               ===
     // ==========================================
     const luggageList = [
-        { category: "📄 證件文件", color: "blue", items: ["護照（效期 6 個月以上）", "台灣駕照正本", "駕照日文譯本", "信用卡 ×2（不同發卡組織）", "Visit Japan Web QR Code 截圖", "機票/飯店/租車憑證離線備份"] },
-        { category: "💴 金錢", color: "green", items: ["日幣現金（每人約 ¥30,000）", "Suica / iPhone 交通卡", "零錢包（停車場/投幣）"] },
-        { category: "🧥 晚秋保暖衣物（5–12°C）", color: "orange", items: ["羽絨外套 or 厚大衣", "發熱衣 ×2", "毛帽、手套、圍巾", "防風防潑水外套", "好走的防滑鞋", "暖暖包"] },
-        { category: "💊 藥品", color: "red", items: ["感冒藥、腸胃藥", "暈車藥（山路自駕）", "護唇膏、乳液（乾燥）"] },
-        { category: "🔌 3C 用品", color: "purple", items: ["eSIM / 網卡", "行動電源（隨身，不可托運）", "車用手機架 & USB 充電線", "相機 & 記憶卡"] },
-        { category: "🧴 盥洗與溫泉", color: "cyan", items: ["個人盥洗用品", "溫泉用小毛巾", "折疊購物袋"] }
+        { category: "📄 證件與自駕三寶", color: "blue", items: ["護照（效期 6 個月以上）", "台灣駕照正本（缺一不可！）", "駕照日文譯本（缺一不可！）", "信用卡 ×2（含海外高回饋卡）", "Visit Japan Web 入境 QR 截圖", "機票 / 飯店 / 樂天租車憑證離線備份"] },
+        { category: "💴 金錢與交通卡", color: "green", items: ["日幣現金（拉麵店食券機/朝市用）", "Suica / iPhone 交通卡", "零錢包（投幣停車與抽賞用）"] },
+        { category: "🧥 晚秋防寒衣物（3–13°C）", color: "orange", items: ["輕羽絨外套 or 防風保暖大衣", "發熱衣 ×2–3 件", "圍巾、手套、毛帽（函館山夜景極冷）", "好走的防滑防水鞋", "隨身暖暖包"] },
+        { category: "💊 常備藥品", color: "red", items: ["感冒藥、止痛藥、腸胃藥", "暈車藥（中山峠山路備用）", "護唇膏、保濕乳液（北海道極乾燥）"] },
+        { category: "🔌 3C 與車用配件", color: "purple", items: ["日本 eSIM / 網卡", "行動電源（必須隨身攜帶，不可托運）", "車用手機架 & 點菸器/USB 充電線"] },
+        { category: "🧴 盥洗與購物袋", color: "cyan", items: ["個人慣用盥洗保養品", "大型折疊袋（裝一番賞大賞/公仔盒！）"] }
     ];
     // ==========================================
     // ===       注意事項代辦清單             ===
     // ==========================================
     const notesChecklistData = [
         {
-            category: "🔴 超緊急（出發剩 3 天！）",
+            category: "🔴 超緊急（出發前 3 天必辦！）",
             color: "red",
             items: [
-                { id: "hkd-jp-translation", text: "確認已有 <b>駕照日文譯本</b>（監理站臨櫃當天可辦），沒有就無法取車", urgent: true },
-                { id: "hkd-rental-tire", text: "聯絡租車公司確認：<b>冬季輪胎</b>、ETC 卡、異地還車費、函館還車地點", urgent: true },
-                { id: "hkd-kuji-shop", text: "確認 10/24 09:30 一番賞店家地址與附近停車場", urgent: true },
-                { id: "hkd-vjw", text: "填寫 <b>Visit Japan Web</b>（2 人都要），截圖入境 QR Code", urgent: true }
+                { id: "hkd-jp-translation", text: "確認已帶妥 <b>台灣駕照正本＋日文譯本</b>（無譯本日本租車絕對拒租）", urgent: true },
+                { id: "hkd-hokuto-check", text: "確認 10/26 08:30 還車點為「<b>新函館北斗駅前</b>」（距函館市區 30 分車程），或評估是否在樂天改訂「函館駅前店」", urgent: true },
+                { id: "hkd-vjw", text: "填寫 <b>Visit Japan Web</b>（夫妻 2 人皆須完成）並截圖 QR Code", urgent: true },
+                { id: "hkd-kuji-bag", text: "準備大購物袋或預留行李箱空間（裝 10/24 <b>進撃の巨人一番賞</b> 公仔盒）", urgent: true }
             ]
         },
         {
             category: "🟠 出發前 1-2 天",
             color: "orange",
             items: [
-                { id: "hkd-esim", text: "購買並安裝日本 eSIM" },
-                { id: "hkd-yen", text: "換日幣現金" },
-                { id: "hkd-checkin-tr", text: "酷航 TR892 線上報到 / 確認托運行李額度" },
-                { id: "hkd-backup", text: "機票、3 間飯店、租車憑證下載到手機離線" },
-                { id: "hkd-offline-map", text: "Google Maps 下載北海道離線地圖" }
+                { id: "hkd-esim", text: "購買並綁定日本 eSIM" },
+                { id: "hkd-yen", text: "準備日幣現鈔（一粒庵、八芒星、Lawson 抽一番賞、朝市皆常用現金）" },
+                { id: "hkd-offline-map", text: "Google Maps 下載「札幌、定山溪、洞爺湖、登別、函館」離線地圖" },
+                { id: "hkd-hachibosei", text: "出發前看一眼「つけ麺 八芒星」IG (@8_bousei) 確認 10/23 (五) 午間正常營業" }
             ]
         },
         {
-            category: "🔵 旅途中提醒",
+            category: "🔵 旅途中關鍵提醒",
             color: "blue",
             items: [
-                { id: "hkd-road-info", text: "10/24 出發前查「北海道道路情報」中山峠路況" },
-                { id: "hkd-toya-dinner", text: "10/24 在洞爺湖先買好晚餐（豐浦餐廳少）" },
-                { id: "hkd-refuel", text: "10/26 還車前加滿油並保留收據" },
-                { id: "hkd-omiyage", text: "伴手禮在札幌/函館買齊（回程函館機場較小）" },
-                { id: "hkd-tiger-checkin", text: "10/27 虎航 10:20 前抵達機場報到" }
+                { id: "hkd-kuji-lawson", text: "10/24 08:30 取車後先走 1 分鐘去斜對面「Lawson 札幌北6條東二丁目店」看一番賞開賣沒" },
+                { id: "hkd-road-info", text: "10/24 走中山峠前查詢「北海道道路情報」確認無積雪結冰" },
+                { id: "hkd-hakodate-ropeway", text: "10/25 16:00–21:00 函館山禁行租賃車，務必停飯店改搭纜車上山" },
+                { id: "hkd-refuel-hokuto", text: "10/26 07:40 從函館飯店出發，於新函館北斗站旁 ENEOS 加滿油並留收據" }
             ]
         }
     ];
@@ -906,10 +984,10 @@
     const dayCoordinates = {
         0: { name: "札幌", lat: 43.0618, lon: 141.3545, tenkiUrl: "https://tenki.jp/forecast/1/2/1400/1101/" },
         1: { name: "札幌", lat: 43.0618, lon: 141.3545, tenkiUrl: "https://tenki.jp/forecast/1/2/1400/1101/" },
-        2: { name: "洞爺湖", lat: 42.5640, lon: 140.8190, tenkiUrl: "https://tenki.jp/forecast/1/" },
-        3: { name: "函館", lat: 41.7687, lon: 140.7288, tenkiUrl: "https://tenki.jp/forecast/1/" },
-        4: { name: "函館", lat: 41.7687, lon: 140.7288, tenkiUrl: "https://tenki.jp/forecast/1/" },
-        5: { name: "函館", lat: 41.7687, lon: 140.7288, tenkiUrl: "https://tenki.jp/forecast/1/" }
+        2: { name: "洞爺湖", lat: 42.5640, lon: 140.8190, tenkiUrl: "https://tenki.jp/forecast/1/4/2100/1584/" },
+        3: { name: "函館", lat: 41.7687, lon: 140.7288, tenkiUrl: "https://tenki.jp/forecast/1/4/2300/1202/" },
+        4: { name: "函館", lat: 41.7687, lon: 140.7288, tenkiUrl: "https://tenki.jp/forecast/1/4/2300/1202/" },
+        5: { name: "函館", lat: 41.7687, lon: 140.7288, tenkiUrl: "https://tenki.jp/forecast/1/4/2300/1202/" }
     };
 
     function getWmoWeatherInfo(code) {
