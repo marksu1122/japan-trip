@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>北海道晚秋 6 日自駕</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="北海道6日">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#fff7ed">
+    <meta name="description" content="北海道 6 天 5 夜：札幌、定山溪、洞爺湖、登別、函館，含每日行程、訂單、自駕、清單。">
+
+    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/197/197604.png">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Serif+TC:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #fff7ed 0%, #ffffff 40%, #ffffff 60%, #f0f9ff 100%);
+            font-family: 'Inter', 'Helvetica Neue', Arial, 'Microsoft JhengHei', sans-serif;
+            min-height: 100vh;
+            overscroll-behavior-y: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .font-serif-tc { font-family: 'Noto Serif TC', serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .fade-transition { transition: opacity 0.3s ease, transform 0.3s ease; }
+        .soft-shadow { box-shadow: 0 10px 30px -10px rgba(0,0,0,0.08), 0 0 15px rgba(255,255,255,0.6); }
+
+        .badge-pill { display: inline-flex; align-items: center; gap: 3px; padding: 3px 8px; border-radius: 6px; font-size: 0.7rem; font-weight: 600; white-space: nowrap; letter-spacing: 0.02em; }
+        @media (min-width: 768px) { .badge-pill { padding: 4px 10px; font-size: 0.75rem; } }
+
+        /* Morandi Tint Palette for Cards */
+        .card-sight     { background-color: #F2F6F3; border-color: #E2ECE5; }
+        .card-transport { background-color: #F4F6F8; border-color: #E5EAEF; }
+        .card-food      { background-color: #FAF1F1; border-color: #F5E3E3; }
+        .card-buy       { background-color: #F5F3F9; border-color: #E7E3F0; }
+        .card-flight    { background-color: #F8F2F9; border-color: #EFE2F1; }
+        .card-hotel     { background-color: #F4F3F7; border-color: #E6E3ED; }
+        .card-booking   { background-color: #EEF5F6; border-color: #DCECEF; }
+        .card-story     { background-color: #FAFAF9; border-color: #EBEAE6; }
+
+        /* Text and Icon Colors */
+        .text-sight     { color: #3A5F43; }
+        .text-transport { color: #5A6B7C; }
+        .text-food      { color: #C38B8B; }
+        .text-buy       { color: #524675; }
+        .text-flight    { color: #A863A0; }
+        .text-hotel     { color: #726297; }
+        .text-booking   { color: #3B7A87; }
+        .text-story     { color: #57534E; }
+
+        /* Borders for Icons */
+        .border-sight     { border-color: #E2ECE5; }
+        .border-transport { border-color: #E5EAEF; }
+        .border-food      { border-color: #F5E3E3; }
+        .border-buy       { border-color: #E7E3F0; }
+        .border-flight    { border-color: #EFE2F1; }
+        .border-hotel     { border-color: #E6E3ED; }
+        .border-booking   { border-color: #DCECEF; }
+        .border-story     { border-color: #EBEAE6; }
+
+        /* Morandi Badges */
+        .badge-food   { background-color: #FAF1F1; color: #C38B8B; border: 1px solid #F5E3E3; }
+        .badge-buy    { background-color: #F5F3F9; color: #524675; border: 1px solid #E7E3F0; }
+        .badge-booking{ background-color: #EEF5F6; color: #3B7A87; border: 1px solid #DCECEF; }
+        .badge-story  { background-color: #FAFAF9; color: #57534E; border: 1px solid #EBEAE6; }
+        .badge-sight  { background-color: #F2F6F3; color: #3A5F43; border: 1px solid #E2ECE5; }
+        .badge-transport { background-color: #F4F6F8; color: #5A6B7C; border: 1px solid #E5EAEF; }
+        .badge-flight { background-color: #F8F2F9; color: #A863A0; border: 1px solid #EFE2F1; }
+        .badge-hotel  { background-color: #F4F3F7; color: #726297; border: 1px solid #E6E3ED; }
+        .badge-tip    { background-color: #fefce8; color: #ca8a04; border: 1px solid #fef08a; }
+        .badge-green  { background-color: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+
+        /* Clean Notice UI */
+        .notice-box {
+            background-color: #FCF8F2 !important;
+            border: 1px solid #F1E4D0 !important;
+        }
+        .notice-danger {
+            color: #9B2C2C !important;
+        }
+        .notice-warning {
+            color: #6B512C !important;
+        }
+
+
+        /* Sakura petal animation */
+        @keyframes fall {
+            0%   { transform: translateY(-20px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+        .petal {
+            position: fixed;
+            top: -20px;
+            font-size: 1.2rem;
+            animation: fall linear infinite;
+            pointer-events: none;
+            z-index: 0;
+            user-select: none;
+        }
+
+        /* Tab active state */
+        .tab-btn.active {
+            background-color: #111827;
+            color: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.18);
+        }
+
+        /* Card hover */
+        .day-event-card {
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .day-event-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px -6px rgba(0,0,0,0.12);
+        }
+
+        /* Date pill active */
+        .date-pill.active {
+            background: #111827;
+            color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+        }
+        .date-pill {
+            transition: all 0.2s ease;
+        }
+
+        /* Tip collapsible */
+        .tip-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s cubic-bezier(0,1,0,1), opacity 0.3s ease;
+            opacity: 0;
+        }
+        .tip-body.open {
+            max-height: 1000px;
+            opacity: 1;
+            transition: max-height 0.4s ease-in, opacity 0.3s ease;
+        }
+        .tip-body ul { padding-left: 1.25rem; list-style-type: disc; }
+        .tip-body li { margin-bottom: 0.3rem; color: #4b5563; line-height: 1.5; }
+        .tip-body strong { color: #1f2937; }
+
+        :root {
+            --sakura: #f43f5e;
+            --sakura-light: #fce7f3;
+        }
+    </style>
+</head>
+<body class="text-gray-800 pb-16 relative">
+
+    <!-- Decorative autumn leaves -->
+    <span class="petal" style="left:5%;animation-duration:8s;animation-delay:0s;">🍂</span>
+    <span class="petal" style="left:15%;animation-duration:11s;animation-delay:2s;">🍁</span>
+    <span class="petal" style="left:30%;animation-duration:9s;animation-delay:5s;">🍂</span>
+    <span class="petal" style="left:55%;animation-duration:13s;animation-delay:1s;">🍁</span>
+    <span class="petal" style="left:70%;animation-duration:10s;animation-delay:3s;">🍂</span>
+    <span class="petal" style="left:85%;animation-duration:7s;animation-delay:4s;">🍁</span>
+    <span class="petal" style="left:92%;animation-duration:12s;animation-delay:6s;">🍂</span>
+
+    <!-- ===== HEADER ===== -->
+    <header class="pt-6 md:pt-10 pb-3 text-center px-3 relative z-10">
+        <p class="text-xs tracking-[0.25em] text-amber-500 font-semibold uppercase mb-1">✈️ 旅遊行程規劃</p>
+        <h1 class="text-[1.45rem] md:text-[2.2rem] font-serif-tc font-bold tracking-[0.1em] text-[#1a1a1a] mb-1">
+            北海道 晚秋 6 日
+        </h1>
+        <p class="text-sm text-gray-400 mb-5">🍂 札幌 · 定山溪 · 洞爺湖 · 登別 · 函館｜2026/10/22 – 10/27</p>
+
+        <!-- Navigation Tabs -->
+        <div class="max-w-5xl mx-auto overflow-x-auto no-scrollbar pb-3 px-1 text-center">
+            <div class="inline-flex bg-white/60 backdrop-blur-md p-1 rounded-full shadow-sm border border-gray-200">
+                <button onclick="switchTab('itinerary')" id="tab-itinerary" class="tab-btn active px-3 md:px-5 py-1.5 md:py-2 rounded-full text-[13px] md:text-sm font-bold transition-all duration-300 whitespace-nowrap">
+                    <i class="fas fa-calendar-alt mr-1"></i>行程
+                </button>
+                <button onclick="switchTab('tools')" id="tab-tools" class="tab-btn px-3 md:px-5 py-1.5 md:py-2 rounded-full text-[13px] md:text-sm font-bold transition-all duration-300 text-gray-500 hover:text-gray-800 bg-transparent whitespace-nowrap">
+                    <i class="fas fa-file-invoice mr-1"></i>訂單資訊
+                </button>
+                <button onclick="switchTab('transport')" id="tab-transport" class="tab-btn px-3 md:px-5 py-1.5 md:py-2 rounded-full text-[13px] md:text-sm font-bold transition-all duration-300 text-gray-500 hover:text-gray-800 bg-transparent whitespace-nowrap">
+                    <i class="fas fa-car mr-1"></i>自駕
+                </button>
+                <button onclick="switchTab('shopping')" id="tab-shopping" class="tab-btn px-3 md:px-5 py-1.5 md:py-2 rounded-full text-[13px] md:text-sm font-bold transition-all duration-300 text-gray-500 hover:text-gray-800 bg-transparent whitespace-nowrap">
+                    <i class="fas fa-shopping-bag mr-1"></i>購物
+                </button>
+                <button onclick="switchTab('luggage')" id="tab-luggage" class="tab-btn px-3 md:px-5 py-1.5 md:py-2 rounded-full text-[13px] md:text-sm font-bold transition-all duration-300 text-gray-500 hover:text-gray-800 bg-transparent whitespace-nowrap">
+                    <i class="fas fa-suitcase mr-1"></i>行李
+                </button>
+                <button onclick="switchTab('notes')" id="tab-notes" class="tab-btn px-3 md:px-5 py-1.5 md:py-2 rounded-full text-[13px] md:text-sm font-bold transition-all duration-300 text-gray-500 hover:text-gray-800 bg-transparent whitespace-nowrap">
+                    <i class="fas fa-bullhorn mr-1"></i>注意事項
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== VIEW 1: ITINERARY ========== -->
+    <div id="view-itinerary" class="block relative z-10">
+        <!-- Date Navigation -->
+        <div class="max-w-4xl mx-auto px-3 md:px-4 mb-5 md:mb-8 text-center">
+            <div class="inline-flex bg-white/80 backdrop-blur-xl rounded-[2rem] shadow-sm border border-white p-1.5 flex items-center justify-between w-full md:w-auto">
+                <button onclick="scrollNav('left')" class="shrink-0 z-20 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full hover:bg-gray-100 text-gray-400 hover:text-gray-700 transition-colors">
+                    <i class="fas fa-chevron-left text-sm"></i>
+                </button>
+                <div id="date-nav" class="flex-1 flex overflow-x-auto justify-start items-center space-x-1 no-scrollbar scroll-smooth px-1 md:max-w-[600px]"></div>
+                <button onclick="scrollNav('right')" class="shrink-0 z-20 w-8 h-8 md:w-10 md:h-10 flex items-center justify-center rounded-full hover:bg-gray-100 text-gray-400 hover:text-gray-700 transition-colors">
+                    <i class="fas fa-chevron-right text-sm"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Day Card -->
+        <div class="px-3 md:px-4">
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] md:rounded-[2rem] soft-shadow max-w-3xl mx-auto p-4 sm:p-6 md:p-10 border border-white relative overflow-hidden" id="main-card-content">
+                <div class="flex flex-row items-center gap-3 md:gap-5 mb-5 md:mb-8">
+                    <div class="shrink-0 flex flex-col items-center justify-center w-16 h-16 md:w-[5.5rem] md:h-[5.5rem] border border-rose-100 rounded-[1rem] md:rounded-2xl bg-rose-50 shadow-sm">
+                        <span class="text-2xl md:text-[1.8rem] font-black leading-none text-gray-800" id="card-date">--</span>
+                        <span class="text-[10px] md:text-[12px] font-black tracking-[0.1em] text-rose-500 mt-1 uppercase" id="card-day-week">---</span>
+                        <span class="text-[9px] md:text-[10px] font-semibold tracking-[0.05em] text-gray-400 mt-0.5 uppercase" id="card-month">---</span>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex flex-wrap items-center gap-2 mb-1 md:mb-2">
+                            <span class="inline-block bg-[#2d3748] text-white text-[10px] md:text-[11px] px-2.5 py-0.5 rounded-full tracking-wider font-medium" id="card-tag">城市</span>
+                            <div class="inline-flex items-center gap-1.5 bg-rose-50 text-rose-600 text-[10px] md:text-[11px] px-2.5 py-0.5 rounded-full border border-rose-100 font-medium whitespace-nowrap" id="card-weather"></div>
+                        </div>
+                        <h2 class="text-[1.15rem] md:text-[1.75rem] font-serif-tc font-bold text-gray-800 leading-snug tracking-wide truncate md:whitespace-normal" id="card-title">載入中...</h2>
+                    </div>
+                </div>
+
+                <div class="space-y-3 md:space-y-4" id="card-events">
+                    <!-- Dynamically generated -->
+                </div>
+
+                <div class="flex justify-between items-center mt-8 md:mt-12 pt-6 border-t border-gray-100">
+                    <button id="btn-prev" onclick="changeDay(currentIndex - 1)" class="px-4 md:px-5 py-2 md:py-2.5 border border-gray-300 rounded-full text-[12px] md:text-sm font-medium text-gray-600 hover:border-gray-800 hover:bg-gray-50 transition-colors flex items-center gap-2">
+                        <i class="fas fa-arrow-left text-[10px]"></i> 上一天
+                    </button>
+                    <button id="btn-next" onclick="changeDay(currentIndex + 1)" class="px-4 md:px-5 py-2 md:py-2.5 border border-gray-300 rounded-full text-[12px] md:text-sm font-medium text-gray-600 hover:border-gray-800 hover:bg-gray-50 transition-colors flex items-center gap-2">
+                        下一天 <i class="fas fa-arrow-right text-[10px]"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- ========== VIEW 3: TOOLS 訂單資訊 ========== -->
+    <div id="view-tools" class="hidden px-3 md:px-4 relative z-10">
+        <div class="max-w-3xl mx-auto space-y-4 md:space-y-6">
+
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-3 border-b pb-2 flex items-center gap-2"><i class="fas fa-plane text-blue-500"></i> 航班資訊</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="bg-blue-50/50 p-3.5 md:p-4 rounded-xl border border-blue-100 shadow-sm">
+                        <div class="flex justify-between items-start mb-2 pb-2 border-b border-blue-100/50">
+                            <div>
+                                <span class="font-bold text-blue-900 text-[13.5px] md:text-[14.5px] block">去程 ➔ 札幌新千歲 (CTS)</span>
+                                <span class="text-[10px] text-blue-600 bg-blue-100 px-1.5 py-0.5 rounded font-mono mt-0.5 inline-block">酷航 TR892・AF61PK</span>
+                            </div>
+                            <span class="bg-blue-600 text-white text-[10px] px-1.5 py-0.5 rounded font-bold">訂單 OK</span>
+                        </div>
+                        <div class="space-y-2 text-[12.5px] text-gray-700">
+                            <div class="flex items-start gap-2"><i class="fas fa-calendar-day text-blue-500 w-4 text-center mt-0.5"></i><p><strong>日期：</strong>2026/10/22 (四)</p></div>
+                            <div class="flex items-start gap-2"><i class="fas fa-clock text-blue-500 w-4 text-center mt-0.5"></i><p><strong>時間：</strong>13:00 ➔ 17:55 (3h55m)</p></div>
+                            <div class="flex items-start gap-2"><i class="fas fa-map-marker-alt text-blue-500 w-4 text-center mt-0.5"></i><p><strong>機場：</strong>桃園 ➔ 新千歲</p></div>
+                            <div class="flex items-start gap-2"><i class="fas fa-suitcase text-blue-500 w-4 text-center mt-0.5"></i><p><strong>行李：</strong>依訂單（請確認）</p></div>
+                        </div>
+                    </div>
+                    <div class="bg-emerald-50/50 p-3.5 md:p-4 rounded-xl border border-emerald-100 shadow-sm">
+                        <div class="flex justify-between items-start mb-2 pb-2 border-b border-emerald-100/50">
+                            <div>
+                                <span class="font-bold text-emerald-900 text-[13.5px] md:text-[14.5px] block">回程 ➔ 台北桃園 (TPE)</span>
+                                <span class="text-[10px] text-emerald-600 bg-emerald-100 px-1.5 py-0.5 rounded font-mono mt-0.5 inline-block">台灣虎航 IT237・R4SE7S</span>
+                            </div>
+                            <span class="bg-emerald-600 text-white text-[10px] px-1.5 py-0.5 rounded font-bold">訂單 OK</span>
+                        </div>
+                        <div class="space-y-2 text-[12.5px] text-gray-700">
+                            <div class="flex items-start gap-2"><i class="fas fa-calendar-day text-emerald-500 w-4 text-center mt-0.5"></i><p><strong>日期：</strong>2026/10/27 (二)</p></div>
+                            <div class="flex items-start gap-2"><i class="fas fa-clock text-emerald-500 w-4 text-center mt-0.5"></i><p><strong>時間：</strong>12:20 ➔ 16:00</p></div>
+                            <div class="flex items-start gap-2"><i class="fas fa-map-marker-alt text-emerald-500 w-4 text-center mt-0.5"></i><p><strong>機場：</strong>函館 HKD ➔ 桃園 T1</p></div>
+                            <div class="flex items-start gap-2"><i class="fas fa-suitcase text-emerald-500 w-4 text-center mt-0.5"></i><p><strong>行李：</strong>托運 25kg / 每人</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-3 border-b pb-2 flex items-center gap-2"><i class="fas fa-hotel text-purple-500"></i> 住宿資訊</h3>
+                <ul class="space-y-3">
+                    <li class="flex items-start gap-3 p-3 rounded-xl bg-rose-50/50 border border-rose-100">
+                        <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center text-rose-500 shadow-sm shrink-0"><i class="fas fa-bed"></i></div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-bold text-[13.5px] text-gray-800">KOKO 飯店 札幌站前（好萊塢雙床房）</p>
+                            <p class="text-[12px] text-gray-500">10/22 ~ 10/24（2晚） • <span class="font-mono text-[11px] bg-rose-100/80 text-rose-700 px-1.5 py-0.5 rounded">訂單: 1616334349510502</span></p>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Sapporo+Ekimae" target="_blank" class="text-[10px] bg-white border border-rose-200 text-rose-600 hover:bg-rose-50 px-2 py-1 rounded shadow-sm whitespace-nowrap flex items-center gap-1 shrink-0"><i class="fas fa-map-marker-alt"></i> 導航</a>
+                    </li>
+                    <li class="flex items-start gap-3 p-3 rounded-xl bg-orange-50/50 border border-orange-100">
+                        <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center text-orange-500 shadow-sm shrink-0"><i class="fas fa-bed"></i></div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-bold text-[13.5px] text-gray-800">Hotel Cocoa（豐浦町・Twin Room）</p>
+                            <p class="text-[12px] text-gray-500">10/24 ~ 10/25（1晚） • <span class="font-mono text-[11px] bg-orange-100/80 text-orange-700 px-1.5 py-0.5 rounded">訂單: 1787129869</span></p>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Hotel+Cocoa+Toyoura" target="_blank" class="text-[10px] bg-white border border-orange-200 text-orange-600 hover:bg-orange-50 px-2 py-1 rounded shadow-sm whitespace-nowrap flex items-center gap-1 shrink-0"><i class="fas fa-map-marker-alt"></i> 導航</a>
+                    </li>
+                    <li class="flex items-start gap-3 p-3 rounded-xl bg-purple-50/50 border border-purple-100">
+                        <div class="w-9 h-9 rounded-full bg-white flex items-center justify-center text-purple-500 shadow-sm shrink-0"><i class="fas fa-hot-tub"></i></div>
+                        <div class="flex-1 min-w-0">
+                            <p class="font-bold text-[13.5px] text-gray-800">環球景觀飯店函館（大床房・帶淋浴）</p>
+                            <p class="text-[12px] text-gray-500">10/25 ~ 10/27（2晚） • <span class="font-mono text-[11px] bg-purple-100/80 text-purple-700 px-1.5 py-0.5 rounded">訂單: 1616334349105930</span></p>
+                        </div>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Hotel+Global+View+Hakodate" target="_blank" class="text-[10px] bg-white border border-purple-200 text-purple-600 hover:bg-purple-50 px-2 py-1 rounded shadow-sm whitespace-nowrap flex items-center gap-1 shrink-0"><i class="fas fa-map-marker-alt"></i> 導航</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-3 border-b pb-2 flex items-center gap-2"><i class="fas fa-car-side text-indigo-500"></i> 租車</h3>
+                <div class="text-[12.5px] text-gray-700 space-y-2">
+                    <div class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-blue-500 w-4 text-center"></i><p><strong>取車：</strong>10/24 (六) 08:30 @ 札幌（店鋪待補）</p></div>
+                    <div class="flex items-center gap-2"><i class="fas fa-flag-checkered text-green-500 w-4 text-center"></i><p><strong>還車：</strong>10/26 (一) 08:30 @ 函館（店鋪待補）</p></div>
+                    <div class="flex items-center gap-2"><i class="fas fa-snowflake text-sky-500 w-4 text-center"></i><p><strong>確認：</strong>冬季輪胎・ETC・異地還車費</p></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ========== VIEW 4: TRANSPORT 自駕 ========== -->
+    <div id="view-transport" class="hidden px-3 md:px-4 relative z-10">
+        <div class="max-w-3xl mx-auto space-y-4 md:space-y-6">
+            <div class="bg-amber-50 p-4 md:p-5 rounded-xl border border-amber-200 soft-shadow">
+                <h4 class="font-bold text-amber-800 text-[14.5px] md:text-base mb-3 flex items-center gap-2"><i class="fas fa-car"></i> 🚗 自駕概覽（10/24 – 10/26）</h4>
+                <ul class="text-[13px] md:text-[13.5px] text-gray-700 space-y-2 list-disc pl-4">
+                    <li><strong>10/24：</strong>札幌 ➔ 定山溪（1h）➔ 中山峠 ➔ 洞爺湖（1.5h）➔ 豐浦 Hotel Cocoa（25 分）</li>
+                    <li><strong>10/25：</strong>豐浦 ➔ 登別（1h10m，道央道）➔ 大沼公園 ➔ 函館（約 3h）</li>
+                    <li><strong>10/26：</strong>加油 ➔ 08:30 函館還車</li>
+                </ul>
+            </div>
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-3 border-b pb-2 flex items-center gap-2"><i class="fas fa-road text-blue-500"></i> 重點路段</h3>
+                <ul class="space-y-2 text-[13px] text-gray-700 list-disc pl-5">
+                    <li><strong>國道 230 中山峠：</strong>標高 835m，晚秋可能結冰，查 <a class="text-blue-600 underline" href="https://info-road.hdb.hkd.mlit.go.jp/" target="_blank">北海道道路情報</a>。</li>
+                    <li><strong>道央自動車道：</strong>豐浦IC ➔ 登別東IC ➔ 大沼公園IC，有 ETC 較方便。</li>
+                    <li><strong>函館山：</strong>夜間有自家車管制，請搭纜車。</li>
+                    <li><strong>行車時間：</strong>以 Google Maps 為準再加 15-20% 緩衝。</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== VIEW 5: SHOPPING 購物 ========== -->
+    <div id="view-shopping" class="hidden px-3 md:px-4 relative z-10">
+        <div class="max-w-3xl mx-auto space-y-4 md:space-y-6">
+
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-shopping-bag text-pink-500"></i> 購物清單
+                </h3>
+                <div class="space-y-4" id="shopping-list">
+                    <!-- Dynamically rendered -->
+                </div>
+            </div>
+
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-3 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-store text-purple-500"></i> 此行必逛商圈
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="p-3 rounded-xl bg-rose-50 border border-rose-100">
+                        <p class="font-bold text-[13.5px] text-rose-800">🍫 札幌 狸小路・站前</p>
+                        <p class="text-[12px] text-gray-600 mt-1">ROYCE、白色戀人、六花亭、LeTAO，藥妝與唐吉訶德集中</p>
+                    </div>
+                    <div class="p-3 rounded-xl bg-blue-50 border border-blue-100">
+                        <p class="font-bold text-[13.5px] text-blue-800">🎯 札幌 動漫二手店</p>
+                        <p class="text-[12px] text-gray-600 mt-1">狸小路周邊駿河屋、Lashinbang，可先找想要的賞再決定抽不抽</p>
+                    </div>
+                    <div class="p-3 rounded-xl bg-amber-50 border border-amber-100">
+                        <p class="font-bold text-[13.5px] text-amber-800">🦀 函館朝市</p>
+                        <p class="text-[12px] text-gray-600 mt-1">干貝、昆布、烏賊乾貨（生鮮肉品不可帶回台灣）</p>
+                    </div>
+                    <div class="p-3 rounded-xl bg-green-50 border border-green-100">
+                        <p class="font-bold text-[13.5px] text-green-800">🧱 金森紅磚倉庫</p>
+                        <p class="text-[12px] text-gray-600 mt-1">函館限定雜貨、音樂盒、甜點，雨天也好逛</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ========== VIEW 6: LUGGAGE 行李 ========== -->
+    <div id="view-luggage" class="hidden px-3 md:px-4 relative z-10">
+        <div class="max-w-3xl mx-auto space-y-4 md:space-y-6">
+
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-suitcase text-rose-500"></i> 行李打包清單
+                </h3>
+                <div class="space-y-4" id="luggage-list">
+                    <!-- Dynamically rendered -->
+                </div>
+            </div>
+
+            <!-- 6月氣候 -->
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-3 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-cloud-sun text-yellow-500"></i> 6 月日本氣候參考（伊豆・箱根・東京）
+                </h3>
+                <div class="overflow-x-auto rounded-xl border border-gray-200">
+                    <table class="w-full text-[13px] text-left bg-white">
+                        <thead class="bg-gray-50 text-gray-700 border-b">
+                            <tr>
+                                <th class="p-3 font-bold">地區</th>
+                                <th class="p-3 font-bold">溫度範圍</th>
+                                <th class="p-3 font-bold">備註</th>
+                                <th class="p-3 font-bold">建議穿著</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y text-gray-700">
+                            <tr class="hover:bg-gray-50"><td class="p-3 font-semibold">伊豆下田</td><td class="p-3">20-26°C 🌊</td><td class="p-3">海邊晚上涼</td><td class="p-3">短袖＋薄外套</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="p-3 font-semibold">箱根山區</td><td class="p-3">15-22°C ⛰️</td><td class="p-3">比平地低 5°C</td><td class="p-3">薄外套必備</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="p-3 font-semibold">東京上野</td><td class="p-3">22-28°C ☀️</td><td class="p-3">梅雨季，帶傘</td><td class="p-3">短袖＋折疊傘</td></tr>
+                            <tr class="hover:bg-gray-50"><td class="p-3 font-semibold">整體提醒</td><td class="p-3 text-blue-600 font-medium" colspan="3">☔ 6月是梅雨季，每天出門必帶摺疊傘！建議備 2 把備用。</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ========== VIEW 7: NOTES 注意事項 ========== -->
+    <div id="view-notes" class="hidden px-3 md:px-4 relative z-10">
+        <div class="max-w-3xl mx-auto space-y-4 md:space-y-6">
+
+            <!-- 📋 行前準備代辦清單 -->
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-tasks text-rose-500"></i> 📋 行前準備代辦清單
+                </h3>
+                <p class="text-[12.5px] text-gray-500 mb-4">距離出發時間有限，請依照時間段完成以下事項。勾選後系統會自動保存您的進度！</p>
+                <div class="space-y-4" id="notes-checklist">
+                    <!-- Dynamically rendered checklists -->
+                </div>
+            </div>
+
+            <!-- 北海道晚秋攻略 -->
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-snowflake text-sky-500"></i> 🍂 北海道晚秋自駕攻略
+                </h3>
+                <ul class="space-y-2 text-[13px] text-gray-700 list-disc pl-5">
+                    <li><strong>天氣：</strong>10 月下旬札幌/函館白天約 10–14°C、早晚 3–6°C，山區可能下初雪。</li>
+                    <li><strong>日落早：</strong>約 16:40 就天黑，自駕行程盡量在 16:30 前結束。</li>
+                    <li><strong>野生動物：</strong>山路常有蝦夷鹿衝出，黃昏尤其要減速。</li>
+                    <li><strong>加油：</strong>鄉間加油站晚上很早關門，油量剩一半就加。</li>
+                    <li><strong>甲地租乙地還：</strong>札幌取車、函館還車通常要另收異地還車費，取車時確認金額。</li>
+                </ul>
+            </div>
+
+            <!-- 緊急聯絡與實用資訊 -->
+            <div class="bg-white/95 backdrop-blur-xl rounded-[1.5rem] soft-shadow p-5 md:p-6 border border-white">
+                <h3 class="text-[1.1rem] md:text-lg font-bold text-gray-800 mb-4 border-b pb-2 flex items-center gap-2">
+                    <i class="fas fa-phone-alt text-blue-500"></i> 緊急聯絡與實用資訊
+                </h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div class="p-3 rounded-xl bg-blue-50 border border-blue-100">
+                        <p class="font-bold text-[13px] text-blue-800 mb-1">🚑 日本緊急電話</p>
+                        <p class="text-[12px] text-gray-700">警察：<strong>110</strong>／消防救護：<strong>119</strong></p>
+                        <p class="text-[12px] text-gray-700">道路救援 JAF：<strong>#8139</strong></p>
+                    </div>
+                    <div class="p-3 rounded-xl bg-green-50 border border-green-100">
+                        <p class="font-bold text-[13px] text-green-800 mb-1">📱 必備 App</p>
+                        <p class="text-[12px] text-gray-700">• Google Maps（離線地圖）• Google 翻譯</p>
+                        <p class="text-[12px] text-gray-700">• Visit Japan Web • tenki.jp 天氣</p>
+                    </div>
+                    <div class="p-3 rounded-xl bg-amber-50 border border-amber-100">
+                        <p class="font-bold text-[13px] text-amber-800 mb-1">💴 消費</p>
+                        <p class="text-[12px] text-gray-700">同店單日 ¥5,000 以上可退稅（帶護照）</p>
+                        <p class="text-[12px] text-gray-700">朝市、小店多收現金</p>
+                    </div>
+                    <div class="p-3 rounded-xl bg-rose-50 border border-rose-100">
+                        <p class="font-bold text-[13px] text-rose-800 mb-1">♨️ 溫泉禮儀</p>
+                        <p class="text-[12px] text-gray-700">入浴前先洗淨身體，毛巾不可泡進池中</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    // ==========================================
+    // ===       行程資料 (北海道 6 天)       ===
+    // ==========================================
+    const itineraryData = [
+        {
+            date: "2026-10-22",
+            title: "抵達新千歲 & 札幌夜晚",
+            tag: "札幌",
+            weather: "🌙 5°C~12°C",
+            events: [
+                {
+                    time: "13:00", type: "flight", icon: "fas fa-plane-departure",
+                    title: "酷航 TR892 桃園 ➔ 新千歲 ✈️",
+                    desc: "13:00 桃園起飛，17:55 抵達新千歲機場 (CTS)，飛行約 3h55m。<br>🔑 訂位代號：<b>AF61PK</b>",
+                    badges: [{cls:"booking", icon:"fa-plane", text:"TR892"}, {cls:"flight", icon:"fa-clock", text:"17:55 抵達"}],
+                    notice: { level: "warning", icon: "fa-utensils", text: "廉航無餐", warning: "酷航基本票不含餐，建議在桃園機場先吃午餐或攜帶輕食上機。入境前先填好 <b>Visit Japan Web</b> QR Code。" }
+                },
+                {
+                    time: "19:00", type: "transport", icon: "fas fa-train",
+                    title: "JR 快速 Airport ➔ 札幌站 🚆",
+                    desc: "入境＋領行李約 45-60 分鐘。機場 B1 搭 JR 快速 Airport，約 37 分鐘抵達札幌站，約 ¥1,230/人。",
+                    badges: [{cls:"transport", icon:"fa-train", text:"JR 約 37 分"}, {cls:"transport", icon:"fa-credit-card", text:"可刷 Suica/信用卡感應"}],
+                    tip: { title: "搭車小技巧 🚆", content: "• 每小時約 5-6 班，免預約自由席即可。<br>• 可在機場「北海道四季市場」先逛伴手禮，但回程不經新千歲，<b>想買的 ROYCE / 白色戀人等請在札幌買</b>。<br>• 札幌站下車走 <b>南口</b> 往 KOKO 飯店（步行約 5 分鐘）。" }
+                },
+                {
+                    time: "20:00", type: "hotel", icon: "fas fa-hotel",
+                    title: "KOKO 飯店 札幌站前 Check-in 🏨",
+                    desc: "好萊塢雙床房，10/22–10/24 共 2 晚。<br>🔑 訂單號：<b>1616334349510502</b>",
+                    badges: [{cls:"hotel", icon:"fa-bed", text:"2 晚"}, {cls:"booking", icon:"fa-suitcase", text:"可寄放行李"}]
+                },
+                {
+                    time: "20:30", type: "food", icon: "fas fa-utensils",
+                    title: "晚餐：成吉思汗烤肉 or 湯咖哩 🍖",
+                    desc: "抵達日先吃北海道招牌！成吉思汗烤羊肉（だるま／ジンギスカン専門店）或湯咖哩。",
+                    badges: [{cls:"food", icon:"fa-fire", text:"成吉思汗"}, {cls:"food", icon:"fa-pepper-hot", text:"湯咖哩"}],
+                    tip: { title: "夜晚口袋名單 🌙", content: "• <b>成吉思汗だるま</b>（薄野）：老字號，晚上常排隊，可吃完再逛。<br>• <b>湯咖哩 Suage+ / GARAKU</b>：GARAKU 末點較早，太晚可改站前 ESTA/大丸美食街。<br>• 想吃拉麵：薄野 <b>元祖拉麵橫丁</b> 營業到深夜。" }
+                }
+            ]
+        },
+        {
+            date: "2026-10-23",
+            title: "北大銀杏大道 & 札幌市區",
+            tag: "札幌",
+            weather: "⛅ 5°C~13°C",
+            events: [
+                {
+                    time: "08:30", type: "food", icon: "fas fa-coffee",
+                    title: "早餐：二条市場海鮮丼 or 站前咖啡 🍣",
+                    desc: "想吃海鮮可去二条市場（地鐵大通/步行），或在飯店附近輕鬆解決，保留肚子給午餐。",
+                    badges: [{cls:"food", icon:"fa-fish", text:"海鮮丼"}]
+                },
+                {
+                    time: "09:30", type: "sight", icon: "fas fa-university",
+                    title: "北海道大學：銀杏大道 & 白楊木林道 🍂",
+                    desc: "從札幌站北口步行約 10 分鐘。10 月下旬正是 <b>北 13 條銀杏大道</b> 黃葉高峰，約 70 棵銀杏排成金色隧道。建議停留 1.5-2 小時。",
+                    badges: [{cls:"sight", icon:"fa-leaf", text:"銀杏季"}, {cls:"sight", icon:"fa-ticket-alt", text:"免費"}],
+                    tip: { title: "北大散步動線 🗺️", content: "正門 ➔ <b>克拉克博士胸像</b> ➔ 中央草坪 ➔ 綜合博物館（免費，週一休）➔ <b>白楊木林道</b> ➔ <b>北 13 條銀杏大道</b>（北 13 條門）。<br>📸 銀杏大道上午順光，週末人潮多，週五早上相對好拍。<br>🍦 校內 <b>北大マルシェ</b> 可買北大限定牛奶/冰淇淋與文創。" },
+                    notice: { level: "warning", icon: "fa-info-circle", text: "校園禮儀", warning: "北大是上課中的校園，請勿進入研究大樓，拍照勿阻擋自行車道。" }
+                },
+                {
+                    time: "12:00", type: "food", icon: "fas fa-utensils",
+                    title: "午餐：湯咖哩 / 味噌拉麵 🍜",
+                    desc: "札幌兩大名物擇一，另一個留給晚上。",
+                    badges: [{cls:"food", icon:"fa-pepper-hot", text:"湯咖哩"}, {cls:"food", icon:"fa-bowl-food", text:"味噌拉麵"}]
+                },
+                {
+                    time: "13:30", type: "sight", icon: "fas fa-city",
+                    title: "時計台 ➔ 大通公園 ➔ 電視塔 🗼",
+                    desc: "市中心步行串連，大通公園秋季行道樹也正轉紅。電視塔展望台可俯瞰大通公園。",
+                    badges: [{cls:"sight", icon:"fa-camera", text:"市區散步"}]
+                },
+                {
+                    time: "15:30", type: "buy", icon: "fas fa-shopping-bag",
+                    title: "狸小路 & 薄野逛街 🛍️",
+                    desc: "藥妝、唐吉訶德、二手動漫店集中。伴手禮（ROYCE、六花亭、白色戀人）建議在札幌一次買齊。",
+                    badges: [{cls:"buy", icon:"fa-store", text:"藥妝/伴手禮"}]
+                },
+                {
+                    time: "18:00", type: "sight", icon: "fas fa-mountain",
+                    title: "（選配）藻岩山夜景 🌃",
+                    desc: "日本新三大夜景之一。搭路面電車到「ロープウェイ入口」轉免費接駁，纜車＋迷你纜車來回約 ¥2,100/人。",
+                    badges: [{cls:"sight", icon:"fa-star", text:"新三大夜景"}],
+                    notice: { level: "warning", icon: "fa-temperature-low", text: "山頂很冷", warning: "10 月下旬山頂晚上約 0-5°C，請帶羽絨外套與手套。" }
+                }
+            ]
+        },
+        {
+            date: "2026-10-24",
+            title: "取車 ➔ 定山溪 ➔ 洞爺湖",
+            tag: "自駕",
+            weather: "⛅ 3°C~12°C",
+            events: [
+                {
+                    time: "08:00", type: "hotel", icon: "fas fa-door-open",
+                    title: "KOKO 飯店 Check-out",
+                    desc: "整理好行李後退房，前往租車店。",
+                    badges: [{cls:"hotel", icon:"fa-suitcase", text:"退房"}]
+                },
+                {
+                    time: "08:30", type: "booking", icon: "fas fa-key",
+                    title: "札幌取車 🔑（待補租車公司）",
+                    desc: "10/24 08:30 取車 ➔ 10/26 08:30 函館還車（甲地租乙地還）。",
+                    badges: [{cls:"booking", icon:"fa-key", text:"取車"}, {cls:"booking", icon:"fa-route", text:"異地還車"}],
+                    notice: { level: "danger", icon: "fa-snowflake", text: "取車必確認", warning: "1. 台灣駕照正本＋<b>日文譯本</b>＋護照 2. 確認為 <b>冬季輪胎（スタッドレス）</b> 3. ETC 卡 4. 拍照/錄影車身刮痕 5. 確認異地還車費。" }
+                },
+                {
+                    time: "09:30", type: "buy", icon: "fas fa-dice",
+                    title: "市區抽一番賞 🎯（店家待補）",
+                    desc: "預定 09:30 開抽，抽完 10:00 出發定山溪。",
+                    badges: [{cls:"buy", icon:"fa-gift", text:"一番賞"}],
+                    notice: { level: "warning", icon: "fa-parking", text: "停車與時間", warning: "取車到抽賞只有 1 小時，請先查好店家附近的計時停車場（Times / 名鐵協商）。若店家在取車點附近，也可考慮步行過去。" }
+                },
+                {
+                    time: "10:00", type: "transport", icon: "fas fa-car",
+                    title: "自駕 ➔ 定山溪溫泉（約 1 小時）🚗",
+                    desc: "走國道 230 號往南，約 30 km。",
+                    badges: [{cls:"transport", icon:"fa-road", text:"約 1 小時"}]
+                },
+                {
+                    time: "11:00", type: "sight", icon: "fas fa-leaf",
+                    title: "定山溪：二見吊橋 & 河童足湯 🍁",
+                    desc: "二見公園步道走到 <b>二見吊橋</b>（紅葉尾聲仍有餘韻），溫泉街有免費足湯。停留約 1.5 小時並在此午餐。",
+                    badges: [{cls:"sight", icon:"fa-leaf", text:"紅葉尾聲"}, {cls:"sight", icon:"fa-hot-tub", text:"免費足湯"}],
+                    tip: { title: "定山溪小攻略 ♨️", content: "• 停車：<b>定山溪觀光案內所旁公共停車場</b>（免費）。<br>• 若時間充裕可加 <b>豐平峽水壩</b>（需轉乘電動巴士，季節運行至 11 月上旬，約多 1.5 小時）。<br>• 午餐可在溫泉街吃蕎麥麵或豆腐料理。" }
+                },
+                {
+                    time: "13:00", type: "transport", icon: "fas fa-car",
+                    title: "經中山峠 ➔ 洞爺湖（約 1.5 小時）⛰️",
+                    desc: "國道 230 號越過中山峠（標高 835m），中途可在 <b>道之驛 望羊中山</b> 吃名物「炸馬鈴薯（あげいも）」。",
+                    badges: [{cls:"transport", icon:"fa-mountain", text:"山路"}, {cls:"food", icon:"fa-drumstick-bite", text:"あげいも"}],
+                    notice: { level: "danger", icon: "fa-snowflake", text: "山路結冰風險", warning: "中山峠 10 月下旬可能降雪或路面結冰。出發前查看 <b>北海道道路情報</b>，車速放慢，避免天黑後行駛。" }
+                },
+                {
+                    time: "14:45", type: "sight", icon: "fas fa-water",
+                    title: "洞爺湖：Silo 展望台 & 湖畔 🏞️",
+                    desc: "Silo 展望台可俯瞰整個洞爺湖與中島。時間夠可順遊昭和新山／有珠山纜車（末班約 16:00 前後）。",
+                    badges: [{cls:"sight", icon:"fa-camera", text:"湖景"}],
+                    tip: { title: "洞爺湖長期煙火 🎆", content: "洞爺湖溫泉每年 4 月底至 10 月底，每晚約 <b>20:45 起放 20 分鐘煙火</b>（10/24 應仍在期間內，請以官網為準）。<br>如想看，可先到 Hotel Cocoa 入住，晚上再開約 25 分鐘回湖畔。" }
+                },
+                {
+                    time: "16:30", type: "hotel", icon: "fas fa-hotel",
+                    title: "Hotel Cocoa（豐浦町）Check-in 🏨",
+                    desc: "Twin Room 1 晚，入住 15:00 起／退房 10:00。<br>🔑 訂單號：<b>1787129869</b>",
+                    badges: [{cls:"hotel", icon:"fa-bed", text:"1 晚"}],
+                    notice: { level: "warning", icon: "fa-utensils", text: "晚餐先準備", warning: "豐浦町餐廳少且打烊早，建議在洞爺湖溫泉街先吃晚餐或在超市/超商買好。" }
+                }
+            ]
+        },
+        {
+            date: "2026-10-25",
+            title: "登別地獄谷 ➔ 南下函館",
+            tag: "自駕",
+            weather: "⛅ 6°C~14°C",
+            events: [
+                {
+                    time: "08:30", type: "transport", icon: "fas fa-car",
+                    title: "豐浦 ➔ 登別（約 1 小時 10 分）🚗",
+                    desc: "走道央自動車道（豐浦IC ➔ 登別東IC）。",
+                    badges: [{cls:"transport", icon:"fa-road", text:"高速公路"}]
+                },
+                {
+                    time: "09:45", type: "sight", icon: "fas fa-smog",
+                    title: "登別地獄谷 & 大湯沼 👹",
+                    desc: "火山噴氣地形，木棧道約 15 分鐘到鐵泉池。再開車到 <b>大湯沼</b> 與 <b>大湯沼川天然足湯</b>。停留約 2 小時。",
+                    badges: [{cls:"sight", icon:"fa-ticket-alt", text:"免費入場"}, {cls:"sight", icon:"fa-parking", text:"停車 ¥500"}],
+                    tip: { title: "登別順遊 ♨️", content: "• 地獄谷停車場可在同日停大湯沼停車場（出示收據）。<br>• 溫泉街有 <b>閻魔堂</b>（定時會變臉）。<br>• 早上人少、光線好，上午到最理想。" }
+                },
+                {
+                    time: "12:00", type: "food", icon: "fas fa-utensils",
+                    title: "午餐：登別溫泉街 🍜",
+                    desc: "推薦地獄拉麵或溫泉街咖哩。",
+                    badges: [{cls:"food", icon:"fa-pepper-hot", text:"地獄拉麵"}]
+                },
+                {
+                    time: "13:00", type: "transport", icon: "fas fa-car",
+                    title: "登別 ➔ 函館（約 3 小時）🚗",
+                    desc: "道央道 ➔ 大沼公園IC ➔ 函館。中途可停 <b>大沼國定公園</b>（駒岳＋湖景，約 30 分鐘）。",
+                    badges: [{cls:"transport", icon:"fa-road", text:"約 3 小時"}, {cls:"sight", icon:"fa-leaf", text:"大沼公園"}],
+                    notice: { level: "warning", icon: "fa-gas-pump", text: "長途駕駛", warning: "每 1.5 小時休息一次。傍晚 16:40 左右日落，盡量 17:00 前抵達函館。" }
+                },
+                {
+                    time: "16:30", type: "hotel", icon: "fas fa-hotel",
+                    title: "環球景觀飯店函館 Check-in 🏨",
+                    desc: "大床房（帶淋浴），10/25–10/27 共 2 晚，有私人停車位、溫泉、三溫暖。<br>🔑 訂單號：<b>1616334349105930</b>",
+                    badges: [{cls:"hotel", icon:"fa-bed", text:"2 晚"}, {cls:"hotel", icon:"fa-hot-tub", text:"溫泉"}, {cls:"hotel", icon:"fa-parking", text:"停車位"}]
+                },
+                {
+                    time: "17:30", type: "sight", icon: "fas fa-mountain",
+                    title: "函館山夜景 🌃",
+                    desc: "世界級夜景！建議搭 <b>函館山纜車</b>（來回約 ¥1,800/人），從飯店搭計程車或市電到十字街再走到纜車站。",
+                    badges: [{cls:"sight", icon:"fa-star", text:"百萬夜景"}],
+                    notice: { level: "warning", icon: "fa-car", text: "夜間不能開車上山", warning: "函館山登山道路在夜間有自家車管制期，請把車停在飯店，改搭纜車或計程車。若當天霧大，可延到 10/26 晚上。" }
+                },
+                {
+                    time: "19:30", type: "food", icon: "fas fa-utensils",
+                    title: "晚餐：函館鹽拉麵 / 居酒屋 🍜",
+                    desc: "推薦 <b>函館麵廚房あじさい</b> 鹽拉麵，或大門橫丁屋台村。",
+                    badges: [{cls:"food", icon:"fa-bowl-food", text:"鹽拉麵"}]
+                }
+            ]
+        },
+        {
+            date: "2026-10-26",
+            title: "函館還車 & 港町漫遊",
+            tag: "函館",
+            weather: "⛅ 6°C~14°C",
+            events: [
+                {
+                    time: "08:00", type: "transport", icon: "fas fa-gas-pump",
+                    title: "加滿油 ⛽",
+                    desc: "還車前在還車點附近加滿油（Regular 紅色油槍），收據保留給店員查驗。",
+                    badges: [{cls:"transport", icon:"fa-gas-pump", text:"滿油還車"}]
+                },
+                {
+                    time: "08:30", type: "booking", icon: "fas fa-key",
+                    title: "函館還車 🔑（地點待補）",
+                    desc: "還車後改以市電／步行遊覽函館。",
+                    badges: [{cls:"booking", icon:"fa-flag-checkered", text:"還車"}],
+                    notice: { level: "warning", icon: "fa-suitcase", text: "行李先放飯店", warning: "建議 10/25 入住時就把行李搬進房間，還車時只帶隨身包。" }
+                },
+                {
+                    time: "09:15", type: "food", icon: "fas fa-fish",
+                    title: "函館朝市：海鮮丼 & 釣烏賊 🦑",
+                    desc: "鄰近函館站。<b>駅二市場</b> 可體驗釣活烏賊現切生魚片。",
+                    badges: [{cls:"food", icon:"fa-fish", text:"海鮮丼"}, {cls:"food", icon:"fa-star", text:"活烏賊"}]
+                },
+                {
+                    time: "11:00", type: "sight", icon: "fas fa-warehouse",
+                    title: "金森紅磚倉庫 ➔ 元町八幡坂 ⛪",
+                    desc: "灣區紅磚倉庫逛街，再走上元町坡道：八幡坂、舊函館區公會堂、天主教／東正教教堂。",
+                    badges: [{cls:"sight", icon:"fa-camera", text:"港町散步"}, {cls:"buy", icon:"fa-store", text:"紅磚倉庫"}]
+                },
+                {
+                    time: "13:00", type: "food", icon: "fas fa-hamburger",
+                    title: "午餐：幸運小丑漢堡 🍔",
+                    desc: "函館限定連鎖，招牌中華雞腿堡（チャイニーズチキンバーガー）。灣區本店就在紅磚倉庫旁。",
+                    badges: [{cls:"food", icon:"fa-hamburger", text:"函館限定"}]
+                },
+                {
+                    time: "14:30", type: "sight", icon: "fas fa-star",
+                    title: "五稜郭公園 & 五稜郭塔 ⭐",
+                    desc: "搭市電到「五稜郭公園前」。登塔俯瞰星形城郭，秋天櫻花樹葉轉紅。附近有 <b>六花亭五稜郭店</b> 喝下午茶。",
+                    badges: [{cls:"sight", icon:"fa-ticket-alt", text:"塔 約 ¥1,000"}],
+                    tip: { title: "函館市電 🚋", content: "市電＋巴士 <b>一日券</b> 可在函館站觀光案內所購買，或用 Suica 感應。坐 2-3 趟以上就划算。" }
+                },
+                {
+                    time: "18:00", type: "food", icon: "fas fa-utensils",
+                    title: "晚餐 & 自由活動 🌙",
+                    desc: "若昨晚函館山起霧，今晚補上夜景。晚餐可吃壽司或成吉思汗。飯店泡溫泉休息。",
+                    badges: [{cls:"food", icon:"fa-fish", text:"壽司"}]
+                }
+            ]
+        },
+        {
+            date: "2026-10-27",
+            title: "函館 ➔ 桃園 賦歸",
+            tag: "回程",
+            weather: "⛅ 6°C~13°C",
+            events: [
+                {
+                    time: "08:00", type: "food", icon: "fas fa-coffee",
+                    title: "早餐 & 最後採買 ☕",
+                    desc: "朝市最後掃貨（乾貨、海產真空包裝，<b>生鮮不可帶回台灣</b>）。",
+                    badges: [{cls:"buy", icon:"fa-shopping-basket", text:"最後採買"}]
+                },
+                {
+                    time: "09:30", type: "transport", icon: "fas fa-bus",
+                    title: "機場巴士 ➔ 函館機場（約 20 分）🚌",
+                    desc: "函館站前機場巴士或計程車（約 ¥3,000）。退房後出發。",
+                    badges: [{cls:"transport", icon:"fa-bus", text:"約 20 分"}]
+                },
+                {
+                    time: "12:20", type: "flight", icon: "fas fa-plane",
+                    title: "台灣虎航 IT237 函館 ➔ 桃園 ✈️",
+                    desc: "12:20 起飛，16:00 抵達桃園 T1。每人托運 25 公斤。<br>🔑 訂位代號：<b>R4SE7S</b>",
+                    badges: [{cls:"booking", icon:"fa-plane", text:"IT237"}, {cls:"flight", icon:"fa-suitcase", text:"25kg/人"}],
+                    notice: { level: "danger", icon: "fa-clock", text: "報到截止", warning: "虎航櫃檯約起飛前 <b>50 分鐘</b> 關閉，請 10:20 前抵達機場。行李請在飯店先秤重。" }
+                }
+            ]
+        }
+    ];
+    // ==========================================
+    // ===         購物清單               ===
+    // ==========================================
+    const shoppingList = [
+        { category: "🍫 伴手禮甜點", color: "pink", items: [] },
+        { category: "💊 藥妝", color: "purple", items: [] },
+        { category: "🎯 一番賞/動漫", color: "blue", items: [] },
+        { category: "🦀 海產乾貨", color: "amber", items: [] },
+        { category: "👕 服飾雜貨", color: "green", items: [] }
+    ];
+    // ==========================================
+    // ===         行李清單               ===
+    // ==========================================
+    const luggageList = [
+        { category: "📄 證件文件", color: "blue", items: ["護照（效期 6 個月以上）", "台灣駕照正本", "駕照日文譯本", "信用卡 ×2（不同發卡組織）", "Visit Japan Web QR Code 截圖", "機票/飯店/租車憑證離線備份"] },
+        { category: "💴 金錢", color: "green", items: ["日幣現金（每人約 ¥30,000）", "Suica / iPhone 交通卡", "零錢包（停車場/投幣）"] },
+        { category: "🧥 晚秋保暖衣物（5–12°C）", color: "orange", items: ["羽絨外套 or 厚大衣", "發熱衣 ×2", "毛帽、手套、圍巾", "防風防潑水外套", "好走的防滑鞋", "暖暖包"] },
+        { category: "💊 藥品", color: "red", items: ["感冒藥、腸胃藥", "暈車藥（山路自駕）", "護唇膏、乳液（乾燥）"] },
+        { category: "🔌 3C 用品", color: "purple", items: ["eSIM / 網卡", "行動電源（隨身，不可托運）", "車用手機架 & USB 充電線", "相機 & 記憶卡"] },
+        { category: "🧴 盥洗與溫泉", color: "cyan", items: ["個人盥洗用品", "溫泉用小毛巾", "折疊購物袋"] }
+    ];
+    // ==========================================
+    // ===       注意事項代辦清單             ===
+    // ==========================================
+    const notesChecklistData = [
+        {
+            category: "🔴 超緊急（出發剩 3 天！）",
+            color: "red",
+            items: [
+                { id: "hkd-jp-translation", text: "確認已有 <b>駕照日文譯本</b>（監理站臨櫃當天可辦），沒有就無法取車", urgent: true },
+                { id: "hkd-rental-tire", text: "聯絡租車公司確認：<b>冬季輪胎</b>、ETC 卡、異地還車費、函館還車地點", urgent: true },
+                { id: "hkd-kuji-shop", text: "確認 10/24 09:30 一番賞店家地址與附近停車場", urgent: true },
+                { id: "hkd-vjw", text: "填寫 <b>Visit Japan Web</b>（2 人都要），截圖入境 QR Code", urgent: true }
+            ]
+        },
+        {
+            category: "🟠 出發前 1-2 天",
+            color: "orange",
+            items: [
+                { id: "hkd-esim", text: "購買並安裝日本 eSIM" },
+                { id: "hkd-yen", text: "換日幣現金" },
+                { id: "hkd-checkin-tr", text: "酷航 TR892 線上報到 / 確認托運行李額度" },
+                { id: "hkd-backup", text: "機票、3 間飯店、租車憑證下載到手機離線" },
+                { id: "hkd-offline-map", text: "Google Maps 下載北海道離線地圖" }
+            ]
+        },
+        {
+            category: "🔵 旅途中提醒",
+            color: "blue",
+            items: [
+                { id: "hkd-road-info", text: "10/24 出發前查「北海道道路情報」中山峠路況" },
+                { id: "hkd-toya-dinner", text: "10/24 在洞爺湖先買好晚餐（豐浦餐廳少）" },
+                { id: "hkd-refuel", text: "10/26 還車前加滿油並保留收據" },
+                { id: "hkd-omiyage", text: "伴手禮在札幌/函館買齊（回程函館機場較小）" },
+                { id: "hkd-tiger-checkin", text: "10/27 虎航 10:20 前抵達機場報到" }
+            ]
+        }
+    ];
+
+    // ==========================================
+    // ===         全域狀態                    ===
+    // ==========================================
+    let currentIndex = 0;
+    const dayNames = ['SUN','MON','TUE','WED','THU','FRI','SAT'];
+    const monthNames = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+
+    // ==========================================
+    // ===         Tab 切換                    ===
+    // ==========================================
+    function switchTab(tabId) {
+        const views = ['itinerary','tools','transport','shopping','luggage','notes'];
+        views.forEach(v => {
+            const el = document.getElementById('view-' + v);
+            el.classList.add('hidden');
+            el.classList.remove('block');
+            const btn = document.getElementById('tab-' + v);
+            if (btn) {
+                btn.classList.remove('active');
+                btn.classList.add('text-gray-500');
+            }
+        });
+        const target = document.getElementById('view-' + tabId);
+        target.classList.remove('hidden');
+        target.classList.add('block');
+        const activeBtn = document.getElementById('tab-' + tabId);
+        if (activeBtn) {
+            activeBtn.classList.add('active');
+            activeBtn.classList.remove('text-gray-500');
+        }
+        if (tabId === 'shopping') renderShoppingList();
+        if (tabId === 'luggage') renderLuggageList();
+        if (tabId === 'notes') renderNotesChecklist();
+    }
+
+    // ==========================================
+    // ===         日期導航                    ===
+    // ==========================================
+    function buildDateNav() {
+        const nav = document.getElementById('date-nav');
+        nav.innerHTML = '';
+        itineraryData.forEach((day, idx) => {
+            const d = new Date(day.date + 'T12:00:00');
+            const pill = document.createElement('button');
+            pill.className = 'date-pill flex flex-col items-center px-3 py-1.5 rounded-full cursor-pointer shrink-0 ' + (idx === 0 ? 'active text-white' : 'text-gray-500 hover:text-gray-800 hover:bg-gray-100');
+            pill.innerHTML = `<span class="text-[10px] font-bold">${dayNames[d.getDay()]}</span><span class="text-[15px] font-black leading-tight">${d.getDate()}</span>`;
+            pill.onclick = () => changeDay(idx);
+            nav.appendChild(pill);
+        });
+    }
+
+    function scrollNav(dir) {
+        const nav = document.getElementById('date-nav');
+        nav.scrollBy({ left: dir === 'left' ? -120 : 120, behavior: 'smooth' });
+    }
+
+    // ==========================================
+    // ===         即時天氣預報                 ===
+    // ==========================================
+    const weatherCache = {};
+    // ==========================================
+    // ===       天氣座標                     ===
+    // ==========================================
+    const dayCoordinates = {
+        0: { name: "札幌", lat: 43.0618, lon: 141.3545, tenkiUrl: "https://tenki.jp/forecast/1/2/1400/1101/" },
+        1: { name: "札幌", lat: 43.0618, lon: 141.3545, tenkiUrl: "https://tenki.jp/forecast/1/2/1400/1101/" },
+        2: { name: "洞爺湖", lat: 42.5640, lon: 140.8190, tenkiUrl: "https://tenki.jp/forecast/1/" },
+        3: { name: "函館", lat: 41.7687, lon: 140.7288, tenkiUrl: "https://tenki.jp/forecast/1/" },
+        4: { name: "函館", lat: 41.7687, lon: 140.7288, tenkiUrl: "https://tenki.jp/forecast/1/" },
+        5: { name: "函館", lat: 41.7687, lon: 140.7288, tenkiUrl: "https://tenki.jp/forecast/1/" }
+    };
+
+    function getWmoWeatherInfo(code) {
+        const mapping = {
+            0: { emoji: "☀️", desc: "晴朗" },
+            1: { emoji: "🌤️", desc: "晴時多雲" },
+            2: { emoji: "⛅", desc: "多雲時晴" },
+            3: { emoji: "☁️", desc: "陰天" },
+            45: { emoji: "🌫️", desc: "霧" },
+            48: { emoji: "🌫️", desc: "霧" },
+            51: { emoji: "🌧️", desc: "毛毛雨" },
+            53: { emoji: "🌧️", desc: "毛毛雨" },
+            55: { emoji: "🌧️", desc: "毛毛雨" },
+            61: { emoji: "🌧️", desc: "小雨" },
+            63: { emoji: "🌧️", desc: "中雨" },
+            65: { emoji: "🌧️", desc: "大雨" },
+            71: { emoji: "🌨️", desc: "小雪" },
+            73: { emoji: "🌨️", desc: "中雪" },
+            75: { emoji: "🌨️", desc: "大雪" },
+            80: { emoji: "🌧️", desc: "陣雨" },
+            81: { emoji: "🌧️", desc: "陣雨" },
+            82: { emoji: "🌧️", desc: "暴雨" },
+            95: { emoji: "⛈️", desc: "雷雨" },
+            96: { emoji: "⛈️", desc: "雷雨" },
+            99: { emoji: "⛈️", desc: "雷雨" }
+        };
+        return mapping[code] || { emoji: "☀️", desc: "晴朗" };
+    }
+
+    function updateWeatherRealtime(dayDate, idx) {
+        const coords = dayCoordinates[idx];
+        if (!coords) return;
+
+        const weatherEl = document.getElementById('card-weather');
+        
+        function setWeatherUI(emoji, min, max, desc, isRealtime) {
+            const tenkiUrl = coords.tenkiUrl || 'https://tenki.jp/';
+            if (isRealtime) {
+                weatherEl.innerHTML = `<a href="${tenkiUrl}" target="_blank" class="hover:underline flex items-center gap-1">${emoji} ${min}°C~${max}°C (${desc} 預報) <i class="fas fa-external-link-alt text-[9px] opacity-70"></i></a>`;
+            } else {
+                weatherEl.innerHTML = `<a href="${tenkiUrl}" target="_blank" class="hover:underline flex items-center gap-1">${emoji} (歷史均溫) <i class="fas fa-external-link-alt text-[9px] opacity-70"></i></a>`;
+            }
+        }
+
+        if (weatherCache[idx]) {
+            const data = weatherCache[idx];
+            setWeatherUI(data.emoji, data.min, data.max, data.desc, true);
+            return;
+        }
+
+        const url = `https://api.open-meteo.com/v1/forecast?latitude=${coords.lat}&longitude=${coords.lon}&daily=weathercode,temperature_2m_max,temperature_2m_min&timezone=Asia%2FTokyo&forecast_days=16`;
+        
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                if (data && data.daily && data.daily.time) {
+                    const times = data.daily.time;
+                    const dIdx = times.indexOf(dayDate);
+                    if (dIdx !== -1) {
+                        const code = data.daily.weathercode[dIdx];
+                        const max = Math.round(data.daily.temperature_2m_max[dIdx]);
+                        const min = Math.round(data.daily.temperature_2m_min[dIdx]);
+                        const wInfo = getWmoWeatherInfo(code);
+                        
+                        weatherCache[idx] = { emoji: wInfo.emoji, min: min, max: max, desc: wInfo.desc };
+                        
+                        if (currentIndex === idx) {
+                            setWeatherUI(wInfo.emoji, min, max, wInfo.desc, true);
+                        }
+                    }
+                }
+            })
+            .catch(err => {
+                console.error("Failed to fetch weather forecast:", err);
+            });
+    }
+
+    // ==========================================
+    // ===         渲染日行程                  ===
+    // ==========================================
+    function changeDay(idx) {
+        if (idx < 0 || idx >= itineraryData.length) return;
+        currentIndex = idx;
+        const day = itineraryData[idx];
+        const d = new Date(day.date + 'T12:00:00');
+
+        document.getElementById('card-date').textContent = d.getDate();
+        document.getElementById('card-day-week').textContent = dayNames[d.getDay()];
+        document.getElementById('card-month').textContent = monthNames[d.getMonth()] + ' ' + d.getFullYear();
+        document.getElementById('card-tag').textContent = day.tag;
+
+        const coords = dayCoordinates[idx];
+        const tenkiUrl = coords ? coords.tenkiUrl : 'https://tenki.jp/';
+        document.getElementById('card-weather').innerHTML = `<a href="${tenkiUrl}" target="_blank" class="hover:underline flex items-center gap-1">${day.weather} (歷史均溫) <i class="fas fa-external-link-alt text-[9px] opacity-70"></i></a>`;
+
+        document.getElementById('card-title').textContent = day.title;
+
+        // Fetch and display real-time forecast
+        updateWeatherRealtime(day.date, idx);
+
+        // Events
+        const eventsEl = document.getElementById('card-events');
+        eventsEl.innerHTML = '';
+        day.events.forEach(ev => {
+            const colors = {
+                food:      { card: 'card-food',      text: 'text-food',      border: 'border-food',      time: 'text-food' },
+                sight:     { card: 'card-sight',     text: 'text-sight',     border: 'border-sight',     time: 'text-sight' },
+                buy:       { card: 'card-buy',       text: 'text-buy',       border: 'border-buy',       time: 'text-buy' },
+                booking:   { card: 'card-booking',   text: 'text-booking',   border: 'border-booking',   time: 'text-booking' },
+                transport: { card: 'card-transport', text: 'text-transport', border: 'border-transport', time: 'text-transport' },
+                flight:    { card: 'card-flight',    text: 'text-flight',    border: 'border-flight',    time: 'text-flight' },
+                hotel:     { card: 'card-hotel',     text: 'text-hotel',     border: 'border-hotel',     time: 'text-hotel' },
+                story:     { card: 'card-story',     text: 'text-story',     border: 'border-story',     time: 'text-story' },
+            };
+            const c = colors[ev.type] || colors['story'];
+            const typeLabels = {
+                food:'餐飲', sight:'景點', buy:'購物', booking:'預訂',
+                transport:'交通', flight:'航班', hotel:'住宿', story:'故事'
+            };
+            const badgeClsMap = {
+                food: 'badge-food', buy: 'badge-buy', booking: 'badge-booking',
+                sight: 'badge-sight', transport: 'badge-transport', flight: 'badge-flight',
+                hotel: 'badge-hotel', story: 'badge-story', tip: 'badge-tip'
+            };
+
+            const card = document.createElement('div');
+            card.className = `day-event-card ${c.card} border rounded-xl p-3 md:p-4`;
+
+            // Badges HTML
+            let badgesHtml = '';
+            if (ev.badges && ev.badges.length) {
+                badgesHtml = `<div class="flex flex-wrap gap-1.5 mt-2">${ev.badges.map(b => {
+                    const bcls = badgeClsMap[b.cls] || 'badge-story';
+                    return `<span class="badge-pill ${bcls}"><i class="fas ${b.icon} text-[10px]"></i> ${b.text}</span>`;
+                }).join('')}</div>`;
+            }
+
+            // Notice HTML
+            let noticeHtml = '';
+            if (ev.notice) {
+                const level = ev.notice.level || 'danger';
+                const textClass = level === 'danger' ? 'notice-danger' : 'notice-warning';
+                const icon = ev.notice.icon || (level === 'danger' ? 'fa-exclamation-triangle' : 'fa-exclamation-circle');
+
+                noticeHtml = `<div class="mt-2.5 bg-white/70 rounded-xl border border-gray-100 p-3 text-[12px] text-gray-700">
+                    <div class="flex items-center gap-2 mb-1.5">
+                        <i class="fas ${icon} text-gray-400 text-sm"></i>
+                        <span class="font-bold text-gray-600">${ev.notice.text}</span>
+                    </div>
+                    <div class="flex items-start gap-2 notice-box rounded-lg p-2 ${textClass}">
+                        <i class="fas ${icon} text-xs mt-0.5 shrink-0"></i>
+                        <span class="font-medium leading-snug">${ev.notice.warning}</span>
+                    </div>
+                </div>`;
+            }
+
+            // Tip HTML
+            let tipHtml = '';
+            if (ev.tip) {
+                const tipId = 'tip-' + Math.random().toString(36).substr(2,9);
+                tipHtml = `<div class="mt-2.5 bg-blue-50/60 rounded-xl border border-blue-100 overflow-hidden">
+                    <button onclick="toggleTip('${tipId}')" class="w-full flex items-center gap-2.5 px-4 py-3 text-[12px] font-bold text-blue-600 hover:bg-blue-50 transition-colors text-left">
+                        <i class="fas fa-info-circle text-sm shrink-0"></i>
+                        <span>${ev.tip.title}</span>
+                        <i id="${tipId}-icon" class="fas fa-chevron-down ml-auto transition-transform duration-300 shrink-0 text-xs"></i>
+                    </button>
+                    <div id="${tipId}" class="tip-body px-4">
+                        <div class="pb-4 text-gray-600 leading-relaxed text-[12px] md:text-[12.5px]">
+                            ${ev.tip.content}
+                        </div>
+                    </div>
+                </div>`;
+            }
+
+            card.innerHTML = `
+                <div class="flex gap-3">
+                    <div class="shrink-0 w-9 h-9 md:w-10 md:h-10 rounded-full bg-white flex items-center justify-center ${c.text} shadow-sm border ${c.border}">
+                        <i class="${ev.icon} text-sm"></i>
+                    </div>
+                    <div class="flex-1 min-w-0">
+                        <div class="flex flex-wrap items-center gap-2 mb-1">
+                            <span class="text-[11px] font-bold ${c.time} font-mono">${ev.time}</span>
+                            <span class="badge-pill badge-${ev.type}">${typeLabels[ev.type] || ''}</span>
+                        </div>
+                        <p class="font-bold text-[13.5px] md:text-[14.5px] text-gray-800 leading-snug">${ev.title}</p>
+                        <p class="text-[12px] md:text-[13px] text-gray-500 mt-1 leading-relaxed">${ev.desc}</p>
+                    </div>
+                </div>
+                ${badgesHtml}${noticeHtml}${tipHtml}`;
+            eventsEl.appendChild(card);
+        });
+
+        // Update date pills
+        document.querySelectorAll('.date-pill').forEach((pill, i) => {
+            if (i === idx) {
+                pill.classList.add('active', 'text-white');
+                pill.classList.remove('text-gray-500', 'hover:text-gray-800', 'hover:bg-gray-100');
+            } else {
+                pill.classList.remove('active', 'text-white');
+                pill.classList.add('text-gray-500', 'hover:text-gray-800', 'hover:bg-gray-100');
+            }
+        });
+
+        // Update prev/next buttons
+        document.getElementById('btn-prev').style.visibility = idx > 0 ? 'visible' : 'hidden';
+        document.getElementById('btn-next').style.visibility = idx < itineraryData.length - 1 ? 'visible' : 'hidden';
+
+        // Scroll pill into view
+        const pills = document.querySelectorAll('.date-pill');
+        if (pills[idx]) pills[idx].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+        // Fade animation
+        const cardEl = document.getElementById('main-card-content');
+        cardEl.style.opacity = '0';
+        cardEl.style.transform = 'translateY(8px)';
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                cardEl.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+                cardEl.style.opacity = '1';
+                cardEl.style.transform = 'translateY(0)';
+            });
+        });
+    }
+
+    // ==========================================
+    // ===         Toggle Tip                  ===
+    // ==========================================
+    function toggleTip(tipId) {
+        const el = document.getElementById(tipId);
+        const icon = document.getElementById(tipId + '-icon');
+        el.classList.toggle('open');
+        if (icon) icon.style.transform = el.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+    }
+
+    // ==========================================
+    // ===         渲染購物清單               ===
+    // ==========================================
+    function renderShoppingList() {
+        const el = document.getElementById('shopping-list');
+        if (el.children.length > 0) return;
+        const colorMap = {
+            pink:   { bg:'bg-pink-50',   border:'border-pink-100',   title:'text-pink-800'   },
+            amber:  { bg:'bg-amber-50',  border:'border-amber-100',  title:'text-amber-800'  },
+            purple: { bg:'bg-purple-50', border:'border-purple-100', title:'text-purple-800' },
+            blue:   { bg:'bg-blue-50',   border:'border-blue-100',   title:'text-blue-800'   },
+        };
+        shoppingList.forEach(group => {
+            const c = colorMap[group.color] || colorMap.blue;
+            const div = document.createElement('div');
+            div.className = `${c.bg} ${c.border} border rounded-xl p-4`;
+            div.innerHTML = `<h4 class="font-bold text-[14px] ${c.title} mb-3">${group.category}</h4>
+                <ul class="space-y-2">${group.items.map(item => `
+                <li class="flex items-center gap-2 text-[13px] text-gray-700">
+                    <input type="checkbox" class="w-4 h-4 rounded accent-rose-500">
+                    <span class="flex-1">${typeof item === 'string' ? item : item.name}</span>
+                    ${item.qty ? `<span class="text-[11px] text-gray-400 shrink-0">${item.qty}</span>` : ''}
+                </li>`).join('')}</ul>`;
+            el.appendChild(div);
+        });
+    }
+
+    // ==========================================
+    // ===         渲染行李清單               ===
+    // ==========================================
+    function renderLuggageList() {
+        const el = document.getElementById('luggage-list');
+        if (el.children.length > 0) return;
+        const colorMap = {
+            blue:   'bg-blue-50 border-blue-100 text-blue-800',
+            green:  'bg-green-50 border-green-100 text-green-800',
+            orange: 'bg-orange-50 border-orange-100 text-orange-800',
+            red:    'bg-red-50 border-red-100 text-red-800',
+            purple: 'bg-purple-50 border-purple-100 text-purple-800',
+            cyan:   'bg-cyan-50 border-cyan-100 text-cyan-800',
+        };
+        luggageList.forEach(group => {
+            const c = colorMap[group.color] || 'bg-gray-50 border-gray-100 text-gray-800';
+            const [bg, border, title] = c.split(' ');
+            const div = document.createElement('div');
+            div.className = `${bg} ${border} border rounded-xl p-4`;
+            div.innerHTML = `<h4 class="font-bold text-[14px] ${title} mb-3">${group.category}</h4>
+                <ul class="space-y-2">${group.items.map(item => `
+                <li class="flex items-center gap-2 text-[13px] text-gray-700">
+                    <input type="checkbox" class="w-4 h-4 rounded accent-rose-500">
+                    <span>${item}</span>
+                </li>`).join('')}</ul>`;
+            el.appendChild(div);
+        });
+    }
+
+    // ==========================================
+    // ===         渲染注意事項代辦清單         ===
+    // ==========================================
+    function renderNotesChecklist() {
+        const el = document.getElementById('notes-checklist');
+        if (!el) return;
+        el.innerHTML = '';
+        
+        const colorMap = {
+            red:    'bg-red-50 border-red-100 text-red-800',
+            orange: 'bg-orange-50 border-orange-100 text-orange-800',
+            amber:  'bg-amber-50 border-amber-100 text-amber-800',
+            blue:   'bg-blue-50 border-blue-100 text-blue-800',
+        };
+
+        notesChecklistData.forEach(group => {
+            const c = colorMap[group.color] || 'bg-gray-50 border-gray-100 text-gray-800';
+            const [bg, border, title] = c.split(' ');
+            const div = document.createElement('div');
+            div.className = `${bg} ${border} border rounded-xl p-4`;
+            
+            let listHtml = `<h4 class="font-bold text-[14px] ${title} mb-3 flex items-center gap-1.5">${group.category}</h4>`;
+            listHtml += `<ul class="space-y-2.5">`;
+            
+            group.items.forEach(item => {
+                const checked = localStorage.getItem('notes_chk_' + item.id) === 'true' ? 'checked' : '';
+                const lineThrough = checked ? 'line-through text-gray-400 font-normal' : 'font-semibold';
+                listHtml += `
+                <li class="flex items-start gap-2.5 text-[13px] text-gray-700">
+                    <input type="checkbox" id="notes_chk_${item.id}" ${checked} onchange="toggleNotesCheck('${item.id}')" class="w-4 h-4 rounded accent-rose-500 mt-0.5 shrink-0 cursor-pointer">
+                    <label for="notes_chk_${item.id}" id="notes_lbl_${item.id}" class="cursor-pointer select-none flex-1 leading-snug ${lineThrough}">
+                        ${item.urgent ? `<span class="bg-red-500 text-white font-bold px-1.5 py-0.5 rounded text-[10px] mr-1">緊急</span>` : ''}
+                        ${item.text}
+                    </label>
+                </li>`;
+            });
+            
+            listHtml += `</ul>`;
+            div.innerHTML = listHtml;
+            el.appendChild(div);
+        });
+    }
+
+    function toggleNotesCheck(id) {
+        const chk = document.getElementById('notes_chk_' + id);
+        const lbl = document.getElementById('notes_lbl_' + id);
+        if (chk && lbl) {
+            localStorage.setItem('notes_chk_' + id, chk.checked);
+            if (chk.checked) {
+                lbl.classList.add('line-through', 'text-gray-400', 'font-normal');
+                lbl.classList.remove('font-semibold');
+            } else {
+                lbl.classList.remove('line-through', 'text-gray-400', 'font-normal');
+                lbl.classList.add('font-semibold');
+            }
+        }
+    }
+
+
+
+    // ==========================================
+    // ===            初始化                   ===
+    // ==========================================
+    document.addEventListener('DOMContentLoaded', () => {
+        buildDateNav();
+        changeDay(0);
+
+        // Auto select today's date if it matches
+        const today = new Date().toISOString().split('T')[0];
+        const todayIdx = itineraryData.findIndex(d => d.date === today);
+        if (todayIdx !== -1) changeDay(todayIdx);
+
+        // Pre-render list functions
+        renderNotesChecklist();
+    });
+    </script>
+</body>
+</html>
