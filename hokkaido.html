@@ -578,7 +578,7 @@
     const itineraryData = [
         {
             date: "2026-10-22",
-            title: "抵達新千歲 & 札幌美食之夜",
+            title: "抵達新千歲 ➔ 機場寶可夢 & 一幻拉麵 ➔ 札幌飯店 Check-in",
             tag: "札幌",
             weather: "🌙 5°C~12°C",
             events: [
@@ -587,34 +587,43 @@
                     title: "酷航 TR892 桃園 ➔ 新千歲 ✈️",
                     desc: "13:00 桃園起飛，17:55 抵達新千歲機場 (CTS)，飛行約 3h55m。<br>🔑 訂位代號：<b>AF61PK</b>",
                     badges: [{cls:"booking", icon:"fa-plane", text:"TR892"}, {cls:"flight", icon:"fa-clock", text:"17:55 抵達"}],
-                    notice: { level: "warning", icon: "fa-utensils", text: "廉航無餐 & 入境準備", warning: "酷航基本票不含餐，建議在桃園機場先吃午餐或帶輕食上機。出發前請填妥 <b>Visit Japan Web</b> 並截圖 QR Code。" }
+                    notice: { level: "warning", icon: "fa-utensils", text: "廉航無餐 & 快速通關準備", warning: "酷航基本票不含餐，建議在桃園機場先吃午餐或帶輕食上機。出發前請填妥 <b>Visit Japan Web</b> 並截圖 QR Code，一下機快步通關搶在 18:50 前抵達國內線 2F！" }
                 },
                 {
-                    time: "18:45", type: "food", icon: "fas fa-bowl-food",
-                    title: "【選擇 A】えびそば一幻 新千歲空港店 🦐",
-                    desc: "全北海道只有 2 家一幻（新千歲機場店 & 札幌總本店）！若出關順利且肚子餓，可先去國內線航廈 3F「北海道拉麵道場」吃濃郁鮮蝦湯頭拉麵（營業至 21:00，L.O. 20:30）。",
-                    badges: [{cls:"food", icon:"fa-shrimp", text:"えびそば一幻"}, {cls:"sight", icon:"fa-clock", text:"09:00-21:00"}],
-                    tip: { title: "一幻拉麵點餐攻略 🦐", content: "• <b>北海道僅 2 店</b>：① 新千歲機場國內線 3F（09:00–21:00）② 札幌總本店（南7條西9丁目，11:00–翌03:00）。<br>• <b>必點組合</b>：湯頭選「<b>そのまま（原味純蝦湯）</b>」或「<b>ほどほど（加豚骨）</b>」＋ 口味選「<b>えびみそ（鮮蝦味噌）</b>」或「<b>えびしお（鮮蝦鹽味）</b>」＋ 粗麵（太麺），再加點一顆 <b>えびおにぎり（蝦味飯糰）</b> 泡進湯裡吃！<br>• 💡 若想趕去市區吃 <b>Soup Curry KING</b>（21:00 L.O.），這餐可留到今晚或明晚去札幌總本店當宵夜（開到凌晨 03:00）！" }
+                    time: "19:00", type: "buy", icon: "fas fa-dragon",
+                    title: "新千歲機場 國內線 2F：ポケモンストア（寶可夢商店）⚡",
+                    desc: "出關後沿 2F 聯絡通道走 6 分鐘至國內線航廈 2F！<b>營業時間至 20:00</b>。因為你們回程從函館飛、不會再回新千歲機場，今晚是買到<b>新千歲機場限定「CTS 機長皮卡丘 ＆ 空服員皮卡丘」</b>的唯一機會！",
+                    badges: [{cls:"buy", icon:"fa-dragon", text:"CTS機長皮卡丘限定"}, {cls:"sight", icon:"fa-clock", text:"08:00-20:00"}],
+                    tip: {
+                        title: "⚡ 新千歲機場 國內線 2F 必買重點（營業至 20:00）",
+                        content: "• <b>📍 位置</b>：新千歲機場 <b>國內線航廈 2F</b>（Center Plaza 往南側方向）。<br>" +
+                                 "• <b>🔥 獨家必買</b>：胸口印有新千歲機場代碼 <b>`CTS` 的「機長皮卡丘（パイロットピカチュウ）」與「空服員皮卡丘（CAピカチュウ）」</b>絨毛玩偶＆吊飾！（大丸札幌 8F 的寶可夢中心買不到機場限定款喔！）<br>" +
+                                 "• <b>🍪 同樓層順買</b>：旁邊還有「<b>札幌農學校 新千歲機場ファクトリー店</b>」（營業至 20:00），若還有現烤起司蛋糕或夾心餅可先買一個嚐鮮！"
+                    }
                 },
                 {
-                    time: "19:00", type: "transport", icon: "fas fa-train",
-                    title: "JR 快速 Airport ➔ 札幌站 🚆",
-                    desc: "從新千歲機場 B1 搭 JR 快速 Airport，約 37 分鐘直達札幌站（自由席 ¥1,230 / 指定席 u-seat ¥2,070）。",
-                    badges: [{cls:"transport", icon:"fa-train", text:"JR 約 37 分"}, {cls:"transport", icon:"fa-credit-card", text:"可刷 Suica"}],
-                    tip: { title: "搭車與伴手禮提醒 🚆", content: "• 每小時約 5–6 班車，直接刷 Suica/ICOCA 進站搭自由席即可。<br>• 回程從函館飛，不會再回新千歲機場，<b>札幌限定伴手禮（如札幌農學校、六尾燒）請在札幌買齊</b>。<br>• 札幌站下車走 <b>南口</b> 前往 KOKO 飯店（步行約 5 分鐘）。" }
+                    time: "19:35", type: "food", icon: "fas fa-bowl-food",
+                    title: "晚餐：えびそば一幻 新千歲空港店（國內線 3F）🦐🍜",
+                    desc: "逛完 2F 寶可夢後，直接搭手扶梯上 <b>國內線 3F「北海道拉麵道場」</b>吃一幻拉麵！<b>營業至 21:00（L.O. 20:30）</b>，把一幻在機場先完美解鎖！",
+                    badges: [{cls:"food", icon:"fa-shrimp", text:"えびそば一幻"}, {cls:"food", icon:"fa-clock", text:"09:00-21:00 (L.O.20:30)"}],
+                    tip: {
+                        title: "🦐 一幻拉麵 新千歲機場店 點餐攻略",
+                        content: "• <b>位置</b>：國內線航廈 3F「北海道ラーメン道場」入口最顯眼處（店內有大型行李放置區，拉行李箱去吃超方便！）。<br>" +
+                                 "• <b>必點組合</b>：湯頭選「<b>そのまま（原味純蝦湯）</b>」或「<b>ほどほど（加豚骨）</b>」＋ 口味選「<b>えびみそ（鮮蝦味噌）</b>」或「<b>えびしお（鮮蝦鹽味）</b>」＋ 粗麵（太麺），再加點一顆 <b>えびおにぎり（蝦味飯糰）</b> 泡進蝦湯裡吃！<br>" +
+                                 "• <i>💡 延誤備案：萬一班機大延誤超過 20:00 才出關，直接搭 JR 進札幌市區，改去開到<b>凌晨 03:00 的「えびそば一幻 総本店」</b>（南7西9）吃宵夜！</i>"
+                    }
                 },
                 {
-                    time: "20:00", type: "hotel", icon: "fas fa-hotel",
+                    time: "20:30", type: "transport", icon: "fas fa-train",
+                    title: "JR 快速 Airport ➔ 札幌站（約 37 分鐘）🚆",
+                    desc: "吃完一幻後搭電梯下至國內線 B1F 搭 JR 快速 Airport，約 37 分鐘直達札幌站（每 12–15 分鐘一班，末班車至 23:21，自由席 ¥1,230 可直接刷 Suica/ICOCA）。",
+                    badges: [{cls:"transport", icon:"fa-train", text:"JR 約 37 分"}, {cls:"transport", icon:"fa-credit-card", text:"可刷 Suica"}]
+                },
+                {
+                    time: "21:20", type: "hotel", icon: "fas fa-hotel",
                     title: "KOKO 飯店 札幌站前 Check-in 🏨",
-                    desc: "好萊塢雙床房，10/22–10/24 共 2 晚。位於札幌站南口與大通之間（北1條西3丁目），離一粒庵步行 3 分鐘、離工作咖啡廳 poool 步行 1 分鐘！<br>🔑 訂單號：<b>1616334349510502</b>",
+                    desc: "從 JR 札幌站南口（或地下街）步行約 5 分鐘抵達飯店 Check-in！好萊塢雙床房，10/22–10/24 共 2 晚（櫃檯 24 小時皆可辦理入住）。<br>🔑 訂單號：<b>1616334349510502</b>",
                     badges: [{cls:"hotel", icon:"fa-bed", text:"2 晚"}, {cls:"booking", icon:"fa-map-marker-alt", text:"北1條西3丁目"}]
-                },
-                {
-                    time: "20:15", type: "food", icon: "fas fa-bowl-food",
-                    title: "晚餐 / 宵夜：えびそば一幻 総本店 🦐（或 新千歲機場店 / 一粒庵）",
-                    desc: "第一晚抵達札幌市區約 20:00（若 19:30 前到札幌站可先衝 KOKO 飯店旁的<b>一粒庵</b>，營業至 20:00）；若超過 20:00，推薦去開到<b>凌晨 03:00 的「えびそば一幻 総本店」</b>吃濃郁蝦湯拉麵＋蝦味飯糰！",
-                    badges: [{cls:"food", icon:"fa-shrimp", text:"一幻總店至凌晨03:00"}, {cls:"food", icon:"fa-award", text:"一粒庵至20:00"}],
-                    tip: { title: "第一晚拉麵攻略（依抵達時間彈性選）🍜", content: "• <b>方案 1（19:30 前抵達札幌站）｜ラーメン札幌 一粒庵</b>：北4西1 ホクレンビル B1F（離 KOKO 飯店走路 3 分鐘，晚間 17:00–20:00），必點「元氣味噌拉麵」。<br>• <b>方案 2（20:00 後悠閒吃）｜えびそば一幻 総本店</b>：中央区南7条西9丁目1024-10（營業至<b>凌晨 03:00</b>），必點「<b>そのまま（原味）或 ほどほど（豚骨混合）えびみそ（蝦味噌）＋ 粗麵 ＋ えびおにぎり（蝦味飯糰）</b>」！<br>• <b>方案 3（下飛機先吃）｜えびそば一幻 新千歳空港店</b>：國內線 3F 拉麵道場（營業至 21:00），一下機就能先吃！" }
                 }
             ]
         },
